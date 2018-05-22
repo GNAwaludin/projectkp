@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include templates/head.ejs %>
+</head>
+<body>
+    <% include templates/header.ejs %>
+    
+    <div id="wrapper">
+    <div class="page-header-data"><h2>Perjalanan Dinas Non PNS</h2></div>
+    <div class="page-container">
+        <div class="page-data">
+            <h3>Uang Harian dan Akomodasi Perjalanan Dinas Dalam Provinsi dan Luar Provinsi Non PNS</h3></br>
+            <h3>Edit Data</h3>
+             <form class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Uraian:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="uraian">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Pendidikan:</label>
+                            <div class="col-sm-10">
+                                    <label class="radio-inline">
+                                      <input type="radio" name="pendidikan">SMP/SD
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="pendidikan">D3/SMA
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="pendidikan">S1/S2
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="pendidikan">Profesor/S3
+                                    </label>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Tujuan:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="sel1" style="width: 300px;">
+                                    <option>--Pilih Salah Satu--</option>
+                                    <option>Dalam Provinsi</option>
+                                    <option>Luar Provinsi (Jakarta, Banten)</option>
+                                    <option>Dalam dan Luar Provinsi</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Akomodasi:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Akomodasi" name="Akomodasi">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Besaran Uang Harian (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="besaran">
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Keterangan:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                            </div>
+                    </div>
+    
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success" value="Simpan" style="cursor: pointer;">Simpan</button>
+                            <button type="submit" class="btn btn-danger" value="Batal" onClick="cancelAdd()" style="cursor: pointer;">Batal</button>
+                        </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+       </div>
+    <script type="text/javascript" src="/../js/all.js"></script>
+</body>
+</html>

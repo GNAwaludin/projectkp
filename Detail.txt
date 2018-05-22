@@ -1,0 +1,240 @@
+1. Tabel Bidang
+2. Tabel Kategori Bidang
+3. Tabel Sub Kategori Bidang
+4. Tabel Detail Sub Bidang
+
+===============================
+1. Bidang 1
+- Tabel 1.1 - 1.11 (Detail 2)
+- Tabel 1.12 (Detail 4)
+- Tabel 1.13 (Detail 2)
+- Tabel 1.14 - 1.16 (Dilewat Sementara)
+- Tabel 1.17 (Detail 2)
+===============================
+2. Bidang 2
+- Tabel 2.1 (Detail 3)
+- Tabel 2.2 - 2.4 , 2.6 - 2.7, 2.9 (Detail 2)
+- Tabel 2.5 (Detail 5)
+- Tabel 2.8 (Detail 1A)
+===============================
+3. Bidang 3
+- Tabel 3.1 - 3.2 (Detail 6)
+- Tabel 3.3, 3.6 (Detail 2)
+- Tabel 3.4 - 3.5 (Dilewat Sementara)
+- Tabel 3.6
+- Tabel 3.7 - 3.9, 3.12 - 3.14 (Dilewat Sementara)
+- Tabel 3.10 (Detail 7)
+- Tabel 3.11 (Detail 2)
+- Tabel 3.15 - 3.16 (Detail 8)
+- Tabel 3.17 - 3.18 (Detail 9)
+===============================
+4. Bidang 4
+- Tabel 4.1 (Detail 2)
+===============================
+5. Bidang 5
+- Tabel 5.1 (Detail 1C)
+- Tabel 5.2 (Detail 3)
+- Tabel 5.3 (Detail 9)
+===============================
+6. Bidang 6
+- Tabel 6.1 - 6.2, 6.4 - 6.5 (Detail 2)
+- Tabel 6.3 (Detail 1A)
+===============================
+7. Bidang 7
+- Tabel 7.1 - 7.2 (Detail 2) 
+===============================
+8. Bidang 8
+- Tabel 8.1 - 8.71 (Detail 10)
+===============================
+9. Bidang 9
+- Tabel 9.1 (Detail 9)
+===============================
+10. Bidang 10
+- Tabel 10.1 (Detail 1D)
+- Tabel 10.2 (Detail 1A)
+- Tabel 10.3 - 10.7 (Detail 2)
+===============================
+11. Bidang 11
+- Tabel 11.1 (Detail 9)
+===============================
+12. Bidang 12
+- Dilewat Sementara
+===============================
+13. Bidang 13**
+- Tabel 13.1 - 13.2, 13.5 - 13.8 (Detail 10) + Benih (Detail 3)
+- Tabel 13.3 - 13.4 (Detail 1E)
+- Tabel 13.9 - 13.10 (Detail 2)
+- Tabel 13.11 (Detail 3)
+- Tabel 13.12 - 13.13 (Detail 10)
+- Tabel 13.14 (Detail 11)
+- Tabel 13.15 (Dilewat Sementara)
+===============================
+14. Bidang 14**
+- Tabel 14.1 - 14.21, 14.28 - 14.30 (Detail 12)
+- Tabel 14.22 - 14.27 (Detail 13)
+- Tabel 14.31 - 14.34 (Detail 14)
+- Tabel 14.35 (Detail 9)
+- Tabel 14.36 (Detail 10)
+- tabel 14.37 - 14.38 (Detail 9)
+- Tabel 14.39 - 14.69 (Detail 2)
+===============================
+15. Bidang 15
+- Tabel 15.1 (Detail 15)
+- Tabel 15.2 - 15.3 (Detail 2)
+- Tabel 15.4 - 15.5 (Detail 10)
+- Tabel 15.6 (Detail 1A)
+===============================
+16. Bidang 16**
+- Tabel 16.1 (Detail 2)
+===============================
+17. Bidang 17
+- Tabel 17.1 (Detail 10)
+- Tabel 17.2 - 17.3 (Detail 4)
+- Tabel 17.4 (Detail 9)
+- Tabel 17.5 (Detail 15)
+- Tabel 17.6 (Detail 2)
+===============================
+18. Bidang 18
+- Tabel 18.1 - 18.2 (Detail 2) + Makan Malam
+- Tabel 18.3 (Detail 15)
+- Tabel 18.4 (Detail 4)
+- Tabel 18.5 (Detail 9)
+- Tabel 18.6 - 18.7 (Detail 4)
+- Tabel 18.8 (Detail 9)
+- Tabel 18.9 (Detail 4)
+- Tabel 18.10 (Detail 9)
+- Tabel 18.11 (Detail 14)
+===============================
+19. Bidang 19
+- Tabel 19.1 (Detail 9)
+- Tabel 19.2 (detail 15)
+===============================
+20. Bidang 20
+- Tabel 20.1 - 20.5 (Detail 2)
+- Tabel 20.6 - 20.7 (Detail 10)
+- Tabel 20.8 (Detail 9)
+===============================
+21. Bidang 21
+- Tabel 21.1 (Detail 2)
+===============================
+22. Bidang 22
+- Tabel 22.1 (Detail 2)
+===============================
+23. Bidang 23
+- Tabel 23.1 - 23.3 (Detail 9)
+- Tabel 23.4 - 23.5 (Detail 2)
+
+===============================
+SBU - Batas Tertinggi
+===============================
+A. Kategori A
+- Tabel 2.1 (Detail 9)
+- Tabel 2.2, 2.4 - 2.5 (Detail 2)
+- Tabel 2.3, 2.7 - 2.8 (Detail 4)
+- Tabel 2.6, 2.9 - 2.10 (Detail 10)
+===============================
+B. Kategori B
+- Tabel 2.11 (Detail 10)
+===============================
+C. Kategori C
+- Tabel 2.12 (Detail 3)
+- Tabel 2.13 (Detail 1A)
+===============================
+D. Kategori D
+- (Detail 2)
+===============================
+E. Kategori E
+- Tabel 2.14 (Detail 2)
+- Tabel 2.15 (Detail 9)
+===============================
+F. Kategori F
+- Tabel 2.16 (Detail 2)
+===============================
+G. Kategori G
+- Tabel 2.17 (Detail 9)
+===============================
+H. Kategori H
+- Tabel 2.18 (Detail 9)
+===============================
+I. Kategori I
+- Tabel 2.19 (Detail 9)
+===============================
+J. Kategori J
+- Tabel 2.20 - 2.23 (Detail 2)
+===============================
+K. Kategori K
+- Tabel 2.24 (Detail 2)
+===============================
+L. Kategori L
+- Tabel 2.25 (Detial 2)
+===============================
+M. Kategori M
+- Tabel 2.26 (Detail 2)
+===============================
+N. Kategori N
+- Tabel 2.27 (Detail 10)
+===============================
+O. Kategori O
+- Tabel 2.28 (Detail 2)
+===============================
+P. Kategori P
+- Tabel 2.29 -  2.30 + 3 (Detail 15)
+===============================
+Q. Kategori Q
+- Tabel 2.31 (Detail 9)
+===============================
+R. Kategori R**
+
+===============================
+S. Kategori S**
+- Tabel 2.50 - 2.51 (Detail 5)
+===============================
+T. Kategori T
+- Tabel 2.52 (Detail 2)
+===============================
+U. Kategori U
+- Tabel 2.53 (Detail 11)
+===============================
+V. Kategori V
+- Tabel 2.54 (Detail 6)
+===============================
+W. Kategori W**
+
+===============================
+X. Kategori X **
+- Tabel 2.55 (Detail 9)
+- Tabel 2.56 - 2.57 (Detail 2)
+===============================
+Y. Kategori Y**
+
+===============================
+Z. Kategori Z
+- Tabel 2.58 (Detail 2)
+===============================
+AA. Kategori AA
+- Tabel 2.59 (Detail 9)
+===============================
+BB. Kategori BB
+- Tabel 2.60 (Detail 11)
+===============================
+B. SBU Sebagai Estimasi
+===============================
+A. Kategori A
+- Tabel 3.1 (Detail 9)
+===============================
+B. Kategori B
+- Tabel 3.2 (Detail 2)
+===============================
+C. Kategori C
+- Tabel 3.3 (Detail 9)
+===============================
+D. Kategori D
+- Tabel 3.4 (Detail 10)
+===============================
+E. Kategori E
+- Tabel 3.5 (Detail 3)
+===============================
+
+
+
+

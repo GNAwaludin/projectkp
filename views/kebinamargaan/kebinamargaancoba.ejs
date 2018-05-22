@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="/../images/favicon.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="/../css/newstyle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="font-style: italic;text-align: center;">Standar Biaya Khusus Menu</h1><br/>
+        <form id="rentalProperties">
+            <p>
+                <label>KATEGORI
+                    <select class="selectpicker" data-style="btn-primary" multiple data-max-options="1" name="kategori" data-live-search="true">
+                        <optgroup label="kategori">
+                        <option value="bkfj01">Biaya Kegiatan Fisik Jalan</option>
+                        <option value="bkfj02">Biaya Kegiatan Fisik Jembatan</option>
+                        <option value="kppt">Kegiatan Perencanaan dan Pengawasan Teknis</option>
+                        <option value="kpjj01">Kegiatan Pembangunan Jalan dan Jembatan</option>
+                        <option value="kppj02">Kegiatan Pengawasan Pembangunan Jalan/Jembatan</option>
+                        <option value="bsak">Biaya Sewa Alat/Kendaraan</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>SUB KATEGORI
+                    <select name="subkategori" id="subkategori" class="selectpicker" data-style="btn-danger" multiple data-max-options="1" data-live-search="true">
+                        <optgroup label="Sub Fisik Jalan">
+                        <option value="hsk01">Harga Satuan Kegiatan Peningkatan Jalan(HOTMIX)</option>
+                        <option value="hsk02">Harga Satuan Kegiatan Peningkatan Jalan(BETON)</option>
+                        <option value="hskr">Harga Satuan Kegiatan Rehabilitas/Pemeliharaan Berkala (HOTMIX)</option>
+                        <option value="hskpr">Harga Satuan Kegiatan Pemeliharaan Rutin</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>SUB KATEGORI
+                    <select name="subkategori02" id="subkategori02" class="selectpicker" data-style="btn-warning" multiple data-max-options="1" data-live-search="true">
+                        <optgroup label="Sub Fisik Jembatan">
+                        <option value="hsdm">Harga Satuan Dasar Minimal Penanganan Jembatan</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </p>
+
+            <div class="table-responsive">
+                <table class="table" id = "t2" style="display: none;">
+                    <caption>HARGA SATUAN KEGIATAN PENINGKATAN JALAN (HOTMIX)</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>LEBAR PERKERASAN</th>
+                            <th>HARGA SATUAN MAKSIMAL</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(data.length){ 
+                                
+                     for(var i = 0;i < data.length;i++) { %>
+                     <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].lebar%></td>
+                    <td><%=data[i].nominal%></td>
+                    <td>
+                        <a class="a-inside edit" href="../sistem/edit/<%=data[i].id%>"><span class="glyphicon glyphicon-ok" onclick="myFunction()">&nbsp;</span></a>
+                       
+                        <a class="glyphicons glyphicons-remove" href="../sistem/delete/<%=data[i].id%>"><span class="glyphicon glyphicon-remove" onclick="myFunction2()"></span></a>
+                       
+                    </td>
+                </tr>
+                <% }
+            
+                }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+                <% } %>
+                    </tbody>
+                </table>       
+               <table class="table" id = "t12" style="display: none;">
+                    <caption>HARGA SATUAN DASAR MINIMAL PENANGANAN JEMBATAN</caption>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>PENANGANAN</th>
+                        <th>RANGKA BAJA</th>
+                        <th>BETON KONVENSIONAL</th>
+                        <th>PRESTRESSED</th>
+                        <th>BOX CULVERT</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>RUTIN (NON STRUKTURAL)</td>
+                        <td>565,070.00</td>
+                        <td>525,001.40</td>
+                        <td>535,001.40</td>
+                        <td>525,001.40</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>REHABILITASI/PERBAIKAN (STRUKTURAL)</td>
+                        <td>151,888,761.20</td>
+                        <td>129,918,839.60</td>
+                        <td>139,491,125.40</td>
+                        <td>59,775,159.40</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>PENGGATIAN BARU</td>
+                        <td>263,844,539.20</td>
+                        <td>223,531,418.00</td>
+                        <td>239,299,953.00</td>
+                        <td>114,838,662.40</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="/../js/kebinamargaan.js"></script>
+</body>
+</html>

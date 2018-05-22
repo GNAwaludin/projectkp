@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include templates/head.ejs %>
+</head>
+<body>
+    <% include templates/header.ejs %>
+    
+    <div id="wrapper">
+    <div class="page-header-data"><h2>Bidang Informatika</h2></div>
+    <div class="page-container">
+        <div class="page-data">
+            <h3>Biaya Tenaga Pelayanan Kesehatan di Unit Pelayanan Teknis (UPT)/Balai Dinas Kesehatan yang melakukan Pelayanan Kesehatan</h3></br>
+            <h3>Edit Data</h3>
+             <form class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Kelompok Ahli:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="uraian">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Honorarium /Bulan (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Honorarium (Rp.)" name="honorarium">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Insentif (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Insentif (Rp.)" name="insentif">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Satuan Insentif:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="Satuan">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Jasa Pelayanan Rawat Jalan /Bulan (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Jasa Pelayanan (Rp.)" name="jasa1">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Jasa Pelayanan Rawat Inap /Bulan (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Jasa Pelayanan (Rp.)" name="jasa2">
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Keterangan:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                            </div>
+                    </div>
+    
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success" value="Simpan" style="cursor: pointer;">Simpan</button>
+                            <button type="submit" class="btn btn-danger" value="Batal" onClick="cancelAdd()" style="cursor: pointer;">Batal</button>
+                        </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+       </div>
+    <script type="text/javascript" src="/../js/all.js"></script>
+</body>
+</html>

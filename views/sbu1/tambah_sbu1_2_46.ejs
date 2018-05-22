@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include templates/head.ejs %>
+</head>
+<body>
+    <% include templates/header.ejs %>
+    
+    <div id="wrapper">
+    <div class="page-header-data"><h2>Perjalanan Dinas</h2></div>
+    <div class="page-container">
+        <div class="page-data">
+            <h3>Perjalanan Dinas Luar Negeri</h3>
+            <h3>Satuan Biaya Uang Harian Perjalanan Dinas Luar Negeri</h3></br>
+            <h3>Tambah Data Baru</h3>
+             <form class="form-horizontal" method="post">   
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Wilayah:</label>  
+                            <div class="col-sm-10">
+                                <select class="form-control" id="sel1" style="width: 300px;">
+                                    <option>--Pilih Salah Satu--</option>
+                                    <option>Amerika</option>
+                                    <option>Amerika Selatan</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Negara:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="sel1" style="width: 300px;">
+                                    <option>--Pilih Salah Satu--</option>
+                                    <option>Amerika Serikat</option>
+                                    <option>Kanada</option>
+                                </select>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Gol I (US $.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (US $.)" name="besaran1">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Gol II (US $.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (US $.)" name="besaran2">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Gol III (US $.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (US $.)" name="besaran3">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Gol IV (US $.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (US $.)" name="besaran4">
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Keterangan:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                            </div>
+                    </div>
+    
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success" value="Simpan" style="cursor: pointer;">Simpan</button>
+                            <button type="submit" class="btn btn-danger" value="Batal" onClick="cancelAdd()" style="cursor: pointer;">Batal</button>
+                        </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+       </div>
+    <script type="text/javascript" src="/../js/all.js"></script>
+</body>
+</html>

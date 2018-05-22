@@ -1,0 +1,22 @@
+{
+  "name": "Project3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Ibnu Aziz N <ibnuaziznu@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^1.0.0",
+    "express": "^3.5.1",
+    "express-myconnection": "^1.0.4",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.2.0"
+  }
+}

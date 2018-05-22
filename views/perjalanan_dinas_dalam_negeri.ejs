@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+	<link rel="shortcut icon" type="image/png" href="/../images/favicon.png"/>
+	<style type="text/css">
+	.scrollable-menu {
+    	height: auto;
+    	max-height: 50px;
+    	overflow-x: hidden;
+	}
+	</style>
+</head>
+<body>
+<fieldset style="width: 600px; float: left;">
+  <legend>PERJALANAN DINAS DALAM NEGERI</legend>
+  <p>
+  	<input type="radio" onchange="swapConfig(this)" name="urlOptions" id="production" checked="checked" />
+    <label for="production">Perjalanan Dinas Dalam Daerah</label>
+    <input type="radio" onchange="swapConfig(this)" name="urlOptions" id="development" />
+    <label for="development">Perjalanan Dinas Luar Provinsi</label>
+  </p>
+  <div id="productionSettings">
+    <br/>FORM PENGAJUAN
+    <p>
+      	<label for="p1">Nama Koordinator</label>
+      	<input type="text" name="p1" value="" placeholder="Contoh: Mohammad Junaidi" id="koordinator">
+    </p>
+    <p>
+    	<label for="p2">Jumlah Orang</label>
+      	<input type="text" name="p2" value="" placeholder="Contoh: 2" id="jmlorang">
+  	</p>
+
+  	<p>
+    	<label for="p5">Jumlah Hari</label>
+      	<input type="text" name="p5" value="" placeholder="Contoh: 4" id="jmlhari">
+  	</p>
+  	<form name="expiration">
+  	<p>
+  		<label>Tujuan Dari</label>
+      	<select name="tujuandari" class="scrollable-menu" id="tujuandari" onchange="setTujuanDari()">
+		    <option value="">-Pilih Salah Satu--</option>
+		    <option value="Kota Bogor">Kota Bogor</option>
+		    <option value="Kabupaten Bogor">Kabupaten Bogor</option>
+		    <option value="Kota Depok">Kota Depok</option>
+		    <option value="Kota Sukabumi">Kota Sukabumi</option>
+		    <option value="Kabupaten Sukabumi">Kabupaten Sukabumi</option>
+		    <option value="Kabupaten Cianjur">Kabupaten Cianjur</option>
+		    <option value="Kota Cirebon">Kota Cirebon</option>
+		    <option value="Kabupaten Cirebon">Kabupaten Cirebon</option>
+		    <option value="Kabupaten Majalengka">Kabupaten Majalengka</option>
+		    <option value="Kabupaten Kuningan">Kabupaten Kuningan</option>
+		    <option value="Kabupaten Indramayu">Kabupaten Indramayu</option>
+		    <option value="Kabupaten Subang">Kabupaten Subang</option>
+		    <option value="Kabupaten Purwakarta">Kabupaten Purwakarta</option>
+		    <option value="Kabupaten Karawang">Kabupaten Karawang</option>
+		    <option value="Kota Bekasi">Kota Bekasi</option>
+		    <option value="Kabupaten Bekasi">Kabupaten Bekasi</option>
+		    <option value="Kota Bandung">Kota Bandung</option>
+		    <option value="Kabupaten Bandung">Kabupaten Bandung</option>
+		    <option value="Kota Cimahi">Kota Cimahi</option>
+		    <option value="KBB">KBB</option>
+		    <option value="Kabupaten Sumedang">Kabupaten Sumedang</option>
+		    <option value="Kabupaten Garut">Kabupaten Garut</option>
+		    <option value="Kota Tasikmalaya">Kota Tasikmalaya</option>
+		    <option value="Kabupaten Tasikmalaya">Kabupaten Tasikmalaya</option>
+		    <option value="Kabupaten Ciamis">Kabupaten Ciamis</option>
+		    <option value="Kota Banjar">Kota Banjar</option>
+		    <option value="Kabupaten Pangandaran">Kabupaten Pangandaran</option>
+		    <option value="DKI Jakarta">DKI Jakarta</option>
+        </select>
+  	</p>
+  	<p>
+  		<label>Tujuan Ke</label>
+  			<select name="tujuanke" class="scrollable-menu" onchange="setTujuanKe()">
+  				<option value="">-Pilih Salah Satu--</option>
+			    <option value="Kota Bogor">Kota Bogor</option>
+			    <option value="Kabupaten Bogor">Kabupaten Bogor</option>
+			    <option value="Kota Depok">Kota Depok</option>
+			    <option value="Kota Sukabumi">Kota Sukabumi</option>
+			    <option value="Kabupaten Sukabumi">Kabupaten Sukabumi</option>
+			    <option value="Kabupaten Cianjur">Kabupaten Cianjur</option>
+			    <option value="Kota Cirebon">Kota Cirebon</option>
+			    <option value="Kabupaten Cirebon">Kabupaten Cirebon</option>
+			    <option value="Kabupaten Majalengka">Kabupaten Majalengka</option>
+			    <option value="Kabupaten Kuningan">Kabupaten Kuningan</option>
+			    <option value="Kabupaten Indramayu">Kabupaten Indramayu</option>
+			    <option value="Kabupaten Subang">Kabupaten Subang</option>
+			    <option value="Kabupaten Purwakarta">Kabupaten Purwakarta</option>
+			    <option value="Kabupaten Karawang">Kabupaten Karawang</option>
+			    <option value="Kota Bekasi">Kota Bekasi</option>
+			    <option value="Kabupaten Bekasi">Kabupaten Bekasi</option>
+			    <option value="Kota Bandung">Kota Bandung</option>
+			    <option value="Kabupaten Bandung">Kabupaten Bandung</option>
+			    <option value="Kota Cimahi">Kota Cimahi</option>
+			    <option value="KBB">KBB</option>
+			    <option value="Kabupaten Sumedang">Kabupaten Sumedang</option>
+			    <option value="Kabupaten Garut">Kabupaten Garut</option>
+			    <option value="Kota Tasikmalaya">Kota Tasikmalaya</option>
+			    <option value="Kabupaten Tasikmalaya">Kabupaten Tasikmalaya</option>
+			    <option value="Kabupaten Ciamis">Kabupaten Ciamis</option>
+			    <option value="Kota Banjar">Kota Banjar</option>
+			    <option value="Kabupaten Pangandaran">Kabupaten Pangandaran</option>
+			    <option value="DKI Jakarta">DKI Jakarta</option>
+  			</select>
+  	</p>
+  	<p>
+  		<label for="txttujuan">Tujuan</label>
+  		<input type="text" name="expires" id="expires" class="text" disabled="disabled" style="width: 300px;">
+  	</p>
+  	<p><input type="button" value="Setujui Tujuan" onclick="showHiddenValue(); jarakTempuh()" /></p>
+  	
+  	<p>
+  		<label for="jarakTempuh">Jarak Tempuh (KM)</label>
+  		<input type="text" name="jarak" id="jarak" class="text" disabled="disabled">
+  	</p>
+  	<p>
+  		<label>Golongan
+  		<select name="golongan" id="golongan" onchange="uangHarian()">
+  			<option value="">--Pilih Salah Satu--</option>
+  			<option value="I">Golongan I</option>
+  			<option value="II">Golongan II</option>
+  			<option value="III">Golongan III</option>
+  			<option value="IV">Golongan IV</option>
+  		</select>
+  		</label>
+  	</p>
+  	<p>
+  		<div>
+  			<label>Uang Harian/Orang</label>
+  			<input type="text" name="uangharian" class="text" disabled="disabled" id="uangharian">
+  		</div>
+  	</p>
+
+  	<button type="button" onclick="hitungJumlah()" style="float: right;">Hitung Jumlah</button>
+  </form>
+  </div>
+  <div id="developmentSettings" style="display:none">
+    <br/>FORM PENGAJUAN
+    <p>
+      <label for="d1">Developent</label>
+      <input type="text" name="d1" value="">
+    </p>
+  </div>
+</fieldset>
+
+<fieldset style="width: 600px; float: right;">
+  <legend>HASIL PERHITUNGAN PERJALANAN DINAS</legend>
+</fieldset>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script  src="/../js/perjalanandinas.js"></script>
+
+</body>
+</html>

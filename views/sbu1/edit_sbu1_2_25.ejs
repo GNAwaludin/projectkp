@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <% include templates/head.ejs %>
+</head>
+<body>
+    <% include templates/header.ejs %>
+    
+    <div id="wrapper">
+    <div class="page-header-data"><h2>Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi</h2></div>
+    <div class="page-container">
+        <div class="page-data">
+            <h3>Besaran Uang Saku</h3></br>
+            <h3>Edit Data</h3>
+             <form class="form-horizontal" method="post">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Uraian:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="uraian">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Satuan:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="satuan">
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Besaran (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="besaran">
+                            </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Keterangan:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                            </div>
+                    </div>
+    
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success" value="Simpan" style="cursor: pointer;">Simpan</button>
+                            <button type="submit" class="btn btn-danger" value="Batal" onClick="cancelAdd()" style="cursor: pointer;">Batal</button>
+                        </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+       </div>
+    <script type="text/javascript" src="/../js/all.js"></script>
+</body>
+</html>
