@@ -48,7 +48,7 @@ app.use(
         user: 'root',
         password : '',
         port : 3306, //port mysql
-        database:'contoh'
+        database:'projectkp'
 
     },'pool') //or single
 
@@ -1084,8 +1084,11 @@ app.get('/edit_lainnya_23_5', sistem.edit_lainnya_23_5);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_1', sistem.sbu1_2_1);
-app.get('/tambah_sbu1_2_1', sistem.tambah_sbu1_2_1);
-app.get('/edit_sbu1_2_1', sistem.edit_sbu1_2_1);
+app.get('/tambah_sbu1_2_1/add', sistem.tambah_sbu1_2_1);
+app.post('/tambah_sbu1_2_1/add', sistem.save_sbu1_2_1);
+app.get('/edit_sbu1_2_1/edit/:id', sistem.edit_sbu1_2_1);
+app.post('/edit_sbu1_2_1/edit/:id', sistem.save_edit_sbu1_2_1);
+app.get('/edit_sbu1_2_1/delete/:id', sistem.delete_sbu1_2_1);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_2', sistem.sbu1_2_2);
