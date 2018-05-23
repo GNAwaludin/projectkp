@@ -1092,23 +1092,35 @@ app.get('/edit_sbu1_2_1/delete/:id', sistem.delete_sbu1_2_1);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_2', sistem.sbu1_2_2);
-app.get('/tambah_sbu1_2_2', sistem.tambah_sbu1_2_2);
-app.get('/edit_sbu1_2_2', sistem.edit_sbu1_2_2);
+app.get('/tambah_sbu1_2_2/add', sistem.tambah_sbu1_2_2);
+app.post('/tambah_sbu1_2_2/add', sistem.save_sbu1_2_2);
+app.get('/edit_sbu1_2_2/edit/:id', sistem.edit_sbu1_2_2);
+app.post('/edit_sbu1_2_2/edit/:id', sistem.save_edit_sbu1_2_2);
+app.get('/edit_sbu1_2_2/delete/:id', sistem.delete_sbu1_2_2);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_3', sistem.sbu1_2_3);
-app.get('/tambah_sbu1_2_3', sistem.tambah_sbu1_2_3);
-app.get('/edit_sbu1_2_3', sistem.edit_sbu1_2_3);
+app.get('/tambah_sbu1_2_3/add', sistem.tambah_sbu1_2_3);
+app.post('/tambah_sbu1_2_3/add', sistem.save_sbu1_2_3);
+app.get('/edit_sbu1_2_3/edit/:id', sistem.edit_sbu1_2_3);
+app.post('/edit_sbu1_2_3/edit/:id', sistem.save_edit_sbu1_2_3);
+app.get('/edit_sbu1_2_3/delete/:id', sistem.delete_sbu1_2_3);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_4', sistem.sbu1_2_4);
-app.get('/tambah_sbu1_2_4', sistem.tambah_sbu1_2_4);
-app.get('/edit_sbu1_2_4', sistem.edit_sbu1_2_4);
+app.get('/tambah_sbu1_2_4/add', sistem.tambah_sbu1_2_4);
+app.post('/tambah_sbu1_2_4/add', sistem.save_sbu1_2_4);
+app.get('/edit_sbu1_2_4/edit/:id', sistem.edit_sbu1_2_4);
+app.post('/edit_sbu1_2_4/edit/:id', sistem.save_edit_sbu1_2_4);
+app.get('/edit_sbu1_2_4/delete/:id', sistem.delete_sbu1_2_4);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_5', sistem.sbu1_2_5);
-app.get('/tambah_sbu1_2_5', sistem.tambah_sbu1_2_5);
-app.get('/edit_sbu1_2_5', sistem.edit_sbu1_2_5);
+app.get('/tambah_sbu1_2_5/add', sistem.tambah_sbu1_2_5);
+app.post('/tambah_sbu1_2_5/add', sistem.save_sbu1_2_5);
+app.get('/edit_sbu1_2_5/edit/:id', sistem.edit_sbu1_2_5);
+app.post('/edit_sbu1_2_5/edit/:id', sistem.save_edit_sbu1_2_5);
+app.get('/edit_sbu1_2_5/delete/:id', sistem.delete_sbu1_2_5);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_6', sistem.sbu1_2_6);
