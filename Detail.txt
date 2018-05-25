@@ -127,13 +127,13 @@
 ===============================
 SBU - Batas Tertinggi
 ===============================
-A. Kategori A
+A. Kategori A (DONE)
 - Tabel 2.1 (Detail 9)
 - Tabel 2.2, 2.4 - 2.5 (Detail 2)
 - Tabel 2.3, 2.7 - 2.8 (Detail 4)
 - Tabel 2.6, 2.9 - 2.10 (Detail 10)
 ===============================
-B. Kategori B
+B. Kategori B (DONE)
 - Tabel 2.11 (Detail 10)
 ===============================
 C. Kategori C
