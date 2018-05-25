@@ -4858,7 +4858,20 @@ exports.delete_sbu1_2_11 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_12 = function(req, res){
-    res.render('sbu1/sbu1_2_12', {title: 'Pengadaan Tanah'});
+    // res.render('sbu1/sbu1_2_12', {title: 'Pengadaan Tanah'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 12", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_12', {
+                title: 'Pengadaan Tanah',
+                page_title: "Pengadaan Tanah", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4866,16 +4879,126 @@ exports.tambah_sbu1_2_12 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_12', {title: 'Pengadan Tanah'});
 };
 
+/* Save Data sbu1_2_12 */
+exports.save_sbu1_2_12 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 12
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_12');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_12 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_12', {title: 'Pengadan Tanah'});
+    // res.render('sbu1/edit_sbu1_2_12', {title: 'Pengadan Tanah'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_12',{
+                title : 'Edit SBU1_2_12',
+                page_title:"Edit sbu1_2_12",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_12 */
+exports.save_edit_sbu1_2_12 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_12');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_12 */
+exports.delete_sbu1_2_12 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_12');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Honorarium Tim Persiapan Pengadaan Tanah, Tim Kajian Keberatan, Tim Pelaksana Pengadaan Tanah dan Satuan Tugas*/
 
 /*Render Tabel*/
 exports.sbu1_2_13 = function(req, res){
-    res.render('sbu1/sbu1_2_13', {title: 'Pengadaan Tanah'});
+    // res.render('sbu1/sbu1_2_13', {title: 'Pengadaan Tanah'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM deatil1a WHERE detail1_id = 1", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_13', {
+                title: 'Pengadaan Tanah',
+                page_title: "Pengadaan Tanah", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4883,10 +5006,105 @@ exports.tambah_sbu1_2_13 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_13', {title: 'Pengadan Tanah'});
 };
 
+/* Save Data sbu1_2_13 */
+exports.save_sbu1_2_13 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 1
+        };
+
+        var query = connection.query("INSERT INTO deatil1a set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_13');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_13 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_13', {title: 'Pengadan Tanah'});
+    // res.render('sbu1/edit_sbu1_2_13', {title: 'Pengadan Tanah'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM deatil1a WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_13',{
+                title : 'Edit SBU1_2_13',
+                page_title:"Edit sbu1_2_13",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_13 */
+exports.save_edit_sbu1_2_13 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE deatil1a set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_13');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_13 */
+exports.delete_sbu1_2_13 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM deatil1a  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_13');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===========================Satuan Biaya Makanan dan Minuman Lembur==========================*/
@@ -4894,7 +5112,20 @@ exports.edit_sbu1_2_13 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_13D = function(req, res){
-    res.render('sbu1/sbu1_2_13D', {title: 'Pengadaan Makanan dan Minuman Lembur'});
+    // res.render('sbu1/sbu1_2_13D', {title: 'Pengadaan Makanan dan Minuman Lembur'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 14", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_13D', {
+                title: 'Pengadaan Makanan dan Minuman Lembur',
+                page_title: "Pengadaan Makanan dan Minuman Lembur", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4902,13 +5133,109 @@ exports.tambah_sbu1_2_13D = function(req, res){
     res.render('sbu1/tambah_sbu1_2_13D', {title: 'Pengadaan Makanan dan Minuman Lembur'});
 };
 
+/* Save Data sbu1_2_13D */
+exports.save_sbu1_2_13D = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 14
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_13D');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_13D = function(req, res){
-    res.render('sbu1/edit_sbu1_2_13D', {title: 'Pengadaan Makanan dan Minuman Lembur'});
+    // res.render('sbu1/edit_sbu1_2_13D', {title: 'Pengadaan Makanan dan Minuman Lembur'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_13D',{
+                title : 'Edit SBU1_2_13D',
+                page_title:"Edit sbu1_2_13D",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_13D */
+exports.save_edit_sbu1_2_13D = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_13D');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_13D */
+exports.delete_sbu1_2_13D = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_13D');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*============Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa===========*/
+
 /*Kepada PNS Non Pemprov dan Non PNS yang Melaksanakan Kegiatan*/
 
 /*Render Tabel*/

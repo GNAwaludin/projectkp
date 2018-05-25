@@ -11,8 +11,50 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Biaya Operasional dan Biaya Pendukung Untuk Kegiatan pada Tahapan Pelaksanaan dan Penyerahan Hasil</h3>
-                  <a href="/tambah_sbu1_2_12" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_sbu1_2_12/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nilai Paket</th>
+                  <th>Formulasi</th>
+                  <th>Batas Maksimum</th>
+                  <th>Nominal (Rp.)</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nama2%></td>
+                    <td><%=data[i].nama3%></td>
+                    <td><%=data[i].nilai%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_sbu1_2_12/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_sbu1_2_12/delete/<%=data[i].id%>>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
    	<script type="text/javascript" src="/../js/all.js"></script>
