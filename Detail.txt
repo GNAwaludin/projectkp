@@ -136,27 +136,27 @@ A. Kategori A (DONE)
 B. Kategori B (DONE)
 - Tabel 2.11 (Detail 10)
 ===============================
-C. Kategori C
+C. Kategori C (DONE)
 - Tabel 2.12 (Detail 3)
 - Tabel 2.13 (Detail 1A)
 ===============================
-D. Kategori D
+D. Kategori D (DONE)
 - (Detail 2)
 ===============================
-E. Kategori E
+E. Kategori E (DONE)
 - Tabel 2.14 (Detail 2)
 - Tabel 2.15 (Detail 9)
 ===============================
-F. Kategori F
+F. Kategori F (DONE)
 - Tabel 2.16 (Detail 2)
 ===============================
-G. Kategori G
+G. Kategori G (DONE)
 - Tabel 2.17 (Detail 9)
 ===============================
-H. Kategori H
+H. Kategori H (DONE)
 - Tabel 2.18 (Detail 9)
 ===============================
-I. Kategori I
+I. Kategori I (DONE)
 - Tabel 2.19 (Detail 9)
 ===============================
 J. Kategori J
