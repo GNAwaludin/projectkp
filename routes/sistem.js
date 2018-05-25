@@ -5240,7 +5240,20 @@ exports.delete_sbu1_2_13D = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_14 = function(req, res){
-    res.render('sbu1/sbu1_2_14', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    // res.render('sbu1/sbu1_2_14', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 15", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_14', {
+                title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa',
+                page_title: "Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5248,16 +5261,124 @@ exports.tambah_sbu1_2_14 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_14', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
 };
 
+/* Save Data sbu1_2_14 */
+exports.save_sbu1_2_14 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 15
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_14');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_14 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_14', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    // res.render('sbu1/edit_sbu1_2_14', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_14',{
+                title : 'Edit SBU1_2_14',
+                page_title:"Edit sbu1_2_14",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_14 */
+exports.save_edit_sbu1_2_14 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_14');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_14 */
+exports.delete_sbu1_2_14 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_14');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*/*Besaran Uang Transport*/
 
 /*Render Tabel*/
 exports.sbu1_2_15 = function(req, res){
-    res.render('sbu1/sbu1_2_15', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    // res.render('sbu1/sbu1_2_15', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 16", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_15', {
+                title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa',
+                page_title: "Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5265,10 +5386,105 @@ exports.tambah_sbu1_2_15 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_15', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
 };
 
+/* Save Data sbu1_2_15 */
+exports.save_sbu1_2_15 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 16
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_15');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_15 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_15', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    // res.render('sbu1/edit_sbu1_2_15', {title: 'Jasa Narasumber, Moderator, Pembawa Acara, Rohaniwan, dan Pembaca Doa'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_15',{
+                title : 'Edit SBU1_2_15',
+                page_title:"Edit sbu1_2_15",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_15 */
+exports.save_edit_sbu1_2_15 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_15');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_15 */
+exports.delete_sbu1_2_15 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_15');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*==============Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS==============*/
@@ -5276,7 +5492,20 @@ exports.edit_sbu1_2_15 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_16 = function(req, res){
-    res.render('sbu1/sbu1_2_16', {title: 'Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS'});
+    // res.render('sbu1/sbu1_2_16', {title: 'Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 17", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_16', {
+                title: 'Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS',
+                page_title: "Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5284,10 +5513,105 @@ exports.tambah_sbu1_2_16 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_16', {title: 'Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS'});
 };
 
+/* Save Data sbu1_2_16 */
+exports.save_sbu1_2_16 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 17
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_16');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_16 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_16', {title: 'Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS'});
+    // res.render('sbu1/edit_sbu1_2_16', {title: 'Honorarium Kegiatan untuk PNS Non Pemprov Jawa Barat dan Non PNS'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_16',{
+                title : 'Edit SBU1_2_16',
+                page_title:"Edit sbu1_2_16",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_16 */
+exports.save_edit_sbu1_2_16 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_16');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_16 */
+exports.delete_sbu1_2_16 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_16');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*=========================Honorarium Tenaga Teknis Non PNS===================================*/
@@ -5295,7 +5619,20 @@ exports.edit_sbu1_2_16 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_17 = function(req, res){
-    res.render('sbu1/sbu1_2_17', {title: 'Honorarium Tenaga Teknis Non PNS'});
+    // res.render('sbu1/sbu1_2_17', {title: 'Honorarium Tenaga Teknis Non PNS'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 18", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_17', {
+                title: 'Honorarium Tenaga Teknis Non PNS',
+                page_title: "Honorarium Tenaga Teknis Non PNS", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5303,10 +5640,105 @@ exports.tambah_sbu1_2_17 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_17', {title: 'Honorarium Tenaga Teknis Non PNS'});
 };
 
+/* Save Data sbu1_2_17 */
+exports.save_sbu1_2_17 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            keterangan : input.keterangan,
+            kategori_id : 18
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_17');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_17 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_17', {title: 'Honorarium Tenaga Teknis Non PNS'});
+    // res.render('sbu1/edit_sbu1_2_17', {title: 'Honorarium Tenaga Teknis Non PNS'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_17',{
+                title : 'Edit SBU1_2_17',
+                page_title:"Edit sbu1_2_17",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_17 */
+exports.save_edit_sbu1_2_17 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_17');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_17 */
+exports.delete_sbu1_2_17 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_17');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===============================Upah Harian Kegiatan Non PNS=================================*/
@@ -5314,18 +5746,128 @@ exports.edit_sbu1_2_17 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_18 = function(req, res){
-    res.render('sbu1/sbu1_2_18', {title: 'Upah Harian Kegiatan Non PNS'});
+    // res.render('sbu1/sbu1_2_18', {title: 'Upah Harian Kegiatan Non PNS'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 19", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_18', {
+                title: 'Upah Harian Kegiatan Non PNS',
+                page_title: "Upah Harian Kegiatan Non PNS", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
 exports.tambah_sbu1_2_18 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_18', {title: 'Upah Harian Kegiatan Non PNS'});
+    res.render('sbu1/tambah_sbu1_2_18', {title: 'Upah Harian Kegiatan Non PNS'});
+};
+
+/* Save Data sbu1_2_18 */
+exports.save_sbu1_2_18 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 19
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_18');
+        });
+    });
+
 };
 
 /* Edit Data */
 exports.edit_sbu1_2_18 = function(req, res){
-    res.render('sbu1/tambah_sbu1_2_18', {title: 'Upah Harian Kegiatan Non PNS'});
+    // res.render('sbu1/tambah_sbu1_2_18', {title: 'Upah Harian Kegiatan Non PNS'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_18',{
+                title : 'Edit SBU1_2_18',
+                page_title:"Edit sbu1_2_18",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_18 */
+exports.save_edit_sbu1_2_18 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_18');
+          
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_18 */
+exports.delete_sbu1_2_18 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_18');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*==========================Honorarium Harian/Kegiatan/Pertemuan Non PNS======================*/
@@ -5333,7 +5875,20 @@ exports.edit_sbu1_2_18 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_19 = function(req, res){
-    res.render('sbu1/sbu1_2_19', {title: 'Honorarium Harian/Kegiatan/Pertemuan Non PNS'});
+    // res.render('sbu1/sbu1_2_19', {title: 'Honorarium Harian/Kegiatan/Pertemuan Non PNS'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 20", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_19', {
+                title: 'Honorarium Harian/Kegiatan/Pertemuan Non PNS',
+                page_title: "Honorarium Harian/Kegiatan/Pertemuan Non PNS", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5341,10 +5896,107 @@ exports.tambah_sbu1_2_19 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_19', {title: 'Honorarium Harian/Kegiatan/Pertemuan Non PNS'});
 };
 
+/* Save Data sbu1_2_19 */
+exports.save_sbu1_2_19 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 20
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_19');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_19 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_19', {title: 'Honorarium Harian/Kegiatan/Pertemuan Non PNS'});
+    // res.render('sbu1/edit_sbu1_2_19', {title: 'Honorarium Harian/Kegiatan/Pertemuan Non PNS'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_19',{
+                title : 'Edit SBU1_2_19',
+                page_title:"Edit sbu1_2_19",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_19 */
+exports.save_edit_sbu1_2_19 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_19');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_19 */
+exports.delete_sbu1_2_19 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_19');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===========Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office===========*/
@@ -5353,7 +6005,20 @@ exports.edit_sbu1_2_19 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_20 = function(req, res){
-    res.render('sbu1/sbu1_2_20', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/sbu1_2_20', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 21", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_20', {
+                title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office',
+                page_title: "Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5361,17 +6026,125 @@ exports.tambah_sbu1_2_20 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_20', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
 };
 
+/* Save Data sbu1_2_20 */
+exports.save_sbu1_2_20 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 21
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_20');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_20 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_20', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/edit_sbu1_2_20', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_20',{
+                title : 'Edit SBU1_2_20',
+                page_title:"Edit sbu1_2_20",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_20 */
+exports.save_edit_sbu1_2_20 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_20');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_20 */
+exports.delete_sbu1_2_20 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_20');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Dilakukan Melalui Kontrak Perorangan*/
 /*Tenaga Kebersihan dan Pramubakti*/
 
 /*Render Tabel*/
 exports.sbu1_2_21 = function(req, res){
-    res.render('sbu1/sbu1_2_21', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/sbu1_2_21', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 22", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_21', {
+                title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office',
+                page_title: "Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5379,17 +6152,125 @@ exports.tambah_sbu1_2_21 = function(req, res){
     res.render('sbu1/edit_sbu1_2_21', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
 };
 
+/* Save Data sbu1_2_21 */
+exports.save_sbu1_2_21 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 22
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_21');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_21 = function(req, res){
-    res.render('sbu1/tambah_sbu1_2_21', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/tambah_sbu1_2_21', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_21',{
+                title : 'Edit SBU1_2_21',
+                page_title:"Edit sbu1_2_21",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_21 */
+exports.save_edit_sbu1_2_21 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_21');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_21 */
+exports.delete_sbu1_2_21 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_21');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Dilakukan Melalui Kontrak Pihak Ketiga*/
 /*Tenaga Satpam/Pengemudi/Front Office*/
 
 /*Render Tabel*/
 exports.sbu1_2_22 = function(req, res){
-    res.render('sbu1/sbu1_2_22', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/sbu1_2_22', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 24", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_22', {
+                title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office',
+                page_title: "Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5397,17 +6278,125 @@ exports.tambah_sbu1_2_22 = function(req, res){
     res.render('sbu1/tambah__sbu1_2_22', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
 };
 
+/* Save Data sbu1_2_22 */
+exports.save_sbu1_2_22 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 24
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_22');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_22 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_22', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/edit_sbu1_2_22', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_22',{
+                title : 'Edit SBU1_2_22',
+                page_title:"Edit sbu1_2_22",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_22 */
+exports.save_edit_sbu1_2_22 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_22');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_22 */
+exports.delete_sbu1_2_22 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_22');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Dilakukan Melalui Kontrak Pihak Ketiga*/
 /*Tenaga Kebersihan dan Pramubakti*/
 
 /*Render Tabel*/
 exports.sbu1_2_23 = function(req, res){
-    res.render('sbu1/sbu1_2_23', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/sbu1_2_23', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 25", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_23', {
+                title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office',
+                page_title: "Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5415,10 +6404,105 @@ exports.tambah_sbu1_2_23 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_23', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
 };
 
+/* Save Data sbu1_2_23 */
+exports.save_sbu1_2_23 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 25
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_23');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_23 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_23', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    // res.render('sbu1/edit_sbu1_2_23', {title: 'Honorarium Satpam/Pengemudi/Petugas Kebersihan/Pramubakti/Front Office'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_23',{
+                title : 'Edit SBU1_2_23',
+                page_title:"Edit sbu1_2_23",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_23 */
+exports.save_edit_sbu1_2_23 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_23');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_23 */
+exports.delete_sbu1_2_23 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_23');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*==============Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD=================*/
