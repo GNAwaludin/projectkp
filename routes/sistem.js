@@ -6510,7 +6510,20 @@ exports.delete_sbu1_2_23 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_24 = function(req, res){
-    res.render('sbu1/sbu1_2_24', {title: 'Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD'});
+    // res.render('sbu1/sbu1_2_24', {title: 'Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 23", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_23', {
+                title: 'Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD',
+                page_title: "Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6518,10 +6531,105 @@ exports.tambah_sbu1_2_24 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_24', {title: 'Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD'});
 };
 
+/* Save Data sbu1_2_24 */
+exports.save_sbu1_2_24 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 23
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_24');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_24 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_24', {title: 'Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD'});
+    // res.render('sbu1/edit_sbu1_2_24', {title: 'Honorarium Jasa Pengawalan Gubernur/Wakil Gubernur/Ketua DPRD'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_24',{
+                title : 'Edit SBU1_2_24',
+                page_title:"Edit sbu1_2_24",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_24 */
+exports.save_edit_sbu1_2_24 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_24');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_24 */
+exports.delete_sbu1_2_24 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_24');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*================Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi=================*/
@@ -6529,7 +6637,20 @@ exports.edit_sbu1_2_24 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_25 = function(req, res){
-    res.render('sbu1/sbu1_2_25', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+    // res.render('sbu1/sbu1_2_25', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 26", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_25', {
+                title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi',
+                page_title: "Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6537,16 +6658,124 @@ exports.tambah_sbu1_2_25 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_25', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
 };
 
+/* Save Data sbu1_2_25 */
+exports.save_sbu1_2_25 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 26
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_25');
+        });
+    });
+
+};
+
+
 /* Edit Data */
 exports.edit_sbu1_2_25 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_25', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_25',{
+                title : 'Edit SBU1_2_25',
+                page_title:"Edit sbu1_2_25",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_25 */
+exports.save_edit_sbu1_2_25 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_25');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_25 */
+exports.delete_sbu1_2_25 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_25');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Besaran Uang Saku*/
 
 /*Render Tabel*/
 exports.sbu1_2_25b = function(req, res){
-    res.render('sbu1/sbu1_2_25b', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 27", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_25b', {
+                title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi',
+                page_title: "Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6554,16 +6783,122 @@ exports.tambah_sbu1_2_25b = function(req, res){
     res.render('sbu1/tambah_sbu1_2_25b', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
 };
 
+/* Save Data sbu1_2_25b */
+exports.save_sbu1_2_25b = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 27
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_25b');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_25b = function(req, res){
-    res.render('sbu1/edit_sbu1_2_25b', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_25b',{
+                title : 'Edit SBU1_2_25b',
+                page_title:"Edit sbu1_2_25b",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_25b */
+exports.save_edit_sbu1_2_25b = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_25b');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_25b */
+exports.delete_sbu1_2_25b = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_25b');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Penggantian Uang Transport*/
 
 /*Render Tabel*/
 exports.sbu1_2_26 = function(req, res){
-    res.render('sbu1/sbu1_2_26', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 28", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_26', {
+                title: 'Satuan Biaya Konsumsi Rapat',
+                page_title: "Satuan Biaya Konsumsi Rapat", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6571,10 +6906,104 @@ exports.tambah_sbu1_2_26 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_26', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
 };
 
+/* Save Data sbu1_2_26 */
+exports.save_sbu1_2_26 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 28
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_26');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_26 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_26', {title: 'Satuan Biaya Uang Saku Rapat dan Bantuan Biaya Transportasi'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_26',{
+                title : 'Edit SBU1_2_26',
+                page_title:"Edit sbu1_2_26",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_26 */
+exports.save_edit_sbu1_2_26 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_26');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_26 */
+exports.delete_sbu1_2_26 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_26');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*==========================Satuan Biaya Pertemuan di Luar Kantor=============================*/
@@ -6582,7 +7011,19 @@ exports.edit_sbu1_2_26 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_27 = function(req, res){
-    res.render('sbu1/sbu1_2_27', {title: 'Satuan Biaya Pertemuan di Luar Kantor'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail10 WHERE kategori_id = 29", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_27', {
+                title: 'Satuan Biaya Pertemuan di Luar Kantor',
+                page_title: "Satuan Biaya Pertemuan di Luar Kantor", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6590,10 +7031,108 @@ exports.tambah_sbu1_2_27 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_27', {title: 'Satuan Biaya Pertemuan di Luar Kantor'});
 };
 
+/* Save Data sbu1_2_27 */
+exports.save_sbu1_2_27 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 29
+        };
+
+        var query = connection.query("INSERT INTO detail10 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_27');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_27 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_27', {title: 'Satuan Biaya Pertemuan di Luar Kantor'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail10 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_27',{
+                title : 'Edit SBU1_2_27',
+                page_title:"Edit sbu1_2_27",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_27 */
+exports.save_edit_sbu1_2_27 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+           nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail10 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_27');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_27 */
+exports.delete_sbu1_2_27 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail10  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_27');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*================================Satuan Biaya Sewa Kendaraan=================================*/
@@ -6601,7 +7140,20 @@ exports.edit_sbu1_2_27 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_28 = function(req, res){
-    res.render('sbu1/sbu1_2_28', {title: 'Satuan Biaya Sewa Kendaraan'});
+    // res.render('sbu1/sbu1_2_28', {title: 'Satuan Biaya Sewa Kendaraan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 30", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_28', {
+                title: 'Satuan Biaya Sewa Kendaraan',
+                page_title: "Satuan Biaya Sewa Kendaraan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6609,10 +7161,105 @@ exports.tambah_sbu1_2_28 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_28', {title: 'Satuan Biaya Sewa Kendaraan'});
 };
 
+
+/* Save Data sbu1_2_28 */
+exports.save_sbu1_2_28 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 30
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_28');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_28 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_28', {title: 'Satuan Biaya Sewa Kendaraan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_28',{
+                title : 'Edit SBU1_2_28',
+                page_title:"Edit sbu1_2_28",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_28 */
+exports.save_edit_sbu1_2_28 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_28');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_28 */
+exports.delete_sbu1_2_28 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_28');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*========Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan===========*/
@@ -6620,7 +7267,19 @@ exports.edit_sbu1_2_28 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_29 = function(req, res){
-    res.render('sbu1/sbu1_2_29', {title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail15 WHERE kategori_id = 31", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_29', {
+                title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan',
+                page_title: "Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6628,16 +7287,120 @@ exports.tambah_sbu1_2_29 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_29', {title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan'});
 };
 
+/* Save Data sbu1_2_29 */
+exports.save_sbu1_2_29 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 31
+        };
+
+        var query = connection.query("INSERT INTO detail15 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_29');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_29 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_29', {title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail15 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_29',{
+                title : 'Edit SBU1_2_29',
+                page_title:"Edit sbu1_2_29",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_29 */
+exports.save_edit_sbu1_2_29 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail15 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_29');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_29 */
+exports.delete_sbu1_2_29 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail15  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_29');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Satuan Biaya Pelumasan Kendaraan Dinas*/
 
 /*Render Tabel*/
 exports.sbu1_2_30 = function(req, res){
-    res.render('sbu1/sbu1_2_30', {title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail15 WHERE kategori_id = 32", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_30', {
+                title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan',
+                page_title: "Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6645,10 +7408,102 @@ exports.tambah_sbu1_2_30 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_30', {title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan'});
 };
 
+/* Save Data sbu1_2_30 */
+exports.save_sbu1_2_30 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 32
+        };
+
+        var query = connection.query("INSERT INTO detail15 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_30');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_30 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_30', {title: 'Satuan Biaya Bahan Bakar, Pelumasan, dan Biaya Pembayaran Pajak Kendaraan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail15 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_30',{
+                title : 'Edit SBU1_2_30',
+                page_title:"Edit sbu1_2_30",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_30 */
+exports.save_edit_sbu1_2_30 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail15 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_30');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_30 */
+exports.delete_sbu1_2_30 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail15  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_30');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Satuan Biaya Pembayaran Pajak Kendaraan Dinas*/
 
