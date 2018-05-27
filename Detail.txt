@@ -177,10 +177,10 @@ N. Kategori N (DONE)
 O. Kategori O (DONE)
 - Tabel 2.28 (Detail 2)
 ===============================
-P. Kategori P
+P. Kategori P (DONE)
 - Tabel 2.29 -  2.30 + 3 (Detail 15)
 ===============================
-Q. Kategori Q
+Q. Kategori Q (DONE)
 - Tabel 2.31 (Detail 9)
 ===============================
 R. Kategori R**

@@ -14,40 +14,40 @@
             <h3>Perjalanan Dinas Dalam Negeri</h3>
             <h3>Jarak Antar Ibukota Kabupaten dan Kota Di Provinsi Jawa Barat</h3></br>
             <h3>Edit Data</h3>
-             <form class="form-horizontal" method="post">
+             <form class="form-horizontal" method="post" action="/edit_sbu1_2_36/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Dari:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama1" value="<%=data[0].nama1%>">
                                     <option>--Pilih Kab/Kota--</option>
-                                    <option>Kota Bogor</option>
-                                    <option>Kab. Bogor</option>
-                                    <option>Kota Depok</option>
-                                    <option>Kota Sukabumi</option>
-                                    <option>Kab. Sukabumi</option>
-                                    <option>Kab. Cianjur</option>
-                                    <option>Kota Cirebon</option>
-                                    <option>Kab. Cirebon</option>
-                                    <option>Kab. Majalengka</option>
-                                    <option>Kab. Kuningan</option>
-                                    <option>Kab. Indramayu</option>
-                                    <option>Kab. Subang</optiion>
-                                    <option>Kab. Purwakarta</option>
-                                    <option>Kab. Karawang</option>
-                                    <option>Kota Bekasi</option>
-                                    <option>Kab. Bekasi</option>
-                                    <option>Kota Bandung</option>
-                                    <option>Kab. Bandung</option>
-                                    <option>Kota Cimahi</option>
-                                    <option>Kab. Bandung Barat</option>
-                                    <option>Kab. Sumedang</option>
-                                    <option>Kota Garut</option>
-                                    <option>Kota Tasikmalaya</option>
-                                    <option>Kab. Tasikmalaya</option>
-                                    <option>Kab. Ciamis</option>
-                                    <option>Kota Banjar</option>
-                                    <option>Kab. Pangandaran</option>
-                                    <option>DKI Jakarta</option>
+                                    <option value="Kota Bogor">Kota Bogor</option>
+                                    <option value="Kab. Bogor">Kab. Bogor</option>
+                                    <option value="Kota Depok">Kota Depok</option>
+                                    <option value="Kota Sukabumi">Kota Sukabumi</option>
+                                    <option value="Kab. Sukabumi">Kab. Sukabumi</option>
+                                    <option value="Kab. Cianjur">Kab. Cianjur</option>
+                                    <option value="Kota Cirebon">Kota Cirebon</option>
+                                    <option value="Kab. Cirebon">Kab. Cirebon</option>
+                                    <option value="Kab. Majalengka">Kab. Majalengka</option>
+                                    <option value="Kab. Kuningan">Kab. Kuningan</option>
+                                    <option value="Kab. Indramayu">Kab. Indramayu</option>
+                                    <option value="Kab. Subang">Kab. Subang</optiion>
+                                    <option value="Kab. Purwakarta">Kab. Purwakarta</option>
+                                    <option value="Kab. Karawang">Kab. Karawang</option>
+                                    <option value="Kota Bekasi">Kota Bekasi</option>
+                                    <option value="Kab. Bekasi">Kab. Bekasi</option>
+                                    <option value="Kota Bandung">Kota Bandung</option>
+                                    <option value="Kab. Bandung">Kab. Bandung</option>
+                                    <option value="Kota Cimahi">Kota Cimahi</option>
+                                    <option value="Kab. Bandung Barat">Kab. Bandung Barat</option>
+                                    <option value="Kab. Sumedang">Kab. Sumedang</option>
+                                    <option value="Kota Garut">Kota Garut</option>
+                                    <option value="Kota Tasikmalaya">Kota Tasikmalaya</option>
+                                    <option value="Kota Tasikmalaya">Kab. Tasikmalaya</option>
+                                    <option value="Kab. Ciamis">Kab. Ciamis</option>
+                                    <option value="Kota Banjar">Kota Banjar</option>
+                                    <option value="Kota Banjar">Kab. Pangandaran</option>
+                                    <option value="DKI Jakarta">DKI Jakarta</option>
                                 </select>
                             </div>
                     </div>
@@ -55,36 +55,36 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Tujuan:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama2" value="<%=data[0].nama2%>">
                                     <option>--Pilih Kab/Kota--</option>
-                                    <option>Kota Bogor</option>
-                                    <option>Kab. Bogor</option>
-                                    <option>Kota Depok</option>
-                                    <option>Kota Sukabumi</option>
-                                    <option>Kab. Sukabumi</option>
-                                    <option>Kab. Cianjur</option>
-                                    <option>Kota Cirebon</option>
-                                    <option>Kab. Cirebon</option>
-                                    <option>Kab. Majalengka</option>
-                                    <option>Kab. Kuningan</option>
-                                    <option>Kab. Indramayu</option>
-                                    <option>Kab. Subang</optiion>
-                                    <option>Kab. Purwakarta</option>
-                                    <option>Kab. Karawang</option>
-                                    <option>Kota Bekasi</option>
-                                    <option>Kab. Bekasi</option>
-                                    <option>Kota Bandung</option>
-                                    <option>Kab. Bandung</option>
-                                    <option>Kota Cimahi</option>
-                                    <option>Kab. Bandung Barat</option>
-                                    <option>Kab. Sumedang</option>
-                                    <option>Kota Garut</option>
-                                    <option>Kota Tasikmalaya</option>
-                                    <option>Kab. Tasikmalaya</option>
-                                    <option>Kab. Ciamis</option>
-                                    <option>Kota Banjar</option>
-                                    <option>Kab. Pangandaran</option>
-                                    <option>DKI Jakarta</option>
+                                    <option value="Kota Bogor">Kota Bogor</option>
+                                    <option value="Kab. Bogor">Kab. Bogor</option>
+                                    <option value="Kota Depok">Kota Depok</option>
+                                    <option value="Kota Sukabumi">Kota Sukabumi</option>
+                                    <option value="Kab. Sukabumi">Kab. Sukabumi</option>
+                                    <option value="Kab. Cianjur">Kab. Cianjur</option>
+                                    <option value="Kota Cirebon">Kota Cirebon</option>
+                                    <option value="Kab. Cirebon">Kab. Cirebon</option>
+                                    <option value="Kab. Majalengka">Kab. Majalengka</option>
+                                    <option value="Kab. Kuningan">Kab. Kuningan</option>
+                                    <option value="Kab. Indramayu">Kab. Indramayu</option>
+                                    <option value="Kab. Subang">Kab. Subang</optiion>
+                                    <option value="Kab. Purwakarta">Kab. Purwakarta</option>
+                                    <option value="Kab. Karawang">Kab. Karawang</option>
+                                    <option value="Kota Bekasi">Kota Bekasi</option>
+                                    <option value="Kab. Bekasi">Kab. Bekasi</option>
+                                    <option value="Kota Bandung">Kota Bandung</option>
+                                    <option value="Kab. Bandung">Kab. Bandung</option>
+                                    <option value="Kota Cimahi">Kota Cimahi</option>
+                                    <option value="Kab. Bandung Barat">Kab. Bandung Barat</option>
+                                    <option value="Kab. Sumedang">Kab. Sumedang</option>
+                                    <option value="Kota Garut">Kota Garut</option>
+                                    <option value="Kota Tasikmalaya">Kota Tasikmalaya</option>
+                                    <option value="Kota Tasikmalaya">Kab. Tasikmalaya</option>
+                                    <option value="Kab. Ciamis">Kab. Ciamis</option>
+                                    <option value="Kota Banjar">Kota Banjar</option>
+                                    <option value="Kota Banjar">Kab. Pangandaran</option>
+                                    <option value="DKI Jakarta">DKI Jakarta</option>
                                 </select>
                             </div>
                     </div>
@@ -92,14 +92,14 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Jarak (KM):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Jarak (KM)" name="jarak">
+                                <input type="text" class="form-control" placeholder="Masukan Jarak (KM)" name="nilai" value="<%=data[0].nilai%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
