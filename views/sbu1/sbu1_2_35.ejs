@@ -13,8 +13,48 @@
             <h3>Perjalanan Dinas Dalam Negeri</h3>
             <h3>Uang Harian Perjalanan Dinas dari Daerah Kabupaten/Kota asal ke Daerah Kabupaten/Kota</h3>
             <h3>Jarak > 151km</h3>
-                  <a href="/tambah_sbu1_2_35" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_sbu1_2_35/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Golongan</th>
+                  <th>Satuan</th>
+                  <th>Jumlah Uang Harian (Rp.)</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nama2%></td>
+                    <td><%=data[i].nilai%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_sbu1_2_35/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_sbu1_2_35/delete/<%=data[i].id%>>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
     <script type="text/javascript" src="/../js/all.js"></script>
