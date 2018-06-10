@@ -158,7 +158,7 @@ app.get('/edit_kebinamargaan_1_17', sistem.edit_kebinamargaan_1_17);
 /*=============================================================================*/
 
 /*===========================Sumber Daya Air===================================*/
-
+app.get('/sumber_daya_air', sistem.sumber_daya_air);
 /*======================SDA Honorarium Tenaga Teknis Non PNS===================*/
 app.get('/sda_2_1', sistem.sda_2_1);
 app.get('/tambah_sda_2_1', sistem.tambah_sda_2_1);
@@ -219,6 +219,7 @@ app.get('/tambah_sda_drone', sistem.tambah_sda_drone);
 app.get('/edit_sda_drone', sistem.edit_sda_drone);
 /*==============================================================================*/
 /*===============================Keciptakaryaan=================================*/
+app.get('/keciptakaryaan', sistem.keciptakaryaan);
 /*==============Tenaga Ahli Berdasarkan Pengalaman dan Sertifikasi==============*/
 app.get('/cipta_3_1', sistem.cipta_3_1);
 app.get('/tambah_cipta_3_1', sistem.tambah_cipta_3_1);
@@ -311,15 +312,65 @@ app.get('/edit_cipta_3_18', sistem.edit_cipta_3_18);
 /*==============================================================================*/
 /*=================================Perhubungan==================================*/
 /*=============Standar Harga Satuan Kegiatan Pembangunan Prasarana==============*/
-app.get('/hub_4_1', sistem.hub_4_1);
-app.get('/tambah_hub_4_1', sistem.tambah_hub_4_1);
-app.get('/edit_hub_4_1', sistem.edit_hub_4_1);
+app.get('/perhubungan', sistem.perhubungan);
+/*==============================Perhubungan Darat===============================*/
+app.get('/hub_4_1IA', sistem.hub_4_1IA);
+app.get('/tambah_hub_4_1IA', sistem.tambah_hub_4_1IA);
+app.get('/edit_hub_4_1IA', sistem.edit_hub_4_1IA);
+
+app.get('/hub_4_1IB', sistem.hub_4_1IB);
+app.get('/tambah_hub_4_1IB', sistem.tambah_hub_4_1IB);
+app.get('/edit_hub_4_1IB', sistem.edit_hub_4_1IB);
+
+app.get('/hub_4_1IC', sistem.hub_4_1IC);
+app.get('/tambah_hub_4_1IC', sistem.tambah_hub_4_1IC);
+app.get('/edit_hub_4_1IC', sistem.edit_hub_4_1IC);
 /*==============================================================================*/
+/*==============================Perhubungan Laut================================*/
+app.get('/hub_4_1IIA', sistem.hub_4_1IIA);
+app.get('/tambah_hub_4_1IIA', sistem.tambah_hub_4_1IIA);
+app.get('/edit_hub_4_1IIA', sistem.edit_hub_4_1IIA);
+
+app.get('/hub_4_1IIB', sistem.hub_4_1IIB);
+app.get('/tambah_hub_4_1IIB', sistem.tambah_hub_4_1IIB);
+app.get('/edit_hub_4_1IIB', sistem.edit_hub_4_1IIB);
+/*==============================================================================*/
+/*==============================Perhubungan Udara===============================*/
+app.get('/hub_4_1IIIA', sistem.hub_4_1IIIA);
+app.get('/tambah_hub_4_1IIIA', sistem.tambah_hub_4_1IIIA);
+app.get('/edit_hub_4_1IIIA', sistem.edit_hub_4_1IIIA);
+/*==============================================================================*/
+
 /*===============================Lingkungan Hidup===============================*/
+app.get('/lingkungan_hidup', sistem.lingkungan_hidup);
 /*==================Pengujian Parameter Kualitas Lingkungan=====================*/
-app.get('/lh_5_1', sistem.lh_5_1);
-app.get('/tambah_lh_5_1', sistem.tambah_lh_5_1);
-app.get('/edit_lh_5_1', sistem.edit_lh_5_1);
+app.get('/lh_5_1a', sistem.lh_5_1a);
+app.get('/tambah_lh_5_1a', sistem.tambah_lh_5_1a);
+app.get('/edit_lh_5_1a', sistem.edit_lh_5_1a);
+
+app.get('/lh_5_1b', sistem.lh_5_1b);
+app.get('/tambah_lh_5_1b', sistem.tambah_lh_5_1b);
+app.get('/edit_lh_5_1b', sistem.edit_lh_5_1b);
+
+app.get('/lh_5_1c', sistem.lh_5_1c);
+app.get('/tambah_lh_5_1c', sistem.tambah_lh_5_1c);
+app.get('/edit_lh_5_1c', sistem.edit_lh_5_1c);
+
+app.get('/lh_5_1d', sistem.lh_5_1d);
+app.get('/tambah_lh_5_1d', sistem.tambah_lh_5_1d);
+app.get('/edit_lh_5_1d', sistem.edit_lh_5_1d);
+
+app.get('/lh_5_1e', sistem.lh_5_1e);
+app.get('/tambah_lh_5_1e', sistem.tambah_lh_5_1e);
+app.get('/edit_lh_5_1e', sistem.edit_lh_5_1e);
+
+app.get('/lh_5_1f', sistem.lh_5_1f);
+app.get('/tambah_lh_5_1f', sistem.tambah_lh_5_1f);
+app.get('/edit_lh_5_1f', sistem.edit_lh_5_1f);
+
+app.get('/lh_5_1g', sistem.lh_5_1g);
+app.get('/tambah_lh_5_1g', sistem.tambah_lh_5_1g);
+app.get('/edit_lh_5_1g', sistem.edit_lh_5_1g);
 /*==============================================================================*/
 /*==============Pengambilan Contoh Parameter Kualitas Lingkungan================*/
 app.get('/lh_5_2', sistem.lh_5_2);
