@@ -583,6 +583,9 @@ exports.edit_kebinamargaan_1_17 = function(req, res){
 /*=============================================================================================*/
 
 /*========================================Bidang SDA===========================================*/
+exports.sumber_daya_air = function(req, res){
+    res.render('sda/sumber_daya_air', {title: 'Sumber Daya Air'});
+};
 /*========================Honorarium Tenaga Teknis NON PNS Khusus Bidang SDA===================*/
 /*Render Tabel*/
 exports.sda_2_1 = function(req, res){
@@ -745,6 +748,9 @@ exports.edit_sda_drone = function(req, res){
 /*============================================================================================*/
 
 /*======================================Keciptakaryaan========================================*/
+exports.keciptakaryaan = function(req, res){
+    res.render('keciptakaryaan/keciptakaryaan', {title: 'Keciptakaryaan'});
+};
 /*=====================Tenaga Ahli Berdasarkan Pengalaman dan Sertifikasi ====================*/
 /*Render Tabel*/
 exports.cipta_3_1 = function(req, res){
@@ -1034,39 +1040,209 @@ exports.edit_cipta_3_18 = function(req, res){
 };
 /*============================================================================================*/
 /*======================================Perhubungan===========================================*/
-/*=================Standar Harga Satuan Kegiatan Pembangunan Prasarana========================*/
+exports.perhubungan = function(req, res){
+    res.render('perhubungan/perhubungan', {title: 'Perhubungan'});
+};
+/*====================================Perhubungan Darat=======================================*/
 /*Render Tabel*/
-exports.hub_4_1 = function(req, res){
-    res.render('perhubungan/hub_4_1', {title: 'Perhubungan'});
+exports.hub_4_1IA = function(req, res){
+    res.render('perhubungan/hub_4_1IA', {title: 'Perhubungan'});
 };
 
 /* Tambah Data */
-exports.tambah_hub_4_1 = function(req, res){
-    res.render('perhubungan/tambah_hub_4_1', {title: 'Perhubungan'});
+exports.tambah_hub_4_1IA = function(req, res){
+    res.render('perhubungan/tambah_hub_4_1IA', {title: 'Perhubungan'});
 };
 
 /* Edit Data */
-exports.edit_hub_4_1 = function(req, res){
-    res.render('perhubungan/edit_hub_4_1', {title: 'Perhubungan'});
+exports.edit_hub_4_1IA = function(req, res){
+    res.render('perhubungan/edit_hub_4_1IA', {title: 'Perhubungan'});
 };
-/*============================================================================================*/
+/*===========================================================================================*/
+exports.hub_4_1IB = function(req, res){
+    res.render('perhubungan/hub_4_1IB', {title: 'Perhubungan'});
+};
+
+/* Tambah Data */
+exports.tambah_hub_4_1IB = function(req, res){
+    res.render('perhubungan/tambah_hub_4_1IB', {title: 'Perhubungan'});
+};
+
+/* Edit Data */
+exports.edit_hub_4_1IB = function(req, res){
+    res.render('perhubungan/edit_hub_4_1IB', {title: 'Perhubungan'});
+};
+/*===========================================================================================*/
+exports.hub_4_1IC = function(req, res){
+    res.render('perhubungan/hub_4_1IC', {title: 'Perhubungan'});
+};
+
+/* Tambah Data */
+exports.tambah_hub_4_1IC = function(req, res){
+    res.render('perhubungan/tambah_hub_4_1IC', {title: 'Perhubungan'});
+};
+
+/* Edit Data */
+exports.edit_hub_4_1IC = function(req, res){
+    res.render('perhubungan/edit_hub_4_1IC', {title: 'Perhubungan'});
+};
+/*====================================Perhubungan Laut=======================================*/
+/*Render Tabel*/
+exports.hub_4_1IIA = function(req, res){
+    res.render('perhubungan/hub_4_1IIA', {title: 'Perhubungan'});
+};
+
+/* Tambah Data */
+exports.tambah_hub_4_1IIA = function(req, res){
+    res.render('perhubungan/tambah_hub_4_1IIA', {title: 'Perhubungan'});
+};
+
+/* Edit Data */
+exports.edit_hub_4_1IIA = function(req, res){
+    res.render('perhubungan/edit_hub_4_1IIA', {title: 'Perhubungan'});
+};
+/*===========================================================================================*/
+exports.hub_4_1IIB = function(req, res){
+    res.render('perhubungan/hub_4_1IIB', {title: 'Perhubungan'});
+};
+
+/* Tambah Data */
+exports.tambah_hub_4_1IIB = function(req, res){
+    res.render('perhubungan/tambah_hub_4_1IIB', {title: 'Perhubungan'});
+};
+
+/* Edit Data */
+exports.edit_hub_4_1IIB = function(req, res){
+    res.render('perhubungan/edit_hub_4_1IIB', {title: 'Perhubungan'});
+};
+/*====================================Perhubungan Udara=======================================*/
+/*Render Tabel*/
+exports.hub_4_1IIIA = function(req, res){
+    res.render('perhubungan/hub_4_1IIIA', {title: 'Perhubungan'});
+};
+
+/* Tambah Data */
+exports.tambah_hub_4_1IIIA = function(req, res){
+    res.render('perhubungan/tambah_hub_4_1IIIA', {title: 'Perhubungan'});
+};
+
+/* Edit Data */
+exports.edit_hub_4_1IIIA = function(req, res){
+    res.render('perhubungan/edit_hub_4_1IIIA', {title: 'Perhubungan'});
+};
+/*===========================================================================================*/
+
 /*===================================Lingkungan Hidup=========================================*/
+exports.lingkungan_hidup = function(req, res){
+    res.render('lhidup/lingkungan_hidup', {title: 'Lingkungan Hidup'});
+};
 /*==========================Pengujian Parameter Kualitas Lingkungan===========================*/
 /*Render Tabel*/
-exports.lh_5_1 = function(req, res){
-    res.render('lhidup/lh_5_1', {title: 'Lingkungan Hidup'});
+exports.lh_5_1a = function(req, res){
+    res.render('lhidup/lh_5_1a', {title: 'Lingkungan Hidup'});
 };
 
 /* Tambah Data */
-exports.tambah_lh_5_1 = function(req, res){
-    res.render('lhidup/tambah_lh_5_1', {title: 'Lingkungan Hidup'});
+exports.tambah_lh_5_1a = function(req, res){
+    res.render('lhidup/tambah_lh_5_1a', {title: 'Lingkungan Hidup'});
 };
 
 /* Edit Data */
-exports.edit_lh_5_1 = function(req, res){
-    res.render('lhidup/edit_lh_5_1', {title: 'Lingkungan Hidup'});
+exports.edit_lh_5_1a = function(req, res){
+    res.render('lhidup/edit_lh_5_1a', {title: 'Lingkungan Hidup'});
 };
 /*============================================================================================*/
+/*Render Tabel*/
+exports.lh_5_1b = function(req, res){
+    res.render('lhidup/lh_5_1b', {title: 'Lingkungan Hidup'});
+};
+
+/* Tambah Data */
+exports.tambah_lh_5_1b = function(req, res){
+    res.render('lhidup/tambah_lh_5_1b', {title: 'Lingkungan Hidup'});
+};
+
+/* Edit Data */
+exports.edit_lh_5_1b = function(req, res){
+    res.render('lhidup/edit_lh_5_1b', {title: 'Lingkungan Hidup'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.lh_5_1c = function(req, res){
+    res.render('lhidup/lh_5_1c', {title: 'Lingkungan Hidup'});
+};
+
+/* Tambah Data */
+exports.tambah_lh_5_1c = function(req, res){
+    res.render('lhidup/tambah_lh_5_1c', {title: 'Lingkungan Hidup'});
+};
+
+/* Edit Data */
+exports.edit_lh_5_1c = function(req, res){
+    res.render('lhidup/edit_lh_5_1c', {title: 'Lingkungan Hidup'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.lh_5_1d = function(req, res){
+    res.render('lhidup/lh_5_1d', {title: 'Lingkungan Hidup'});
+};
+
+/* Tambah Data */
+exports.tambah_lh_5_1d = function(req, res){
+    res.render('lhidup/tambah_lh_5_1d', {title: 'Lingkungan Hidup'});
+};
+
+/* Edit Data */
+exports.edit_lh_5_1d = function(req, res){
+    res.render('lhidup/edit_lh_5_1d', {title: 'Lingkungan Hidup'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.lh_5_1e = function(req, res){
+    res.render('lhidup/lh_5_1e', {title: 'Lingkungan Hidup'});
+};
+
+/* Tambah Data */
+exports.tambah_lh_5_1e = function(req, res){
+    res.render('lhidup/tambah_lh_5_1e', {title: 'Lingkungan Hidup'});
+};
+
+/* Edit Data */
+exports.edit_lh_5_1e = function(req, res){
+    res.render('lhidup/edit_lh_5_1e', {title: 'Lingkungan Hidup'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.lh_5_1f = function(req, res){
+    res.render('lhidup/lh_5_1f', {title: 'Lingkungan Hidup'});
+};
+
+/* Tambah Data */
+exports.tambah_lh_5_1f = function(req, res){
+    res.render('lhidup/tambah_lh_5_1f', {title: 'Lingkungan Hidup'});
+};
+
+/* Edit Data */
+exports.edit_lh_5_1f = function(req, res){
+    res.render('lhidup/edit_lh_5_1f', {title: 'Lingkungan Hidup'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.lh_5_1g = function(req, res){
+    res.render('lhidup/lh_5_1g', {title: 'Lingkungan Hidup'});
+};
+
+/* Tambah Data */
+exports.tambah_lh_5_1g = function(req, res){
+    res.render('lhidup/tambah_lh_5_1g', {title: 'Lingkungan Hidup'});
+};
+
+/* Edit Data */
+exports.edit_lh_5_1g = function(req, res){
+    res.render('lhidup/edit_lh_5_1g', {title: 'Lingkungan Hidup'});
+};
+/*============================================================================================*/
+
 /*=======================Pengambilan Contoh Parameter Kualitas Lingkungan=====================*/
 /*Render Tabel*/
 exports.lh_5_2 = function(req, res){
