@@ -382,7 +382,9 @@ app.get('/lh_5_3', sistem.lh_5_3);
 app.get('/tambah_lh_5_3', sistem.tambah_lh_5_3);
 app.get('/edit_lh_5_3', sistem.edit_lh_5_3);
 /*==============================================================================*/
+
 /*=================================Kearsipan====================================*/
+app.get('/kearsipan', sistem.kearsipan);
 /*======================Standar Biaya Satuan Pembenahan Arsip===================*/
 app.get('/arsip_6_1', sistem.arsip_6_1);
 app.get('/tambah_arsip_6_1', sistem.tambah_arsip_6_1);
@@ -408,7 +410,9 @@ app.get('/arsip_6_5', sistem.arsip_6_5);
 app.get('/tambah_arsip_6_5', sistem.tambah_arsip_6_5);
 app.get('/edit_arsip_6_5', sistem.edit_arsip_6_5);
 /*==============================================================================*/
+
 /*================================Perpustakaan==================================*/
+app.get('/perpustakaan', sistem.perpustakaan);
 /*=================================Honorarium===================================*/
 app.get('/perpus_7_1', sistem.perpus_7_1);
 app.get('/tambah_perpus_7_1', sistem.tambah_perpus_7_1);
@@ -419,6 +423,7 @@ app.get('/perpus_7_2', sistem.perpus_7_2);
 app.get('/tambah_perpus_7_2', sistem.tambah_perpus_7_2);
 app.get('/edit_perpus_7_2', sistem.edit_perpus_7_2);
 /*==============================================================================*/
+
 /*=================================Perkebunan===================================*/
 /*==============================Rehab Teh Tahun 1===============================*/
 app.get('/kebun_8_1', sistem.kebun_8_1);
@@ -775,22 +780,54 @@ app.get('/kebun_8_71', sistem.kebun_8_71);
 app.get('/tambah_kebun_8_71', sistem.tambah_kebun_8_71);
 app.get('/edit_kebun_8_71', sistem.edit_kebun_8_71);
 /*==============================================================================*/
+
 /*=========================Kebudayaan dan Pariwisata============================*/
+app.get('/pariwisata', sistem.pariwisata);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/budpar_9_1', sistem.budpar_9_1);
 app.get('/tambah_budpar_9_1', sistem.tambah_budpar_9_1);
 app.get('/edit_budpar_9_1', sistem.edit_budpar_9_1);
 /*==============================================================================*/
+
 /*=========================Industri dan Perdagangan=============================*/
+app.get('/indag', sistem.indag);
 /*========================Standar Biaya Tenaga Khusus===========================*/
-app.get('/indag_10_1', sistem.indag_10_1);
-app.get('/tambah_indag_10_1', sistem.tambah_indag_10_1);
-app.get('/edit_indag_10_1', sistem.edit_indag_10_1);
+app.get('/indag_10_1a', sistem.indag_10_1a);
+app.get('/tambah_indag_10_1a', sistem.tambah_indag_10_1a);
+app.get('/edit_indag_10_1a', sistem.edit_indag_10_1a);
+
+app.get('/indag_10_1b', sistem.indag_10_1b);
+app.get('/tambah_indag_10_1b', sistem.tambah_indag_10_1b);
+app.get('/edit_indag_10_1b', sistem.edit_indag_10_1b);
+
+app.get('/indag_10_1c', sistem.indag_10_1c);
+app.get('/tambah_indag_10_1c', sistem.tambah_indag_10_1c);
+app.get('/edit_indag_10_1c', sistem.edit_indag_10_1c);
+
+app.get('/indag_10_1d', sistem.indag_10_1d);
+app.get('/tambah_indag_10_1d', sistem.tambah_indag_10_1d);
+app.get('/edit_indag_10_1d', sistem.edit_indag_10_1d);
+
+app.get('/indag_10_1e', sistem.indag_10_1e);
+app.get('/tambah_indag_10_1e', sistem.tambah_indag_10_1e);
+app.get('/edit_indag_10_1e', sistem.edit_indag_10_1e);
+
+app.get('/indag_10_1f', sistem.indag_10_1f);
+app.get('/tambah_indag_10_1f', sistem.tambah_indag_10_1f);
+app.get('/edit_indag_10_1f', sistem.edit_indag_10_1f);
+
+app.get('/indag_10_1g', sistem.indag_10_1g);
+app.get('/tambah_indag_10_1g', sistem.tambah_indag_10_1g);
+app.get('/edit_indag_10_1g', sistem.edit_indag_10_1g);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
-app.get('/indag_10_2', sistem.indag_10_2);
-app.get('/tambah_indag_10_2', sistem.tambah_indag_10_2);
-app.get('/edit_indag_10_2', sistem.edit_indag_10_2);
+app.get('/indag_10_2a', sistem.indag_10_2a);
+app.get('/tambah_indag_10_2a', sistem.tambah_indag_10_2a);
+app.get('/edit_indag_10_2a', sistem.edit_indag_10_2a);
+
+app.get('/indag_10_2b', sistem.indag_10_2b);
+app.get('/tambah_indag_10_2b', sistem.tambah_indag_10_2b);
+app.get('/edit_indag_10_2b', sistem.edit_indag_10_2b);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_3', sistem.indag_10_3);
@@ -817,13 +854,41 @@ app.get('/indag_10_7', sistem.indag_10_7);
 app.get('/tambah_indag_10_7', sistem.tambah_indag_10_7);
 app.get('/edit_indag_10_7', sistem.edit_indag_10_7);
 /*==============================================================================*/
+
 /*==========================Promosi dan Penanaman Modal=========================*/
+app.get('/promod', sistem.promod);
 /*========================Standar Biaya Tenaga Khusus===========================*/
-app.get('/promod_11_1', sistem.promod_11_1);
-app.get('/tambah_promod_11_1', sistem.tambah_promod_11_1);
-app.get('/edit_promod_11_1', sistem.edit_promod_11_1);
+app.get('/promod_11_1a', sistem.promod_11_1a);
+app.get('/tambah_promod_11_1a', sistem.tambah_promod_11_1a);
+app.get('/edit_promod_11_1a', sistem.edit_promod_11_1a);
 /*==============================================================================*/
+app.get('/promod_11_1b', sistem.promod_11_1b);
+app.get('/tambah_promod_11_1b', sistem.tambah_promod_11_1b);
+app.get('/edit_promod_11_1b', sistem.edit_promod_11_1b);
+/*==============================================================================*/
+app.get('/promod_11_1c', sistem.promod_11_1c);
+app.get('/tambah_promod_11_1c', sistem.tambah_promod_11_1c);
+app.get('/edit_promod_11_1c', sistem.edit_promod_11_1c);
+/*==============================================================================*/
+app.get('/promod_11_1d', sistem.promod_11_1d);
+app.get('/tambah_promod_11_1d', sistem.tambah_promod_11_1d);
+app.get('/edit_promod_11_1d', sistem.edit_promod_11_1d);
+/*==============================================================================*/
+app.get('/promod_11_1e', sistem.promod_11_1e);
+app.get('/tambah_promod_11_1e', sistem.tambah_promod_11_1e);
+app.get('/edit_promod_11_1e', sistem.edit_promod_11_1e);
+/*==============================================================================*/
+app.get('/promod_11_1f', sistem.promod_11_1f);
+app.get('/tambah_promod_11_1f', sistem.tambah_promod_11_1f);
+app.get('/edit_promod_11_1f', sistem.edit_promod_11_1f);
+/*==============================================================================*/
+app.get('/promod_11_1g', sistem.promod_11_1g);
+app.get('/tambah_promod_11_1g', sistem.tambah_promod_11_1g);
+app.get('/edit_promod_11_1g', sistem.edit_promod_11_1g);
+/*==============================================================================*/
+
 /*=================================Informatika==================================*/
+app.get('/informatika', sistem.informatika);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/informatika_12_1', sistem.informatika_12_1);
 app.get('/tambah_informatika_12_1', sistem.tambah_informatika_12_1);
@@ -864,7 +929,9 @@ app.get('/informatika_12_8', sistem.informatika_12_8);
 app.get('/tambah_informatika_12_8', sistem.tambah_informatika_12_8);
 app.get('/edit_informatika_12_8', sistem.edit_informatika_12_8);
 /*==============================================================================*/
+
 /*=================================Peternakan===================================*/
+app.get('/peternakan', sistem.peternakan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_1', sistem.peternakan_15_1);
 app.get('/tambah_peternakan_15_1', sistem.tambah_peternakan_15_1);
@@ -895,7 +962,9 @@ app.get('/peternakan_15_6', sistem.peternakan_15_6);
 app.get('/tambah_peternakan_15_6', sistem.tambah_peternakan_15_6);
 app.get('/edit_peternakan_15_6', sistem.edit_peternakan_15_6);
 /*==============================================================================*/
+
 /*=================================Kesehatan====================================*/
+app.get('/kesehatan', sistem.kesehatan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_1', sistem.kesehatan_17_1);
 app.get('/tambah_kesehatan_17_1', sistem.tambah_kesehatan_17_1);
@@ -926,7 +995,9 @@ app.get('/kesehatan_17_6', sistem.kesehatan_17_6);
 app.get('/tambah_kesehatan_17_6', sistem.tambah_kesehatan_17_6);
 app.get('/edit_kesehatan_17_6', sistem.edit_kesehatan_17_6);
 /*==============================================================================*/
+
 /*=================================Kediklatan===================================*/
+app.get('/kediklatan', sistem.kediklatan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_1', sistem.kediklatan_18_1);
 app.get('/tambah_kediklatan_18_1', sistem.tambah_kediklatan_18_1);
@@ -982,7 +1053,9 @@ app.get('/kediklatan_18_10', sistem.kediklatan_18_10);
 app.get('/tambah_kediklatan_18_10', sistem.tambah_kediklatan_18_10);
 app.get('/edit_kediklatan_18_10', sistem.edit_kediklatan_18_10);
 /*==============================================================================*/
+
 /*=================================Olahraga=====================================*/
+app.get('/olahraga', sistem.olahraga);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/or_19_1', sistem.or_19_1);
 app.get('/tambah_or_19_1', sistem.tambah_or_19_1);
@@ -993,7 +1066,9 @@ app.get('/or_19_2', sistem.or_19_2);
 app.get('/tambah_or_19_2', sistem.tambah_or_19_2);
 app.get('/edit_or_19_2', sistem.edit_or_19_2);
 /*==============================================================================*/
+
 /*=====================================ESDM=====================================*/
+app.get('/esdm', sistem.esdm);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/esdm_20_1a', sistem.esdm_20_1a);
 app.get('/tambah_esdm_20_1a', sistem.tambah_esdm_20_1a);
@@ -1079,7 +1154,9 @@ app.get('/esdm_20_8', sistem.esdm_20_8);
 app.get('/tambah_esdm_20_8', sistem.tambah_esdm_20_8);
 app.get('/edit_esdm_20_8', sistem.edit_esdm_20_8);
 /*==============================================================================*/
+
 /*=======================Tenaga Kerja dan Transmigrasi==========================*/
+app.get('/nakertrans', sistem.nakertrans);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/nakertrans_21_1a', sistem.nakertrans_21_1a);
 app.get('/tambah_nakertrans_21_1a', sistem.tambah_nakertrans_21_1a);
@@ -1095,13 +1172,17 @@ app.get('/nakertrans_21_1c', sistem.nakertrans_21_1c);
 app.get('/tambah_nakertrans_21_1c', sistem.tambah_nakertrans_21_1c);
 app.get('/edit_nakertrans_21_1c', sistem.edit_nakertrans_21_1c);
 /*==============================================================================*/
+
 /*======================Penelitian dan Pengembangan=============================*/
+app.get('/litbang', sistem.litbang);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/litbang_22_1', sistem.litbang_22_1);
 app.get('/tambah_litbang_22_1', sistem.tambah_litbang_22_1);
 app.get('/edit_litbang_22_1', sistem.edit_litbang_22_1);
 /*==============================================================================*/
+
 /*================================Lainnya=======================================*/
+app.get('/lainnya', sistem.lainnya);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/lainnya_23_1', sistem.lainnya_23_1);
 app.get('/tambah_lainnya_23_1', sistem.tambah_lainnya_23_1);
