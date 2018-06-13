@@ -1275,7 +1275,11 @@ exports.edit_lh_5_3 = function(req, res){
     res.render('lhidup/edit_lh_5_3', {title: 'Lingkungan Hidup'});
 };
 /*============================================================================================*/
+
 /*=====================================Bidang Kearsipan=======================================*/
+exports.kearsipan = function(req, res){
+    res.render('kearsipan/kearsipan', {title: 'Kearsipan'});
+};
 /*============================Standar Biaya Satuan Pembenahan Arsip===========================*/
 /*Render Tabel*/
 exports.arsip_6_1 = function(req, res){
@@ -1356,7 +1360,11 @@ exports.edit_arsip_6_5 = function(req, res){
     res.render('kearsipan/edit_arsip_6_5', {title: 'Kearsipan'});
 };
 /*============================================================================================*/
+
 /*===================================Bidang Perpustakaan======================================*/
+exports.perpustakaan = function(req, res){
+    res.render('perpustakaan/perpustakaan', {title: 'Perpustakaan'});
+};
 /*==========================================Honorarium========================================*/
 /*Render Tabel*/
 exports.perpus_7_1 = function(req, res){
@@ -2526,7 +2534,11 @@ exports.edit_kebun_8_71 = function(req, res){
     res.render('perkebunan/edit_kebun_8_71', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
+
 /*=================================Kebudayaan dan Pariwisata==================================*/
+exports.pariwisata = function(req, res){
+    res.render('pariwisata/pariwisata', {title: 'Kebudayaan dan Pariwisata'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.budpar_9_1 = function(req, res){
@@ -2543,37 +2555,146 @@ exports.edit_budpar_9_1 = function(req, res){
     res.render('pariwisata/edit_budpar_9_1', {title: 'Kebudayaan dan Pariwisata'});
 };
 /*============================================================================================*/
+
 /*=================================Industri dan Perdagangan===================================*/
+exports.indag = function(req, res){
+    res.render('indag/indag', {title: 'Industri dan Perdagangan'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
-exports.indag_10_1 = function(req, res){
-    res.render('indag/indag_10_1', {title: 'Industri dan Perdagangan'});
+exports.indag_10_1a = function(req, res){
+    res.render('indag/indag_10_1a', {title: 'Industri dan Perdagangan'});
 };
 
 /* Tambah Data */
-exports.tambah_indag_10_1 = function(req, res){
-    res.render('indag/tambah_indag_10_1', {title: 'Industri dan Perdagangan'});
+exports.tambah_indag_10_1a = function(req, res){
+    res.render('indag/tambah_indag_10_1a', {title: 'Industri dan Perdagangan'});
 };
 
 /* Edit Data */
-exports.edit_indag_10_1 = function(req, res){
-    res.render('indag/edit_indag_10_1', {title: 'Industri dan Perdagangan'});
+exports.edit_indag_10_1a = function(req, res){
+    res.render('indag/edit_indag_10_1a', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_1b = function(req, res){
+    res.render('indag/indag_10_1b', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_1b = function(req, res){
+    res.render('indag/tambah_indag_10_1b', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_1b = function(req, res){
+    res.render('indag/edit_indag_10_1b', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_1c = function(req, res){
+    res.render('indag/indag_10_1c', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_1c = function(req, res){
+    res.render('indag/tambah_indag_10_1c', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_1c = function(req, res){
+    res.render('indag/edit_indag_10_1c', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_1d = function(req, res){
+    res.render('indag/indag_10_1d', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_1d = function(req, res){
+    res.render('indag/tambah_indag_10_1d', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_1d = function(req, res){
+    res.render('indag/edit_indag_10_1d', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_1e = function(req, res){
+    res.render('indag/indag_10_1e', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_1e = function(req, res){
+    res.render('indag/tambah_indag_10_1e', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_1e = function(req, res){
+    res.render('indag/edit_indag_10_1e', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_1f = function(req, res){
+    res.render('indag/indag_10_1f', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_1f = function(req, res){
+    res.render('indag/tambah_indag_10_1f', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_1f = function(req, res){
+    res.render('indag/edit_indag_10_1f', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_1g = function(req, res){
+    res.render('indag/indag_10_1g', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_1g = function(req, res){
+    res.render('indag/tambah_indag_10_1g', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_1g = function(req, res){
+    res.render('indag/edit_indag_10_1g', {title: 'Industri dan Perdagangan'});
 };
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
-exports.indag_10_2 = function(req, res){
-    res.render('indag/indag_10_2', {title: 'Industri dan Perdagangan'});
+exports.indag_10_2a = function(req, res){
+    res.render('indag/indag_10_2a', {title: 'Industri dan Perdagangan'});
 };
 
 /* Tambah Data */
-exports.tambah_indag_10_2 = function(req, res){
-    res.render('indag/tambah_indag_10_2', {title: 'Industri dan Perdagangan'});
+exports.tambah_indag_10_2a = function(req, res){
+    res.render('indag/tambah_indag_10_2a', {title: 'Industri dan Perdagangan'});
 };
 
 /* Edit Data */
-exports.edit_indag_10_2 = function(req, res){
-    res.render('indag/edit_indag_10_2', {title: 'Industri dan Perdagangan'});
+exports.edit_indag_10_2a = function(req, res){
+    res.render('indag/edit_indag_10_2a', {title: 'Industri dan Perdagangan'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.indag_10_2b = function(req, res){
+    res.render('indag/indag_10_2b', {title: 'Industri dan Perdagangan'});
+};
+
+/* Tambah Data */
+exports.tambah_indag_10_2b = function(req, res){
+    res.render('indag/tambah_indag_10_2b', {title: 'Industri dan Perdagangan'});
+};
+
+/* Edit Data */
+exports.edit_indag_10_2b = function(req, res){
+    res.render('indag/edit_indag_10_2b', {title: 'Industri dan Perdagangan'});
 };
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
@@ -2656,24 +2777,123 @@ exports.edit_indag_10_7 = function(req, res){
     res.render('indag/edit_indag_10_7', {title: 'Industri dan Perdagangan'});
 };
 /*============================================================================================*/
+
 /*================================Promosi dan Pnanaman Modal==================================*/
+exports.promod = function(req, res){
+    res.render('promod/promod', {title: 'Promosi dan Pnanaman Modal'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
-exports.promod_11_1 = function(req, res){
-    res.render('promod/promod_11_1', {title: 'Promosi dan Pnanaman Modal'});
+exports.promod_11_1a = function(req, res){
+    res.render('promod/promod_11_1a', {title: 'Promosi dan Pnanaman Modal'});
 };
 
 /* Tambah Data */
-exports.tambah_promod_11_1 = function(req, res){
-    res.render('promod/tambah_promod_11_1', {title: 'Promosi dan Pnanaman Modal'});
+exports.tambah_promod_11_1a = function(req, res){
+    res.render('promod/tambah_promod_11_1a', {title: 'Promosi dan Pnanaman Modal'});
 };
 
 /* Edit Data */
-exports.edit_promod_11_1 = function(req, res){
-    res.render('promod/edit_promod_11_1', {title: 'Promosi dan Pnanaman Modal'});
+exports.edit_promod_11_1a = function(req, res){
+    res.render('promod/edit_promod_11_1a', {title: 'Promosi dan Pnanaman Modal'});
 };
 /*============================================================================================*/
+/*Render Tabel*/
+exports.promod_11_1b = function(req, res){
+    res.render('promod/promod_11_1b', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Tambah Data */
+exports.tambah_promod_11_1b = function(req, res){
+    res.render('promod/tambah_promod_11_1b', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Edit Data */
+exports.edit_promod_11_1b = function(req, res){
+    res.render('promod/edit_promod_11_1b', {title: 'Promosi dan Pnanaman Modal'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.promod_11_1c = function(req, res){
+    res.render('promod/promod_11_1c', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Tambah Data */
+exports.tambah_promod_11_1c = function(req, res){
+    res.render('promod/tambah_promod_11_1c', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Edit Data */
+exports.edit_promod_11_1c = function(req, res){
+    res.render('promod/edit_promod_11_1c', {title: 'Promosi dan Pnanaman Modal'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.promod_11_1d = function(req, res){
+    res.render('promod/promod_11_1d', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Tambah Data */
+exports.tambah_promod_11_1d = function(req, res){
+    res.render('promod/tambah_promod_11_1d', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Edit Data */
+exports.edit_promod_11_1d = function(req, res){
+    res.render('promod/edit_promod_11_1d', {title: 'Promosi dan Pnanaman Modal'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.promod_11_1e = function(req, res){
+    res.render('promod/promod_11_1e', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Tambah Data */
+exports.tambah_promod_11_1e = function(req, res){
+    res.render('promod/tambah_promod_11_1e', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Edit Data */
+exports.edit_promod_11_1e = function(req, res){
+    res.render('promod/edit_promod_11_1e', {title: 'Promosi dan Pnanaman Modal'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.promod_11_1f = function(req, res){
+    res.render('promod/promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Tambah Data */
+exports.tambah_promod_11_1f = function(req, res){
+    res.render('promod/tambah_promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Edit Data */
+exports.edit_promod_11_1f = function(req, res){
+    res.render('promod/edit_promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+};
+/*============================================================================================*/
+/*Render Tabel*/
+exports.promod_11_1g = function(req, res){
+    res.render('promod/promod_11_1g', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Tambah Data */
+exports.tambah_promod_11_1g = function(req, res){
+    res.render('promod/tambah_promod_11_1g', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Edit Data */
+exports.edit_promod_11_1g = function(req, res){
+    res.render('promod/edit_promod_11_1g', {title: 'Promosi dan Pnanaman Modal'});
+};
+/*============================================================================================*/
+
 /*========================================Informatika=========================================*/
+exports.informatika = function(req, res){
+    res.render('informatika/informatika', {title: 'Informatika'});
+};
+
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.informatika_12_1 = function(req, res){
@@ -2802,7 +3022,11 @@ exports.edit_informatika_12_8 = function(req, res){
     res.render('informatika/edit_informatika_12_8', {title: 'Informatika'});
 };
 /*============================================================================================*/
+
 /*========================================Peternakan==========================================*/
+exports.peternakan = function(req, res){
+    res.render('peternakan/peternakan', {title: 'Peternakan'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_1 = function(req, res){
@@ -2898,8 +3122,12 @@ exports.tambah_peternakan_15_6 = function(req, res){
 exports.edit_peternakan_15_6 = function(req, res){
     res.render('peternakan/edit_peternakan_15_6', {title: 'Peternakan'});
 };
-/*============================================================================================*/
+/*============================================================================================*
+
 /*========================================Kesehatan===========================================*/
+exports.kesehatan = function(req, res){
+    res.render('kesehatan/kesehatan', {title: 'Kesehatan'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_1 = function(req, res){
@@ -2996,7 +3224,11 @@ exports.edit_kesehatan_17_6 = function(req, res){
     res.render('kesehatan/edit_kesehatan_17_6', {title: 'Kesehatan'});
 };
 /*============================================================================================*/
+
 /*========================================Kediklatan==========================================*/
+exports.kediklatan = function(req, res){
+    res.render('kediklatan/kediklatan', {title: 'Kediklatan'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_1 = function(req, res){
@@ -3173,7 +3405,12 @@ exports.edit_kediklatan_18_11 = function(req, res){
     res.render('kediklatan/edit_kediklatan_18_11', {title: 'Kediklatan'});
 };
 /*============================================================================================*/
+
 /*========================================Olahraga============================================*/
+exports.olahraga = function(req, res){
+    res.render('olahraga/olahraga', {title: 'Olahraga'});
+};
+
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.or_19_1 = function(req, res){
@@ -3206,7 +3443,11 @@ exports.edit_or_19_2 = function(req, res){
     res.render('olahraga/edit_or_19_2', {title: 'Olahraga'});
 };
 /*============================================================================================*/
+
 /*==========================================ESDM==============================================*/
+exports.esdm = function(req, res){
+    res.render('esdm/esdm', {title: 'ESDM'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.esdm_20_1a = function(req, res){
@@ -3479,7 +3720,11 @@ exports.edit_esdm_20_8 = function(req, res){
     res.render('esdm/edit_esdm_20_8', {title: 'ESDM'});
 };
 /*============================================================================================*/
+
 /*===============================Tenaga Kerja da Transmigrasi=================================*/
+exports.nakertrans = function(req, res){
+    res.render('nakertrans/nakertrans', {title: 'Tenaga Kerja dan Transmigrasi'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.nakertrans_21_1a = function(req, res){
@@ -3528,7 +3773,12 @@ exports.edit_nakertrans_21_1c = function(req, res){
     res.render('nakertrans/edit_nakertrans_21_1c', {title: 'Tenaga Kerja dan Transmigrasi'});
 };
 /*============================================================================================*/
+
 /*===============================Penelitian dan Pengembangan==================================*/
+exports.litbang = function(req, res){
+    res.render('litbang/litbang', {title: 'Penelitian dan Pengembangan'});
+};
+
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.litbang_22_1 = function(req, res){
@@ -3545,7 +3795,11 @@ exports.edit_litbang_22_1 = function(req, res){
     res.render('litbang/edit_litbang_22_1', {title: 'Penelitian dan Pengembangan'});
 };
 /*============================================================================================*/
+
 /*=======================================Lainnya==============================================*/
+exports.lainnya = function(req, res){
+    res.render('lainnya/lainnya', {title: 'Lainnya'});
+};
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.lainnya_23_1 = function(req, res){
