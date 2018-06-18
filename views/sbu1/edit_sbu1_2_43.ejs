@@ -12,13 +12,14 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Perjalanan Dinas Dalam Negeri</h3>
-            <h3>Uang Harian Perjalanan Dinas dan Uang Representasi</h3></br>
-            <h3>Tambah Data Baru</h3>
-             <form class="form-horizontal" method="post" action="/tambah_sbu1_2_42/add">
+            <h3>Uang harian perjalanan dinas dan uang representasi Ketua 
+DPRD, Wakil Ketua DPRD dan Anggota DPRD</h3></br>
+            <h3>Edit Data</h3>
+             <form class="form-horizontal" method="post" action="/edit_sbu1_2_43/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Uraian:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="nama1">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="nama1" value="<%=data[0].nama1%>">
                             </div>
                     </div>
 
@@ -37,28 +38,28 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Satuan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama3">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama3" value="<%=data[0].nama2%>">
                             </div>
                     </div>                    
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Besaran Uang Harian (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai1">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai1" value="<%=data[0].nilai1%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Uang Representasi (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai2">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai2" value="<%=data[0].nilai2%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
