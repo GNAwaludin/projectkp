@@ -183,7 +183,7 @@ P. Kategori P (DONE)
 Q. Kategori Q (DONE)
 - Tabel 2.31 (Detail 9)
 ===============================
-R. Kategori R** (HALF)
+R. Kategori R** (DONE)
 
 ===============================
 S. Kategori S**
