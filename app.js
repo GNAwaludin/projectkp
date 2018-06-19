@@ -1609,27 +1609,39 @@ app.get('/tambah_sbu1_2_47/add', sistem.tambah_sbu1_2_47);
 app.post('/tambah_sbu1_2_47/add', sistem.save_sbu1_2_47);
 app.get('/edit_sbu1_2_47/edit/:id', sistem.edit_sbu1_2_47);
 app.post('/edit_sbu1_2_47/edit/:id', sistem.save_edit_sbu1_2_47);
-app.get('/edit_sbu1_2_47/delete/:id', sistem.delete_sbu1_2_47);;
+app.get('/edit_sbu1_2_47/delete/:id', sistem.delete_sbu1_2_47);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_48', sistem.sbu1_2_48);
-app.get('/tambah_sbu1_2_48', sistem.tambah_sbu1_2_48);
-app.get('/edit_sbu1_2_48', sistem.edit_sbu1_2_48);
+app.get('/tambah_sbu1_2_48/add', sistem.tambah_sbu1_2_48);
+app.post('/tambah_sbu1_2_48/add', sistem.save_sbu1_2_48);
+app.get('/edit_sbu1_2_48/edit/:id', sistem.edit_sbu1_2_48);
+app.post('/edit_sbu1_2_48/edit/:id', sistem.save_edit_sbu1_2_48);
+app.get('/edit_sbu1_2_48/delete/:id', sistem.delete_sbu1_2_48);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_49', sistem.sbu1_2_49);
-app.get('/tambah_sbu1_2_49', sistem.tambah_sbu1_2_49);
-app.get('/edit_sbu1_2_49', sistem.edit_sbu1_2_49);
+app.get('/tambah_sbu1_2_49/add', sistem.tambah_sbu1_2_49);
+app.post('/tambah_sbu1_2_49/add', sistem.save_sbu1_2_49);
+app.get('/edit_sbu1_2_49/edit/:id', sistem.edit_sbu1_2_49);
+app.post('/edit_sbu1_2_49/edit/:id', sistem.save_edit_sbu1_2_49);
+app.get('/edit_sbu1_2_49/delete/:id', sistem.delete_sbu1_2_49);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_50', sistem.sbu1_2_50);
-app.get('/tambah_sbu1_2_50', sistem.tambah_sbu1_2_50);
-app.get('/edit_sbu1_2_50', sistem.edit_sbu1_2_50);
+app.get('/tambah_sbu1_2_50/add', sistem.tambah_sbu1_2_50);
+app.post('/tambah_sbu1_2_50/add', sistem.save_sbu1_2_50);
+app.get('/edit_sbu1_2_50/edit/:id', sistem.edit_sbu1_2_50);
+app.post('/edit_sbu1_2_50/edit/:id', sistem.save_edit_sbu1_2_50);
+app.get('/edit_sbu1_2_50/delete/:id', sistem.delete_sbu1_2_50);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_51', sistem.sbu1_2_51);
-app.get('/tambah_sbu1_2_51', sistem.tambah_sbu1_2_51);
-app.get('/edit_sbu1_2_41', sistem.edit_sbu1_2_51);
+app.get('/tambah_sbu1_2_51/add', sistem.tambah_sbu1_2_51);
+app.post('/tambah_sbu1_2_51/add', sistem.save_sbu1_2_51);
+app.get('/edit_sbu1_2_51/edit/:id', sistem.edit_sbu1_2_51);
+app.post('/edit_sbu1_2_51/edit/:id', sistem.save_edit_sbu1_2_51);
+app.get('/edit_sbu1_2_51/delete/:id', sistem.delete_sbu1_2_51);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_52', sistem.sbu1_2_52);

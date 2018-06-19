@@ -10108,7 +10108,19 @@ exports.delete_sbu1_2_47 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_48 = function(req, res){
-    res.render('sbu1/sbu1_2_48', {title: 'Perjalanan Dinas'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 50", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_48', {
+                title: 'Perjalanan Dinas',
+                page_title: "Perjalanan Dinas", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10116,16 +10128,126 @@ exports.tambah_sbu1_2_48 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_48', {title: 'Perjalanan Dinas'});
 };
 
+/* Save Data sbu1_2_48 */
+exports.save_sbu1_2_48 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nama5 : input.nama5,
+            keterangan : input.keterangan,
+            kategori_id : 50
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_48');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_48 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_48', {title: 'Perjalanan Dinas'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_48',{
+                title : 'Edit SBU1_2_48',
+                page_title:"Edit sbu1_2_48",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_48 */
+exports.save_edit_sbu1_2_48 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nama5 : input.nama5,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_48');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_48 */
+exports.delete_sbu1_2_48 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_48');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Perjalanan Dinas Pindah*/
 
 /*Render Tabel*/
 exports.sbu1_2_49 = function(req, res){
-    res.render('sbu1/sbu1_2_49', {title: 'Perjalanan Dinas'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 51", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_49', {
+                title: 'Perjalanan Dinas',
+                page_title: "Perjalanan Dinas", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10133,10 +10255,106 @@ exports.tambah_sbu1_2_49 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_49', {title: 'Perjalanan Dinas'});
 };
 
+/* Save Data sbu1_2_49 */
+exports.save_sbu1_2_49 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 51
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_49');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_49 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_49', {title: 'Perjalanan Dinas'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_49',{
+                title : 'Edit SBU1_2_49',
+                page_title:"Edit sbu1_2_49",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_49 */
+exports.save_edit_sbu1_2_49 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_49');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_49 */
+exports.delete_sbu1_2_49 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_49');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===============================Biaya Penginapan Perjalanan Dinas============================*/
@@ -10144,7 +10362,19 @@ exports.edit_sbu1_2_49 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_50 = function(req, res){
-    res.render('sbu1/sbu1_2_50', {title: 'Biaya Penginapan Perjalanan Dinas'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail5 WHERE kategori_id = 52", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_50', {
+                title: 'Perjalanan Dinas',
+                page_title: "Perjalanan Dinas", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10152,16 +10382,130 @@ exports.tambah_sbu1_2_50 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_50', {title: 'Biaya Penginapan Perjalanan Dinas'});
 };
 
+/* Save Data sbu1_2_50 */
+exports.save_sbu1_2_50 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan,
+            kategori_id : 52
+        };
+
+        var query = connection.query("INSERT INTO detail5 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_50');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_50 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_50', {title: 'Biaya Penginapan Perjalanan Dinas'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail5 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_50',{
+                title : 'Edit SBU1_2_50',
+                page_title:"Edit sbu1_2_50",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_50 */
+exports.save_edit_sbu1_2_50 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail5 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_50');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_50 */
+exports.delete_sbu1_2_50 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail5  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_50');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Satuan Biaya Penginapan Perjalanan Dinas Luar Provinsi*/
 
 /*Render Tabel*/
 exports.sbu1_2_51 = function(req, res){
-    res.render('sbu1/sbu1_2_51', {title: 'Biaya Penginapan Perjalanan Dinas'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail5 WHERE kategori_id = 53", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_51', {
+                title: 'Perjalanan Dinas',
+                page_title: "Perjalanan Dinas", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10169,10 +10513,112 @@ exports.tambah_sbu1_2_51 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_51', {title: 'Biaya Penginapan Perjalanan Dinas'});
 };
 
+/* Save Data sbu1_2_51 */
+exports.save_sbu1_2_51 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan,
+            kategori_id : 53
+        };
+
+        var query = connection.query("INSERT INTO detail5 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_51');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_51 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_51', {title: 'Biaya Penginapan Perjalanan Dinas'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail5 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_51',{
+                title : 'Edit SBU1_2_51',
+                page_title:"Edit sbu1_2_51",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_51 */
+exports.save_edit_sbu1_2_51 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail5 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_51');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_51 */
+exports.delete_sbu1_2_51 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail5  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_51');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*======================================Akomodasi=============================================*/
