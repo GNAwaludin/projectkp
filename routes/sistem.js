@@ -10501,8 +10501,8 @@ exports.sbu1_2_51 = function(req, res){
                 console.log("Error Selecting : %s ", err);
 
             res.render('sbu1/sbu1_2_51', {
-                title: 'Perjalanan Dinas',
-                page_title: "Perjalanan Dinas", data:rows
+                title: 'Biaya Penginapan Perjalanan Dinas',
+                page_title: "Biaya Penginapan Perjalanan Dinas", data:rows
             });
         });
     });
@@ -10626,7 +10626,19 @@ exports.delete_sbu1_2_51 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_52 = function(req, res){
-    res.render('sbu1/sbu1_2_52', {title: 'Akomodasi'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 54", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_52', {
+                title: 'Akomodasi',
+                page_title: "Akomodasi", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10634,10 +10646,104 @@ exports.tambah_sbu1_2_52 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_52', {title: 'Akomodasi'});
 };
 
+/* Save Data sbu1_2_52 */
+exports.save_sbu1_2_52 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 54
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_52');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_52 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_52', {title: 'Akomodasi'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_52',{
+                title : 'Edit SBU1_2_52',
+                page_title:"Edit sbu1_2_52",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_52 */
+exports.save_edit_sbu1_2_52 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_52');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_52 */
+exports.delete_sbu1_2_52 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_52');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===============================Perjalanan Dinas Non PNS=====================================*/
@@ -10645,7 +10751,19 @@ exports.edit_sbu1_2_52 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu1_2_53 = function(req, res){
-    res.render('sbu1/sbu1_2_53', {title: 'Perjalanan Dinas Non PNS'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 55", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_53', {
+                title: 'Perjalanan Dinas Non PNS',
+                page_title: "Perjalanan Dinas Non PNS", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10653,17 +10771,127 @@ exports.tambah_sbu1_2_53 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_53', {title: 'Perjalanan Dinas Non PNS'});
 };
 
+/* Save Data sbu1_2_53 */
+exports.save_sbu1_2_53 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 55
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_53');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_53 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_53', {title: 'Perjalanan Dinas Non PNS'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_53',{
+                title : 'Edit SBU1_2_53',
+                page_title:"Edit sbu1_2_53",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_53 */
+exports.save_edit_sbu1_2_53 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_53');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_53 */
+exports.delete_sbu1_2_53 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_53');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===============================Penyetaraan TNI dan POLRI=====================================*/
 
 /*Render Tabel*/
 exports.sbu1_2_54 = function(req, res){
-    res.render('sbu1/sbu1_2_54', {title: 'Penyetaraan TNI dan POLRI'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 56", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu1/sbu1_2_54', {
+                title: 'Penyetaraan TNI dan POLRI',
+                page_title: "Penyetaraan TNI dan POLRI", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10671,10 +10899,106 @@ exports.tambah_sbu1_2_54 = function(req, res){
     res.render('sbu1/tambah_sbu1_2_54', {title: 'Penyetaraan TNI dan POLRI'});
 };
 
+/* Save Data sbu1_2_54 */
+exports.save_sbu1_2_54 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            keterangan : input.keterangan,
+            kategori_id : 56
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu1_2_54');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu1_2_54 = function(req, res){
-    res.render('sbu1/edit_sbu1_2_54', {title: 'Penyetaraan TNI dan POLRI'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu1/edit_sbu1_2_54',{
+                title : 'Edit SBU1_2_54',
+                page_title:"Edit sbu1_2_54",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu1_2_54 */
+exports.save_edit_sbu1_2_54 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu1_2_54');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu1_2_54 */
+exports.delete_sbu1_2_54 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu1_2_54');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*======================================Biaya Pakaian=========================================*/

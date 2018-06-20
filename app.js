@@ -1645,18 +1645,27 @@ app.get('/edit_sbu1_2_51/delete/:id', sistem.delete_sbu1_2_51);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_52', sistem.sbu1_2_52);
-app.get('/tambah_sbu1_2_52', sistem.tambah_sbu1_2_52);
-app.get('/edit_sbu1_2_52', sistem.edit_sbu1_2_52);
+app.get('/tambah_sbu1_2_52/add', sistem.tambah_sbu1_2_52);
+app.post('/tambah_sbu1_2_52/add', sistem.save_sbu1_2_52);
+app.get('/edit_sbu1_2_52/edit/:id', sistem.edit_sbu1_2_52);
+app.post('/edit_sbu1_2_52/edit/:id', sistem.save_edit_sbu1_2_52);
+app.get('/edit_sbu1_2_52/delete/:id', sistem.delete_sbu1_2_52);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_53', sistem.sbu1_2_53);
-app.get('/tambah_sbu1_2_53', sistem.tambah_sbu1_2_53);
-app.get('/edit_sbu1_2_53', sistem.edit_sbu1_2_53);
+app.get('/tambah_sbu1_2_53/add', sistem.tambah_sbu1_2_53);
+app.post('/tambah_sbu1_2_53/add', sistem.save_sbu1_2_53);
+app.get('/edit_sbu1_2_53/edit/:id', sistem.edit_sbu1_2_53);
+app.post('/edit_sbu1_2_53/edit/:id', sistem.save_edit_sbu1_2_53);
+app.get('/edit_sbu1_2_53/delete/:id', sistem.delete_sbu1_2_53);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_54', sistem.sbu1_2_54);
-app.get('/tambah_sbu1_2_54', sistem.tambah_sbu1_2_54);
-app.get('/edit_sbu1_2_54', sistem.edit_sbu1_2_54);
+app.get('/tambah_sbu1_2_54/add', sistem.tambah_sbu1_2_54);
+app.post('/tambah_sbu1_2_54/add', sistem.save_sbu1_2_54);
+app.get('/edit_sbu1_2_54/edit/:id', sistem.edit_sbu1_2_54);
+app.post('/edit_sbu1_2_54/edit/:id', sistem.save_edit_sbu1_2_54);
+app.get('/edit_sbu1_2_54/delete/:id', sistem.delete_sbu1_2_54);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_55', sistem.sbu1_2_55);

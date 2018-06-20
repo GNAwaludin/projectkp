@@ -186,14 +186,14 @@ Q. Kategori Q (DONE)
 R. Kategori R** (DONE)
 
 ===============================
-S. Kategori S**
-- Tabel 2.50 - 2.51 (Detail 5)
+S. Kategori S** (DONE)
+- Tabel 2.50 - 2.51 (Detail 5) 
 ===============================
 T. Kategori T
-- Tabel 2.52 (Detail 2)
+- Tabel 2.52 (Detail 2) (DONE)
 ===============================
 U. Kategori U
-- Tabel 2.53 (Detail 11)
+- Tabel 2.53 (Detail 11) (DONE)
 ===============================
 V. Kategori V
 - Tabel 2.54 (Detail 6)

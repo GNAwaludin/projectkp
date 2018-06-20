@@ -18,16 +18,16 @@
                         <label class="control-label col-sm-2">Golongan:</label>
                             <div class="col-sm-10">
                                     <label class="radio-inline">
-                                      <input type="radio" name="golongan">GOl I
+                                      <input type="radio" name="nama1" value="Gol I">GOl I
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="golongan">GOl II
+                                      <input type="radio" name="nama1" value="Gol II">GOl II
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="golongan">Gol III
+                                      <input type="radio" name="nama1" value="Gol III">Gol III
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="golongan">Gol IV
+                                      <input type="radio" name="nama1" value="Gol IV">Gol IV
                                     </label>
                             </div>
                     </div>
@@ -35,13 +35,13 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Golongan Pangkat:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama2">
                                     <option>--Pilih Salah Satu--</option>
-                                    <option>Tamtama</option>
-                                    <option>Bintara</option>
-                                    <option>Perwira Pertama</option>
-                                    <option>Perwira Menengah</option>
-                                    <option>Perwira Tinggi</option>
+                                    <option value="Tamtama">Tamtama</option>
+                                    <option value="Bintara">Bintara</option>
+                                    <option value="Perwira Pertama">Perwira Pertama</option>
+                                    <option value="Perwira Menengah">Perwira Menengah</option>
+                                    <option value="Perwira Tinggi">Perwira Tinggi</option>
                                 </select>
                             </div>
                     </div>
@@ -49,21 +49,21 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">TNI:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Detail" name="tni">
+                                <input type="text" class="form-control" placeholder="Masukan Detail" name="nama3" value="<%=data[0].nama3%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">POLRI:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Detail" name="polri">
+                                <input type="text" class="form-control" placeholder="Masukan Detail" name="nama4" value="<%=data[0].nama4%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     

@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Uraian:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="uraian">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="nama1" value="<%=data[0].nama1%>">
                             </div>
                     </div>
 
@@ -25,16 +25,16 @@
                         <label class="control-label col-sm-2">Pendidikan:</label>
                             <div class="col-sm-10">
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">SMP/SD
+                                      <input type="radio" name="nama2" value="SMP/SD">SMP/SD
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">D3/SMA
+                                      <input type="radio" name="nama2" value="D3/SMA">D3/SMA
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">S1/S2
+                                      <input type="radio" name="nama2" value="S1/S2">S1/S2
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">Profesor/S3
+                                      <input type="radio" name="nama2" value="Profesor/S3">Profesor/S3
                                     </label>
                             </div>
                     </div>
@@ -42,11 +42,11 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Tujuan:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama3">
                                     <option>--Pilih Salah Satu--</option>
-                                    <option>Dalam Provinsi</option>
-                                    <option>Luar Provinsi (Jakarta, Banten)</option>
-                                    <option>Dalam dan Luar Provinsi</option>
+                                    <option value="Dalam Provinsi">Dalam Provinsi</option>
+                                    <option value="Luar Provinsi (Jakarta, Banten)">Luar Provinsi (Jakarta, Banten)</option>
+                                    <option value="Dalam dan Luar Provinsi">Dalam dan Luar Provinsi</option>
                                 </select>
                             </div>
                     </div>
@@ -54,21 +54,21 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Akomodasi:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Akomodasi" name="Akomodasi">
+                                <input type="text" class="form-control" placeholder="Masukan Akomodasi" name="nama4" value="<%=data[0].nama1%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Besaran Uang Harian (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="besaran">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai" value="<%=data[0].nilai%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
