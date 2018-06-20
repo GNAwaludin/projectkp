@@ -1397,7 +1397,12 @@ exports.edit_perpus_7_2 = function(req, res){
     res.render('perpustakaan/edit_perpus_7_2', {title: 'Perpustakaan'});
 };
 /*============================================================================================*/
+
 /*=======================================Bidang Perkebunan====================================*/
+exports.perkebunan = function(req, res){
+    res.render('perkebunan/perkebunan', {title: 'Perkebunan'});
+};
+
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
 exports.kebun_8_1 = function(req, res){

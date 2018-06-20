@@ -425,6 +425,7 @@ app.get('/edit_perpus_7_2', sistem.edit_perpus_7_2);
 /*==============================================================================*/
 
 /*=================================Perkebunan===================================*/
+app.get('/perkebunan', sistem.perkebunan);
 /*==============================Rehab Teh Tahun 1===============================*/
 app.get('/kebun_8_1', sistem.kebun_8_1);
 app.get('/tambah_kebun_8_1', sistem.tambah_kebun_8_1);
