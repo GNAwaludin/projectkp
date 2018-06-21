@@ -196,7 +196,7 @@ U. Kategori U
 - Tabel 2.53 (Detail 11) (DONE)
 ===============================
 V. Kategori V
-- Tabel 2.54 (Detail 6)
+- Tabel 2.54 (Detail 6) (DONE)
 ===============================
 W. Kategori W**
 

@@ -13,18 +13,18 @@
         <div class="page-data">
             <h3>Tenaga Ahli Non Sertifikat</h3></br>
             <h3>Edit Data</h3>
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="post" action="/edit_sbu1_2_60/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Pendidikan:</label>
                             <div class="col-sm-10">
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">S1
+                                      <input type="radio" name="nama1" value="S1">S1
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">S2
+                                      <input type="radio" name="nama1" value="S2">S2
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="pendidikan">S3
+                                      <input type="radio" name="nama1" value="S3">S3
                                     </label>
                             </div>
                     </div>
@@ -32,35 +32,35 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Tahun Pengalaman:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Kisaran Tahun" name="tahun">
+                                <input type="text" class="form-control" placeholder="Masukan Kisaran Tahun" name="nama2" value="<%=data[0].nama2%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Satuan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="satuan">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama3" value="<%=data[0].nama3%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Billing Rate (Min) (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Harga (Rp.)" name="harga1">
+                                <input type="text" class="form-control" placeholder="Masukan Harga (Rp.)" name="nilai1" value="<%=data[0].nilai1%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Billing Rate (Max) (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Harga (Rp.)" name="harga2">
+                                <input type="text" class="form-control" placeholder="Masukan Harga (Rp.)" name="nilai2" value="<%=data[0].nilai2%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
