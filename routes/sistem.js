@@ -11435,15 +11435,15 @@ exports.edit_sbu1_2_60 = function(req, res){
     
     req.getConnection(function(err,connection){
        
-        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        var query = connection.query('SELECT * FROM detail11 WHERE id = ?',[id],function(err,rows)
         {
             
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('sbu1/edit_sbu1_2_59',{
-                title : 'Edit SBU1_2_59',
-                page_title:"Edit sbu1_2_59",data:rows
+            res.render('sbu1/edit_sbu1_2_60',{
+                title : 'Edit SBU1_2_60',
+                page_title:"Edit sbu1_2_60",data:rows
             });
                 
            
@@ -11510,7 +11510,19 @@ exports.delete_sbu1_2_60 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu2_3_1 = function(req, res){
-    res.render('sbu2/sbu2_3_1', {title: 'Satuan Sewa Gedung/Lapang Olahraga'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 61", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_1', {
+                title: 'Satuan Sewa Gedung/Lapang Olahraga',
+                page_title: "Satuan Sewa Gedung/Lapang Olahraga", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -11518,16 +11530,124 @@ exports.tambah_sbu2_3_1 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_1', {title: 'Satuan Sewa Gedung/Lapang Olahraga'});
 };
 
+/* Save Data sbu2_3_1 */
+exports.save_sbu2_3_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 61
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_1 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_1', {title: 'Satuan Sewa Gedung/Lapang Olahraga'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_1',{
+                title : 'Edit SBU2_3_1',
+                page_title:"Edit sbu2_3_1",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_1 */
+exports.save_edit_sbu2_3_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_1');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_1 */
+exports.delete_sbu2_3_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===================Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi================*/
 
 /*Render Tabel*/
 exports.sbu2_3_2 = function(req, res){
-    res.render('sbu2/sbu2_3_2', {title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 62", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_2', {
+                title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi',
+                page_title: "Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -11535,16 +11655,122 @@ exports.tambah_sbu2_3_2 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_2', {title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi'});
 };
 
+/* Save Data sbu2_3_2 */
+exports.save_sbu2_3_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 62
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_2 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_2', {title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_2',{
+                title : 'Edit SBU2_3_2',
+                page_title:"Edit sbu2_3_2",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_2 */
+exports.save_edit_sbu2_3_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_2');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_2 */
+exports.delete_sbu2_3_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==============Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)================*/
 
 /*Render Tabel*/
 exports.sbu2_3_3 = function(req, res){
-    res.render('sbu2/sbu2_3_3', {title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 63", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_3', {
+                title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)',
+                page_title: "Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -11552,16 +11778,124 @@ exports.tambah_sbu2_3_3 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_3', {title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)'});
 };
 
+/* Save Data sbu2_3_3 */
+exports.save_sbu2_3_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 63
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_3 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_3', {title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_3',{
+                title : 'Edit SBU2_3_3',
+                page_title:"Edit sbu2_3_3",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_3 */
+exports.save_edit_sbu2_3_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_3');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_3 */
+exports.delete_sbu2_3_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*====================Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)====================*/
 
 /*Render Tabel*/
 exports.sbu2_3_4 = function(req, res){
-    res.render('sbu2/sbu2_3_4', {title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail10 WHERE kategori_id = 64", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_4', {
+                title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)',
+                page_title: "Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -11569,16 +11903,126 @@ exports.tambah_sbu2_3_4 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_4', {title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)'});
 };
 
+/* Save Data sbu2_3_4 */
+exports.save_sbu2_3_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 64
+        };
+
+        var query = connection.query("INSERT INTO detail10 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_4 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_4', {title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail10 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_4',{
+                title : 'Edit SBU2_3_4',
+                page_title:"Edit sbu2_3_4",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_4 */
+exports.save_edit_sbu2_3_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail10 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_4');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_4 */
+exports.delete_sbu2_3_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail10  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Biaya Perawatan Kendaraan Dinas==============================*/
 
 /*Render Tabel*/
 exports.sbu2_3_5 = function(req, res){
-    res.render('sbu2/sbu2_3_5', {title: 'Biaya Perawatan Kendaraan Dinas'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 65", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_5', {
+                title: 'Biaya Perawatan Kendaraan Dinas',
+                page_title: "Biaya Perawatan Kendaraan Dinas", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -11586,10 +12030,106 @@ exports.tambah_sbu2_3_5 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_5', {title: 'Biaya Perawatan Kendaraan Dinas'});
 };
 
+/* Save Data sbu2_3_5 */
+exports.save_sbu2_3_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 65
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_5 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_5', {title: 'Biaya Perawatan Kendaraan Dinas'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_5',{
+                title : 'Edit SBU2_3_5',
+                page_title:"Edit sbu2_3_5",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_5 */
+exports.save_edit_sbu2_3_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_5');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_5 */
+exports.delete_sbu2_3_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 exports.kategoriA = function(req, res){

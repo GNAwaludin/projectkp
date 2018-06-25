@@ -220,19 +220,19 @@ BB. Kategori BB
 B. SBU Sebagai Estimasi
 ===============================
 A. Kategori A
-- Tabel 3.1 (Detail 9)
+- Tabel 3.1 (Detail 9) (DONE)
 ===============================
 B. Kategori B
-- Tabel 3.2 (Detail 2)
+- Tabel 3.2 (Detail 2) (DONE)
 ===============================
 C. Kategori C
-- Tabel 3.3 (Detail 9)
+- Tabel 3.3 (Detail 3) (DONE)
 ===============================
 D. Kategori D
-- Tabel 3.4 (Detail 10)
+- Tabel 3.4 (Detail 10) (DONE)
 ===============================
 E. Kategori E
-- Tabel 3.5 (Detail 3)
+- Tabel 3.5 (Detail 3) (DONE)
 ===============================
 
 
