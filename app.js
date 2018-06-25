@@ -425,360 +425,929 @@ app.get('/edit_perpus_7_2', sistem.edit_perpus_7_2);
 /*==============================================================================*/
 
 /*=================================Perkebunan===================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_1', sistem.kebun_8_1);
-app.get('/tambah_kebun_8_1', sistem.tambah_kebun_8_1);
-app.get('/edit_kebun_8_1', sistem.edit_kebun_8_1);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_2', sistem.kebun_8_2);
-app.get('/tambah_kebun_8_2', sistem.tambah_kebun_8_2);
-app.get('/edit_kebun_8_2', sistem.edit_kebun_8_2);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_3', sistem.kebun_8_3);
-app.get('/tambah_kebun_8_3', sistem.tambah_kebun_8_3);
-app.get('/edit_kebun_8_3', sistem.edit_kebun_8_3);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_4', sistem.kebun_8_4);
-app.get('/tambah_kebun_8_4', sistem.tambah_kebun_8_4);
-app.get('/edit_kebun_8_4', sistem.edit_kebun_8_4);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_5', sistem.kebun_8_5);
-app.get('/tambah_kebun_8_5', sistem.tambah_kebun_8_5);
-app.get('/edit_kebun_8_5', sistem.edit_kebun_8_5);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_6', sistem.kebun_8_6);
-app.get('/tambah_kebun_8_6', sistem.tambah_kebun_8_6);
-app.get('/edit_kebun_8_6', sistem.edit_kebun_8_6);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_7', sistem.kebun_8_7);
-app.get('/tambah_kebun_8_7', sistem.tambah_kebun_8_7);
-app.get('/edit_kebun_8_7', sistem.edit_kebun_8_7);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_8', sistem.kebun_8_8);
-app.get('/tambah_kebun_8_8', sistem.tambah_kebun_8_8);
-app.get('/edit_kebun_8_8', sistem.edit_kebun_8_8);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_9', sistem.kebun_8_9);
-app.get('/tambah_kebun_8_9', sistem.tambah_kebun_8_9);
-app.get('/edit_kebun_8_9', sistem.edit_kebun_8_9);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_10', sistem.kebun_8_10);
-app.get('/tambah_kebun_8_10', sistem.tambah_kebun_8_10);
-app.get('/edit_kebun_8_10', sistem.edit_kebun_8_10);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_11', sistem.kebun_8_11);
-app.get('/tambah_kebun_8_11', sistem.tambah_kebun_8_11);
-app.get('/edit_kebun_8_11', sistem.edit_kebun_8_11);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_12', sistem.kebun_8_12);
-app.get('/tambah_kebun_8_12', sistem.tambah_kebun_8_12);
-app.get('/edit_kebun_8_12', sistem.edit_kebun_8_12);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_13', sistem.kebun_8_13);
-app.get('/tambah_kebun_8_13', sistem.tambah_kebun_8_13);
-app.get('/edit_kebun_8_13', sistem.edit_kebun_8_13);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_14', sistem.kebun_8_14);
-app.get('/tambah_kebun_8_14', sistem.tambah_kebun_8_14);
-app.get('/edit_kebun_8_14', sistem.edit_kebun_8_14);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_15', sistem.kebun_8_15);
-app.get('/tambah_kebun_8_15', sistem.tambah_kebun_8_15);
-app.get('/edit_kebun_8_15', sistem.edit_kebun_8_15);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_16', sistem.kebun_8_16);
-app.get('/tambah_kebun_8_16', sistem.tambah_kebun_8_16);
-app.get('/edit_kebun_8_16', sistem.edit_kebun_8_16);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_17', sistem.kebun_8_17);
-app.get('/tambah_kebun_8_17', sistem.tambah_kebun_8_17);
-app.get('/edit_kebun_8_17', sistem.edit_kebun_8_17);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_18', sistem.kebun_8_18);
-app.get('/tambah_kebun_8_18', sistem.tambah_kebun_8_18);
-app.get('/edit_kebun_8_18', sistem.edit_kebun_8_18);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_19', sistem.kebun_8_19);
-app.get('/tambah_kebun_8_19', sistem.tambah_kebun_8_19);
-app.get('/edit_kebun_8_19', sistem.edit_kebun_8_19);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_20', sistem.kebun_8_20);
-app.get('/tambah_kebun_8_20', sistem.tambah_kebun_8_20);
-app.get('/edit_kebun_8_20', sistem.edit_kebun_8_20);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_21', sistem.kebun_8_21);
-app.get('/tambah_kebun_8_21', sistem.tambah_kebun_8_21);
-app.get('/edit_kebun_8_21', sistem.edit_kebun_8_21);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_22', sistem.kebun_8_22);
-app.get('/tambah_kebun_8_22', sistem.tambah_kebun_8_22);
-app.get('/edit_kebun_8_22', sistem.edit_kebun_8_22);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_23', sistem.kebun_8_23);
-app.get('/tambah_kebun_8_23', sistem.tambah_kebun_8_23);
-app.get('/edit_kebun_8_23', sistem.edit_kebun_8_23);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_24', sistem.kebun_8_24);
-app.get('/tambah_kebun_8_24', sistem.tambah_kebun_8_24);
-app.get('/edit_kebun_8_24', sistem.edit_kebun_8_24);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_25', sistem.kebun_8_25);
-app.get('/tambah_kebun_8_25', sistem.tambah_kebun_8_25);
-app.get('/edit_kebun_8_25', sistem.edit_kebun_8_25);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_26', sistem.kebun_8_26);
-app.get('/tambah_kebun_8_26', sistem.tambah_kebun_8_26);
-app.get('/edit_kebun_8_26', sistem.edit_kebun_8_26);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_27', sistem.kebun_8_27);
-app.get('/tambah_kebun_8_27', sistem.tambah_kebun_8_27);
-app.get('/edit_kebun_8_27', sistem.edit_kebun_8_27);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_28', sistem.kebun_8_28);
-app.get('/tambah_kebun_8_28', sistem.tambah_kebun_8_28);
-app.get('/edit_kebun_8_28', sistem.edit_kebun_8_28);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_29', sistem.kebun_8_29);
-app.get('/tambah_kebun_8_29', sistem.tambah_kebun_8_29);
-app.get('/edit_kebun_8_29', sistem.edit_kebun_8_29);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_30', sistem.kebun_8_30);
-app.get('/tambah_kebun_8_30', sistem.tambah_kebun_8_30);
-app.get('/edit_kebun_8_30', sistem.edit_kebun_8_30);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_31', sistem.kebun_8_31);
-app.get('/tambah_kebun_8_31', sistem.tambah_kebun_8_31);
-app.get('/edit_kebun_8_31', sistem.edit_kebun_8_31);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_32', sistem.kebun_8_32);
-app.get('/tambah_kebun_8_32', sistem.tambah_kebun_8_32);
-app.get('/edit_kebun_8_32', sistem.edit_kebun_8_32);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_33', sistem.kebun_8_3);
-app.get('/tambah_kebun_8_33', sistem.tambah_kebun_8_33);
-app.get('/edit_kebun_8_33', sistem.edit_kebun_8_33);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_34', sistem.kebun_8_34);
-app.get('/tambah_kebun_8_34', sistem.tambah_kebun_8_34);
-app.get('/edit_kebun_8_34', sistem.edit_kebun_8_34);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_35', sistem.kebun_8_35);
-app.get('/tambah_kebun_8_35', sistem.tambah_kebun_8_35);
-app.get('/edit_kebun_8_35', sistem.edit_kebun_8_35);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_36', sistem.kebun_8_36);
-app.get('/tambah_kebun_8_36', sistem.tambah_kebun_8_36);
-app.get('/edit_kebun_8_36', sistem.edit_kebun_8_36);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_37', sistem.kebun_8_37);
-app.get('/tambah_kebun_8_37', sistem.tambah_kebun_8_37);
-app.get('/edit_kebun_8_37', sistem.edit_kebun_8_37);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_38', sistem.kebun_8_38);
-app.get('/tambah_kebun_8_38', sistem.tambah_kebun_8_38);
-app.get('/edit_kebun_8_38', sistem.edit_kebun_8_38);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_39', sistem.kebun_8_39);
-app.get('/tambah_kebun_8_39', sistem.tambah_kebun_8_39);
-app.get('/edit_kebun_8_39', sistem.edit_kebun_8_39);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_40', sistem.kebun_8_40);
-app.get('/tambah_kebun_8_40', sistem.tambah_kebun_8_40);
-app.get('/edit_kebun_8_40', sistem.edit_kebun_8_40);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_41', sistem.kebun_8_41);
-app.get('/tambah_kebun_8_41', sistem.tambah_kebun_8_41);
-app.get('/edit_kebun_8_41', sistem.edit_kebun_8_41);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_42', sistem.kebun_8_42);
-app.get('/tambah_kebun_8_42', sistem.tambah_kebun_8_42);
-app.get('/edit_kebun_8_42', sistem.edit_kebun_8_42);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_43', sistem.kebun_8_43);
-app.get('/tambah_kebun_8_43', sistem.tambah_kebun_8_43);
-app.get('/edit_kebun_8_43', sistem.edit_kebun_8_43);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_44', sistem.kebun_8_44);
-app.get('/tambah_kebun_8_44', sistem.tambah_kebun_8_44);
-app.get('/edit_kebun_8_44', sistem.edit_kebun_8_44);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_45', sistem.kebun_8_45);
-app.get('/tambah_kebun_8_45', sistem.tambah_kebun_8_45);
-app.get('/edit_kebun_8_45', sistem.edit_kebun_8_45);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_46', sistem.kebun_8_46);
-app.get('/tambah_kebun_8_46', sistem.tambah_kebun_8_46);
-app.get('/edit_kebun_8_46', sistem.edit_kebun_8_46);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_47', sistem.kebun_8_47);
-app.get('/tambah_kebun_8_47', sistem.tambah_kebun_8_47);
-app.get('/edit_kebun_8_47', sistem.edit_kebun_8_47);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_48', sistem.kebun_8_48);
-app.get('/tambah_kebun_8_48', sistem.tambah_kebun_8_48);
-app.get('/edit_kebun_8_48', sistem.edit_kebun_8_48);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_49', sistem.kebun_8_49);
-app.get('/tambah_kebun_8_49', sistem.tambah_kebun_8_49);
-app.get('/edit_kebun_8_49', sistem.edit_kebun_8_49);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_50', sistem.kebun_8_50);
-app.get('/tambah_kebun_8_50', sistem.tambah_kebun_8_50);
-app.get('/edit_kebun_8_50', sistem.edit_kebun_8_50);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_51', sistem.kebun_8_51);
-app.get('/tambah_kebun_8_51', sistem.tambah_kebun_8_51);
-app.get('/edit_kebun_8_51', sistem.edit_kebun_8_51);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_52', sistem.kebun_8_52);
-app.get('/tambah_kebun_8_52', sistem.tambah_kebun_8_52);
-app.get('/edit_kebun_8_52', sistem.edit_kebun_8_52);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_53', sistem.kebun_8_53);
-app.get('/tambah_kebun_8_53', sistem.tambah_kebun_8_53);
-app.get('/edit_kebun_8_53', sistem.edit_kebun_8_53);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_54', sistem.kebun_8_54);
-app.get('/tambah_kebun_8_54', sistem.tambah_kebun_8_54);
-app.get('/edit_kebun_8_54', sistem.edit_kebun_8_54);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_55', sistem.kebun_8_55);
-app.get('/tambah_kebun_8_55', sistem.tambah_kebun_8_55);
-app.get('/edit_kebun_8_55', sistem.edit_kebun_8_55);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_56', sistem.kebun_8_56);
-app.get('/tambah_kebun_8_56', sistem.tambah_kebun_8_56);
-app.get('/edit_kebun_8_56', sistem.edit_kebun_8_56);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_57', sistem.kebun_8_57);
-app.get('/tambah_kebun_8_57', sistem.tambah_kebun_8_57);
-app.get('/edit_kebun_8_57', sistem.edit_kebun_8_57);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_58', sistem.kebun_8_58);
-app.get('/tambah_kebun_8_58', sistem.tambah_kebun_8_58);
-app.get('/edit_kebun_8_58', sistem.edit_kebun_8_58);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_59', sistem.kebun_8_59);
-app.get('/tambah_kebun_8_59', sistem.tambah_kebun_8_59);
-app.get('/edit_kebun_8_59', sistem.edit_kebun_8_59);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_60', sistem.kebun_8_60);
-app.get('/tambah_kebun_8_60', sistem.tambah_kebun_8_60);
-app.get('/edit_kebun_8_60', sistem.edit_kebun_8_60);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_61', sistem.kebun_8_61);
-app.get('/tambah_kebun_8_61', sistem.tambah_kebun_8_61);
-app.get('/edit_kebun_8_61', sistem.edit_kebun_8_61);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_62', sistem.kebun_8_62);
-app.get('/tambah_kebun_8_62', sistem.tambah_kebun_8_62);
-app.get('/edit_kebun_8_62', sistem.edit_kebun_8_62);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_63', sistem.kebun_8_63);
-app.get('/tambah_kebun_8_63', sistem.tambah_kebun_8_63);
-app.get('/edit_kebun_8_63', sistem.edit_kebun_8_63);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_64', sistem.kebun_8_64);
-app.get('/tambah_kebun_8_64', sistem.tambah_kebun_8_64);
-app.get('/edit_kebun_8_64', sistem.edit_kebun_8_64);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_65', sistem.kebun_8_65);
-app.get('/tambah_kebun_8_65', sistem.tambah_kebun_8_65);
-app.get('/edit_kebun_8_65', sistem.edit_kebun_8_65);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_66', sistem.kebun_8_66);
-app.get('/tambah_kebun_8_66', sistem.tambah_kebun_8_66);
-app.get('/edit_kebun_8_66', sistem.edit_kebun_8_66);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_67', sistem.kebun_8_67);
-app.get('/tambah_kebun_8_67', sistem.tambah_kebun_8_67);
-app.get('/edit_kebun_8_67', sistem.edit_kebun_8_67);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_68', sistem.kebun_8_68);
-app.get('/tambah_kebun_8_68', sistem.tambah_kebun_8_68);
-app.get('/edit_kebun_8_68', sistem.edit_kebun_8_68);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_69', sistem.kebun_8_69);
-app.get('/tambah_kebun_8_69', sistem.tambah_kebun_8_69);
-app.get('/edit_kebun_8_69', sistem.edit_kebun_8_69);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_70', sistem.kebun_8_70);
-app.get('/tambah_kebun_8_70', sistem.tambah_kebun_8_70);
-app.get('/edit_kebun_8_70', sistem.edit_kebun_8_70);
-/*==============================================================================*/
-/*==============================Rehab Teh Tahun 1===============================*/
-app.get('/kebun_8_71', sistem.kebun_8_71);
-app.get('/tambah_kebun_8_71', sistem.tambah_kebun_8_71);
-app.get('/edit_kebun_8_71', sistem.edit_kebun_8_71);
+app.get('/perkebunan', sistem.perkebunan);
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_1a', sistem.kebun_8_1a);
+app.get('/tambah_kebun_8_1a', sistem.tambah_kebun_8_1a);
+app.get('/edit_kebun_8_1a', sistem.edit_kebun_8_1a);
+
+app.get('/kebun_8_1b', sistem.kebun_8_1b);
+app.get('/tambah_kebun_8_1b', sistem.tambah_kebun_8_1b);
+app.get('/edit_kebun_8_1b', sistem.edit_kebun_8_1b);
+
+app.get('/kebun_8_1c', sistem.kebun_8_1c);
+app.get('/tambah_kebun_8_1c', sistem.tambah_kebun_8_1c);
+app.get('/edit_kebun_8_1c', sistem.edit_kebun_8_1c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_2a', sistem.kebun_8_2a);
+app.get('/tambah_kebun_8_2a', sistem.tambah_kebun_8_2a);
+app.get('/edit_kebun_8_2a', sistem.edit_kebun_8_2a);
+
+app.get('/kebun_8_2b', sistem.kebun_8_2b);
+app.get('/tambah_kebun_8_2b', sistem.tambah_kebun_8_2b);
+app.get('/edit_kebun_8_2b', sistem.edit_kebun_8_2b);
+
+app.get('/kebun_8_2c', sistem.kebun_8_2c);
+app.get('/tambah_kebun_8_2c', sistem.tambah_kebun_8_2c);
+app.get('/edit_kebun_8_2c', sistem.edit_kebun_8_2c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_3a', sistem.kebun_8_3a);
+app.get('/tambah_kebun_8_3a', sistem.tambah_kebun_8_3a);
+app.get('/edit_kebun_8_3a', sistem.edit_kebun_8_3a);
+
+app.get('/kebun_8_3', sistem.kebun_8_3b);
+app.get('/tambah_kebun_8_3b', sistem.tambah_kebun_8_3b);
+app.get('/edit_kebun_8_3b', sistem.edit_kebun_8_3b);
+
+app.get('/kebun_8_3c', sistem.kebun_8_3c);
+app.get('/tambah_kebun_8_3c', sistem.tambah_kebun_8_3c);
+app.get('/edit_kebun_8_3c', sistem.edit_kebun_8_3c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_4a', sistem.kebun_8_4a);
+app.get('/tambah_kebun_8_4a', sistem.tambah_kebun_8_4a);
+app.get('/edit_kebun_8_4a', sistem.edit_kebun_8_4a);
+
+app.get('/kebun_8_4b', sistem.kebun_8_4b);
+app.get('/tambah_kebun_8_4b', sistem.tambah_kebun_8_4b);
+app.get('/edit_kebun_8_4b', sistem.edit_kebun_8_4b);
+
+app.get('/kebun_8_4c', sistem.kebun_8_4c);
+app.get('/tambah_kebun_8_4c', sistem.tambah_kebun_8_4c);
+app.get('/edit_kebun_8_4c', sistem.edit_kebun_8_4c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_5a', sistem.kebun_8_5a);
+app.get('/tambah_kebun_8_5a', sistem.tambah_kebun_8_5a);
+app.get('/edit_kebun_8_5a', sistem.edit_kebun_8_5a);
+
+app.get('/kebun_8_5b', sistem.kebun_8_5b);
+app.get('/tambah_kebun_8_5b', sistem.tambah_kebun_8_5b);
+app.get('/edit_kebun_8_5b', sistem.edit_kebun_8_5b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_6a', sistem.kebun_8_6a);
+app.get('/tambah_kebun_8_6a', sistem.tambah_kebun_8_6a);
+app.get('/edit_kebun_8_6a', sistem.edit_kebun_8_6a);
+
+app.get('/kebun_8_6b', sistem.kebun_8_6b);
+app.get('/tambah_kebun_8_6b', sistem.tambah_kebun_8_6b);
+app.get('/edit_kebun_8_6b', sistem.edit_kebun_8_6b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_7a', sistem.kebun_8_7a);
+app.get('/tambah_kebun_8_7a', sistem.tambah_kebun_8_7a);
+app.get('/edit_kebun_8_7a', sistem.edit_kebun_8_7a);
+
+app.get('/kebun_8_7b', sistem.kebun_8_7b);
+app.get('/tambah_kebun_8_7b', sistem.tambah_kebun_8_7b);
+app.get('/edit_kebun_8_7b', sistem.edit_kebun_8_7b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_8a', sistem.kebun_8_8a);
+app.get('/tambah_kebun_8_8a', sistem.tambah_kebun_8_8a);
+app.get('/edit_kebun_8_8a', sistem.edit_kebun_8_8a);
+
+app.get('/kebun_8_8b', sistem.kebun_8_8b);
+app.get('/tambah_kebun_8_8b', sistem.tambah_kebun_8_8b);
+app.get('/edit_kebun_8_8b', sistem.edit_kebun_8_8b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_9a', sistem.kebun_8_9a);
+app.get('/tambah_kebun_8_9a', sistem.tambah_kebun_8_9a);
+app.get('/edit_kebun_8_9a', sistem.edit_kebun_8_9a);
+
+app.get('/kebun_8_9b', sistem.kebun_8_9b);
+app.get('/tambah_kebun_8_9b', sistem.tambah_kebun_8_9b);
+app.get('/edit_kebun_8_9b', sistem.edit_kebun_8_9b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_10a', sistem.kebun_8_10a);
+app.get('/tambah_kebun_8_10a', sistem.tambah_kebun_8_10a);
+app.get('/edit_kebun_8_10a', sistem.edit_kebun_8_10a);
+
+app.get('/kebun_8_10b', sistem.kebun_8_10b);
+app.get('/tambah_kebun_8_10b', sistem.tambah_kebun_8_10b);
+app.get('/edit_kebun_8_10b', sistem.edit_kebun_8_10b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_11a', sistem.kebun_8_11a);
+app.get('/tambah_kebun_8_11a', sistem.tambah_kebun_8_11a);
+app.get('/edit_kebun_8_11a', sistem.edit_kebun_8_11a);
+
+app.get('/kebun_8_11b', sistem.kebun_8_11b);
+app.get('/tambah_kebun_8_11b', sistem.tambah_kebun_8_11b);
+app.get('/edit_kebun_8_11b', sistem.edit_kebun_8_11b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_12a', sistem.kebun_8_12a);
+app.get('/tambah_kebun_8_12a', sistem.tambah_kebun_8_12a);
+app.get('/edit_kebun_8_12a', sistem.edit_kebun_8_12a);
+
+app.get('/kebun_8_12b', sistem.kebun_8_12b);
+app.get('/tambah_kebun_8_12b', sistem.tambah_kebun_8_12b);
+app.get('/edit_kebun_8_12b', sistem.edit_kebun_8_12b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_13a', sistem.kebun_8_13a);
+app.get('/tambah_kebun_8_13a', sistem.tambah_kebun_8_13a);
+app.get('/edit_kebun_8_13a', sistem.edit_kebun_8_13a);
+
+app.get('/kebun_8_13b', sistem.kebun_8_13b);
+app.get('/tambah_kebun_8_13b', sistem.tambah_kebun_8_13b);
+app.get('/edit_kebun_8_13b', sistem.edit_kebun_8_13b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_14a', sistem.kebun_8_14a);
+app.get('/tambah_kebun_8_14a', sistem.tambah_kebun_8_14a);
+app.get('/edit_kebun_8_14a', sistem.edit_kebun_8_14a);
+
+app.get('/kebun_8_14b', sistem.kebun_8_14b);
+app.get('/tambah_kebun_8_14b', sistem.tambah_kebun_8_14b);
+app.get('/edit_kebun_8_14b', sistem.edit_kebun_8_14b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_15a', sistem.kebun_8_15a);
+app.get('/tambah_kebun_8_15a', sistem.tambah_kebun_8_15a);
+app.get('/edit_kebun_8_15a', sistem.edit_kebun_8_15a);
+
+app.get('/kebun_8_15b', sistem.kebun_8_15b);
+app.get('/tambah_kebun_8_15b', sistem.tambah_kebun_8_15b);
+app.get('/edit_kebun_8_15b', sistem.edit_kebun_8_15b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_16a', sistem.kebun_8_16a);
+app.get('/tambah_kebun_8_16a', sistem.tambah_kebun_8_16a);
+app.get('/edit_kebun_8_16a', sistem.edit_kebun_8_16a);
+
+app.get('/kebun_8_16b', sistem.kebun_8_16b);
+app.get('/tambah_kebun_8_16b', sistem.tambah_kebun_8_16b);
+app.get('/edit_kebun_8_16b', sistem.edit_kebun_8_16b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_17a', sistem.kebun_8_17a);
+app.get('/tambah_kebun_8_17a', sistem.tambah_kebun_8_17a);
+app.get('/edit_kebun_8_17a', sistem.edit_kebun_8_17a);
+
+app.get('/kebun_8_17b', sistem.kebun_8_17b);
+app.get('/tambah_kebun_8_17b', sistem.tambah_kebun_8_17b);
+app.get('/edit_kebun_8_17b', sistem.edit_kebun_8_17b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_18a', sistem.kebun_8_18a);
+app.get('/tambah_kebun_8_18a', sistem.tambah_kebun_8_18a);
+app.get('/edit_kebun_8_18a', sistem.edit_kebun_8_18a);
+
+app.get('/kebun_8_18b', sistem.kebun_8_18b);
+app.get('/tambah_kebun_8_18b', sistem.tambah_kebun_8_18b);
+app.get('/edit_kebun_8_18b', sistem.edit_kebun_8_18b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_19a', sistem.kebun_8_19a);
+app.get('/tambah_kebun_8_19a', sistem.tambah_kebun_8_19a);
+app.get('/edit_kebun_8_19a', sistem.edit_kebun_8_19a);
+
+app.get('/kebun_8_19b', sistem.kebun_8_19b);
+app.get('/tambah_kebun_8_19b', sistem.tambah_kebun_8_19b);
+app.get('/edit_kebun_8_19b', sistem.edit_kebun_8_19b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_20a', sistem.kebun_8_20a);
+app.get('/tambah_kebun_8_20a', sistem.tambah_kebun_8_20a);
+app.get('/edit_kebun_8_20a', sistem.edit_kebun_8_20a);
+
+app.get('/kebun_8_20b', sistem.kebun_8_20b);
+app.get('/tambah_kebun_8_20b', sistem.tambah_kebun_8_20b);
+app.get('/edit_kebun_8_20b', sistem.edit_kebun_8_20b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_21a', sistem.kebun_8_21a);
+app.get('/tambah_kebun_8_21a', sistem.tambah_kebun_8_21a);
+app.get('/edit_kebun_8_21a', sistem.edit_kebun_8_21a);
+
+app.get('/kebun_8_21b', sistem.kebun_8_21b);
+app.get('/tambah_kebun_8_21b', sistem.tambah_kebun_8_21b);
+app.get('/edit_kebun_8_21b', sistem.edit_kebun_8_21b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_22a', sistem.kebun_8_22a);
+app.get('/tambah_kebun_8_22a', sistem.tambah_kebun_8_22a);
+app.get('/edit_kebun_8_22a', sistem.edit_kebun_8_22a);
+
+app.get('/kebun_8_22b', sistem.kebun_8_22b);
+app.get('/tambah_kebun_8_22b', sistem.tambah_kebun_8_22b);
+app.get('/edit_kebun_8_22b', sistem.edit_kebun_8_22b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_23a', sistem.kebun_8_23a);
+app.get('/tambah_kebun_8_23a', sistem.tambah_kebun_8_23a);
+app.get('/edit_kebun_8_23a', sistem.edit_kebun_8_23a);
+
+app.get('/kebun_8_23b', sistem.kebun_8_23b);
+app.get('/tambah_kebun_8_23b', sistem.tambah_kebun_8_23b);
+app.get('/edit_kebun_8_23b', sistem.edit_kebun_8_23b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_24a', sistem.kebun_8_24a);
+app.get('/tambah_kebun_8_24a', sistem.tambah_kebun_8_24a);
+app.get('/edit_kebun_8_24a', sistem.edit_kebun_8_24a);
+
+app.get('/kebun_8_24b', sistem.kebun_8_24b);
+app.get('/tambah_kebun_8_24b', sistem.tambah_kebun_8_24b);
+app.get('/edit_kebun_8_24b', sistem.edit_kebun_8_24b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_25a', sistem.kebun_8_25a);
+app.get('/tambah_kebun_8_25a', sistem.tambah_kebun_8_25a);
+app.get('/edit_kebun_8_25a', sistem.edit_kebun_8_25a);
+
+app.get('/kebun_8_25b', sistem.kebun_8_25b);
+app.get('/tambah_kebun_8_25b', sistem.tambah_kebun_8_25b);
+app.get('/edit_kebun_8_25b', sistem.edit_kebun_8_25b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_26a', sistem.kebun_8_26a);
+app.get('/tambah_kebun_8_26a', sistem.tambah_kebun_8_26a);
+app.get('/edit_kebun_8_26a', sistem.edit_kebun_8_26a);
+
+app.get('/kebun_8_26b', sistem.kebun_8_26b);
+app.get('/tambah_kebun_8_26b', sistem.tambah_kebun_8_26b);
+app.get('/edit_kebun_8_26b', sistem.edit_kebun_8_26b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_27a', sistem.kebun_8_27a);
+app.get('/tambah_kebun_8_27a', sistem.tambah_kebun_8_27a);
+app.get('/edit_kebun_8_27a', sistem.edit_kebun_8_27a);
+
+app.get('/kebun_8_27b', sistem.kebun_8_27b);
+app.get('/tambah_kebun_8_27b', sistem.tambah_kebun_8_27b);
+app.get('/edit_kebun_8_27b', sistem.edit_kebun_8_27b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_28a', sistem.kebun_8_28a);
+app.get('/tambah_kebun_8_28a', sistem.tambah_kebun_8_28a);
+app.get('/edit_kebun_8_28a', sistem.edit_kebun_8_28a);
+
+app.get('/kebun_8_28b', sistem.kebun_8_28b);
+app.get('/tambah_kebun_8_28b', sistem.tambah_kebun_8_28b);
+app.get('/edit_kebun_8_28b', sistem.edit_kebun_8_28b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_29a', sistem.kebun_8_29a);
+app.get('/tambah_kebun_8_29a', sistem.tambah_kebun_8_29a);
+app.get('/edit_kebun_8_29a', sistem.edit_kebun_8_29a);
+
+app.get('/kebun_8_29b', sistem.kebun_8_29b);
+app.get('/tambah_kebun_8_29b', sistem.tambah_kebun_8_29b);
+app.get('/edit_kebun_8_29b', sistem.edit_kebun_8_29b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_30a', sistem.kebun_8_30a);
+app.get('/tambah_kebun_8_30a', sistem.tambah_kebun_8_30a);
+app.get('/edit_kebun_8_30a', sistem.edit_kebun_8_30a);
+
+app.get('/kebun_8_30b', sistem.kebun_8_30b);
+app.get('/tambah_kebun_8_30b', sistem.tambah_kebun_8_30b);
+app.get('/edit_kebun_8_30b', sistem.edit_kebun_8_30b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_31a', sistem.kebun_8_31a);
+app.get('/tambah_kebun_8_31a', sistem.tambah_kebun_8_31a);
+app.get('/edit_kebun_8_31a', sistem.edit_kebun_8_31a);
+
+app.get('/kebun_8_31b', sistem.kebun_8_31b);
+app.get('/tambah_kebun_8_31b', sistem.tambah_kebun_8_31b);
+app.get('/edit_kebun_8_31b', sistem.edit_kebun_8_31b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_32a', sistem.kebun_8_32a);
+app.get('/tambah_kebun_8_32a', sistem.tambah_kebun_8_32a);
+app.get('/edit_kebun_8_32a', sistem.edit_kebun_8_32a);
+
+app.get('/kebun_8_32b', sistem.kebun_8_32b);
+app.get('/tambah_kebun_8_32b', sistem.tambah_kebun_8_32b);
+app.get('/edit_kebun_8_32b', sistem.edit_kebun_8_32b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_33a', sistem.kebun_8_33a);
+app.get('/tambah_kebun_8_33a', sistem.tambah_kebun_8_33a);
+app.get('/edit_kebun_8_33a', sistem.edit_kebun_8_33a);
+
+app.get('/kebun_8_33b', sistem.kebun_8_33b);
+app.get('/tambah_kebun_8_33b', sistem.tambah_kebun_8_33b);
+app.get('/edit_kebun_8_33b', sistem.edit_kebun_8_33b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_34a', sistem.kebun_8_34a);
+app.get('/tambah_kebun_8_34a', sistem.tambah_kebun_8_34a);
+app.get('/edit_kebun_8_34a', sistem.edit_kebun_8_34a);
+
+app.get('/kebun_8_34b', sistem.kebun_8_34b);
+app.get('/tambah_kebun_8_34b', sistem.tambah_kebun_8_34b);
+app.get('/edit_kebun_8_34b', sistem.edit_kebun_8_34b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_35a', sistem.kebun_8_35a);
+app.get('/tambah_kebun_8_35a', sistem.tambah_kebun_8_35a);
+app.get('/edit_kebun_8_35a', sistem.edit_kebun_8_35a);
+
+app.get('/kebun_8_35b', sistem.kebun_8_35b);
+app.get('/tambah_kebun_8_35b', sistem.tambah_kebun_8_35b);
+app.get('/edit_kebun_8_35b', sistem.edit_kebun_8_35b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_36a', sistem.kebun_8_36a);
+app.get('/tambah_kebun_8_36a', sistem.tambah_kebun_8_36a);
+app.get('/edit_kebun_8_36a', sistem.edit_kebun_8_36a);
+
+app.get('/kebun_8_36b', sistem.kebun_8_36b);
+app.get('/tambah_kebun_8_36b', sistem.tambah_kebun_8_36b);
+app.get('/edit_kebun_8_36b', sistem.edit_kebun_8_36b);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_37a', sistem.kebun_8_37a);
+app.get('/tambah_kebun_8_37a', sistem.tambah_kebun_8_37a);
+app.get('/edit_kebun_8_37a', sistem.edit_kebun_8_37a);
+
+app.get('/kebun_8_37b', sistem.kebun_8_37b);
+app.get('/tambah_kebun_8_37b', sistem.tambah_kebun_8_37b);
+app.get('/edit_kebun_8_37b', sistem.edit_kebun_8_37b);
+
+app.get('/kebun_8_37c', sistem.kebun_8_37c);
+app.get('/tambah_kebun_8_37c', sistem.tambah_kebun_8_37c);
+app.get('/edit_kebun_8_37c', sistem.edit_kebun_8_37c);
+
+app.get('/kebun_8_37d', sistem.kebun_8_37d);
+app.get('/tambah_kebun_8_37d', sistem.tambah_kebun_8_37d);
+app.get('/edit_kebun_8_37d', sistem.edit_kebun_8_37d);
+
+app.get('/kebun_8_37e', sistem.kebun_8_37e);
+app.get('/tambah_kebun_8_37e', sistem.tambah_kebun_8_37e);
+app.get('/edit_kebun_8_37e', sistem.edit_kebun_8_37e);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_38a', sistem.kebun_8_38a);
+app.get('/tambah_kebun_8_38a', sistem.tambah_kebun_8_38a);
+app.get('/edit_kebun_8_38a', sistem.edit_kebun_8_38a);
+
+app.get('/kebun_8_38b', sistem.kebun_8_38b);
+app.get('/tambah_kebun_8_38b', sistem.tambah_kebun_8_38b);
+app.get('/edit_kebun_8_38b', sistem.edit_kebun_8_38b);
+
+app.get('/kebun_8_38c', sistem.kebun_8_38c);
+app.get('/tambah_kebun_8_38c', sistem.tambah_kebun_8_38c);
+app.get('/edit_kebun_8_38c', sistem.edit_kebun_8_38c);
+
+app.get('/kebun_8_38d', sistem.kebun_8_38d);
+app.get('/tambah_kebun_8_38d', sistem.tambah_kebun_8_38d);
+app.get('/edit_kebun_8_38d', sistem.edit_kebun_8_38d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_39a', sistem.kebun_8_39a);
+app.get('/tambah_kebun_8_39a', sistem.tambah_kebun_8_39a);
+app.get('/edit_kebun_8_39a', sistem.edit_kebun_8_39a);
+
+app.get('/kebun_8_39b', sistem.kebun_8_39b);
+app.get('/tambah_kebun_8_39b', sistem.tambah_kebun_8_39b);
+app.get('/edit_kebun_8_39b', sistem.edit_kebun_8_39b);
+
+app.get('/kebun_8_39c', sistem.kebun_8_39c);
+app.get('/tambah_kebun_8_39c', sistem.tambah_kebun_8_39c);
+app.get('/edit_kebun_8_39c', sistem.edit_kebun_8_39c);
+
+app.get('/kebun_8_39d', sistem.kebun_8_39d);
+app.get('/tambah_kebun_8_39d', sistem.tambah_kebun_8_39d);
+app.get('/edit_kebun_8_39d', sistem.edit_kebun_8_39d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_40a', sistem.kebun_8_40a);
+app.get('/tambah_kebun_8_40a', sistem.tambah_kebun_8_40a);
+app.get('/edit_kebun_8_40a', sistem.edit_kebun_8_40a);
+
+app.get('/kebun_8_40b', sistem.kebun_8_40b);
+app.get('/tambah_kebun_8_40b', sistem.tambah_kebun_8_40b);
+app.get('/edit_kebun_8_40b', sistem.edit_kebun_8_40b);
+
+app.get('/kebun_8_40c', sistem.kebun_8_40c);
+app.get('/tambah_kebun_8_40c', sistem.tambah_kebun_8_40c);
+app.get('/edit_kebun_8_40c', sistem.edit_kebun_8_40c);
+
+app.get('/kebun_8_40d', sistem.kebun_8_40d);
+app.get('/tambah_kebun_8_40d', sistem.tambah_kebun_8_40d);
+app.get('/edit_kebun_8_40d', sistem.edit_kebun_8_40d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_41a', sistem.kebun_8_41a);
+app.get('/tambah_kebun_8_41a', sistem.tambah_kebun_8_41a);
+app.get('/edit_kebun_8_41a', sistem.edit_kebun_8_41a);
+
+app.get('/kebun_8_41b', sistem.kebun_8_41b);
+app.get('/tambah_kebun_8_41b', sistem.tambah_kebun_8_41b);
+app.get('/edit_kebun_8_41b', sistem.edit_kebun_8_41b);
+
+app.get('/kebun_8_41c', sistem.kebun_8_41c);
+app.get('/tambah_kebun_8_41c', sistem.tambah_kebun_8_41c);
+app.get('/edit_kebun_8_41c', sistem.edit_kebun_8_41c);
+
+app.get('/kebun_8_41d', sistem.kebun_8_41d);
+app.get('/tambah_kebun_8_41d', sistem.tambah_kebun_8_41d);
+app.get('/edit_kebun_8_41d', sistem.edit_kebun_8_41d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_42a', sistem.kebun_8_42a);
+app.get('/tambah_kebun_8_42a', sistem.tambah_kebun_8_42a);
+app.get('/edit_kebun_8_42a', sistem.edit_kebun_8_42a);
+
+app.get('/kebun_8_42b', sistem.kebun_8_42b);
+app.get('/tambah_kebun_8_42b', sistem.tambah_kebun_8_42b);
+app.get('/edit_kebun_8_42b', sistem.edit_kebun_8_42b);
+
+app.get('/kebun_8_42c', sistem.kebun_8_42c);
+app.get('/tambah_kebun_8_42c', sistem.tambah_kebun_8_42c);
+app.get('/edit_kebun_8_42c', sistem.edit_kebun_8_42c);
+
+app.get('/kebun_8_42d', sistem.kebun_8_42d);
+app.get('/tambah_kebun_8_42d', sistem.tambah_kebun_8_42d);
+app.get('/edit_kebun_8_42d', sistem.edit_kebun_8_42d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_43a', sistem.kebun_8_43a);
+app.get('/tambah_kebun_8_43a', sistem.tambah_kebun_8_43a);
+app.get('/edit_kebun_8_43a', sistem.edit_kebun_8_43a);
+
+app.get('/kebun_8_43b', sistem.kebun_8_43b);
+app.get('/tambah_kebun_8_43b', sistem.tambah_kebun_8_43b);
+app.get('/edit_kebun_8_43b', sistem.edit_kebun_8_43b);
+
+app.get('/kebun_8_43c', sistem.kebun_8_43c);
+app.get('/tambah_kebun_8_43c', sistem.tambah_kebun_8_43c);
+app.get('/edit_kebun_8_43c', sistem.edit_kebun_8_43c);
+
+app.get('/kebun_8_43d', sistem.kebun_8_43d);
+app.get('/tambah_kebun_8_43d', sistem.tambah_kebun_8_43d);
+app.get('/edit_kebun_8_43d', sistem.edit_kebun_8_43d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_44aa', sistem.kebun_8_44aa);
+app.get('/tambah_kebun_8_44aa', sistem.tambah_kebun_8_44aa);
+app.get('/edit_kebun_8_44aa', sistem.edit_kebun_8_44aa);
+
+app.get('/kebun_8_44ab', sistem.kebun_8_44ab);
+app.get('/tambah_kebun_8_44ab', sistem.tambah_kebun_8_44ab);
+app.get('/edit_kebun_8_44ab', sistem.edit_kebun_8_44ab);
+
+app.get('/kebun_8_44ac', sistem.kebun_8_44ac);
+app.get('/tambah_kebun_8_44ac', sistem.tambah_kebun_8_44ac);
+app.get('/edit_kebun_8_44ac', sistem.edit_kebun_8_44ac);
+
+app.get('/kebun_8_44b', sistem.kebun_8_44b);
+app.get('/tambah_kebun_8_44b', sistem.tambah_kebun_8_44b);
+app.get('/edit_kebun_8_44b', sistem.edit_kebun_8_44b);
+
+app.get('/kebun_8_44c', sistem.kebun_8_44c);
+app.get('/tambah_kebun_8_44c', sistem.tambah_kebun_8_44c);
+app.get('/edit_kebun_8_44c', sistem.edit_kebun_8_44c);
+
+app.get('/kebun_8_44d', sistem.kebun_8_44d);
+app.get('/tambah_kebun_8_44d', sistem.tambah_kebun_8_44d);
+app.get('/edit_kebun_8_44d', sistem.edit_kebun_8_44d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_45aa', sistem.kebun_8_45aa);
+app.get('/tambah_kebun_8_45aa', sistem.tambah_kebun_8_45aa);
+app.get('/edit_kebun_8_45aa', sistem.edit_kebun_8_45aa);
+
+app.get('/kebun_8_45ab', sistem.kebun_8_45ab);
+app.get('/tambah_kebun_8_45ab', sistem.tambah_kebun_8_45ab);
+app.get('/edit_kebun_8_45ab', sistem.edit_kebun_8_45ab);
+
+app.get('/kebun_8_45b', sistem.kebun_8_45b);
+app.get('/tambah_kebun_8_45b', sistem.tambah_kebun_8_45b);
+app.get('/edit_kebun_8_45b', sistem.edit_kebun_8_45b);
+
+app.get('/kebun_8_45c', sistem.kebun_8_45c);
+app.get('/tambah_kebun_8_45c', sistem.tambah_kebun_8_45c);
+app.get('/edit_kebun_8_45c', sistem.edit_kebun_8_45c);
+
+app.get('/kebun_8_45d', sistem.kebun_8_45d);
+app.get('/tambah_kebun_8_45d', sistem.tambah_kebun_8_45d);
+app.get('/edit_kebun_8_45d', sistem.edit_kebun_8_45d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_46aa', sistem.kebun_8_46aa);
+app.get('/tambah_kebun_8_46aa', sistem.tambah_kebun_8_46aa);
+app.get('/edit_kebun_8_46aa', sistem.edit_kebun_8_46aa);
+
+app.get('/kebun_8_46ab', sistem.kebun_8_46ab);
+app.get('/tambah_kebun_8_46ab', sistem.tambah_kebun_8_46ab);
+app.get('/edit_kebun_8_46ab', sistem.edit_kebun_8_46ab);
+
+app.get('/kebun_8_46b', sistem.kebun_8_46b);
+app.get('/tambah_kebun_8_46b', sistem.tambah_kebun_8_46b);
+app.get('/edit_kebun_8_46b', sistem.edit_kebun_8_46b);
+
+app.get('/kebun_8_46c', sistem.kebun_8_46c);
+app.get('/tambah_kebun_8_46c', sistem.tambah_kebun_8_46c);
+app.get('/edit_kebun_8_46c', sistem.edit_kebun_8_46c);
+
+app.get('/kebun_8_46d', sistem.kebun_8_46d);
+app.get('/tambah_kebun_8_46d', sistem.tambah_kebun_8_46d);
+app.get('/edit_kebun_8_46d', sistem.edit_kebun_8_46d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_47aa', sistem.kebun_8_47aa);
+app.get('/tambah_kebun_8_47aa', sistem.tambah_kebun_8_47aa);
+app.get('/edit_kebun_8_47aa', sistem.edit_kebun_8_47aa);
+
+app.get('/kebun_8_47ab', sistem.kebun_8_47ab);
+app.get('/tambah_kebun_8_47ab', sistem.tambah_kebun_8_47ab);
+app.get('/edit_kebun_8_47ab', sistem.edit_kebun_8_47ab);
+
+app.get('/kebun_8_47b', sistem.kebun_8_47b);
+app.get('/tambah_kebun_8_47b', sistem.tambah_kebun_8_47b);
+app.get('/edit_kebun_8_47b', sistem.edit_kebun_8_47b);
+
+app.get('/kebun_8_47c', sistem.kebun_8_47c);
+app.get('/tambah_kebun_8_47c', sistem.tambah_kebun_8_47c);
+app.get('/edit_kebun_8_47c', sistem.edit_kebun_8_47c);
+
+app.get('/kebun_8_47d', sistem.kebun_8_47d);
+app.get('/tambah_kebun_8_47d', sistem.tambah_kebun_8_47d);
+app.get('/edit_kebun_8_47d', sistem.edit_kebun_8_47d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_48a', sistem.kebun_8_48a);
+app.get('/tambah_kebun_8_48a', sistem.tambah_kebun_8_48a);
+app.get('/edit_kebun_8_48a', sistem.edit_kebun_8_48a);
+
+app.get('/kebun_8_48b', sistem.kebun_8_48b);
+app.get('/tambah_kebun_8_48b', sistem.tambah_kebun_8_48b);
+app.get('/edit_kebun_8_48b', sistem.edit_kebun_8_48b);
+
+app.get('/kebun_8_48c', sistem.kebun_8_48c);
+app.get('/tambah_kebun_8_48c', sistem.tambah_kebun_8_48c);
+app.get('/edit_kebun_8_48c', sistem.edit_kebun_8_48c);
+
+app.get('/kebun_8_48d', sistem.kebun_8_48d);
+app.get('/tambah_kebun_8_48d', sistem.tambah_kebun_8_48d);
+app.get('/edit_kebun_8_48d', sistem.edit_kebun_8_48d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_49a', sistem.kebun_8_49a);
+app.get('/tambah_kebun_8_49a', sistem.tambah_kebun_8_49a);
+app.get('/edit_kebun_8_49a', sistem.edit_kebun_8_49a);
+
+app.get('/kebun_8_49b', sistem.kebun_8_49b);
+app.get('/tambah_kebun_8_49b', sistem.tambah_kebun_8_49b);
+app.get('/edit_kebun_8_49b', sistem.edit_kebun_8_49b);
+
+app.get('/kebun_8_49c', sistem.kebun_8_49c);
+app.get('/tambah_kebun_8_49c', sistem.tambah_kebun_8_49c);
+app.get('/edit_kebun_8_49c', sistem.edit_kebun_8_49c);
+
+app.get('/kebun_8_49d', sistem.kebun_8_49d);
+app.get('/tambah_kebun_8_49d', sistem.tambah_kebun_8_49d);
+app.get('/edit_kebun_8_49d', sistem.edit_kebun_8_49d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_50aa', sistem.kebun_8_50aa);
+app.get('/tambah_kebun_8_50aa', sistem.tambah_kebun_8_50aa);
+app.get('/edit_kebun_8_50aa', sistem.edit_kebun_8_50aa);
+
+app.get('/kebun_8_50ab', sistem.kebun_8_50ab);
+app.get('/tambah_kebun_8_50ab', sistem.tambah_kebun_8_50ab);
+app.get('/edit_kebun_8_50ab', sistem.edit_kebun_8_50ab);
+
+app.get('/kebun_8_50b', sistem.kebun_8_50b);
+app.get('/tambah_kebun_8_50b', sistem.tambah_kebun_8_50b);
+app.get('/edit_kebun_8_50b', sistem.edit_kebun_8_50b);
+
+app.get('/kebun_8_50c', sistem.kebun_8_50c);
+app.get('/tambah_kebun_8_50c', sistem.tambah_kebun_8_50c);
+app.get('/edit_kebun_8_50c', sistem.edit_kebun_8_50c);
+
+app.get('/kebun_8_50d', sistem.kebun_8_50d);
+app.get('/tambah_kebun_8_50d', sistem.tambah_kebun_8_50d);
+app.get('/edit_kebun_8_50d', sistem.edit_kebun_8_50d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_51a', sistem.kebun_8_51a);
+app.get('/tambah_kebun_8_51a', sistem.tambah_kebun_8_51a);
+app.get('/edit_kebun_8_51a', sistem.edit_kebun_8_51a);
+
+app.get('/kebun_8_51b', sistem.kebun_8_51b);
+app.get('/tambah_kebun_8_51b', sistem.tambah_kebun_8_51b);
+app.get('/edit_kebun_8_51b', sistem.edit_kebun_8_51b);
+
+app.get('/kebun_8_51c', sistem.kebun_8_51c);
+app.get('/tambah_kebun_8_51c', sistem.tambah_kebun_8_51c);
+app.get('/edit_kebun_8_51c', sistem.edit_kebun_8_51c);
+
+app.get('/kebun_8_51d', sistem.kebun_8_51d);
+app.get('/tambah_kebun_8_51d', sistem.tambah_kebun_8_51d);
+app.get('/edit_kebun_8_51d', sistem.edit_kebun_8_51d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_52a', sistem.kebun_8_52a);
+app.get('/tambah_kebun_8_52a', sistem.tambah_kebun_8_52a);
+app.get('/edit_kebun_8_52a', sistem.edit_kebun_8_52a);
+
+app.get('/kebun_8_52b', sistem.kebun_8_52b);
+app.get('/tambah_kebun_8_52b', sistem.tambah_kebun_8_52b);
+app.get('/edit_kebun_8_52b', sistem.edit_kebun_8_52b);
+
+app.get('/kebun_8_52c', sistem.kebun_8_52c);
+app.get('/tambah_kebun_8_52c', sistem.tambah_kebun_8_52c);
+app.get('/edit_kebun_8_52c', sistem.edit_kebun_8_52c);
+
+app.get('/kebun_8_52d', sistem.kebun_8_52d);
+app.get('/tambah_kebun_8_52d', sistem.tambah_kebun_8_52d);
+app.get('/edit_kebun_8_52d', sistem.edit_kebun_8_52d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_53aa', sistem.kebun_8_53aa);
+app.get('/tambah_kebun_8_53aa', sistem.tambah_kebun_8_53aa);
+app.get('/edit_kebun_8_53aa', sistem.edit_kebun_8_53aa);
+
+app.get('/kebun_8_53ab', sistem.kebun_8_53ab);
+app.get('/tambah_kebun_8_53ab', sistem.tambah_kebun_8_53ab);
+app.get('/edit_kebun_8_53ab', sistem.edit_kebun_8_53ab);
+
+app.get('/kebun_8_53ac', sistem.kebun_8_53ac);
+app.get('/tambah_kebun_8_53ac', sistem.tambah_kebun_8_53ac);
+app.get('/edit_kebun_8_53ac', sistem.edit_kebun_8_53ac);
+
+app.get('/kebun_8_53b', sistem.kebun_8_53b);
+app.get('/tambah_kebun_8_53b', sistem.tambah_kebun_8_53b);
+app.get('/edit_kebun_8_53b', sistem.edit_kebun_8_53b);
+
+app.get('/kebun_8_53c', sistem.kebun_8_53c);
+app.get('/tambah_kebun_8_53c', sistem.tambah_kebun_8_53c);
+app.get('/edit_kebun_8_53c', sistem.edit_kebun_8_53c);
+
+app.get('/kebun_8_53d', sistem.kebun_8_53d);
+app.get('/tambah_kebun_8_53d', sistem.tambah_kebun_8_53d);
+app.get('/edit_kebun_8_53d', sistem.edit_kebun_8_53d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_54aa', sistem.kebun_8_54aa);
+app.get('/tambah_kebun_8_54aa', sistem.tambah_kebun_8_54aa);
+app.get('/edit_kebun_8_54aa', sistem.edit_kebun_8_54aa);
+
+app.get('/kebun_8_54ab', sistem.kebun_8_54ab);
+app.get('/tambah_kebun_8_54ab', sistem.tambah_kebun_8_54ab);
+app.get('/edit_kebun_8_54ab', sistem.edit_kebun_8_54ab);
+
+app.get('/kebun_8_54b', sistem.kebun_8_54b);
+app.get('/tambah_kebun_8_54b', sistem.tambah_kebun_8_54b);
+app.get('/edit_kebun_8_54b', sistem.edit_kebun_8_54b);
+
+app.get('/kebun_8_54c', sistem.kebun_8_54c);
+app.get('/tambah_kebun_8_54c', sistem.tambah_kebun_8_54c);
+app.get('/edit_kebun_8_54c', sistem.edit_kebun_8_54c);
+
+app.get('/kebun_8_54d', sistem.kebun_8_54d);
+app.get('/tambah_kebun_8_54d', sistem.tambah_kebun_8_54d);
+app.get('/edit_kebun_8_54d', sistem.edit_kebun_8_54d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_55aa', sistem.kebun_8_55aa);
+app.get('/tambah_kebun_8_55aa', sistem.tambah_kebun_8_55aa);
+app.get('/edit_kebun_8_55aa', sistem.edit_kebun_8_55aa);
+
+app.get('/kebun_8_55ab', sistem.kebun_8_55ab);
+app.get('/tambah_kebun_8_55ab', sistem.tambah_kebun_8_55ab);
+app.get('/edit_kebun_8_55ab', sistem.edit_kebun_8_55ab);
+
+app.get('/kebun_8_55b', sistem.kebun_8_55b);
+app.get('/tambah_kebun_8_55b', sistem.tambah_kebun_8_55b);
+app.get('/edit_kebun_8_55b', sistem.edit_kebun_8_55b);
+
+app.get('/kebun_8_55c', sistem.kebun_8_55c);
+app.get('/tambah_kebun_8_55c', sistem.tambah_kebun_8_55c);
+app.get('/edit_kebun_8_55c', sistem.edit_kebun_8_55c);
+
+app.get('/kebun_8_55d', sistem.kebun_8_55d);
+app.get('/tambah_kebun_8_55d', sistem.tambah_kebun_8_55d);
+app.get('/edit_kebun_8_55d', sistem.edit_kebun_8_55d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_56a', sistem.kebun_8_56a);
+app.get('/tambah_kebun_8_56a', sistem.tambah_kebun_8_56a);
+app.get('/edit_kebun_8_56a', sistem.edit_kebun_8_56a);
+
+app.get('/kebun_8_56b', sistem.kebun_8_56b);
+app.get('/tambah_kebun_8_56b', sistem.tambah_kebun_8_56b);
+app.get('/edit_kebun_8_56b', sistem.edit_kebun_8_56b);
+
+app.get('/kebun_8_56c', sistem.kebun_8_56c);
+app.get('/tambah_kebun_8_56c', sistem.tambah_kebun_8_56c);
+app.get('/edit_kebun_8_56c', sistem.edit_kebun_8_56c);
+
+app.get('/kebun_8_56d', sistem.kebun_8_56d);
+app.get('/tambah_kebun_8_56d', sistem.tambah_kebun_8_56d);
+app.get('/edit_kebun_8_56d', sistem.edit_kebun_8_56d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_57a', sistem.kebun_8_57a);
+app.get('/tambah_kebun_8_57a', sistem.tambah_kebun_8_57a);
+app.get('/edit_kebun_8_57a', sistem.edit_kebun_8_57a);
+
+app.get('/kebun_8_57b', sistem.kebun_8_57b);
+app.get('/tambah_kebun_8_57b', sistem.tambah_kebun_8_57b);
+app.get('/edit_kebun_8_57b', sistem.edit_kebun_8_57b);
+
+app.get('/kebun_8_57c', sistem.kebun_8_57c);
+app.get('/tambah_kebun_8_57c', sistem.tambah_kebun_8_57c);
+app.get('/edit_kebun_8_57c', sistem.edit_kebun_8_57c);
+
+app.get('/kebun_8_57d', sistem.kebun_8_57d);
+app.get('/tambah_kebun_8_57d', sistem.tambah_kebun_8_57d);
+app.get('/edit_kebun_8_57d', sistem.edit_kebun_8_57d);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_58a', sistem.kebun_8_58a);
+app.get('/tambah_kebun_8_58a', sistem.tambah_kebun_8_58a);
+app.get('/edit_kebun_8_58a', sistem.edit_kebun_8_58a);
+
+app.get('/kebun_8_58b', sistem.kebun_8_58b);
+app.get('/tambah_kebun_8_58b', sistem.tambah_kebun_8_58b);
+app.get('/edit_kebun_8_58b', sistem.edit_kebun_8_58b);
+
+app.get('/kebun_8_58c', sistem.kebun_8_58c);
+app.get('/tambah_kebun_8_58c', sistem.tambah_kebun_8_58c);
+app.get('/edit_kebun_8_58c', sistem.edit_kebun_8_58c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_59a', sistem.kebun_8_59a);
+app.get('/tambah_kebun_8_59a', sistem.tambah_kebun_8_59a);
+app.get('/edit_kebun_8_59a', sistem.edit_kebun_8_59a);
+
+app.get('/kebun_8_59b', sistem.kebun_8_59b);
+app.get('/tambah_kebun_8_59b', sistem.tambah_kebun_8_59b);
+app.get('/edit_kebun_8_59b', sistem.edit_kebun_8_59b);
+
+app.get('/kebun_8_59c', sistem.kebun_8_59c);
+app.get('/tambah_kebun_8_59c', sistem.tambah_kebun_8_59c);
+app.get('/edit_kebun_8_59c', sistem.edit_kebun_8_59c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_60a', sistem.kebun_8_60a);
+app.get('/tambah_kebun_8_60a', sistem.tambah_kebun_8_60a);
+app.get('/edit_kebun_8_60a', sistem.edit_kebun_8_60a);
+
+app.get('/kebun_8_60b', sistem.kebun_8_60b);
+app.get('/tambah_kebun_8_60b', sistem.tambah_kebun_8_60b);
+app.get('/edit_kebun_8_60b', sistem.edit_kebun_8_60b);
+
+app.get('/kebun_8_60c', sistem.kebun_8_60c);
+app.get('/tambah_kebun_8_60c', sistem.tambah_kebun_8_60c);
+app.get('/edit_kebun_8_60c', sistem.edit_kebun_8_60c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_61a', sistem.kebun_8_61a);
+app.get('/tambah_kebun_8_61a', sistem.tambah_kebun_8_61a);
+app.get('/edit_kebun_8_61a', sistem.edit_kebun_8_61a);
+
+app.get('/kebun_8_61b', sistem.kebun_8_61b);
+app.get('/tambah_kebun_8_61b', sistem.tambah_kebun_8_61b);
+app.get('/edit_kebun_8_61b', sistem.edit_kebun_8_61b);
+
+app.get('/kebun_8_61c', sistem.kebun_8_61c);
+app.get('/tambah_kebun_8_61c', sistem.tambah_kebun_8_61c);
+app.get('/edit_kebun_8_61c', sistem.edit_kebun_8_61c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_62a', sistem.kebun_8_62a);
+app.get('/tambah_kebun_8_62a', sistem.tambah_kebun_8_62a);
+app.get('/edit_kebun_8_62a', sistem.edit_kebun_8_62a);
+
+app.get('/kebun_8_62b', sistem.kebun_8_62b);
+app.get('/tambah_kebun_8_62b', sistem.tambah_kebun_8_62b);
+app.get('/edit_kebun_8_62b', sistem.edit_kebun_8_62b);
+
+app.get('/kebun_8_62c', sistem.kebun_8_62c);
+app.get('/tambah_kebun_8_62c', sistem.tambah_kebun_8_62c);
+app.get('/edit_kebun_8_62c', sistem.edit_kebun_8_62c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_63a', sistem.kebun_8_63a);
+app.get('/tambah_kebun_8_63a', sistem.tambah_kebun_8_63a);
+app.get('/edit_kebun_8_63a', sistem.edit_kebun_8_63a);
+
+app.get('/kebun_8_63b', sistem.kebun_8_63b);
+app.get('/tambah_kebun_8_63b', sistem.tambah_kebun_8_63b);
+app.get('/edit_kebun_8_63b', sistem.edit_kebun_8_63b);
+
+app.get('/kebun_8_63c', sistem.kebun_8_63c);
+app.get('/tambah_kebun_8_63c', sistem.tambah_kebun_8_63c);
+app.get('/edit_kebun_8_63c', sistem.edit_kebun_8_63c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_64a', sistem.kebun_8_64a);
+app.get('/tambah_kebun_8_64a', sistem.tambah_kebun_8_64a);
+app.get('/edit_kebun_8_64a', sistem.edit_kebun_8_64a);
+
+app.get('/kebun_8_64b', sistem.kebun_8_64b);
+app.get('/tambah_kebun_8_64b', sistem.tambah_kebun_8_64b);
+app.get('/edit_kebun_8_64b', sistem.edit_kebun_8_64b);
+
+app.get('/kebun_8_64c', sistem.kebun_8_64c);
+app.get('/tambah_kebun_8_64c', sistem.tambah_kebun_8_64c);
+app.get('/edit_kebun_8_64c', sistem.edit_kebun_8_64c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_65a', sistem.kebun_8_65a);
+app.get('/tambah_kebun_8_65a', sistem.tambah_kebun_8_65a);
+app.get('/edit_kebun_8_65a', sistem.edit_kebun_8_65a);
+
+app.get('/kebun_8_65b', sistem.kebun_8_65b);
+app.get('/tambah_kebun_8_65b', sistem.tambah_kebun_8_65b);
+app.get('/edit_kebun_8_65b', sistem.edit_kebun_8_65b);
+
+app.get('/kebun_8_65c', sistem.kebun_8_65c);
+app.get('/tambah_kebun_8_65c', sistem.tambah_kebun_8_65c);
+app.get('/edit_kebun_8_65c', sistem.edit_kebun_8_65c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_66a', sistem.kebun_8_66a);
+app.get('/tambah_kebun_8_66a', sistem.tambah_kebun_8_66a);
+app.get('/edit_kebun_8_66a', sistem.edit_kebun_8_66a);
+
+app.get('/kebun_8_66b', sistem.kebun_8_66b);
+app.get('/tambah_kebun_8_66b', sistem.tambah_kebun_8_66b);
+app.get('/edit_kebun_8_66b', sistem.edit_kebun_8_66b);
+
+app.get('/kebun_8_66c', sistem.kebun_8_66c);
+app.get('/tambah_kebun_8_66c', sistem.tambah_kebun_8_66c);
+app.get('/edit_kebun_8_66c', sistem.edit_kebun_8_66c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_67a', sistem.kebun_8_67a);
+app.get('/tambah_kebun_8_67a', sistem.tambah_kebun_8_67a);
+app.get('/edit_kebun_8_67a', sistem.edit_kebun_8_67a);
+
+app.get('/kebun_8_67b', sistem.kebun_8_67b);
+app.get('/tambah_kebun_8_67b', sistem.tambah_kebun_8_67b);
+app.get('/edit_kebun_8_67b', sistem.edit_kebun_8_67b);
+
+app.get('/kebun_8_67c', sistem.kebun_8_67c);
+app.get('/tambah_kebun_8_67c', sistem.tambah_kebun_8_67c);
+app.get('/edit_kebun_8_67c', sistem.edit_kebun_8_67c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_68a', sistem.kebun_8_68a);
+app.get('/tambah_kebun_8_68a', sistem.tambah_kebun_8_68a);
+app.get('/edit_kebun_8_68a', sistem.edit_kebun_8_68a);
+
+app.get('/kebun_8_68b', sistem.kebun_8_68b);
+app.get('/tambah_kebun_8_68b', sistem.tambah_kebun_8_68b);
+app.get('/edit_kebun_8_68b', sistem.edit_kebun_8_68b);
+
+app.get('/kebun_8_68c', sistem.kebun_8_68c);
+app.get('/tambah_kebun_8_68c', sistem.tambah_kebun_8_68c);
+app.get('/edit_kebun_8_68c', sistem.edit_kebun_8_68c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_69a', sistem.kebun_8_69a);
+app.get('/tambah_kebun_8_69a', sistem.tambah_kebun_8_69a);
+app.get('/edit_kebun_8_69a', sistem.edit_kebun_8_69a);
+
+app.get('/kebun_8_69b', sistem.kebun_8_69b);
+app.get('/tambah_kebun_8_69b', sistem.tambah_kebun_8_69b);
+app.get('/edit_kebun_8_69b', sistem.edit_kebun_8_69b);
+
+app.get('/kebun_8_69c', sistem.kebun_8_69c);
+app.get('/tambah_kebun_8_69c', sistem.tambah_kebun_8_69c);
+app.get('/edit_kebun_8_69c', sistem.edit_kebun_8_69c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_70a', sistem.kebun_8_70a);
+app.get('/tambah_kebun_8_70a', sistem.tambah_kebun_8_70a);
+app.get('/edit_kebun_8_70a', sistem.edit_kebun_8_70a);
+
+app.get('/kebun_8_70b', sistem.kebun_8_70b);
+app.get('/tambah_kebun_8_70b', sistem.tambah_kebun_8_70b);
+app.get('/edit_kebun_8_70b', sistem.edit_kebun_8_70b);
+
+app.get('/kebun_8_70c', sistem.kebun_8_70c);
+app.get('/tambah_kebun_8_70c', sistem.tambah_kebun_8_70c);
+app.get('/edit_kebun_8_70c', sistem.edit_kebun_8_70c);
+/*==============================================================================*/
+/*==============================Rehab Teh Tahun 1===============================*/
+app.get('/kebun_8_71a', sistem.kebun_8_71a);
+app.get('/tambah_kebun_8_71a', sistem.tambah_kebun_8_71a);
+app.get('/edit_kebun_8_71a', sistem.edit_kebun_8_71a);
+
+app.get('/kebun_8_71b', sistem.kebun_8_71b);
+app.get('/tambah_kebun_8_71b', sistem.tambah_kebun_8_71b);
+app.get('/edit_kebun_8_71b', sistem.edit_kebun_8_71b);
+
+app.get('/kebun_8_71c', sistem.kebun_8_71c);
+app.get('/tambah_kebun_8_71c', sistem.tambah_kebun_8_71c);
+app.get('/edit_kebun_8_71c', sistem.edit_kebun_8_71c);
 /*==============================================================================*/
 
 /*=========================Kebudayaan dan Pariwisata============================*/
@@ -1645,59 +2214,38 @@ app.get('/edit_sbu1_2_51/delete/:id', sistem.delete_sbu1_2_51);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_52', sistem.sbu1_2_52);
-app.get('/tambah_sbu1_2_52/add', sistem.tambah_sbu1_2_52);
-app.post('/tambah_sbu1_2_52/add', sistem.save_sbu1_2_52);
-app.get('/edit_sbu1_2_52/edit/:id', sistem.edit_sbu1_2_52);
-app.post('/edit_sbu1_2_52/edit/:id', sistem.save_edit_sbu1_2_52);
-app.get('/edit_sbu1_2_52/delete/:id', sistem.delete_sbu1_2_52);
+app.get('/tambah_sbu1_2_52', sistem.tambah_sbu1_2_52);
+app.get('/edit_sbu1_2_52', sistem.edit_sbu1_2_52);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_53', sistem.sbu1_2_53);
-app.get('/tambah_sbu1_2_53/add', sistem.tambah_sbu1_2_53);
-app.post('/tambah_sbu1_2_53/add', sistem.save_sbu1_2_53);
-app.get('/edit_sbu1_2_53/edit/:id', sistem.edit_sbu1_2_53);
-app.post('/edit_sbu1_2_53/edit/:id', sistem.save_edit_sbu1_2_53);
-app.get('/edit_sbu1_2_53/delete/:id', sistem.delete_sbu1_2_53);
+app.get('/tambah_sbu1_2_53', sistem.tambah_sbu1_2_53);
+app.get('/edit_sbu1_2_53', sistem.edit_sbu1_2_53);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_54', sistem.sbu1_2_54);
-app.get('/tambah_sbu1_2_54/add', sistem.tambah_sbu1_2_54);
-app.post('/tambah_sbu1_2_54/add', sistem.save_sbu1_2_54);
-app.get('/edit_sbu1_2_54/edit/:id', sistem.edit_sbu1_2_54);
-app.post('/edit_sbu1_2_54/edit/:id', sistem.save_edit_sbu1_2_54);
-app.get('/edit_sbu1_2_54/delete/:id', sistem.delete_sbu1_2_54);
+app.get('/tambah_sbu1_2_54', sistem.tambah_sbu1_2_54);
+app.get('/edit_sbu1_2_54', sistem.edit_sbu1_2_54);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_55', sistem.sbu1_2_55);
-app.get('/tambah_sbu1_2_55/add', sistem.tambah_sbu1_2_55);
-app.post('/tambah_sbu1_2_55/add', sistem.save_sbu1_2_55);
-app.get('/edit_sbu1_2_55/edit/:id', sistem.edit_sbu1_2_55);
-app.post('/edit_sbu1_2_55/edit/:id', sistem.save_edit_sbu1_2_55);
-app.get('/edit_sbu1_2_55/delete/:id', sistem.delete_sbu1_2_55);
+app.get('/tambah_sbu1_2_55', sistem.tambah_sbu1_2_55);
+app.get('/edit_sbu1_2_55', sistem.edit_sbu1_2_55);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_58', sistem.sbu1_2_58);
-app.get('/tambah_sbu1_2_58/add', sistem.tambah_sbu1_2_58);
-app.post('/tambah_sbu1_2_58/add', sistem.save_sbu1_2_58);
-app.get('/edit_sbu1_2_58/edit/:id', sistem.edit_sbu1_2_58);
-app.post('/edit_sbu1_2_58/edit/:id', sistem.save_edit_sbu1_2_58);
-app.get('/edit_sbu1_2_58/delete/:id', sistem.delete_sbu1_2_58);
+app.get('/tambah_sbu1_2_58', sistem.tambah_sbu1_2_58);
+app.get('/edit_sbu1_2_58', sistem.edit_sbu1_2_58);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_59', sistem.sbu1_2_59);
-app.get('/tambah_sbu1_2_59/add', sistem.tambah_sbu1_2_59);
-app.post('/tambah_sbu1_2_59/add', sistem.save_sbu1_2_59);
-app.get('/edit_sbu1_2_59/edit/:id', sistem.edit_sbu1_2_59);
-app.post('/edit_sbu1_2_59/edit/:id', sistem.save_edit_sbu1_2_59);
-app.get('/edit_sbu1_2_59/delete/:id', sistem.delete_sbu1_2_59);
+app.get('/tambah_sbu1_2_59', sistem.tambah_sbu1_2_59);
+app.get('/edit_sbu1_2_59', sistem.edit_sbu1_2_59);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu1_2_60', sistem.sbu1_2_60);
-app.get('/tambah_sbu1_2_60/add', sistem.tambah_sbu1_2_60);
-app.post('/tambah_sbu1_2_60/add', sistem.save_sbu1_2_60);
-app.get('/edit_sbu1_2_60/edit/:id', sistem.edit_sbu1_2_60);
-app.post('/edit_sbu1_2_60/edit/:id', sistem.save_edit_sbu1_2_60);
-app.get('/edit_sbu1_2_60/delete/:id', sistem.delete_sbu1_2_60);
+app.get('/tambah_sbu1_2_60', sistem.tambah_sbu1_2_60);
+app.get('/edit_sbu1_2_60', sistem.edit_sbu1_2_60);
 /*==============================================================================*/
 
 /*===================================SBU Estimasi===============================*/
