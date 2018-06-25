@@ -1405,1138 +1405,3264 @@ exports.perkebunan = function(req, res){
 
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_1 = function(req, res){
-    res.render('perkebunan/kebun_8_1', {title: 'Perkebunan'});
+exports.kebun_8_1a = function(req, res){
+    res.render('perkebunan/kebun_8_1a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_1 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_1', {title: 'Perkebunan'});
+exports.tambah_kebun_8_1a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_1a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_1 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_1', {title: 'Perkebunan'});
+exports.edit_kebun_8_1a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_1a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_2 = function(req, res){
-    res.render('perkebunan/kebun_8_2', {title: 'Perkebunan'});
+exports.kebun_8_1b = function(req, res){
+    res.render('perkebunan/kebun_8_1b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_2 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_2', {title: 'Perkebunan'});
+exports.tambah_kebun_8_1b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_1b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_2 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_2', {title: 'Perkebunan'});
+exports.edit_kebun_8_1b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_1b', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_3 = function(req, res){
-    res.render('perkebunan/kebun_8_3', {title: 'Perkebunan'});
+exports.kebun_8_1c = function(req, res){
+    res.render('perkebunan/kebun_8_1c', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_3 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_3', {title: 'Perkebunan'});
+exports.tambah_kebun_8_1c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_1c', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_3 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_3', {title: 'Perkebunan'});
+exports.edit_kebun_8_1c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_1c', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_4 = function(req, res){
-    res.render('perkebunan/kebun_8_4', {title: 'Perkebunan'});
+exports.kebun_8_2a = function(req, res){
+    res.render('perkebunan/kebun_8_2a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_2a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_2a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_2a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_2a', {title: 'Perkebunan'});
+};
+
+exports.kebun_8_2b = function(req, res){
+    res.render('perkebunan/kebun_8_2b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_2b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_2b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_2b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_2b', {title: 'Perkebunan'});
 };
 
+exports.kebun_8_2c = function(req, res){
+    res.render('perkebunan/kebun_8_2c', {title: 'Perkebunan'});
+};
+
 /* Tambah Data */
-exports.tambah_kebun_8_4 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_4', {title: 'Perkebunan'});
+exports.tambah_kebun_8_2c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_2c', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_4 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_4', {title: 'Perkebunan'});
+exports.edit_kebun_8_2c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_2c', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_5 = function(req, res){
-    res.render('perkebunan/kebun_8_5', {title: 'Perkebunan'});
+exports.kebun_8_3a = function(req, res){
+    res.render('perkebunan/kebun_8_3a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_5 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_5', {title: 'Perkebunan'});
+exports.tambah_kebun_8_3a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_3a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_5 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_5', {title: 'Perkebunan'});
+exports.edit_kebun_8_3a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_3a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_6 = function(req, res){
-    res.render('perkebunan/kebun_8_6', {title: 'Perkebunan'});
+exports.kebun_8_3b = function(req, res){
+    res.render('perkebunan/kebun_8_3b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_6 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_6', {title: 'Perkebunan'});
+exports.tambah_kebun_8_3b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_3b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_6 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_6', {title: 'Perkebunan'});
+exports.edit_kebun_8_3b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_3b', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_7 = function(req, res){
-    res.render('perkebunan/kebun_8_7', {title: 'Perkebunan'});
+exports.kebun_8_3c = function(req, res){
+    res.render('perkebunan/kebun_8_3c', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_7 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_7', {title: 'Perkebunan'});
+exports.tambah_kebun_8_3c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_3c', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_7 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_7', {title: 'Perkebunan'});
+exports.edit_kebun_8_3c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_3c', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_8 = function(req, res){
-    res.render('perkebunan/kebun_8_8', {title: 'Perkebunan'});
+exports.kebun_8_4a = function(req, res){
+    res.render('perkebunan/kebun_8_4a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_8 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_8', {title: 'Perkebunan'});
+exports.tambah_kebun_8_4a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_4a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_8 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_8', {title: 'Perkebunan'});
+exports.edit_kebun_8_4a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_4a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_9 = function(req, res){
-    res.render('perkebunan/kebun_8_9', {title: 'Perkebunan'});
+exports.kebun_8_4b = function(req, res){
+    res.render('perkebunan/kebun_8_4b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_9 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_9', {title: 'Perkebunan'});
+exports.tambah_kebun_8_4b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_4b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_9 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_9', {title: 'Perkebunan'});
+exports.edit_kebun_8_4b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_4b', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_10 = function(req, res){
-    res.render('perkebunan/kebun_8_10', {title: 'Perkebunan'});
+exports.kebun_8_4c = function(req, res){
+    res.render('perkebunan/kebun_8_4c', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_10 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_10', {title: 'Perkebunan'});
+exports.tambah_kebun_8_4c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_4c', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_10 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_10', {title: 'Perkebunan'});
+exports.edit_kebun_8_4c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_4c', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_11 = function(req, res){
-    res.render('perkebunan/kebun_8_11', {title: 'Perkebunan'});
+exports.kebun_8_5a = function(req, res){
+    res.render('perkebunan/kebun_8_5a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_11 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_11', {title: 'Perkebunan'});
+exports.tambah_kebun_8_5a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_5a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_11 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_11', {title: 'Perkebunan'});
+exports.edit_kebun_8_5a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_5a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_12 = function(req, res){
-    res.render('perkebunan/kebun_8_12', {title: 'Perkebunan'});
+exports.kebun_8_5b = function(req, res){
+    res.render('perkebunan/kebun_8_5b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_12 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_12', {title: 'Perkebunan'});
+exports.tambah_kebun_8_5b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_5b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_12 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_12', {title: 'Perkebunan'});
+exports.edit_kebun_8_5b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_5b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_13 = function(req, res){
-    res.render('perkebunan/kebun_8_13', {title: 'Perkebunan'});
+exports.kebun_8_6a = function(req, res){
+    res.render('perkebunan/kebun_8_6a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_6a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_6a', {title: 'Perkebunan'});
 };
 
+/* Edit Data */
+exports.edit_kebun_8_6a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_6a', {title: 'Perkebunan'});
+};
+
+exports.kebun_8_6b = function(req, res){
+    res.render('perkebunan/kebun_8_6b', {title: 'Perkebunan'});
+};
+
 /* Tambah Data */
-exports.tambah_kebun_8_13 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_13', {title: 'Perkebunan'});
+exports.tambah_kebun_8_6b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_6b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_13 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_13', {title: 'Perkebunan'});
+exports.edit_kebun_8_6b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_6b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_14 = function(req, res){
-    res.render('perkebunan/kebun_8_14', {title: 'Perkebunan'});
+exports.kebun_8_7a = function(req, res){
+    res.render('perkebunan/kebun_8_7a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_14 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_14', {title: 'Perkebunan'});
+exports.tambah_kebun_8_7a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_7a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_14 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_14', {title: 'Perkebunan'});
+exports.edit_kebun_8_7a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_7a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_15 = function(req, res){
-    res.render('perkebunan/kebun_8_15', {title: 'Perkebunan'});
+exports.kebun_8_7b = function(req, res){
+    res.render('perkebunan/kebun_8_7b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_15 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_15', {title: 'Perkebunan'});
+exports.tambah_kebun_8_7b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_7b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_15 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_15', {title: 'Perkebunan'});
+exports.edit_kebun_8_7b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_7b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_16 = function(req, res){
-    res.render('perkebunan/kebun_8_16', {title: 'Perkebunan'});
+exports.kebun_8_8a = function(req, res){
+    res.render('perkebunan/kebun_8_8a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_16 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_16', {title: 'Perkebunan'});
+exports.tambah_kebun_8_8a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_8a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_16 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_16', {title: 'Perkebunan'});
+exports.edit_kebun_8_8a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_8a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_17 = function(req, res){
-    res.render('perkebunan/kebun_8_17', {title: 'Perkebunan'});
+exports.kebun_8_8b = function(req, res){
+    res.render('perkebunan/kebun_8_8b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_17 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_17', {title: 'Perkebunan'});
+exports.tambah_kebun_8_8b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_8b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_17 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_17', {title: 'Perkebunan'});
+exports.edit_kebun_8_8b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_8b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_18 = function(req, res){
-    res.render('perkebunan/kebun_8_18', {title: 'Perkebunan'});
+exports.kebun_8_9a = function(req, res){
+    res.render('perkebunan/kebun_8_9a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_18 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_18', {title: 'Perkebunan'});
+exports.tambah_kebun_8_9a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_9a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_18 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_18', {title: 'Perkebunan'});
+exports.edit_kebun_8_9a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_9a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_19 = function(req, res){
-    res.render('perkebunan/kebun_8_19', {title: 'Perkebunan'});
+exports.kebun_8_9b = function(req, res){
+    res.render('perkebunan/kebun_8_9b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_19 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_19', {title: 'Perkebunan'});
+exports.tambah_kebun_8_9b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_9b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_19 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_19', {title: 'Perkebunan'});
+exports.edit_kebun_8_9b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_9b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_20 = function(req, res){
-    res.render('perkebunan/kebun_8_20', {title: 'Perkebunan'});
+exports.kebun_8_10a = function(req, res){
+    res.render('perkebunan/kebun_8_10a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_20 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_20', {title: 'Perkebunan'});
+exports.tambah_kebun_8_10a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_10a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_20 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_20', {title: 'Perkebunan'});
+exports.edit_kebun_8_10a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_10a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_21 = function(req, res){
-    res.render('perkebunan/kebun_8_21', {title: 'Perkebunan'});
+exports.kebun_8_10b = function(req, res){
+    res.render('perkebunan/kebun_8_10b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_21 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_21', {title: 'Perkebunan'});
+exports.tambah_kebun_8_10b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_10b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_21 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_21', {title: 'Perkebunan'});
+exports.edit_kebun_8_10b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_10b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_22 = function(req, res){
-    res.render('perkebunan/kebun_8_22', {title: 'Perkebunan'});
+exports.kebun_8_11a = function(req, res){
+    res.render('perkebunan/kebun_8_11a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_22 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_22', {title: 'Perkebunan'});
+exports.tambah_kebun_8_11a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_11a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_22 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_22', {title: 'Perkebunan'});
+exports.edit_kebun_8_11a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_11a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_23 = function(req, res){
-    res.render('perkebunan/kebun_8_23', {title: 'Perkebunan'});
+exports.kebun_8_11b = function(req, res){
+    res.render('perkebunan/kebun_8_11b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_23 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_23', {title: 'Perkebunan'});
+exports.tambah_kebun_8_11b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_11b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_23 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_23', {title: 'Perkebunan'});
+exports.edit_kebun_8_11b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_11b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_24 = function(req, res){
-    res.render('perkebunan/kebun_8_24', {title: 'Perkebunan'});
+exports.kebun_8_12a = function(req, res){
+    res.render('perkebunan/kebun_8_12a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_24 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_24', {title: 'Perkebunan'});
+exports.tambah_kebun_8_12a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_12a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_24 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_24', {title: 'Perkebunan'});
+exports.edit_kebun_8_12a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_12a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_25 = function(req, res){
-    res.render('perkebunan/kebun_8_25', {title: 'Perkebunan'});
+exports.kebun_8_12b = function(req, res){
+    res.render('perkebunan/kebun_8_12b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_25 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_25', {title: 'Perkebunan'});
+exports.tambah_kebun_8_12b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_12b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_25 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_25', {title: 'Perkebunan'});
+exports.edit_kebun_8_12b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_12b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_26 = function(req, res){
-    res.render('perkebunan/kebun_8_26', {title: 'Perkebunan'});
+exports.kebun_8_13a = function(req, res){
+    res.render('perkebunan/kebun_8_13a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_26 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_26', {title: 'Perkebunan'});
+exports.tambah_kebun_8_13a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_13a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_26 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_26', {title: 'Perkebunan'});
+exports.edit_kebun_8_13a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_13a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_27 = function(req, res){
-    res.render('perkebunan/kebun_8_27', {title: 'Perkebunan'});
+exports.kebun_8_13b = function(req, res){
+    res.render('perkebunan/kebun_8_13b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_27 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_27', {title: 'Perkebunan'});
+exports.tambah_kebun_8_13b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_13b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_27 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_27', {title: 'Perkebunan'});
+exports.edit_kebun_8_13b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_13b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_28 = function(req, res){
-    res.render('perkebunan/kebun_8_28', {title: 'Perkebunan'});
+exports.kebun_8_14a = function(req, res){
+    res.render('perkebunan/kebun_8_14a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_28 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_28', {title: 'Perkebunan'});
+exports.tambah_kebun_8_14a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_14a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_28 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_28', {title: 'Perkebunan'});
+exports.edit_kebun_8_14a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_14a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_29 = function(req, res){
-    res.render('perkebunan/kebun_8_29', {title: 'Perkebunan'});
+exports.kebun_8_14b = function(req, res){
+    res.render('perkebunan/kebun_8_14b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_29 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_29', {title: 'Perkebunan'});
+exports.tambah_kebun_8_14b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_14b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_29 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_29', {title: 'Perkebunan'});
+exports.edit_kebun_8_14b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_14b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_30 = function(req, res){
-    res.render('perkebunan/kebun_8_30', {title: 'Perkebunan'});
+exports.kebun_8_15a = function(req, res){
+    res.render('perkebunan/kebun_8_15a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_30 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_30', {title: 'Perkebunan'});
+exports.tambah_kebun_8_15a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_15a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_30 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_30', {title: 'Perkebunan'});
+exports.edit_kebun_8_15a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_15a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_31 = function(req, res){
-    res.render('perkebunan/kebun_8_31', {title: 'Perkebunan'});
+exports.kebun_8_15b = function(req, res){
+    res.render('perkebunan/kebun_8_15b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_31 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_31', {title: 'Perkebunan'});
+exports.tambah_kebun_8_15b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_15b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_31 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_31', {title: 'Perkebunan'});
+exports.edit_kebun_8_15b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_15b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_32 = function(req, res){
-    res.render('perkebunan/kebun_8_32', {title: 'Perkebunan'});
+exports.kebun_8_16a = function(req, res){
+    res.render('perkebunan/kebun_8_16a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_32 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_32', {title: 'Perkebunan'});
+exports.tambah_kebun_8_16a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_16a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_32 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_32', {title: 'Perkebunan'});
+exports.edit_kebun_8_16a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_16a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_33 = function(req, res){
-    res.render('perkebunan/kebun_8_33', {title: 'Perkebunan'});
+exports.kebun_8_16b = function(req, res){
+    res.render('perkebunan/kebun_8_16b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_33 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_33', {title: 'Perkebunan'});
+exports.tambah_kebun_8_16b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_16b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_33 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_33', {title: 'Perkebunan'});
+exports.edit_kebun_8_16b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_16b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_34 = function(req, res){
-    res.render('perkebunan/kebun_8_34', {title: 'Perkebunan'});
+exports.kebun_8_17a = function(req, res){
+    res.render('perkebunan/kebun_8_17a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_34 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_34', {title: 'Perkebunan'});
+exports.tambah_kebun_8_17a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_17a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_34 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_34', {title: 'Perkebunan'});
+exports.edit_kebun_8_17a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_17a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_35 = function(req, res){
-    res.render('perkebunan/kebun_8_35', {title: 'Perkebunan'});
+exports.kebun_8_17b = function(req, res){
+    res.render('perkebunan/kebun_8_17b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_35 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_35', {title: 'Perkebunan'});
+exports.tambah_kebun_8_17b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_17b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_35 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_35', {title: 'Perkebunan'});
+exports.edit_kebun_8_17b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_17b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_36 = function(req, res){
-    res.render('perkebunan/kebun_8_36', {title: 'Perkebunan'});
+exports.kebun_8_18a = function(req, res){
+    res.render('perkebunan/kebun_8_18a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_36 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_36', {title: 'Perkebunan'});
+exports.tambah_kebun_8_18a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_18a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_36 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_36', {title: 'Perkebunan'});
+exports.edit_kebun_8_18a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_18a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_37 = function(req, res){
-    res.render('perkebunan/kebun_8_37', {title: 'Perkebunan'});
+exports.kebun_8_18b = function(req, res){
+    res.render('perkebunan/kebun_8_18b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_37 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_37', {title: 'Perkebunan'});
+exports.tambah_kebun_8_18b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_18b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_37 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_37', {title: 'Perkebunan'});
+exports.edit_kebun_8_18b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_18b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_38 = function(req, res){
-    res.render('perkebunan/kebun_8_38', {title: 'Perkebunan'});
+exports.kebun_8_19a = function(req, res){
+    res.render('perkebunan/kebun_8_19a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_38 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_38', {title: 'Perkebunan'});
+exports.tambah_kebun_8_19a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_19a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_38 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_38', {title: 'Perkebunan'});
+exports.edit_kebun_8_19a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_19a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_39 = function(req, res){
-    res.render('perkebunan/kebun_8_39', {title: 'Perkebunan'});
+exports.kebun_8_19b = function(req, res){
+    res.render('perkebunan/kebun_8_19b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_39 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_39', {title: 'Perkebunan'});
+exports.tambah_kebun_8_19b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_19b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_39 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_39', {title: 'Perkebunan'});
+exports.edit_kebun_8_19b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_19b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_40 = function(req, res){
-    res.render('perkebunan/kebun_8_40', {title: 'Perkebunan'});
+exports.kebun_8_20a = function(req, res){
+    res.render('perkebunan/kebun_8_20a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_40 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_40', {title: 'Perkebunan'});
+exports.tambah_kebun_8_20a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_20a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_40 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_40', {title: 'Perkebunan'});
+exports.edit_kebun_8_20a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_20a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_41 = function(req, res){
-    res.render('perkebunan/kebun_8_41', {title: 'Perkebunan'});
+exports.kebun_8_20b = function(req, res){
+    res.render('perkebunan/kebun_8_20b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_41 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_41', {title: 'Perkebunan'});
+exports.tambah_kebun_8_20b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_20b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_41 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_41', {title: 'Perkebunan'});
+exports.edit_kebun_8_20b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_20b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_42 = function(req, res){
-    res.render('perkebunan/kebun_8_42', {title: 'Perkebunan'});
+exports.kebun_8_21a = function(req, res){
+    res.render('perkebunan/kebun_8_21a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_42 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_42', {title: 'Perkebunan'});
+exports.tambah_kebun_8_21a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_21a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_42 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_42', {title: 'Perkebunan'});
+exports.edit_kebun_8_21a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_21a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_43 = function(req, res){
-    res.render('perkebunan/kebun_8_43', {title: 'Perkebunan'});
+exports.kebun_8_21b = function(req, res){
+    res.render('perkebunan/kebun_8_21b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_43 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_43', {title: 'Perkebunan'});
+exports.tambah_kebun_8_21b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_21b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_43 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_43', {title: 'Perkebunan'});
+exports.edit_kebun_8_21b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_21b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_44 = function(req, res){
-    res.render('perkebunan/kebun_8_44', {title: 'Perkebunan'});
+exports.kebun_8_22a = function(req, res){
+    res.render('perkebunan/kebun_8_22a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_44 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_44', {title: 'Perkebunan'});
+exports.tambah_kebun_8_22a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_22a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_44 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_44', {title: 'Perkebunan'});
+exports.edit_kebun_8_22a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_22a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_45 = function(req, res){
-    res.render('perkebunan/kebun_8_45', {title: 'Perkebunan'});
+exports.kebun_8_22b = function(req, res){
+    res.render('perkebunan/kebun_8_22b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_45 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_45', {title: 'Perkebunan'});
+exports.tambah_kebun_8_22b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_22b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_45 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_45', {title: 'Perkebunan'});
+exports.edit_kebun_8_22b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_22b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_46 = function(req, res){
-    res.render('perkebunan/kebun_8_46', {title: 'Perkebunan'});
+exports.kebun_8_23a = function(req, res){
+    res.render('perkebunan/kebun_8_23a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_46 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_46', {title: 'Perkebunan'});
+exports.tambah_kebun_8_23a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_23a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_46 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_46', {title: 'Perkebunan'});
+exports.edit_kebun_8_23a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_23a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_47 = function(req, res){
-    res.render('perkebunan/kebun_8_47', {title: 'Perkebunan'});
+exports.kebun_8_23b = function(req, res){
+    res.render('perkebunan/kebun_8_23b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_47 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_47', {title: 'Perkebunan'});
+exports.tambah_kebun_8_23b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_23b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_47 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_47', {title: 'Perkebunan'});
+exports.edit_kebun_8_23b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_23b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_48 = function(req, res){
-    res.render('perkebunan/kebun_8_48', {title: 'Perkebunan'});
+exports.kebun_8_24a = function(req, res){
+    res.render('perkebunan/kebun_8_24a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_48 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_48', {title: 'Perkebunan'});
+exports.tambah_kebun_8_24a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_24a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_48 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_48', {title: 'Perkebunan'});
+exports.edit_kebun_8_24a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_24a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_49 = function(req, res){
-    res.render('perkebunan/kebun_8_49', {title: 'Perkebunan'});
+exports.kebun_8_24b = function(req, res){
+    res.render('perkebunan/kebun_8_24b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_49 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_49', {title: 'Perkebunan'});
+exports.tambah_kebun_8_24b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_24b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_49 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_49', {title: 'Perkebunan'});
+exports.edit_kebun_8_24b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_24b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_50 = function(req, res){
-    res.render('perkebunan/kebun_8_50', {title: 'Perkebunan'});
+exports.kebun_8_25a = function(req, res){
+    res.render('perkebunan/kebun_8_25a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_50 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_50', {title: 'Perkebunan'});
+exports.tambah_kebun_8_25a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_25a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_50 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_50', {title: 'Perkebunan'});
+exports.edit_kebun_8_25a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_25a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_51 = function(req, res){
-    res.render('perkebunan/kebun_8_51', {title: 'Perkebunan'});
+exports.kebun_8_25b = function(req, res){
+    res.render('perkebunan/kebun_8_25b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_51 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_51', {title: 'Perkebunan'});
+exports.tambah_kebun_8_25b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_25b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_51 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_51', {title: 'Perkebunan'});
+exports.edit_kebun_8_25b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_25b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_52 = function(req, res){
-    res.render('perkebunan/kebun_8_52', {title: 'Perkebunan'});
+exports.kebun_8_26a = function(req, res){
+    res.render('perkebunan/kebun_8_26a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_52 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_52', {title: 'Perkebunan'});
+exports.tambah_kebun_8_26a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_26a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_52 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_52', {title: 'Perkebunan'});
+exports.edit_kebun_8_26a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_26a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_53 = function(req, res){
-    res.render('perkebunan/kebun_8_53', {title: 'Perkebunan'});
+exports.kebun_8_26b = function(req, res){
+    res.render('perkebunan/kebun_8_26b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_53 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_53', {title: 'Perkebunan'});
+exports.tambah_kebun_8_26b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_26b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_53 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_53', {title: 'Perkebunan'});
+exports.edit_kebun_8_26b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_26b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_54 = function(req, res){
-    res.render('perkebunan/kebun_8_54', {title: 'Perkebunan'});
+exports.kebun_8_27a = function(req, res){
+    res.render('perkebunan/kebun_8_27a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_54 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_54', {title: 'Perkebunan'});
+exports.tambah_kebun_8_27a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_27a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_54 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_54', {title: 'Perkebunan'});
+exports.edit_kebun_8_27a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_27a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_55 = function(req, res){
-    res.render('perkebunan/kebun_8_55', {title: 'Perkebunan'});
+exports.kebun_8_27b = function(req, res){
+    res.render('perkebunan/kebun_8_27b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_55 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_55', {title: 'Perkebunan'});
+exports.tambah_kebun_8_27b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_27b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_55 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_55', {title: 'Perkebunan'});
+exports.edit_kebun_8_27b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_27b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_56 = function(req, res){
-    res.render('perkebunan/kebun_8_56', {title: 'Perkebunan'});
+exports.kebun_8_28a = function(req, res){
+    res.render('perkebunan/kebun_8_28a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_56 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_56', {title: 'Perkebunan'});
+exports.tambah_kebun_8_28a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_28a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_56 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_56', {title: 'Perkebunan'});
+exports.edit_kebun_8_28a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_28a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_57 = function(req, res){
-    res.render('perkebunan/kebun_8_57', {title: 'Perkebunan'});
+exports.kebun_8_28b = function(req, res){
+    res.render('perkebunan/kebun_8_28b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_57 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_57', {title: 'Perkebunan'});
+exports.tambah_kebun_8_28b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_28b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_57 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_57', {title: 'Perkebunan'});
+exports.edit_kebun_8_28b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_28b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_58 = function(req, res){
-    res.render('perkebunan/kebun_8_58', {title: 'Perkebunan'});
+exports.kebun_8_29a = function(req, res){
+    res.render('perkebunan/kebun_8_29a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_29a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_29a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_29a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_29a', {title: 'Perkebunan'});
+};
+
+exports.kebun_8_29b = function(req, res){
+    res.render('perkebunan/kebun_8_29b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_58 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_58', {title: 'Perkebunan'});
+exports.tambah_kebun_8_29b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_29b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_58 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_58', {title: 'Perkebunan'});
+exports.edit_kebun_8_29b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_29b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_59 = function(req, res){
-    res.render('perkebunan/kebun_8_59', {title: 'Perkebunan'});
+exports.kebun_8_30a = function(req, res){
+    res.render('perkebunan/kebun_8_30a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_59 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_59', {title: 'Perkebunan'});
+exports.tambah_kebun_8_30a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_30a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_59 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_59', {title: 'Perkebunan'});
+exports.edit_kebun_8_30a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_30a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_60 = function(req, res){
-    res.render('perkebunan/kebun_8_60', {title: 'Perkebunan'});
+exports.kebun_8_30b = function(req, res){
+    res.render('perkebunan/kebun_8_30b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_60 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_60', {title: 'Perkebunan'});
+exports.tambah_kebun_8_30b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_30b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_60 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_60', {title: 'Perkebunan'});
+exports.edit_kebun_8_30b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_30b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_61 = function(req, res){
-    res.render('perkebunan/kebun_8_61', {title: 'Perkebunan'});
+exports.kebun_8_31a = function(req, res){
+    res.render('perkebunan/kebun_8_31a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_61 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_61', {title: 'Perkebunan'});
+exports.tambah_kebun_8_31a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_31a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_61 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_61', {title: 'Perkebunan'});
+exports.edit_kebun_8_31a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_31a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_62 = function(req, res){
-    res.render('perkebunan/kebun_8_62', {title: 'Perkebunan'});
+exports.kebun_8_31b = function(req, res){
+    res.render('perkebunan/kebun_8_31b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_62 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_62', {title: 'Perkebunan'});
+exports.tambah_kebun_8_31b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_31b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_62 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_62', {title: 'Perkebunan'});
+exports.edit_kebun_8_31b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_31b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_63 = function(req, res){
-    res.render('perkebunan/kebun_8_63', {title: 'Perkebunan'});
+exports.kebun_8_32a = function(req, res){
+    res.render('perkebunan/kebun_8_32a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_63 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_63', {title: 'Perkebunan'});
+exports.tambah_kebun_8_32a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_32a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_63 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_63', {title: 'Perkebunan'});
+exports.edit_kebun_8_32a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_32a', {title: 'Perkebunan'});
 };
-/*============================================================================================*/
-/*======================================Rehab Teh Tahun 1=====================================*/
+
 /*Render Tabel*/
-exports.kebun_8_64 = function(req, res){
-    res.render('perkebunan/kebun_8_64', {title: 'Perkebunan'});
+exports.kebun_8_32b = function(req, res){
+    res.render('perkebunan/kebun_8_32b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_64 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_64', {title: 'Perkebunan'});
+exports.tambah_kebun_8_32b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_32b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_64 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_64', {title: 'Perkebunan'});
+exports.edit_kebun_8_32b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_32b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
 /*Render Tabel*/
-exports.kebun_8_65 = function(req, res){
-    res.render('perkebunan/kebun_8_65', {title: 'Perkebunan'});
+exports.kebun_8_33a = function(req, res){
+    res.render('perkebunan/kebun_8_33a', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_65 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_65', {title: 'Perkebunan'});
+exports.tambah_kebun_8_33a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_33a', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_65 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_65', {title: 'Perkebunan'});
+exports.edit_kebun_8_33a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_33a', {title: 'Perkebunan'});
 };
+
+/*Render Tabel*/
+exports.kebun_8_33b = function(req, res){
+    res.render('perkebunan/kebun_8_33b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_33b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_33b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_33b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_33b', {title: 'Perkebunan'});
+};
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_34a = function(req, res){
+    res.render('perkebunan/kebun_8_34a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_34a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_34a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_34a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_34a', {title: 'Perkebunan'});
+};
+
 /*Render Tabel*/
-exports.kebun_8_66 = function(req, res){
-    res.render('perkebunan/kebun_8_66', {title: 'Perkebunan'});
+exports.kebun_8_34b = function(req, res){
+    res.render('perkebunan/kebun_8_34b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_66 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_66', {title: 'Perkebunan'});
+exports.tambah_kebun_8_34b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_34b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_66 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_66', {title: 'Perkebunan'});
+exports.edit_kebun_8_34b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_34b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_35a = function(req, res){
+    res.render('perkebunan/kebun_8_35a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_35a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_35a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_35a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_35a', {title: 'Perkebunan'});
+};
+
 /*Render Tabel*/
-exports.kebun_8_67 = function(req, res){
-    res.render('perkebunan/kebun_8_67', {title: 'Perkebunan'});
+exports.kebun_8_35b = function(req, res){
+    res.render('perkebunan/kebun_8_35b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_67 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_67', {title: 'Perkebunan'});
+exports.tambah_kebun_8_35b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_35b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_67 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_67', {title: 'Perkebunan'});
+exports.edit_kebun_8_35b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_35b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_36a = function(req, res){
+    res.render('perkebunan/kebun_8_36a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_36a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_36a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_36a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_36a', {title: 'Perkebunan'});
+};
+
 /*Render Tabel*/
-exports.kebun_8_68 = function(req, res){
-    res.render('perkebunan/kebun_8_68', {title: 'Perkebunan'});
+exports.kebun_8_36b = function(req, res){
+    res.render('perkebunan/kebun_8_36b', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_68 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_68', {title: 'Perkebunan'});
+exports.tambah_kebun_8_36b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_36b', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_68 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_68', {title: 'Perkebunan'});
+exports.edit_kebun_8_36b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_36b', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_37a = function(req, res){
+    res.render('perkebunan/kebun_8_37a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_37a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_37a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_37a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_37a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_37b = function(req, res){
+    res.render('perkebunan/kebun_8_37b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_37b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_37b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_37b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_37b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_37c = function(req, res){
+    res.render('perkebunan/kebun_8_37c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_37c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_37c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_37c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_37c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_37d = function(req, res){
+    res.render('perkebunan/kebun_8_37d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_37d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_37d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_37d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_37d', {title: 'Perkebunan'});
+};
+
 /*Render Tabel*/
-exports.kebun_8_69 = function(req, res){
-    res.render('perkebunan/kebun_8_69', {title: 'Perkebunan'});
+exports.kebun_8_37e = function(req, res){
+    res.render('perkebunan/kebun_8_37e', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_69 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_69', {title: 'Perkebunan'});
+exports.tambah_kebun_8_37e = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_37e', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_69 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_69', {title: 'Perkebunan'});
+exports.edit_kebun_8_37e = function(req, res){
+    res.render('perkebunan/edit_kebun_8_37e', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_38a = function(req, res){
+    res.render('perkebunan/kebun_8_38a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_38a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_38a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_38a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_38a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_38b = function(req, res){
+    res.render('perkebunan/kebun_8_38b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_38b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_38b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_38b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_38b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_38c = function(req, res){
+    res.render('perkebunan/kebun_8_38c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_38c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_38c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_38c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_38c', {title: 'Perkebunan'});
+};
+
 /*Render Tabel*/
-exports.kebun_8_70 = function(req, res){
-    res.render('perkebunan/kebun_8_70', {title: 'Perkebunan'});
+exports.kebun_8_38d = function(req, res){
+    res.render('perkebunan/kebun_8_38d', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_70 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_70', {title: 'Perkebunan'});
+exports.tambah_kebun_8_38d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_38d', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_70 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_70', {title: 'Perkebunan'});
+exports.edit_kebun_8_38d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_38d', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 /*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_39a = function(req, res){
+    res.render('perkebunan/kebun_8_39a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_39a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_39a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_39a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_39a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_39b = function(req, res){
+    res.render('perkebunan/kebun_8_39b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_39b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_39b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_39b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_39b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_39c = function(req, res){
+    res.render('perkebunan/kebun_8_39c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_39c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_39c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_39c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_39c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_39d = function(req, res){
+    res.render('perkebunan/kebun_8_39d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_39d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_39d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_39d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_39d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_40a = function(req, res){
+    res.render('perkebunan/kebun_8_40a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_40a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_40a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_40a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_40a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_40b = function(req, res){
+    res.render('perkebunan/kebun_8_40b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_40b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_40b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_40b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_40b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_40c = function(req, res){
+    res.render('perkebunan/kebun_8_40c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_40c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_40c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_40c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_40c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_40d = function(req, res){
+    res.render('perkebunan/kebun_8_40d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_40d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_40d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_40d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_40d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_41a = function(req, res){
+    res.render('perkebunan/kebun_8_41a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_41a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_41a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_41a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_41a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_41b = function(req, res){
+    res.render('perkebunan/kebun_8_41b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_41b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_41b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_41b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_41b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_41c = function(req, res){
+    res.render('perkebunan/kebun_8_41c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_41c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_41c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_41c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_41c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_41d = function(req, res){
+    res.render('perkebunan/kebun_8_41d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_41d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_41d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_41d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_41d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_42a = function(req, res){
+    res.render('perkebunan/kebun_8_42a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_42a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_42a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_42a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_42a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_42b = function(req, res){
+    res.render('perkebunan/kebun_8_42b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_42b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_42b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_42b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_42b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_42c = function(req, res){
+    res.render('perkebunan/kebun_8_42c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_42c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_42c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_42c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_42c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_42d = function(req, res){
+    res.render('perkebunan/kebun_8_42d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_42d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_42d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_42d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_42d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_43a = function(req, res){
+    res.render('perkebunan/kebun_8_43a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_43a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_43a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_43a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_43a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_43b = function(req, res){
+    res.render('perkebunan/kebun_8_43b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_43b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_43b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_43b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_43b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_43c = function(req, res){
+    res.render('perkebunan/kebun_8_43c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_43c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_43c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_43c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_43c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_43d = function(req, res){
+    res.render('perkebunan/kebun_8_43d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_43d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_43d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_43d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_43d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_44aa = function(req, res){
+    res.render('perkebunan/kebun_8_44aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_44aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_44aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_44aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_44aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_44ab = function(req, res){
+    res.render('perkebunan/kebun_8_44ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_44ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_44ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_44ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_44ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_44ac = function(req, res){
+    res.render('perkebunan/kebun_8_44ac', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_44ac = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_44ac', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_44ac = function(req, res){
+    res.render('perkebunan/edit_kebun_8_44ac', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_44b = function(req, res){
+    res.render('perkebunan/kebun_8_44b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_44b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_44b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_44b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_44b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_44c = function(req, res){
+    res.render('perkebunan/kebun_8_44c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_44c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_44c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_44c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_44c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_44d = function(req, res){
+    res.render('perkebunan/kebun_8_44d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_44d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_44d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_44d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_44d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_45aa = function(req, res){
+    res.render('perkebunan/kebun_8_45aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_45aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_45aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_45aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_45aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_45ab = function(req, res){
+    res.render('perkebunan/kebun_8_45ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_45ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_45ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_45ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_45ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_45b = function(req, res){
+    res.render('perkebunan/kebun_8_45b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_45b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_45b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_45b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_45b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_45c = function(req, res){
+    res.render('perkebunan/kebun_8_45c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_45c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_45c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_45c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_45c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_45d = function(req, res){
+    res.render('perkebunan/kebun_8_45d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_45d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_45d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_45d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_45d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_46aa = function(req, res){
+    res.render('perkebunan/kebun_8_46aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_46aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_46aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_46aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_46aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_46ab = function(req, res){
+    res.render('perkebunan/kebun_8_46ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_46ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_46ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_46ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_46ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_46b = function(req, res){
+    res.render('perkebunan/kebun_8_46b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_46b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_46b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_46b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_46b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_46c = function(req, res){
+    res.render('perkebunan/kebun_8_46c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_46c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_46c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_46c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_46c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_46d = function(req, res){
+    res.render('perkebunan/kebun_8_46d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_46d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_46d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_46d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_46d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_47aa = function(req, res){
+    res.render('perkebunan/kebun_8_47aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_47aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_47aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_47aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_47aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_47ab = function(req, res){
+    res.render('perkebunan/kebun_8_47ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_47ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_47ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_47ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_47ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_47b = function(req, res){
+    res.render('perkebunan/kebun_8_47b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_47b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_47b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_47b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_47b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_47c = function(req, res){
+    res.render('perkebunan/kebun_8_47c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_47c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_47c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_47c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_47c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_47d = function(req, res){
+    res.render('perkebunan/kebun_8_47d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_47d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_47d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_47d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_47d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_48a = function(req, res){
+    res.render('perkebunan/kebun_8_48a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_48a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_48a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_48a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_48a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_48b = function(req, res){
+    res.render('perkebunan/kebun_8_48b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_48b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_48b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_48b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_48b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_48c = function(req, res){
+    res.render('perkebunan/kebun_8_48c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_48c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_48c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_48c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_48c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_48d = function(req, res){
+    res.render('perkebunan/kebun_8_48d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_48d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_48d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_48d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_48d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_49a = function(req, res){
+    res.render('perkebunan/kebun_8_49a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_49a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_49a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_49a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_49a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_49b = function(req, res){
+    res.render('perkebunan/kebun_8_49b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_49b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_49b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_49b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_49b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_49c = function(req, res){
+    res.render('perkebunan/kebun_8_49c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_49c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_49c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_49c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_49c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_49d = function(req, res){
+    res.render('perkebunan/kebun_8_49d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_49d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_49d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_49d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_49d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_50aa = function(req, res){
+    res.render('perkebunan/kebun_8_50aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_50aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_50aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_50aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_50aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_50ab = function(req, res){
+    res.render('perkebunan/kebun_8_50ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_50ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_50ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_50ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_50ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_50b = function(req, res){
+    res.render('perkebunan/kebun_8_50b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_50b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_50b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_50b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_50b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_50c = function(req, res){
+    res.render('perkebunan/kebun_8_50c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_50c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_50c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_50c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_50c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_50d = function(req, res){
+    res.render('perkebunan/kebun_8_50d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_50d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_50d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_50d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_50d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_51a = function(req, res){
+    res.render('perkebunan/kebun_8_51a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_51a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_51a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_51a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_51a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_51b = function(req, res){
+    res.render('perkebunan/kebun_8_51b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_51b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_51b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_51b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_51b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_51c = function(req, res){
+    res.render('perkebunan/kebun_8_51c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_51c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_51c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_51c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_51c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_51d = function(req, res){
+    res.render('perkebunan/kebun_8_51d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_51d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_51d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_51d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_51d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_52a = function(req, res){
+    res.render('perkebunan/kebun_8_52a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_52a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_52a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_52a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_52a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_52b = function(req, res){
+    res.render('perkebunan/kebun_8_52b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_52b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_52b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_52b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_52b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_52c = function(req, res){
+    res.render('perkebunan/kebun_8_52c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_52c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_52c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_52c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_52c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_52d = function(req, res){
+    res.render('perkebunan/kebun_8_52d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_52d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_52d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_52d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_52d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_53aa = function(req, res){
+    res.render('perkebunan/kebun_8_53aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_53aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_53aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_53aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_53aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_53ab = function(req, res){
+    res.render('perkebunan/kebun_8_53ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_53ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_53ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_53ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_53ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_53ac = function(req, res){
+    res.render('perkebunan/kebun_8_53ac', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_53ac = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_53ac', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_53ac = function(req, res){
+    res.render('perkebunan/edit_kebun_8_53ac', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_53b = function(req, res){
+    res.render('perkebunan/kebun_8_53b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_53b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_53b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_53b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_53b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_53c = function(req, res){
+    res.render('perkebunan/kebun_8_53c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_53c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_53c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_53c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_53c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_53d = function(req, res){
+    res.render('perkebunan/kebun_8_53d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_53d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_53d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_53d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_53d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_54aa = function(req, res){
+    res.render('perkebunan/kebun_8_54aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_54aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_54aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_54aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_54aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_54ab = function(req, res){
+    res.render('perkebunan/kebun_8_54ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_54ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_54ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_54ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_54ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_54b = function(req, res){
+    res.render('perkebunan/kebun_8_54b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_54b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_54b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_54b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_54b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_54c = function(req, res){
+    res.render('perkebunan/kebun_8_54c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_54c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_54c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_54c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_54c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_54d = function(req, res){
+    res.render('perkebunan/kebun_8_54d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_54d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_54d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_54d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_54d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_55aa = function(req, res){
+    res.render('perkebunan/kebun_8_55aa', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_55aa = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_55aa', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_55aa = function(req, res){
+    res.render('perkebunan/edit_kebun_8_55aa', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_55ab = function(req, res){
+    res.render('perkebunan/kebun_8_55ab', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_55ab = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_55ab', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_55ab = function(req, res){
+    res.render('perkebunan/edit_kebun_8_55ab', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_55b = function(req, res){
+    res.render('perkebunan/kebun_8_55b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_55b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_55b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_55b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_55b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_55c = function(req, res){
+    res.render('perkebunan/kebun_8_55c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_55c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_55c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_55c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_55c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_55d = function(req, res){
+    res.render('perkebunan/kebun_8_55d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_55d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_55d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_55d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_55d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_56a = function(req, res){
+    res.render('perkebunan/kebun_8_56a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_56a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_56a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_56a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_56a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_56b = function(req, res){
+    res.render('perkebunan/kebun_8_56b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_56b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_56b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_56b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_56b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_56c = function(req, res){
+    res.render('perkebunan/kebun_8_56c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_56c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_56c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_56c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_56c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_56d = function(req, res){
+    res.render('perkebunan/kebun_8_56d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_56d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_56d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_56d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_56d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_57a = function(req, res){
+    res.render('perkebunan/kebun_8_57a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_57a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_57a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_57a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_57a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_57b = function(req, res){
+    res.render('perkebunan/kebun_8_57b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_57b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_57b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_57b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_57b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_57c = function(req, res){
+    res.render('perkebunan/kebun_8_57c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_57c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_57c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_57c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_57c', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_57d = function(req, res){
+    res.render('perkebunan/kebun_8_57d', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_57d = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_57d', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_57d = function(req, res){
+    res.render('perkebunan/edit_kebun_8_57d', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_58a = function(req, res){
+    res.render('perkebunan/kebun_8_58a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_58a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_58a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_58a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_58a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_58b = function(req, res){
+    res.render('perkebunan/kebun_8_58b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_58b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_58b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_58b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_58b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_58c = function(req, res){
+    res.render('perkebunan/kebun_8_58c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_58c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_58c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_58c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_58c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_59a = function(req, res){
+    res.render('perkebunan/kebun_8_59a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_59a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_59a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_59a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_59a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_59b = function(req, res){
+    res.render('perkebunan/kebun_8_59b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_59b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_59b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_59b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_59b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_59c = function(req, res){
+    res.render('perkebunan/kebun_8_59c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_59c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_59c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_59c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_59c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_60a = function(req, res){
+    res.render('perkebunan/kebun_8_60a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_60a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_60a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_60a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_60a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_60b = function(req, res){
+    res.render('perkebunan/kebun_8_60b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_60b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_60b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_60b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_60b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_60c = function(req, res){
+    res.render('perkebunan/kebun_8_60c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_60c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_60c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_60c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_60c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_61a = function(req, res){
+    res.render('perkebunan/kebun_8_61a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_61a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_61a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_61a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_61a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_61b = function(req, res){
+    res.render('perkebunan/kebun_8_61b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_61b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_61b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_61b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_61b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_61c = function(req, res){
+    res.render('perkebunan/kebun_8_61c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_61c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_61c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_61c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_61c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_62a = function(req, res){
+    res.render('perkebunan/kebun_8_62a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_62a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_62a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_62a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_62a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_62b = function(req, res){
+    res.render('perkebunan/kebun_8_62b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_62b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_62b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_62b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_62b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_62c = function(req, res){
+    res.render('perkebunan/kebun_8_62c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_62c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_62c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_62c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_62c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_63a = function(req, res){
+    res.render('perkebunan/kebun_8_63a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_63a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_63a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_63a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_63a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_63b = function(req, res){
+    res.render('perkebunan/kebun_8_63b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_63b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_63b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_63b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_63b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_63c = function(req, res){
+    res.render('perkebunan/kebun_8_63c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_63c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_63c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_63c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_63c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_64a = function(req, res){
+    res.render('perkebunan/kebun_8_64a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_64a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_64a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_64a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_64a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_64b = function(req, res){
+    res.render('perkebunan/kebun_8_64b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_64b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_64b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_64b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_64b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_64c = function(req, res){
+    res.render('perkebunan/kebun_8_64c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_64c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_64c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_64c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_64c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_65a = function(req, res){
+    res.render('perkebunan/kebun_8_65a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_65a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_65a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_65a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_65a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_65b = function(req, res){
+    res.render('perkebunan/kebun_8_65b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_65b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_65b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_65b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_65b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_65c = function(req, res){
+    res.render('perkebunan/kebun_8_65c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_65c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_65c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_65c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_65c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_66a = function(req, res){
+    res.render('perkebunan/kebun_8_66a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_66a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_66a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_66a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_66a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_66b = function(req, res){
+    res.render('perkebunan/kebun_8_66b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_66b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_66b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_66b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_66b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_66c = function(req, res){
+    res.render('perkebunan/kebun_8_66c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_66c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_66c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_66c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_66c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_67a = function(req, res){
+    res.render('perkebunan/kebun_8_67a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_67a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_67a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_67a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_67a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_67b = function(req, res){
+    res.render('perkebunan/kebun_8_67b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_67b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_67b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_67b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_67b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_67c = function(req, res){
+    res.render('perkebunan/kebun_8_67c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_67c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_67c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_67c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_67c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_68a = function(req, res){
+    res.render('perkebunan/kebun_8_68a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_68a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_68a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_68a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_68a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_68b = function(req, res){
+    res.render('perkebunan/kebun_8_68b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_68b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_68b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_68b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_68b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_68c = function(req, res){
+    res.render('perkebunan/kebun_8_68c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_68c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_68c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_68c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_68c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_69a = function(req, res){
+    res.render('perkebunan/kebun_8_69a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_69a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_69a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_69a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_69a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_69b = function(req, res){
+    res.render('perkebunan/kebun_8_69b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_69b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_69b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_69b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_69b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_69c = function(req, res){
+    res.render('perkebunan/kebun_8_69c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_69c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_69c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_69c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_69c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_70a = function(req, res){
+    res.render('perkebunan/kebun_8_70a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_70a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_70a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_70a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_70a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_70b = function(req, res){
+    res.render('perkebunan/kebun_8_70b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_70b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_70b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_70b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_70b', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_70c = function(req, res){
+    res.render('perkebunan/kebun_8_70c', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_70c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_70c', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_70c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_70c', {title: 'Perkebunan'});
+};
+/*============================================================================================*/
+/*======================================Rehab Teh Tahun 1=====================================*/
+/*Render Tabel*/
+exports.kebun_8_71a = function(req, res){
+    res.render('perkebunan/kebun_8_71a', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_71a = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_71a', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_71a = function(req, res){
+    res.render('perkebunan/edit_kebun_8_71a', {title: 'Perkebunan'});
+};
+
+/*Render Tabel*/
+exports.kebun_8_71b = function(req, res){
+    res.render('perkebunan/kebun_8_71b', {title: 'Perkebunan'});
+};
+
+/* Tambah Data */
+exports.tambah_kebun_8_71b = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_71b', {title: 'Perkebunan'});
+};
+
+/* Edit Data */
+exports.edit_kebun_8_71b = function(req, res){
+    res.render('perkebunan/edit_kebun_8_71b', {title: 'Perkebunan'});
+};
+
 /*Render Tabel*/
-exports.kebun_8_71 = function(req, res){
-    res.render('perkebunan/kebun_8_71', {title: 'Perkebunan'});
+exports.kebun_8_71c = function(req, res){
+    res.render('perkebunan/kebun_8_71c', {title: 'Perkebunan'});
 };
 
 /* Tambah Data */
-exports.tambah_kebun_8_71 = function(req, res){
-    res.render('perkebunan/tambah_kebun_8_71', {title: 'Perkebunan'});
+exports.tambah_kebun_8_71c = function(req, res){
+    res.render('perkebunan/tambah_kebun_8_71c', {title: 'Perkebunan'});
 };
 
 /* Edit Data */
-exports.edit_kebun_8_71 = function(req, res){
-    res.render('perkebunan/edit_kebun_8_71', {title: 'Perkebunan'});
+exports.edit_kebun_8_71c = function(req, res){
+    res.render('perkebunan/edit_kebun_8_71c', {title: 'Perkebunan'});
 };
 /*============================================================================================*/
 
