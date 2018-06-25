@@ -186,36 +186,36 @@ Q. Kategori Q (DONE)
 R. Kategori R** (DONE)
 
 ===============================
-S. Kategori S** (DONE)
-- Tabel 2.50 - 2.51 (Detail 5) 
+S. Kategori S**
+- Tabel 2.50 - 2.51 (Detail 5)
 ===============================
 T. Kategori T
-- Tabel 2.52 (Detail 2) (DONE)
+- Tabel 2.52 (Detail 2)
 ===============================
 U. Kategori U
-- Tabel 2.53 (Detail 11) (DONE)
+- Tabel 2.53 (Detail 11)
 ===============================
 V. Kategori V
-- Tabel 2.54 (Detail 6) (DONE)
+- Tabel 2.54 (Detail 6)
 ===============================
 W. Kategori W**
 
 ===============================
 X. Kategori X **
-- Tabel 2.55 (Detail 9) (DONE)
+- Tabel 2.55 (Detail 9)
 - Tabel 2.56 - 2.57 (Detail 2)
 ===============================
 Y. Kategori Y**
 
 ===============================
 Z. Kategori Z
-- Tabel 2.58 (Detail 2) (DONE)
+- Tabel 2.58 (Detail 2)
 ===============================
 AA. Kategori AA
-- Tabel 2.59 (Detail 9) (DONE)
+- Tabel 2.59 (Detail 9)
 ===============================
 BB. Kategori BB
-- Tabel 2.60 (Detail 11) (DONE)
+- Tabel 2.60 (Detail 11)
 ===============================
 B. SBU Sebagai Estimasi
 ===============================
