@@ -10,8 +10,55 @@
   <div class="page-header-data"><h2>Perjalanan Dinas</h2></div>
     <div class="page-container">
         <div class="page-data">
-                  <a href="/tambah_sbu1_2_43" class="btn btn-success" role="button">Tambah Data</a>
+            <h3>Perjalanan Dinas Dalam Negeri</h3>
+            <h3>Uang harian perjalanan dinas dan uang representasi Ketua 
+DPRD, Wakil Ketua DPRD dan Anggota DPRD</h3>
+                  <a href="/tambah_sbu1_2_43/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Uraian</th>
+                  <th>Daerah Tujuan</th>
+                  <th>Satuan</th>
+                  <th>Besaran Uang Harian</th>
+                  <th>Besaran Uang Representasi</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nama2%></td>
+                    <td><%=data[i].nama3%></td>
+                    <td><%=data[i].nilai1%></td>
+                    <td><%=data[i].nilai2%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_sbu1_2_43/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_sbu1_2_43/delete/<%=data[i].id%>>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
     <script type="text/javascript" src="/../js/all.js"></script>

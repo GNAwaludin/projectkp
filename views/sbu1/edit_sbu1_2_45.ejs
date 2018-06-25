@@ -15,25 +15,25 @@
             <h3>Biaya Taksi Perjalanan Dinas Luar Provinsi</h3>
             <h3>Gubernur, Wakil Gubernur, Sekretaris Daerah, Pimpinan DPRD dan Anggota DPRD</h3></br>
             <h3>Edit Data</h3>
-             <form class="form-horizontal" method="post">
+             <form class="form-horizontal" method="post" action="/edit_sbu1_2_45/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Uraian:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="uraian">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="nama1" value="<%=data[0].nama1%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Satuan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="satuan">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama2" value="<%=data[0].nama2%>">
                             </div>
                     </div>                    
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Besaran (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="besaran1">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai" value="<%=data[0].nilai%>">
                             </div>
                     </div>
                     

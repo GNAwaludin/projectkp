@@ -11,30 +11,26 @@
     <div class="page-header-data"><h2>Perjalanan Dinas</h2></div>
     <div class="page-container">
         <div class="page-data">
-            <h3>Perjalanan Dinas Pindah</h3>
-            <h3>Biaya Pindah Pengangkutan Barang</h3></br>
-            <h3>Tambah Data Baru</h3>
-             <form class="form-horizontal" method="post" action="/tambah_sbu1_2_49/add">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2">Angkutan:</label>
-                            <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;" name="nama1">
-                                    <option>--Pilih Salah Satu--</option>
-                                    <option value="Kereta Api">Kereta Api</option>
-                                    <option value="Truk">Truk</option>
-                                    <option value="Angkutan Laut/Sungai">Angkutan Laut/Sungai</option>
-                                </select>
-                            </div>
-                    </div>
-
+            <h3>Perjalanan Dinas Dalam Negeri</h3>
+            <h3>Uang harian perjalanan dinas dan uang representasi Ketua 
+DPRD, Wakil Ketua DPRD dan Anggota DPRD</h3></br>
+            <h3>Edit Data</h3>
+             <form class="form-horizontal" method="post" action="/edit_sbu1_2_43/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Uraian:</label>
                             <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian" name="nama1" value="<%=data[0].nama1%>">
+                            </div>
+                    </div>
+
+                     <div class="form-group">
+                        <label class="control-label col-sm-2">Daerah Tujuan:</label>
+                            <div class="col-sm-10">
                                 <select class="form-control" id="sel1" style="width: 300px;" name="nama2">
                                     <option>--Pilih Salah Satu--</option>
-                                    <option value="Pengepakan dan Penggudangan">Pengepakan dan Penggudangan</option>
-                                    <option value="Pengangkutan">Pengangkutan</option>
-                                    <option value="Pengangkutan Laut/Sungai">Pengangkutan Laut/Sungai</option>
+                                    <option value="Kab/Kota  dalam Provinsi">Kab/Kota  dalam Provinsi</option>
+                                    <option value="Provinsi DKI Jakarta dan Provinsi Banten">Provinsi DKI Jakarta dan Provinsi Banten</option>
+                                    <option value="Selain Provinsi DKI Jakarta dan Provinsi Banten">Selain Provinsi DKI Jakarta dan Provinsi Banten</option>
                                 </select>
                             </div>
                     </div>
@@ -42,21 +38,28 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Satuan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama3">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama3" value="<%=data[0].nama2%>">
+                            </div>
+                    </div>                    
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Besaran Uang Harian (Rp.):</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai1" value="<%=data[0].nilai1%>">
                             </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-2">Biaya (Rp.):</label>
+                        <label class="control-label col-sm-2">Uang Representasi (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Nominal (Rp.)" name="nilai">
+                                <input type="text" class="form-control" placeholder="Masukan Besaran (Rp.)" name="nilai2" value="<%=data[0].nilai2%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
