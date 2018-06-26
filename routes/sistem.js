@@ -106,19 +106,11 @@ exports.saveBidang = function(req, res, next){
 
 /*=====================================Bidang Kebinamargaan=========================================*/
 exports.kebinamargaan = function(req, res){
-    req.getConnection(function(err, connection){
 
-        var query = connection.query('SELECT * FROM fsk_jl', function(err, rows){
-
-            if(err)
-                console.log("Error Selecting : %s ", err);
-
-            res.render('kebinamargaan/kebinamargaan', {
-                title: "Bidang Kebinamargaan",
-                page_title: "Bidang Kebinamargaan", data:rows
-            });
-        });
-    });
+    res.render('kebinamargaan/kebinamargaan', {
+    title: "Bidang Kebinamargaan",
+    page_title: "Bidang Kebinamargaan",
+});
 };
 
 
@@ -129,84 +121,78 @@ exports.kebinamargaan = function(req, res){
 
 /*Render Tabel*/
 exports.kebinamargaan_1_1 = function(req, res){
+
      req.getConnection(function(err, connection){
 
-        var query = connection.query('SELECT * FROM sub_fsk_jl', function(err, rows){
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 66", function(err, rows){
 
             if(err)
                 console.log("Error Selecting : %s ", err);
 
             res.render('kebinamargaan/kebinamargaan_1_1', {
-                title: "Kebinamargaan",
-                page_title: "Bidang Kebinamargaan", data:rows
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
             });
         });
     });
 };
-
 
 /* Tambah Data */
 exports.tambah_kebinamargaan_1_1 = function(req, res){
-    req.getConnection(function(err, connection){
-
-        var query = connection.query('SELECT * FROM fsk_jl', function(err, rows){
-
-            if(err)
-                console.log("Error Selecting : %s ", err);
-
-            res.render('kebinamargaan/tambah_kebinamargaan_1_1', {
-                title: "Kebinamargaan",
-                page_title: "Bidang Kebinamargaan", data:rows
-            });
-        });
-    });
+    res.render('kebinamargaan/tambah_kebinamargaan_1_1', {title: 'Peningkatan Jalan Hotmix'});
+   
 };
 
-exports.save_Tambahkebinamargaan_1_1 = function(req, res){
-     var input = JSON.parse(JSON.stringify(req.body));
+/* Save Data kebinamargaan_1_1 */
+exports.save_kebinamargaan_1_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
 
     req.getConnection(function(err, connection){
 
         var data = {
 
-            lebar : input.lebar,
-            nominal : input.nominal,
-            fsk_jl_id : input.fsk_jl_id
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 66
         };
 
-        var query = connection.query("INSERT INTO sub_fsk_jl set ?", data, function(err, rows){
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
 
             if(err)
                 console.log("Error Instering : %s", err);
-            res.redirect('kebinamargaan/kebinamargaan_1_1');
+            res.redirect('/kebinamargaan_1_1');
         });
     });
-}
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_1 = function(req, res){
-
+    // res.render('sbu1/edit_2_1', {title: 'Pengadan Barang/Jasa'});
     var id = req.params.id;
     
     req.getConnection(function(err,connection){
        
-        var query = connection.query('SELECT * FROM sub_fsk_jl WHERE id = ?',[id],function(err,rows)
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
         {
             
             if(err)
                 console.log("Error Selecting : %s ",err );
      
             res.render('kebinamargaan/edit_kebinamargaan_1_1',{
-                title : 'Edit Kebinamargaan',
+                title : 'Edit kebinamargaan_1_1',
                 page_title:"Edit kebinamargaan_1_1",data:rows
             });
                 
            
          });
          
-         //console.log(query.sql);
     }); 
 };
 
+/* Save Edit sbu1_2_1 */
 exports.save_edit_kebinamargaan_1_1 = function(req, res){
 
     var input = JSON.parse(JSON.stringify(req.body));
@@ -215,43 +201,45 @@ exports.save_edit_kebinamargaan_1_1 = function(req, res){
     req.getConnection(function (err, connection) {
         
         var data = {
-            
-            lebar    : input.lebar,
-            nominal : input.nominal
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
         
         };
         
-        connection.query("UPDATE sub_fsk_jl set ? WHERE id = ? ",[data,id], function(err, rows)
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
         {
   
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('kebinamargaan/kebinamargaan_1_1');
+          res.redirect('/kebinamargaan_1_1');
           
         });
     
     });
 };
 
+/* Delete sbu1_2_1 */
 exports.delete_kebinamargaan_1_1 = function(req, res){
 
     var id = req.params.id;
     
      req.getConnection(function (err, connection) {
         
-        connection.query("DELETE FROM sub_fsk_jl  WHERE id = ? ",[id], function(err, rows)
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
         {
             
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('kebinamargaan/kebinamargaan_1_1');
+             res.redirect('/kebinamargaan_1_1');
              
         });
         
      });
-}
+};
 
 /*=================================================================================================*/
 
@@ -260,7 +248,19 @@ exports.delete_kebinamargaan_1_1 = function(req, res){
 
 /*Render Tabel*/
 exports.kebinamargaan_1_2 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_2', {title: 'Kebinamargaan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 67", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_2', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /*Tambah Data Baru*/
@@ -268,30 +268,31 @@ exports.tambah_kebinamargaan_1_2 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_2', {title: 'Kebinamargaan'});
 };
 
-/*show data From database*/
+/* Save Data kebinamargaan_1_2 */
+exports.save_kebinamargaan_1_2 = function(req, res){
 
-exports.list = function(req, res){
+ var input = JSON.parse(JSON.stringify(req.body));
 
-  req.getConnection(function(err,connection){
-       
-        var query = connection.query('SELECT * FROM sub_fsk_jl',function(err,rows)
-        {
-            
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 67
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
             if(err)
-                console.log("Error Selecting : %s ",err );
-     
-            res.render('kebinamargaan/kebinamargaan',{
-                page_title:"Customers - Node.js",data:rows,
-                title: "Kebinamargaan SI"
-            });
-                
-           
-         });
-         
-         //console.log(query.sql);
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_2');
+        });
     });
-  
+
 };
+
 
 /*edit data From database*/
 exports.edit_kebinamargaan_1_2 = function(req, res){
@@ -300,76 +301,89 @@ exports.edit_kebinamargaan_1_2 = function(req, res){
     
     req.getConnection(function(err,connection){
        
-        var query = connection.query('SELECT * FROM sub_fsk_jl WHERE id = ?',[id],function(err,rows)
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
         {
             
             if(err)
                 console.log("Error Selecting : %s ",err );
      
             res.render('kebinamargaan/edit_kebinamargaan_1_2',{
-                page_title:"Edit Customers - Node.js",data:rows,
-                title: "Edit Kebinamargaan"
+                title : 'Edit kebinamargaan_1_2',
+                page_title:"Edit kebinamargaan_1_2",data:rows
             });
                 
            
          });
          
-         //console.log(query.sql);
     }); 
 };
 
-/* Update Data */
-exports.save_edit_kebinamargaan_1_2 = function(req,res){
-    
+/* Save Edit kebinamargaan_1_2 */
+exports.save_edit_kebinamargaan_1_2 = function(req, res){
+
     var input = JSON.parse(JSON.stringify(req.body));
     var id = req.params.id;
     
     req.getConnection(function (err, connection) {
         
         var data = {
-            
-            lebar    : input.lebar,
-            nominal : input.nominal
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
         
         };
         
-        connection.query("UPDATE sub_fsk_jl set ? WHERE id = ? ",[data,id], function(err, rows)
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
         {
   
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('kebinamargaan/kebinamargaan');
+          res.redirect('/kebinamargaan_1_2');
           
         });
     
     });
 };
 
-/*Delete Data*/
-exports.delete_kebinamargaan_1_2 = function(req,res){
-          
-     var id = req.params.id;
+/* Delete kebinamargaan_1_2 */
+exports.delete_kebinamargaan_1_2 = function(req, res){
+
+    var id = req.params.id;
     
      req.getConnection(function (err, connection) {
         
-        connection.query("DELETE FROM sub_fsk_jl  WHERE id = ? ",[id], function(err, rows)
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
         {
             
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('kebinamargaan/kebinamargaan');
+             res.redirect('/kebinamargaan_1_2');
              
         });
         
      });
 };
+
 /*=========================Rehabilitasi/Pemeliharaan Berkala (HOTMIX)==========================*/
 
 /*Render Tabel*/
 exports.kebinamargaan_1_3 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_3', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 68", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_3', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -377,9 +391,101 @@ exports.tambah_kebinamargaan_1_3 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_3', {title: 'Kebinamargaan'});
 };
 
+/* Save Data kebinamargaan_1_3 */
+exports.save_kebinamargaan_1_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 68
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_3 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_3', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_3',{
+                title : 'Edit kebinamargaan_1_3',
+                page_title:"Edit kebinamargaan_1_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_3 */
+exports.save_edit_kebinamargaan_1_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_3');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_3 */
+exports.delete_kebinamargaan_1_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_3');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -387,7 +493,19 @@ exports.edit_kebinamargaan_1_3 = function(req, res){
 /*=====================================Pemeliharaan Rutin======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_4 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_4', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 69", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_4', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -395,9 +513,101 @@ exports.tambah_kebinamargaan_1_4 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_4', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_4 */
+exports.save_kebinamargaan_1_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 69
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_4 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_4', {title: 'Kebinamargaan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_4',{
+                title : 'Edit kebinamargaan_1_4',
+                page_title:"Edit kebinamargaan_1_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_4 */
+exports.save_edit_kebinamargaan_1_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_4');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_4 */
+exports.delete_kebinamargaan_1_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_4');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -405,7 +615,19 @@ exports.edit_kebinamargaan_1_4 = function(req, res){
 /*====================================Pemeliharaan Rutin*======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_5 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_5', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 70", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_5', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -413,9 +635,101 @@ exports.tambah_kebinamargaan_1_5 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_5', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_5 */
+exports.save_kebinamargaan_1_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 70
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_5 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_5', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_5',{
+                title : 'Edit kebinamargaan_1_5',
+                page_title:"Edit kebinamargaan_1_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_5 */
+exports.save_edit_kebinamargaan_1_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_5');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_5 */
+exports.delete_kebinamargaan_1_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_5');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -423,7 +737,19 @@ exports.edit_kebinamargaan_1_5 = function(req, res){
 /*===============================Pembangunan Jalan Baru Hotmix=================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_6 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_6', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 71", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_6', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -431,9 +757,101 @@ exports.tambah_kebinamargaan_1_6 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_6', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_6 */
+exports.save_kebinamargaan_1_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 71
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_6 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_6', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_6',{
+                title : 'Edit kebinamargaan_1_6',
+                page_title:"Edit kebinamargaan_1_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_6 */
+exports.save_edit_kebinamargaan_1_6 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_6');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_6 */
+exports.delete_kebinamargaan_1_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_6');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -441,7 +859,19 @@ exports.edit_kebinamargaan_1_6 = function(req, res){
 /*================================Pembangunan Jalan Baru Beton=================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_7 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_7', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 72", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_7', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -449,9 +879,101 @@ exports.tambah_kebinamargaan_1_7 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_7', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_7 */
+exports.save_kebinamargaan_1_7 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 72
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_7');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_7 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_7', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_7',{
+                title : 'Edit kebinamargaan_1_7',
+                page_title:"Edit kebinamargaan_1_7",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_7 */
+exports.save_edit_kebinamargaan_1_7 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_7');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_7 */
+exports.delete_kebinamargaan_1_7 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_7');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -459,7 +981,19 @@ exports.edit_kebinamargaan_1_7 = function(req, res){
 /*==================================Bahu di Perkeras Beton=====================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_8 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_8', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 73", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_8', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -467,9 +1001,101 @@ exports.tambah_kebinamargaan_1_8 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_8', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_8 */
+exports.save_kebinamargaan_1_8 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 73
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_8');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_8 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_8', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_8',{
+                title : 'Edit kebinamargaan_1_8',
+                page_title:"Edit kebinamargaan_1_8",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_8 */
+exports.save_edit_kebinamargaan_1_8 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_8');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_8*/
+exports.delete_kebinamargaan_1_8 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_8');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -477,7 +1103,19 @@ exports.edit_kebinamargaan_1_8 = function(req, res){
 /*==================================Pelebaran Jalan Beton======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_9 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_9', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 74", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_9', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -485,9 +1123,101 @@ exports.tambah_kebinamargaan_1_9 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_9', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_9 */
+exports.save_kebinamargaan_1_9 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 74
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_9');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_9 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_9', {title: 'Kebinamargaan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_9',{
+                title : 'Edit kebinamargaan_1_9',
+                page_title:"Edit kebinamargaan_1_9",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_9 */
+exports.save_edit_kebinamargaan_1_9 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_9');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_9*/
+exports.delete_kebinamargaan_1_9 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_9');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -495,7 +1225,19 @@ exports.edit_kebinamargaan_1_9 = function(req, res){
 /*================================Pelebaran Jalan AGREGAT======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_10 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_10', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 75", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_10', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -503,9 +1245,101 @@ exports.tambah_kebinamargaan_1_10 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_10', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_10 */
+exports.save_kebinamargaan_1_10 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 75
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_10');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_10 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_10', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_10',{
+                title : 'Edit kebinamargaan_1_10',
+                page_title:"Edit kebinamargaan_1_10",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_10 */
+exports.save_edit_kebinamargaan_1_10 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_10');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_10*/
+exports.delete_kebinamargaan_1_10 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_10');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -513,7 +1347,19 @@ exports.edit_kebinamargaan_1_10 = function(req, res){
 /*=================================Rekonstrksi Jalan HOTMIX====================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_11 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_11', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 76", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_11', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -521,9 +1367,101 @@ exports.tambah_kebinamargaan_1_11 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_11', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_11 */
+exports.save_kebinamargaan_1_11 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 76
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_11');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_11 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_11', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_11',{
+                title : 'Edit kebinamargaan_1_11',
+                page_title:"Edit kebinamargaan_1_11",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_11 */
+exports.save_edit_kebinamargaan_1_11 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_11');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_11*/
+exports.delete_kebinamargaan_1_11 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_11');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/

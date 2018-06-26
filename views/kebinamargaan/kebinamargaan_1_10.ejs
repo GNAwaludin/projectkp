@@ -6,13 +6,13 @@
 </head>
 <body>
     <% include templates/header.ejs %>
-       
+    
 	<div id="wrapper">
 	<div class="page-header-data"><h2>Bidang Kebinamargaan</h2></div>
     <div class="page-container">
         <div class="page-data">
-            <h3>Harga Satuan Pembangunan Jalan Baru (Beton)</h3>
-                  <a href="/tambah_kebinamargaan_1_7/add" class="btn btn-success" role="button">Tambah Data</a>
+            <h3>Harga Satuan Kegiatan Pelebaran Jalan (Agregat)</h3></br>
+              <a href="/tambah_kebinamargaan_1_10/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
          <div class="table-responsive">          
             <table class="table">
@@ -36,9 +36,9 @@
                     <td><%=data[i].nilai%></td>
                     <td><%=data[i].keterangan%></td>
                     <td>
-                        <a class="a-inside edit" href="../edit_kebinamargaan_1_7/edit/<%=data[i].id%>">Edit</a>
+                        <a class="a-inside edit" href="../edit_kebinamargaan_1_10/edit/<%=data[i].id%>">Edit</a>
 
-                        <a class="a-inside delete" href="../edit_kebinamargaan_1_7/delete/<%=data[i].id%>>">Delete</a>
+                        <a class="a-inside delete" href="../edit_kebinamargaan_1_10/delete/<%=data[i].id%>>">Delete</a>
 
                     </td>
                 </tr>
