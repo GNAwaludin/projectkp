@@ -12,8 +12,46 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Harga Satuan Pembangunan Jalan Baru (HOTMIX)</h3>
-                  <a href="/tambah_kebinamargaan_1_6" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_kebinamargaan_1_6/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Lebar Perkerasan</th>
+                  <th>Harga Satuan Maksimal</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nilai%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_kebinamargaan_1_6/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_kebinamargaan_1_6/delete/<%=data[i].id%>>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
    	<script type="text/javascript" src="/../js/all.js"></script>

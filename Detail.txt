@@ -5,7 +5,7 @@
 
 ===============================
 1. Bidang 1
-- Tabel 1.1 - 1.11 (Detail 2)
+- Tabel 1.1 - 1.11 (Detail 2) (DONE)
 - Tabel 1.12 (Detail 4)
 - Tabel 1.13 (Detail 2)
 - Tabel 1.14 - 1.16 (Dilewat Sementara)
@@ -187,52 +187,52 @@ R. Kategori R** (DONE)
 
 ===============================
 S. Kategori S**
-- Tabel 2.50 - 2.51 (Detail 5)
+- Tabel 2.50 - 2.51 (Detail 5) (DONE)
 ===============================
 T. Kategori T
-- Tabel 2.52 (Detail 2)
+- Tabel 2.52 (Detail 2) (DONE)
 ===============================
 U. Kategori U
-- Tabel 2.53 (Detail 11)
+- Tabel 2.53 (Detail 11) (DONE)
 ===============================
 V. Kategori V
-- Tabel 2.54 (Detail 6)
+- Tabel 2.54 (Detail 6) (DONE)
 ===============================
 W. Kategori W**
 
 ===============================
 X. Kategori X **
-- Tabel 2.55 (Detail 9)
+- Tabel 2.55 (Detail 9) (DONE)
 - Tabel 2.56 - 2.57 (Detail 2)
 ===============================
-Y. Kategori Y**
-
+Y. Kategori Y** (DONE)
+ 
 ===============================
 Z. Kategori Z
-- Tabel 2.58 (Detail 2)
+- Tabel 2.58 (Detail 2) (DONE)
 ===============================
 AA. Kategori AA
-- Tabel 2.59 (Detail 9)
+- Tabel 2.59 (Detail 9) (DONE)
 ===============================
 BB. Kategori BB
-- Tabel 2.60 (Detail 11)
+- Tabel 2.60 (Detail 11) (DONE)
 ===============================
 B. SBU Sebagai Estimasi
 ===============================
 A. Kategori A
-- Tabel 3.1 (Detail 9)
+- Tabel 3.1 (Detail 9) (DONE)
 ===============================
 B. Kategori B
-- Tabel 3.2 (Detail 2)
+- Tabel 3.2 (Detail 2) (DONE)
 ===============================
 C. Kategori C
-- Tabel 3.3 (Detail 9)
+- Tabel 3.3 (Detail 3) (DONE)
 ===============================
 D. Kategori D
-- Tabel 3.4 (Detail 10)
+- Tabel 3.4 (Detail 10) (DONE)
 ===============================
 E. Kategori E
-- Tabel 3.5 (Detail 3)
+- Tabel 3.5 (Detail 3) (DONE)
 ===============================
 
 

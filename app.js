@@ -73,70 +73,101 @@ app.get('/Kebinamargaan', sistem.kebinamargaan);
 
 /*==========================Kebinamargaan Jalan Hotmix==========================*/
 app.get('/kebinamargaan_1_1', sistem.kebinamargaan_1_1);
-app.get('/tambah_kebinamargaan_1_1', sistem.tambah_kebinamargaan_1_1);
-app.get('/edit_kebinamargaan_1_1', sistem.edit_kebinamargaan_1_1);
+app.get('/tambah_kebinamargaan_1_1/add', sistem.tambah_kebinamargaan_1_1);
+app.post('/tambah_kebinamargaan_1_1/add', sistem.save_kebinamargaan_1_1);
+app.get('/edit_kebinamargaan_1_1/edit/:id', sistem.edit_kebinamargaan_1_1);
+app.post('/edit_kebinamargaan_1_1/edit/:id', sistem.save_edit_kebinamargaan_1_1);
+app.get('/edit_kebinamargaan_1_1/delete/:id', sistem.delete_kebinamargaan_1_1);
 /*=============================================================================*/
 
 /*==========================Kebinamargaan Jalan Beton==========================*/
 app.get('/kebinamargaan_1_2', sistem.kebinamargaan_1_2);
-app.get('/sistem/delete/:id', sistem.delete_kebinamargaan_1_2);
-app.get('/sistem/edit/:id', sistem.edit_kebinamargaan_1_2);
-app.post('/sistem/edit/:id',sistem.save_edit_kebinamargaan_1_2);
-app.get('/tambah_kebinamargaan_1_2', sistem.tambah_kebinamargaan_1_2);
+app.get('/tambah_kebinamargaan_1_2/add', sistem.tambah_kebinamargaan_1_2);
+app.post('/tambah_kebinamargaan_1_2/add', sistem.save_kebinamargaan_1_2);
+app.get('/edit_kebinamargaan_1_2/edit/:id', sistem.edit_kebinamargaan_1_2);
+app.post('/edit_kebinamargaan_1_2/edit/:id', sistem.save_edit_kebinamargaan_1_2);
+app.get('/edit_kebinamargaan_1_2/delete/:id', sistem.delete_kebinamargaan_1_2);
 /*==============================================================================*/
 
 /*==========================Kebinamargaan Jalan Aspal==========================*/
 app.get('/kebinamargaan_1_3', sistem.kebinamargaan_1_3);
-app.get('/tambah_kebinamargaan_1_3', sistem.tambah_kebinamargaan_1_3);
-app.get('/edit_kebinamargaan_1_3', sistem.edit_kebinamargaan_1_3);
+app.get('/tambah_kebinamargaan_1_3/add', sistem.tambah_kebinamargaan_1_3);
+app.post('/tambah_kebinamargaan_1_3/add', sistem.save_kebinamargaan_1_3);
+app.get('/edit_kebinamargaan_1_3/edit/:id', sistem.edit_kebinamargaan_1_3);
+app.post('/edit_kebinamargaan_1_3/edit/:id', sistem.save_edit_kebinamargaan_1_3);
+app.get('/edit_kebinamargaan_1_3/delete/:id', sistem.delete_kebinamargaan_1_3);
 /*=============================================================================*/
 
 /*=============================Pemeliharaan Rutin==============================*/
 app.get('/kebinamargaan_1_4', sistem.kebinamargaan_1_4);
-app.get('/tambah_kebinamargaan_1_4', sistem.tambah_kebinamargaan_1_4);
-app.get('/edit_kebinamargaan_1_4', sistem.edit_kebinamargaan_1_4);
+app.get('/tambah_kebinamargaan_1_4/add', sistem.tambah_kebinamargaan_1_4);
+app.post('/tambah_kebinamargaan_1_4/add', sistem.save_kebinamargaan_1_4);
+app.get('/edit_kebinamargaan_1_4/edit/:id', sistem.edit_kebinamargaan_1_4);
+app.post('/edit_kebinamargaan_1_4/edit/:id', sistem.save_edit_kebinamargaan_1_4);
+app.get('/edit_kebinamargaan_1_4/delete/:id', sistem.delete_kebinamargaan_1_4);
 /*=============================================================================*/
 
 /*============================Pemeliharaan Rutin*==============================*/
 app.get('/kebinamargaan_1_5', sistem.kebinamargaan_1_5);
-app.get('/tambah_kebinamargaan_1_5', sistem.tambah_kebinamargaan_1_5);
-app.get('/edit_kebinamargaan_1_5', sistem.edit_kebinamargaan_1_5);
+app.get('/tambah_kebinamargaan_1_5/add', sistem.tambah_kebinamargaan_1_5);
+app.post('/tambah_kebinamargaan_1_5/add', sistem.save_kebinamargaan_1_5);
+app.get('/edit_kebinamargaan_1_5/edit/:id', sistem.edit_kebinamargaan_1_5);
+app.post('/edit_kebinamargaan_1_5/edit/:id', sistem.save_edit_kebinamargaan_1_5);
+app.get('/edit_kebinamargaan_1_5/delete/:id', sistem.delete_kebinamargaan_1_5);
 /*=============================================================================*/
 
 /*======================Pembangunan Jalan Baru Hotmix==========================*/
 app.get('/kebinamargaan_1_6', sistem.kebinamargaan_1_6);
-app.get('/tambah_kebinamargaan_1_6', sistem.tambah_kebinamargaan_1_6);
-app.get('/edit_kebinamargaan_1_6', sistem.edit_kebinamargaan_1_6);
+app.get('/tambah_kebinamargaan_1_6/add', sistem.tambah_kebinamargaan_1_6);
+app.post('/tambah_kebinamargaan_1_6/add', sistem.save_kebinamargaan_1_6);
+app.get('/edit_kebinamargaan_1_6/edit/:id', sistem.edit_kebinamargaan_1_6);
+app.post('/edit_kebinamargaan_1_6/edit/:id', sistem.save_edit_kebinamargaan_1_6);
+app.get('/edit_kebinamargaan_1_6/delete/:id', sistem.delete_kebinamargaan_1_6);
 /*=============================================================================*/
 
 /*======================Pembangunan Jalan Baru Beton==========================*/
 app.get('/kebinamargaan_1_7', sistem.kebinamargaan_1_7);
-app.get('/tambah_kebinamargaan_1_7', sistem.tambah_kebinamargaan_1_7);
-app.get('/edit_kebinamargaan_1_7', sistem.edit_kebinamargaan_1_7);
+app.get('/tambah_kebinamargaan_1_7/add', sistem.tambah_kebinamargaan_1_7);
+app.post('/tambah_kebinamargaan_1_7/add', sistem.save_kebinamargaan_1_7);
+app.get('/edit_kebinamargaan_1_7/edit/:id', sistem.edit_kebinamargaan_1_7);
+app.post('/edit_kebinamargaan_1_7/edit/:id', sistem.save_edit_kebinamargaan_1_7);
+app.get('/edit_kebinamargaan_1_7/delete/:id', sistem.delete_kebinamargaan_1_7);
 /*=============================================================================*/
 
 /*==========================Bahu di Perkeras Beton=============================*/
 app.get('/kebinamargaan_1_8', sistem.kebinamargaan_1_8);
-app.get('/tambah_kebinamargaan_1_8', sistem.tambah_kebinamargaan_1_8);
-app.get('/edit_kebinamargaan_1_8', sistem.edit_kebinamargaan_1_8);
+app.get('/tambah_kebinamargaan_1_8/add', sistem.tambah_kebinamargaan_1_8);
+app.post('/tambah_kebinamargaan_1_8/add', sistem.save_kebinamargaan_1_8);
+app.get('/edit_kebinamargaan_1_8/edit/:id', sistem.edit_kebinamargaan_1_8);
+app.post('/edit_kebinamargaan_1_8/edit/:id', sistem.save_edit_kebinamargaan_1_8);
+app.get('/edit_kebinamargaan_1_8/delete/:id', sistem.delete_kebinamargaan_1_8);
 /*=============================================================================*/
 
 /*==========================Peleberan Jalan Beton=============================*/
 app.get('/kebinamargaan_1_9', sistem.kebinamargaan_1_9);
-app.get('/tambah_kebinamargaan_1_9', sistem.tambah_kebinamargaan_1_9);
-app.get('/edit_kebinamargaan_1_9', sistem.edit_kebinamargaan_1_9);
+app.get('/tambah_kebinamargaan_1_9/add', sistem.tambah_kebinamargaan_1_9);
+app.post('/tambah_kebinamargaan_1_9/add', sistem.save_kebinamargaan_1_9);
+app.get('/edit_kebinamargaan_1_9/edit/:id', sistem.edit_kebinamargaan_1_9);
+app.post('/edit_kebinamargaan_1_9/edit/:id', sistem.save_edit_kebinamargaan_1_9);
+app.get('/edit_kebinamargaan_1_9/delete/:id', sistem.delete_kebinamargaan_1_9);
 /*=============================================================================*/
 
 /*==========================Peleberan Jalan Agregat============================*/
 app.get('/kebinamargaan_1_10', sistem.kebinamargaan_1_10);
-app.get('/tambah_kebinamargaan_1_10', sistem.tambah_kebinamargaan_1_10);
-app.get('/edit_kebinamargaan_1_10', sistem.edit_kebinamargaan_1_10);
+app.get('/tambah_kebinamargaan_1_10/add', sistem.tambah_kebinamargaan_1_10);
+app.post('/tambah_kebinamargaan_1_10/add', sistem.save_kebinamargaan_1_10);
+app.get('/edit_kebinamargaan_1_10/edit/:id', sistem.edit_kebinamargaan_1_10);
+app.post('/edit_kebinamargaan_1_10/edit/:id', sistem.save_edit_kebinamargaan_1_10);
+app.get('/edit_kebinamargaan_1_10/delete/:id', sistem.delete_kebinamargaan_1_10);
 /*=============================================================================*/
 
 /*=========================Rekonstruksi Jalan HOTMIX===========================*/
 app.get('/kebinamargaan_1_11', sistem.kebinamargaan_1_11);
-app.get('/tambah_kebinamargaan_1_11', sistem.tambah_kebinamargaan_1_11);
-app.get('/edit_kebinamargaan_1_11', sistem.edit_kebinamargaan_1_11);
+app.get('/tambah_kebinamargaan_1_11/add', sistem.tambah_kebinamargaan_1_11);
+app.post('/tambah_kebinamargaan_1_11/add', sistem.save_kebinamargaan_1_11);
+app.get('/edit_kebinamargaan_1_11/edit/:id', sistem.edit_kebinamargaan_1_11);
+app.post('/edit_kebinamargaan_1_11/edit/:id', sistem.save_edit_kebinamargaan_1_11);
+app.get('/edit_kebinamargaan_1_11/delete/:id', sistem.delete_kebinamargaan_1_11);
 /*=============================================================================*/
 
 /*=========================Dasar Penanganan Jembatan===========================*/
@@ -2251,28 +2282,43 @@ app.get('/edit_sbu1_2_60', sistem.edit_sbu1_2_60);
 /*===================================SBU Estimasi===============================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu2_3_1', sistem.sbu2_3_1);
-app.get('/tambah_sbu2_3_1', sistem.tambah_sbu2_3_1);
-app.get('/edit_sbu2_3_1', sistem.edit_sbu2_3_1);
+app.get('/tambah_sbu2_3_1/add', sistem.tambah_sbu2_3_1);
+app.post('/tambah_sbu2_3_1/add', sistem.save_sbu2_3_1);
+app.get('/edit_sbu2_3_1/edit/:id', sistem.edit_sbu2_3_1);
+app.post('/edit_sbu2_3_1/edit/:id', sistem.save_edit_sbu2_3_1);
+app.get('/edit_sbu2_3_1/delete/:id', sistem.delete_sbu2_3_1);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu2_3_2', sistem.sbu2_3_2);
-app.get('/tambah_sbu2_3_2', sistem.tambah_sbu2_3_2);
-app.get('/edit_sbu2_3_2', sistem.edit_sbu2_3_2);
+app.get('/tambah_sbu2_3_2/add', sistem.tambah_sbu2_3_2);
+app.post('/tambah_sbu2_3_2/add', sistem.save_sbu2_3_2);
+app.get('/edit_sbu2_3_2/edit/:id', sistem.edit_sbu2_3_2);
+app.post('/edit_sbu2_3_2/edit/:id', sistem.save_edit_sbu2_3_2);
+app.get('/edit_sbu2_3_2/delete/:id', sistem.delete_sbu2_3_2);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu2_3_3', sistem.sbu2_3_3);
-app.get('/tambah_sbu2_3_3', sistem.tambah_sbu2_3_3);
-app.get('/edit_sbu2_3_3', sistem.edit_sbu2_3_3);
+app.get('/tambah_sbu2_3_3/add', sistem.tambah_sbu2_3_3);
+app.post('/tambah_sbu2_3_3/add', sistem.save_sbu2_3_3);
+app.get('/edit_sbu2_3_3/edit/:id', sistem.edit_sbu2_3_3);
+app.post('/edit_sbu2_3_3/edit/:id', sistem.save_edit_sbu2_3_3);
+app.get('/edit_sbu2_3_3/delete/:id', sistem.delete_sbu2_3_3);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu2_3_4', sistem.sbu2_3_4);
-app.get('/tambah_sbu2_3_4', sistem.tambah_sbu2_3_4);
-app.get('/edit_sbu2_3_4', sistem.edit_sbu2_3_4);
+app.get('/tambah_sbu2_3_4/add', sistem.tambah_sbu2_3_4);
+app.post('/tambah_sbu2_3_4/add', sistem.save_sbu2_3_4);
+app.get('/edit_sbu2_3_4/edit/:id', sistem.edit_sbu2_3_4);
+app.post('/edit_sbu2_3_4/edit/:id', sistem.save_edit_sbu2_3_4);
+app.get('/edit_sbu2_3_4/delete/:id', sistem.delete_sbu2_3_4);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/sbu2_3_5', sistem.sbu2_3_5);
-app.get('/tambah_sbu2_3_5', sistem.tambah_sbu2_3_5);
-app.get('/edit_sbu2_3_5', sistem.edit_sbu2_3_5);
+app.get('/tambah_sbu2_3_5/add', sistem.tambah_sbu2_3_5);
+app.post('/tambah_sbu2_3_5/add', sistem.save_sbu2_3_5);
+app.get('/edit_sbu2_3_5/edit/:id', sistem.edit_sbu2_3_5);
+app.post('/edit_sbu2_3_5/edit/:id', sistem.save_edit_sbu2_3_5);
+app.get('/edit_sbu2_3_5/delete/:id', sistem.delete_sbu2_3_5);
 /*==============================================================================*/
 
 
