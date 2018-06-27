@@ -6,13 +6,13 @@
 ===============================
 1. Bidang 1
 - Tabel 1.1 - 1.11 (Detail 2) (DONE)
-- Tabel 1.12 (Detail 4)
-- Tabel 1.13 (Detail 2)
+- Tabel 1.12 (Detail 4) (DONE)
+- Tabel 1.13 (Detail 2) (DONE)
 - Tabel 1.14 - 1.16 (Dilewat Sementara)
-- Tabel 1.17 (Detail 2)
+- Tabel 1.17 (Detail 2) (DONE)
 ===============================
 2. Bidang 2
-- Tabel 2.1 (Detail 3)
+- Tabel 2.1 (Detail 3) (DONE)
 - Tabel 2.2 - 2.4 , 2.6 - 2.7, 2.9 (Detail 2)
 - Tabel 2.5 (Detail 5)
 - Tabel 2.8 (Detail 1A)

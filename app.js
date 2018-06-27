@@ -172,34 +172,49 @@ app.get('/edit_kebinamargaan_1_11/delete/:id', sistem.delete_kebinamargaan_1_11)
 
 /*=========================Dasar Penanganan Jembatan===========================*/
 app.get('/kebinamargaan_1_12', sistem.kebinamargaan_1_12);
-app.get('/tambah_kebinamargaan_1_12', sistem.tambah_kebinamargaan_1_12);
-app.get('/edit_kebinamargaan_1_12', sistem.edit_kebinamargaan_1_12);
+app.get('/tambah_kebinamargaan_1_12/add', sistem.tambah_kebinamargaan_1_12);
+app.post('/tambah_kebinamargaan_1_12/add', sistem.save_kebinamargaan_1_12);
+app.get('/edit_kebinamargaan_1_12/edit/:id', sistem.edit_kebinamargaan_1_12);
+app.post('/edit_kebinamargaan_1_12/edit/:id', sistem.save_edit_kebinamargaan_1_12);
+app.get('/edit_kebinamargaan_1_12/delete/:id', sistem.delete_kebinamargaan_1_12);
 /*=============================================================================*/
 
 /*===============Perencanaan dan Pengawasan Jalan Jembatan=====================*/
 app.get('/kebinamargaan_1_13', sistem.kebinamargaan_1_13);
-app.get('/tambah_kebinamargaan_1_13', sistem.tambah_kebinamargaan_1_13);
-app.get('/edit_kebinamargaan_1_13', sistem.edit_kebinamargaan_1_13);
+app.get('/tambah_kebinamargaan_1_13/add', sistem.tambah_kebinamargaan_1_13);
+app.post('/tambah_kebinamargaan_1_13/add', sistem.save_kebinamargaan_1_13);
+app.get('/edit_kebinamargaan_1_13/edit/:id', sistem.edit_kebinamargaan_1_13);
+app.post('/edit_kebinamargaan_1_13/edit/:id', sistem.save_edit_kebinamargaan_1_13);
+app.get('/edit_kebinamargaan_1_13/delete/:id', sistem.delete_kebinamargaan_1_13);
 /*=============================================================================*/
 
 /*==========================Sewa Alat/Kendaraan================================*/
 app.get('/kebinamargaan_1_17', sistem.kebinamargaan_1_17);
-app.get('/tambah_kebinamargaan_1_17', sistem.tambah_kebinamargaan_1_17);
-app.get('/edit_kebinamargaan_1_17', sistem.edit_kebinamargaan_1_17);
+app.get('/tambah_kebinamargaan_1_17/add', sistem.tambah_kebinamargaan_1_17);
+app.post('/tambah_kebinamargaan_1_17/add', sistem.save_kebinamargaan_1_17);
+app.get('/edit_kebinamargaan_1_17/edit/:id', sistem.edit_kebinamargaan_1_17);
+app.post('/edit_kebinamargaan_1_17/edit/:id', sistem.save_edit_kebinamargaan_1_17);
+app.get('/edit_kebinamargaan_1_17/delete/:id', sistem.delete_kebinamargaan_1_17);
 /*=============================================================================*/
 
 /*===========================Sumber Daya Air===================================*/
 app.get('/sumber_daya_air', sistem.sumber_daya_air);
 /*======================SDA Honorarium Tenaga Teknis Non PNS===================*/
 app.get('/sda_2_1', sistem.sda_2_1);
-app.get('/tambah_sda_2_1', sistem.tambah_sda_2_1);
-app.get('/edit_sda_2_1', sistem.edit_sda_2_1);
+app.get('/tambah_sda_2_1/add', sistem.tambah_sda_2_1);
+app.post('/tambah_sda_2_1/add', sistem.save_sda_2_1);
+app.get('/edit_sda_2_1/edit/:id', sistem.edit_sda_2_1);
+app.post('/edit_sda_2_1/edit/:id', sistem.save_edit_sda_2_1);
+app.get('/edit_sda_2_1/delete/:id', sistem.delete_sda_2_1);
 /*+============================================================================*/
 
 /*======Besaran Uang Saku Tenaga Teknis Non PNS Piket Banjir/Kekeringan========*/
 app.get('/sda_2_2', sistem.sda_2_2);
-app.get('/tambah_sda_2_2', sistem.tambah_sda_2_2);
-app.get('/edit_sda_2_2', sistem.edit_sda_2_2);
+app.get('/tambah_sda_2_2/add', sistem.tambah_sda_2_2);
+app.post('/tambah_sda_2_2/add', sistem.save_sda_2_2);
+app.get('/edit_sda_2_2/edit/:id', sistem.edit_sda_2_2);
+app.post('/edit_sda_2_2/edit/:id', sistem.save_edit_sda_2_2);
+app.get('/edit_sda_2_2/delete/:id', sistem.delete_sda_2_2);
 /*==============================================================================*/
 
 /*========Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pedataran)===========*/
