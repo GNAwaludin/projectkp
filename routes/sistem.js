@@ -2058,7 +2058,7 @@ exports.save_edit_sda_2_2 = function(req, res){
         
         };
         
-        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
         {
   
           if (err)
@@ -2095,7 +2095,19 @@ exports.delete_sda_2_2 = function(req, res){
 /*=================Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pedataran)================*/
 /*Render Tabel*/
 exports.sda_2_3 = function(req, res){
-    res.render('sda/sda_2_3', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 85", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_3', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2103,15 +2115,122 @@ exports.tambah_sda_2_3 = function(req, res){
     res.render('sda/tambah_sda_2_3', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_3 */
+exports.save_sda_2_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 85
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_3 = function(req, res){
-    res.render('sda/edit_sda_2_3', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_3',{
+                title : 'Edit sda_2_3',
+                page_title:"Edit sda_2_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_3 */
+exports.save_edit_sda_2_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_3');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_3*/
+exports.delete_sda_2_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pegunungan)===============*/
 /*Render Tabel*/
 exports.sda_2_4 = function(req, res){
-    res.render('sda/sda_2_4', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 86", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_4', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2119,15 +2238,122 @@ exports.tambah_sda_2_4 = function(req, res){
     res.render('sda/tambah_sda_2_4', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_4 */
+exports.save_sda_2_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 86
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_4 = function(req, res){
-    res.render('sda/edit_sda_2_4', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_4',{
+                title : 'Edit sda_2_4',
+                page_title:"Edit sda_2_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_4 */
+exports.save_edit_sda_2_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_4');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_4*/
+exports.delete_sda_2_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==========================Pengukuran dan Perencanaan Sungai/Drainase========================*/
 /*Render Tabel*/
 exports.sda_2_5 = function(req, res){
-    res.render('sda/sda_2_5', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail5 WHERE kategori_id = 87", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_5', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2135,15 +2361,130 @@ exports.tambah_sda_2_5 = function(req, res){
     res.render('sda/tambah_sda_2_5', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_5 */
+exports.save_sda_2_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan,
+            kategori_id : 87
+        };
+
+        var query = connection.query("INSERT INTO detail5 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_5 = function(req, res){
-    res.render('sda/edit_sda_2_5', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail5 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_5',{
+                title : 'Edit sda_2_5',
+                page_title:"Edit sda_2_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_5 */
+exports.save_edit_sda_2_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail5 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_5');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_5*/
+exports.delete_sda_2_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail5  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==============================Pengukuran dan Perencanaan Situ===============================*/
 /*Render Tabel*/
 exports.sda_2_6 = function(req, res){
-    res.render('sda/sda_2_6', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 88", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_6', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2151,15 +2492,122 @@ exports.tambah_sda_2_6 = function(req, res){
     res.render('sda/tambah_sda_2_6', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_6 */
+exports.save_sda_2_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 88
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_6 = function(req, res){
-    res.render('sda/edit_sda_2_6', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_6',{
+                title : 'Edit sda_2_6',
+                page_title:"Edit sda_2_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_6 */
+exports.save_edit_sda_2_6 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_6');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_6*/
+exports.delete_sda_2_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_6');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==========Pengukuran dan Perencanaan Pengamanan Pantai dan Perbaikan Muara Sungai===========*/
 /*Render Tabel*/
 exports.sda_2_7 = function(req, res){
-    res.render('sda/sda_2_7', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 89", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_7', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2167,15 +2615,122 @@ exports.tambah_sda_2_7 = function(req, res){
     res.render('sda/tambah_sda_2_7', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_7 */
+exports.save_sda_2_7 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 89
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_7');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_7 = function(req, res){
-    res.render('sda/edit_sda_2_7', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_7',{
+                title : 'Edit sda_2_7',
+                page_title:"Edit sda_2_7",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_7 */
+exports.save_edit_sda_2_7 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_7');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_7*/
+exports.delete_sda_2_7 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_7');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================Biaya Penyelidikan Lapangan & Pengujian Laboratorium Geoteknik=============*/
 /*Render Tabel*/
 exports.sda_2_8 = function(req, res){
-    res.render('sda/sda_2_8', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM deatil1a WHERE detail1_id = 2", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_8', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2183,15 +2738,122 @@ exports.tambah_sda_2_8 = function(req, res){
     res.render('sda/tambah_sda_2_8', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_8 */
+exports.save_sda_2_8 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 2
+        };
+
+        var query = connection.query("INSERT INTO deatil1a set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_8');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_8 = function(req, res){
-    res.render('sda/edit_sda_2_8', {title: 'Sumber Daya Air'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM deatil1a WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_8',{
+                title : 'Edit sda_2_8',
+                page_title:"Edit sda_2_8",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_8 */
+exports.save_edit_sda_2_8 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE deatil1a set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_8');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_8*/
+exports.delete_sda_2_8 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM deatil1a  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_8');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=============================Biaya Pengelolaan Jaringan Irigasi=============================*/
 /*Render Tabel*/
 exports.sda_2_9 = function(req, res){
-    res.render('sda/sda_2_9', {title: 'Sumber Daya Air'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 91", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_9', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2199,10 +2861,105 @@ exports.tambah_sda_2_9 = function(req, res){
     res.render('sda/tambah_sda_2_9', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_9 */
+exports.save_sda_2_9 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 91
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_9');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_9 = function(req, res){
-    res.render('sda/edit_sda_2_9', {title: 'Sumber Daya Air'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_9',{
+                title : 'Edit sda_2_9',
+                page_title:"Edit sda_2_9",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_9 */
+exports.save_edit_sda_2_9 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_9');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_9*/
+exports.delete_sda_2_9 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_9');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*============================Biaya Sewa Alat Pemotretan Topografi============================*/
 /*Render Tabel*/
@@ -2228,7 +2985,19 @@ exports.keciptakaryaan = function(req, res){
 /*=====================Tenaga Ahli Berdasarkan Pengalaman dan Sertifikasi ====================*/
 /*Render Tabel*/
 exports.cipta_3_1 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_1', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 92", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_1', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -2236,10 +3005,109 @@ exports.tambah_cipta_3_1 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_1', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_1 */
+exports.save_cipta_3_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 92
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_1 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_1', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_1',{
+                title : 'Edit cipta_3_1',
+                page_title:"Edit cipta_3_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_1 */
+exports.save_edit_cipta_3_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_1');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_1*/
+exports.delete_cipta_3_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==========================Tenaga sub Profesional Jasa Konsultansi===========================*/
 /*Render Tabel*/
