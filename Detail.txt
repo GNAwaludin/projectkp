@@ -13,9 +13,9 @@
 ===============================
 2. Bidang 2
 - Tabel 2.1 (Detail 3) (DONE)
-- Tabel 2.2 - 2.4 , 2.6 - 2.7, 2.9 (Detail 2)
-- Tabel 2.5 (Detail 5)
-- Tabel 2.8 (Detail 1A)
+- Tabel 2.2 - 2.4 , 2.6 - 2.7, 2.9 (Detail 2) (DONE)
+- Tabel 2.5 (Detail 5)(DONE)
+- Tabel 2.8 (Detail 1A) (DONE)
 ===============================
 3. Bidang 3
 - Tabel 3.1 - 3.2 (Detail 6)

@@ -219,44 +219,65 @@ app.get('/edit_sda_2_2/delete/:id', sistem.delete_sda_2_2);
 
 /*========Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pedataran)===========*/
 app.get('/sda_2_3', sistem.sda_2_3);
-app.get('/tambah_sda_2_3', sistem.tambah_sda_2_3);
-app.get('/edit_sda_2_3', sistem.edit_sda_2_3);
+app.get('/tambah_sda_2_3/add', sistem.tambah_sda_2_3);
+app.post('/tambah_sda_2_3/add', sistem.save_sda_2_3);
+app.get('/edit_sda_2_3/edit/:id', sistem.edit_sda_2_3);
+app.post('/edit_sda_2_3/edit/:id', sistem.save_edit_sda_2_3);
+app.get('/edit_sda_2_3/delete/:id', sistem.delete_sda_2_3);
 /*==============================================================================*/
 
 /*========Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pegunungan)==========*/
 app.get('/sda_2_4', sistem.sda_2_4);
-app.get('/tambah_sda_2_4', sistem.tambah_sda_2_4);
-app.get('/edit_sda_2_4', sistem.edit_sda_2_4);
+app.get('/tambah_sda_2_4/add', sistem.tambah_sda_2_4);
+app.post('/tambah_sda_2_4/add', sistem.save_sda_2_4);
+app.get('/edit_sda_2_4/edit/:id', sistem.edit_sda_2_4);
+app.post('/edit_sda_2_4/edit/:id', sistem.save_edit_sda_2_4);
+app.get('/edit_sda_2_4/delete/:id', sistem.delete_sda_2_4);
 /*==============================================================================*/
 
 /*=================Pengukuran dan Perencanaan Sungai/Drainase===================*/
 app.get('/sda_2_5', sistem.sda_2_5);
-app.get('/tambah_sda_2_5', sistem.tambah_sda_2_5);
-app.get('/edit_sda_2_5', sistem.edit_sda_2_5);
+app.get('/tambah_sda_2_5/add', sistem.tambah_sda_2_5);
+app.post('/tambah_sda_2_5/add', sistem.save_sda_2_5);
+app.get('/edit_sda_2_5/edit/:id', sistem.edit_sda_2_5);
+app.post('/edit_sda_2_5/edit/:id', sistem.save_edit_sda_2_5);
+app.get('/edit_sda_2_5/delete/:id', sistem.delete_sda_2_5);
 /*==============================================================================*/
 
 /*==========================Pengukuran dan Perencanaan Situ=====================*/
 app.get('/sda_2_6', sistem.sda_2_6);
-app.get('/tambah_sda_2_6', sistem.tambah_sda_2_6);
-app.get('/edit_sda_2_6', sistem.edit_sda_2_6);
+app.get('/tambah_sda_2_6/add', sistem.tambah_sda_2_6);
+app.post('/tambah_sda_2_6/add', sistem.save_sda_2_6);
+app.get('/edit_sda_2_6/edit/:id', sistem.edit_sda_2_6);
+app.post('/edit_sda_2_6/edit/:id', sistem.save_edit_sda_2_6);
+app.get('/edit_sda_2_6/delete/:id', sistem.delete_sda_2_6);
 /*==============================================================================*/
 
 /*====Pengukuran dan Perencanaan Pengamanan Pantai dan Perbaikan Muara Sungai===*/
 app.get('/sda_2_7', sistem.sda_2_7);
-app.get('/tambah_sda_2_7', sistem.tambah_sda_2_7);
-app.get('/edit_sda_2_7', sistem.edit_sda_2_7);
+app.get('/tambah_sda_2_7/add', sistem.tambah_sda_2_7);
+app.post('/tambah_sda_2_7/add', sistem.save_sda_2_7);
+app.get('/edit_sda_2_7/edit/:id', sistem.edit_sda_2_7);
+app.post('/edit_sda_2_7/edit/:id', sistem.save_edit_sda_2_7);
+app.get('/edit_sda_2_7/delete/:id', sistem.delete_sda_2_7);
 /*==============================================================================*/
 
 /*========Biaya Penyelidikan Lapangan & Pengujian Laboratorium Geoteknik========*/
 app.get('/sda_2_8', sistem.sda_2_8);
-app.get('/tambah_sda_2_8', sistem.tambah_sda_2_8);
-app.get('/edit_sda_2_8', sistem.edit_sda_2_8);
+app.get('/tambah_sda_2_8/add', sistem.tambah_sda_2_8);
+app.post('/tambah_sda_2_8/add', sistem.save_sda_2_8);
+app.get('/edit_sda_2_8/edit/:id', sistem.edit_sda_2_8);
+app.post('/edit_sda_2_8/edit/:id', sistem.save_edit_sda_2_8);
+app.get('/edit_sda_2_8/delete/:id', sistem.delete_sda_2_8);
 /*==============================================================================*/
 
 /*=======================Biaya Pengelolaan Jaringan Irigasi=====================*/
 app.get('/sda_2_9', sistem.sda_2_9);
-app.get('/tambah_sda_2_9', sistem.tambah_sda_2_9);
-app.get('/edit_sda_2_9', sistem.edit_sda_2_9);
+app.get('/tambah_sda_2_9/add', sistem.tambah_sda_2_9);
+app.post('/tambah_sda_2_9/add', sistem.save_sda_2_9);
+app.get('/edit_sda_2_9/edit/:id', sistem.edit_sda_2_9);
+app.post('/edit_sda_2_9/edit/:id', sistem.save_edit_sda_2_9);
+app.get('/edit_sda_2_9/delete/:id', sistem.delete_sda_2_9);
 /*==============================================================================*/
 
 /*====================Biaya Sewa Alat Pemotretan Topografi======================*/
@@ -268,8 +289,11 @@ app.get('/edit_sda_drone', sistem.edit_sda_drone);
 app.get('/keciptakaryaan', sistem.keciptakaryaan);
 /*==============Tenaga Ahli Berdasarkan Pengalaman dan Sertifikasi==============*/
 app.get('/cipta_3_1', sistem.cipta_3_1);
-app.get('/tambah_cipta_3_1', sistem.tambah_cipta_3_1);
-app.get('/edit_cipta_3_1', sistem.edit_cipta_3_1);
+app.get('/tambah_cipta_3_1/add', sistem.tambah_cipta_3_1);
+app.post('/tambah_cipta_3_1/add', sistem.save_cipta_3_1);
+app.get('/edit_cipta_3_1/edit/:id', sistem.edit_cipta_3_1);
+app.post('/edit_cipta_3_1/edit/:id', sistem.save_edit_cipta_3_1);
+app.get('/edit_cipta_3_1/delete/:id', sistem.delete_cipta_3_1);
 /*==============================================================================*/
 /*===================Tenaga sub  Profesional jasa  konsultansi==================*/
 app.get('/cipta_3_2', sistem.cipta_3_2);
