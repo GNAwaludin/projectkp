@@ -7496,6 +7496,1820 @@ exports.edit_informatika_12_8 = function(req, res){
 };
 /*============================================================================================*/
 
+/*==============================Tanaman Pangan dan Hortikultura===============================*/
+exports.hortikultura = function(req, res){
+    res.render('hortikultura/hortikultura', {title: 'Hortikultura'});
+};
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1a = function(req, res){
+    res.render('hortikultura/hortikultura_13_1a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1b = function(req, res){
+    res.render('hortikultura/hortikultura_13_1b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1c = function(req, res){
+    res.render('hortikultura/hortikultura_13_1c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1d = function(req, res){
+    res.render('hortikultura/hortikultura_13_1d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1e = function(req, res){
+    res.render('hortikultura/hortikultura_13_1e', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1e = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1e', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1e = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1e', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1f = function(req, res){
+    res.render('hortikultura/hortikultura_13_1f', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1f = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1f', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1f = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1f', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2a = function(req, res){
+    res.render('hortikultura/hortikultura_13_2a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2b = function(req, res){
+    res.render('hortikultura/hortikultura_13_2b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2c = function(req, res){
+    res.render('hortikultura/hortikultura_13_2c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2d = function(req, res){
+    res.render('hortikultura/hortikultura_13_2d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3aa = function(req, res){
+    res.render('hortikultura/hortikultura_13_3aa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3aa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3aa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3aa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3aa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ab = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ab', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ab = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ab', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ab = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ab', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ac = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ac', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ac = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ac', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ac = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ac', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ad = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ad', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ad = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ad', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ad = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ad', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ae = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ae', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ae = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ae', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ae = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ae', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ba = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ba', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ba = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ba', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ba = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ba', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3bb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3bb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3bb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3bb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3bb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3bb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3bc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3bc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3bc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3bc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3bc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3bc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3bd = function(req, res){
+    res.render('hortikultura/hortikultura_13_3bd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3bd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3bd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3bd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3bd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3be = function(req, res){
+    res.render('hortikultura/hortikultura_13_3be', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3be = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3be', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3be = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3be', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ca = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ca', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ca = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ca', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ca = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ca', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3cb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3cb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3cb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3cb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3cb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3cb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3cc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3cc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3cc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3cc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3cc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3cc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3cd = function(req, res){
+    res.render('hortikultura/hortikultura_13_3cd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3cd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3cd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3cd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3cd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ce = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ce', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ce = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ce', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ce = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ce', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3da = function(req, res){
+    res.render('hortikultura/hortikultura_13_3da', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3da = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3da', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3da = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3da', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3db = function(req, res){
+    res.render('hortikultura/hortikultura_13_3db', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3db = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3db', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3db = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3db', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3dc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3dc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3dc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3dc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3dc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3dc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3dd = function(req, res){
+    res.render('hortikultura/hortikultura_13_3dd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3dd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3dd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3dd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3dd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3de = function(req, res){
+    res.render('hortikultura/hortikultura_13_3de', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3de = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3de', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3de = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3de', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ea = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ea', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ea = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ea', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ea = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ea', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3eb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3eb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3eb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3eb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3eb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3eb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ec = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ec', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ec = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ec', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ec = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ec', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3fa = function(req, res){
+    res.render('hortikultura/hortikultura_13_3fa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3fa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3fa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3fa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3fa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3fb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3fb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3fb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3fb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3fb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3fb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3fc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3fc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3fc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3fc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3fc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3fc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ga = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ga', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ga = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ga', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ga = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ga', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3gb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3gb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3gb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3gb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3gb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3gb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3gc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3gc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3gc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3gc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3gc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3gc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4aa = function(req, res){
+    res.render('hortikultura/hortikultura_13_4aa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4aa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4aa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4aa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4aa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ab = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ab', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ab = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ab', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ab = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ab', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ac = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ac', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ac = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ac', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ac = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ac', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ad = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ad', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ad = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ad', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ad = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ad', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ae = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ae', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ae = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ae', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ae = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ae', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4af = function(req, res){
+    res.render('hortikultura/hortikultura_13_4af', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4af = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4af', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4af = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4af', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ag = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ag', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ag = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ag', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ag = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ag', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ba = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ba', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ba = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ba', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ba = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ba', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4be = function(req, res){
+    res.render('hortikultura/hortikultura_13_4be', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4be = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4be', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4be = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4be', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bf = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bf', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bf = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bf', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bf = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bf', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ca = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ca', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ca = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ca', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ca = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ca', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ce = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ce', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ce = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ce', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ce = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ce', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cf = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cf', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cf = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cf', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cf = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cf', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4da = function(req, res){
+    res.render('hortikultura/hortikultura_13_4da', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4da = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4da', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4da = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4da', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4db = function(req, res){
+    res.render('hortikultura/hortikultura_13_4db', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4db = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4db', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4db = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4db', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4dc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4dc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4dc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4dc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4dc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4dc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4dd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4dd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4dd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4dd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4dd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4dd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4de = function(req, res){
+    res.render('hortikultura/hortikultura_13_4de', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4de = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4de', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4de = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4de', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4df = function(req, res){
+    res.render('hortikultura/hortikultura_13_4df', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4df = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4df', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4df = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4df', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4dg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4dg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4dg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4dg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4dg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4dg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ea = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ea', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ea = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ea', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ea = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ea', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4eb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4eb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4eb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4eb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4eb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4eb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ec = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ec', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ec = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ec', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ec = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ec', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ed = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ed', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ed = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ed', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ed = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ed', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ee = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ee', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ee = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ee', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ee = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ee', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ef = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ef', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ef = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ef', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ef = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ef', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4eg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4eg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4eg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4eg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4eg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4eg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fa = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fe = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fe', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fe = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fe', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fe = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fe', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ff = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ff', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ff = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ff', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ff = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ff', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ga = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ga', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ga = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ga', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ga = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ga', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ge = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ge', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ge = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ge', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ge = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ge', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gf = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gf', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gf = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gf', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gf = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gf', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5a = function(req, res){
+    res.render('hortikultura/hortikultura_13_5a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5b = function(req, res){
+    res.render('hortikultura/hortikultura_13_5b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5c = function(req, res){
+    res.render('hortikultura/hortikultura_13_5c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5d = function(req, res){
+    res.render('hortikultura/hortikultura_13_5d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5e = function(req, res){
+    res.render('hortikultura/hortikultura_13_5e', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5e = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5e', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5e = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5e', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5f = function(req, res){
+    res.render('hortikultura/hortikultura_13_5f', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5f = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5f', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5f = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5f', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_6a = function(req, res){
+    res.render('hortikultura/hortikultura_13_6a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_6a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_6a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_6a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_6a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_6b = function(req, res){
+    res.render('hortikultura/hortikultura_13_6b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_6b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_6b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_6b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_6b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_6c = function(req, res){
+    res.render('hortikultura/hortikultura_13_6c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_6c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_6c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_6c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_6c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_7a = function(req, res){
+    res.render('hortikultura/hortikultura_13_7a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_7a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_7a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_7a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_7a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_8a = function(req, res){
+    res.render('hortikultura/hortikultura_13_8a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_8a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_8a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_8a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_8a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_8b = function(req, res){
+    res.render('hortikultura/hortikultura_13_8b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_8b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_8b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_8b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_8b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_8c = function(req, res){
+    res.render('hortikultura/hortikultura_13_8c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_8c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_8c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_8c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_8c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_9 = function(req, res){
+    res.render('hortikultura/hortikultura_13_9', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_9 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_9', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_9 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_9', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_10 = function(req, res){
+    res.render('hortikultura/hortikultura_13_10', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_10 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_10', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_10 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_10', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_11a = function(req, res){
+    res.render('hortikultura/hortikultura_13_11a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_11a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_11a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_11a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_11a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_11b = function(req, res){
+    res.render('hortikultura/hortikultura_13_11b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_11b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_11b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_11b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_11b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_11c = function(req, res){
+    res.render('hortikultura/hortikultura_13_11c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_11c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_11c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_11c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_11c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_12 = function(req, res){
+    res.render('hortikultura/hortikultura_13_12', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_12 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_12', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_12 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_12', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_13 = function(req, res){
+    res.render('hortikultura/hortikultura_13_13', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_13 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_13', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_13 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_13', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_14 = function(req, res){
+    res.render('hortikultura/hortikultura_13_14', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_14 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_14', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_14 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_14', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15a = function(req, res){
+    res.render('hortikultura/hortikultura_13_15a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15b = function(req, res){
+    res.render('hortikultura/hortikultura_13_15b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15c = function(req, res){
+    res.render('hortikultura/hortikultura_13_15c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15d = function(req, res){
+    res.render('hortikultura/hortikultura_13_15d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+
+
 /*========================================Peternakan==========================================*/
 exports.peternakan = function(req, res){
     res.render('peternakan/peternakan', {title: 'Peternakan'});

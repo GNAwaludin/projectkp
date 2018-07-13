@@ -1569,6 +1569,584 @@ app.get('/tambah_informatika_12_8', sistem.tambah_informatika_12_8);
 app.get('/edit_informatika_12_8', sistem.edit_informatika_12_8);
 /*==============================================================================*/
 
+/*======================Tanaman Pangan dan Hortikultura=========================*/
+app.get('/hortikultura', sistem.hortikultura);
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_1a', sistem.hortikultura_13_1a);
+app.get('/tambah_hortikultura_13_1a', sistem.tambah_hortikultura_13_1a);
+app.get('/edit_hortikultura_13_1a', sistem.edit_hortikultura_13_1a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_1b', sistem.hortikultura_13_1b);
+app.get('/tambah_hortikultura_13_1b', sistem.tambah_hortikultura_13_1b);
+app.get('/edit_hortikultura_13_1b', sistem.edit_hortikultura_13_1b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_1c', sistem.hortikultura_13_1c);
+app.get('/tambah_hortikultura_13_1c', sistem.tambah_hortikultura_13_1c);
+app.get('/edit_hortikultura_13_1c', sistem.edit_hortikultura_13_1c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_1d', sistem.hortikultura_13_1d);
+app.get('/tambah_hortikultura_13_1d', sistem.tambah_hortikultura_13_1d);
+app.get('/edit_hortikultura_13_1d', sistem.edit_hortikultura_13_1d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_1e', sistem.hortikultura_13_1e);
+app.get('/tambah_hortikultura_13_1e', sistem.tambah_hortikultura_13_1e);
+app.get('/edit_hortikultura_13_1e', sistem.edit_hortikultura_13_1e);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_1f', sistem.hortikultura_13_1f);
+app.get('/tambah_hortikultura_13_1f', sistem.tambah_hortikultura_13_1f);
+app.get('/edit_hortikultura_13_1f', sistem.edit_hortikultura_13_1f);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_2a', sistem.hortikultura_13_2a);
+app.get('/tambah_hortikultura_13_2a', sistem.tambah_hortikultura_13_2a);
+app.get('/edit_hortikultura_13_2a', sistem.edit_hortikultura_13_2a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_2b', sistem.hortikultura_13_2b);
+app.get('/tambah_hortikultura_13_2b', sistem.tambah_hortikultura_13_2b);
+app.get('/edit_hortikultura_13_2b', sistem.edit_hortikultura_13_2b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_2c', sistem.hortikultura_13_2c);
+app.get('/tambah_hortikultura_13_2c', sistem.tambah_hortikultura_13_2c);
+app.get('/edit_hortikultura_13_2c', sistem.edit_hortikultura_13_2c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_2d', sistem.hortikultura_13_2d);
+app.get('/tambah_hortikultura_13_2d', sistem.tambah_hortikultura_13_2d);
+app.get('/edit_hortikultura_13_2d', sistem.edit_hortikultura_13_2d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_2d', sistem.hortikultura_13_2d);
+app.get('/tambah_hortikultura_13_2d', sistem.tambah_hortikultura_13_2d);
+app.get('/edit_hortikultura_13_2d', sistem.edit_hortikultura_13_2d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3aa', sistem.hortikultura_13_3aa);
+app.get('/tambah_hortikultura_13_3aa', sistem.tambah_hortikultura_13_3aa);
+app.get('/edit_hortikultura_13_3aa', sistem.edit_hortikultura_13_3aa);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ab', sistem.hortikultura_13_3ab);
+app.get('/tambah_hortikultura_13_3ab', sistem.tambah_hortikultura_13_3ab);
+app.get('/edit_hortikultura_13_3ab', sistem.edit_hortikultura_13_3ab);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ac', sistem.hortikultura_13_3ac);
+app.get('/tambah_hortikultura_13_3ac', sistem.tambah_hortikultura_13_3ac);
+app.get('/edit_hortikultura_13_3ac', sistem.edit_hortikultura_13_3ac);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ad', sistem.hortikultura_13_3ad);
+app.get('/tambah_hortikultura_13_3ad', sistem.tambah_hortikultura_13_3ad);
+app.get('/edit_hortikultura_13_3ad', sistem.edit_hortikultura_13_3ad);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ae', sistem.hortikultura_13_3ae);
+app.get('/tambah_hortikultura_13_3ae', sistem.tambah_hortikultura_13_3ae);
+app.get('/edit_hortikultura_13_3ae', sistem.edit_hortikultura_13_3ae);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ba', sistem.hortikultura_13_3ba);
+app.get('/tambah_hortikultura_13_3ba', sistem.tambah_hortikultura_13_3ba);
+app.get('/edit_hortikultura_13_3ba', sistem.edit_hortikultura_13_3ba);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3bb', sistem.hortikultura_13_3bb);
+app.get('/tambah_hortikultura_13_3bb', sistem.tambah_hortikultura_13_3bb);
+app.get('/edit_hortikultura_13_3bb', sistem.edit_hortikultura_13_3bb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3bc', sistem.hortikultura_13_3bc);
+app.get('/tambah_hortikultura_13_3bc', sistem.tambah_hortikultura_13_3bc);
+app.get('/edit_hortikultura_13_3bc', sistem.edit_hortikultura_13_3bc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3bd', sistem.hortikultura_13_3bd);
+app.get('/tambah_hortikultura_13_3bd', sistem.tambah_hortikultura_13_3bd);
+app.get('/edit_hortikultura_13_3bd', sistem.edit_hortikultura_13_3bd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3be', sistem.hortikultura_13_3be);
+app.get('/tambah_hortikultura_13_3be', sistem.tambah_hortikultura_13_3be);
+app.get('/edit_hortikultura_13_3be', sistem.edit_hortikultura_13_3be);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ca', sistem.hortikultura_13_3ca);
+app.get('/tambah_hortikultura_13_3ca', sistem.tambah_hortikultura_13_3ca);
+app.get('/edit_hortikultura_13_3ca', sistem.edit_hortikultura_13_3ca);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3cb', sistem.hortikultura_13_3cb);
+app.get('/tambah_hortikultura_13_3cb', sistem.tambah_hortikultura_13_3cb);
+app.get('/edit_hortikultura_13_3cb', sistem.edit_hortikultura_13_3cb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3cc', sistem.hortikultura_13_3cc);
+app.get('/tambah_hortikultura_13_3cc', sistem.tambah_hortikultura_13_3cc);
+app.get('/edit_hortikultura_13_3cc', sistem.edit_hortikultura_13_3cc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3cd', sistem.hortikultura_13_3cd);
+app.get('/tambah_hortikultura_13_3cd', sistem.tambah_hortikultura_13_3cd);
+app.get('/edit_hortikultura_13_3cd', sistem.edit_hortikultura_13_3cd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ce', sistem.hortikultura_13_3ce);
+app.get('/tambah_hortikultura_13_3ce', sistem.tambah_hortikultura_13_3ce);
+app.get('/edit_hortikultura_13_3ce', sistem.edit_hortikultura_13_3ce);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3da', sistem.hortikultura_13_3da);
+app.get('/tambah_hortikultura_13_3da', sistem.tambah_hortikultura_13_3da);
+app.get('/edit_hortikultura_13_3da', sistem.edit_hortikultura_13_3da);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3db', sistem.hortikultura_13_3db);
+app.get('/tambah_hortikultura_13_3db', sistem.tambah_hortikultura_13_3db);
+app.get('/edit_hortikultura_13_3db', sistem.edit_hortikultura_13_3db);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3dc', sistem.hortikultura_13_3dc);
+app.get('/tambah_hortikultura_13_3dc', sistem.tambah_hortikultura_13_3dc);
+app.get('/edit_hortikultura_13_3dc', sistem.edit_hortikultura_13_3dc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3dd', sistem.hortikultura_13_3dd);
+app.get('/tambah_hortikultura_13_3dd', sistem.tambah_hortikultura_13_3dd);
+app.get('/edit_hortikultura_13_3dd', sistem.edit_hortikultura_13_3dd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3de', sistem.hortikultura_13_3de);
+app.get('/tambah_hortikultura_13_3de', sistem.tambah_hortikultura_13_3de);
+app.get('/edit_hortikultura_13_3de', sistem.edit_hortikultura_13_3de);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ea', sistem.hortikultura_13_3ea);
+app.get('/tambah_hortikultura_13_3ea', sistem.tambah_hortikultura_13_3ea);
+app.get('/edit_hortikultura_13_3ea', sistem.edit_hortikultura_13_3ea);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3eb', sistem.hortikultura_13_3eb);
+app.get('/tambah_hortikultura_13_3eb', sistem.tambah_hortikultura_13_3eb);
+app.get('/edit_hortikultura_13_3eb', sistem.edit_hortikultura_13_3eb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ec', sistem.hortikultura_13_3ec);
+app.get('/tambah_hortikultura_13_3ec', sistem.tambah_hortikultura_13_3ec);
+app.get('/edit_hortikultura_13_3ec', sistem.edit_hortikultura_13_3ec);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3fa', sistem.hortikultura_13_3fa);
+app.get('/tambah_hortikultura_13_3fa', sistem.tambah_hortikultura_13_3fa);
+app.get('/edit_hortikultura_13_3fa', sistem.edit_hortikultura_13_3fa);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3fb', sistem.hortikultura_13_3fb);
+app.get('/tambah_hortikultura_13_3fb', sistem.tambah_hortikultura_13_3fb);
+app.get('/edit_hortikultura_13_3fb', sistem.edit_hortikultura_13_3fb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3fc', sistem.hortikultura_13_3fc);
+app.get('/tambah_hortikultura_13_3fc', sistem.tambah_hortikultura_13_3fc);
+app.get('/edit_hortikultura_13_3fc', sistem.edit_hortikultura_13_3fc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3ga', sistem.hortikultura_13_3ga);
+app.get('/tambah_hortikultura_13_3ga', sistem.tambah_hortikultura_13_3ga);
+app.get('/edit_hortikultura_13_3ga', sistem.edit_hortikultura_13_3ga);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3gb', sistem.hortikultura_13_3gb);
+app.get('/tambah_hortikultura_13_3gb', sistem.tambah_hortikultura_13_3gb);
+app.get('/edit_hortikultura_13_3gb', sistem.edit_hortikultura_13_3gb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_3gc', sistem.hortikultura_13_3gc);
+app.get('/tambah_hortikultura_13_3gc', sistem.tambah_hortikultura_13_3gc);
+app.get('/edit_hortikultura_13_3gc', sistem.edit_hortikultura_13_3gc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4aa', sistem.hortikultura_13_4aa);
+app.get('/tambah_hortikultura_13_4aa', sistem.tambah_hortikultura_13_4aa);
+app.get('/edit_hortikultura_13_4aa', sistem.edit_hortikultura_13_4aa);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ab', sistem.hortikultura_13_4ab);
+app.get('/tambah_hortikultura_13_4ab', sistem.tambah_hortikultura_13_4ab);
+app.get('/edit_hortikultura_13_4ab', sistem.edit_hortikultura_13_4ab);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ac', sistem.hortikultura_13_4ac);
+app.get('/tambah_hortikultura_13_4ac', sistem.tambah_hortikultura_13_4ac);
+app.get('/edit_hortikultura_13_4ac', sistem.edit_hortikultura_13_4ac);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ad', sistem.hortikultura_13_4ad);
+app.get('/tambah_hortikultura_13_4ad', sistem.tambah_hortikultura_13_4ad);
+app.get('/edit_hortikultura_13_4ad', sistem.edit_hortikultura_13_4ad);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ae', sistem.hortikultura_13_4ae);
+app.get('/tambah_hortikultura_13_4ae', sistem.tambah_hortikultura_13_4ae);
+app.get('/edit_hortikultura_13_4ae', sistem.edit_hortikultura_13_4ae);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4af', sistem.hortikultura_13_4af);
+app.get('/tambah_hortikultura_13_4af', sistem.tambah_hortikultura_13_4af);
+app.get('/edit_hortikultura_13_4af', sistem.edit_hortikultura_13_4af);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ag', sistem.hortikultura_13_4ag);
+app.get('/tambah_hortikultura_13_4ag', sistem.tambah_hortikultura_13_4ag);
+app.get('/edit_hortikultura_13_4ag', sistem.edit_hortikultura_13_4ag);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ba', sistem.hortikultura_13_4ba);
+app.get('/tambah_hortikultura_13_4ba', sistem.tambah_hortikultura_13_4ba);
+app.get('/edit_hortikultura_13_4ba', sistem.edit_hortikultura_13_4ba);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4bb', sistem.hortikultura_13_4bb);
+app.get('/tambah_hortikultura_13_4bb', sistem.tambah_hortikultura_13_4bb);
+app.get('/edit_hortikultura_13_4bb', sistem.edit_hortikultura_13_4bb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4bc', sistem.hortikultura_13_4bc);
+app.get('/tambah_hortikultura_13_4bc', sistem.tambah_hortikultura_13_4bc);
+app.get('/edit_hortikultura_13_4bc', sistem.edit_hortikultura_13_4bc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4be', sistem.hortikultura_13_4be);
+app.get('/tambah_hortikultura_13_4be', sistem.tambah_hortikultura_13_4be);
+app.get('/edit_hortikultura_13_4be', sistem.edit_hortikultura_13_4be);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4bf', sistem.hortikultura_13_4bf);
+app.get('/tambah_hortikultura_13_4bf', sistem.tambah_hortikultura_13_4bf);
+app.get('/edit_hortikultura_13_4bf', sistem.edit_hortikultura_13_4bf);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4bg', sistem.hortikultura_13_4bg);
+app.get('/tambah_hortikultura_13_4bg', sistem.tambah_hortikultura_13_4bg);
+app.get('/edit_hortikultura_13_4bg', sistem.edit_hortikultura_13_4bg);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ca', sistem.hortikultura_13_4ca);
+app.get('/tambah_hortikultura_13_4ca', sistem.tambah_hortikultura_13_4ca);
+app.get('/edit_hortikultura_13_4ca', sistem.edit_hortikultura_13_4ca);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4cb', sistem.hortikultura_13_4cb);
+app.get('/tambah_hortikultura_13_4cb', sistem.tambah_hortikultura_13_4cb);
+app.get('/edit_hortikultura_13_4cb', sistem.edit_hortikultura_13_4cb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4cc', sistem.hortikultura_13_4cc);
+app.get('/tambah_hortikultura_13_4cc', sistem.tambah_hortikultura_13_4cc);
+app.get('/edit_hortikultura_13_4cc', sistem.edit_hortikultura_13_4cc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4cd', sistem.hortikultura_13_4cd);
+app.get('/tambah_hortikultura_13_4cd', sistem.tambah_hortikultura_13_4cd);
+app.get('/edit_hortikultura_13_4cd', sistem.edit_hortikultura_13_4cd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ce', sistem.hortikultura_13_4ce);
+app.get('/tambah_hortikultura_13_4ce', sistem.tambah_hortikultura_13_4ce);
+app.get('/edit_hortikultura_13_4ce', sistem.edit_hortikultura_13_4ce);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4cf', sistem.hortikultura_13_4cf);
+app.get('/tambah_hortikultura_13_4cf', sistem.tambah_hortikultura_13_4cf);
+app.get('/edit_hortikultura_13_4cf', sistem.edit_hortikultura_13_4cf);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4cg', sistem.hortikultura_13_4cg);
+app.get('/tambah_hortikultura_13_4cg', sistem.tambah_hortikultura_13_4cg);
+app.get('/edit_hortikultura_13_4cg', sistem.edit_hortikultura_13_4cg);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4da', sistem.hortikultura_13_4da);
+app.get('/tambah_hortikultura_13_4da', sistem.tambah_hortikultura_13_4da);
+app.get('/edit_hortikultura_13_4da', sistem.edit_hortikultura_13_4da);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4db', sistem.hortikultura_13_4db);
+app.get('/tambah_hortikultura_13_4db', sistem.tambah_hortikultura_13_4db);
+app.get('/edit_hortikultura_13_4db', sistem.edit_hortikultura_13_4db);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4dc', sistem.hortikultura_13_4dc);
+app.get('/tambah_hortikultura_13_4dc', sistem.tambah_hortikultura_13_4dc);
+app.get('/edit_hortikultura_13_4dc', sistem.edit_hortikultura_13_4dc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4dd', sistem.hortikultura_13_4dd);
+app.get('/tambah_hortikultura_13_4dd', sistem.tambah_hortikultura_13_4dd);
+app.get('/edit_hortikultura_13_4dd', sistem.edit_hortikultura_13_4dd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4de', sistem.hortikultura_13_4de);
+app.get('/tambah_hortikultura_13_4de', sistem.tambah_hortikultura_13_4de);
+app.get('/edit_hortikultura_13_4de', sistem.edit_hortikultura_13_4de);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4df', sistem.hortikultura_13_4df);
+app.get('/tambah_hortikultura_13_4df', sistem.tambah_hortikultura_13_4df);
+app.get('/edit_hortikultura_13_4df', sistem.edit_hortikultura_13_4df);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4dg', sistem.hortikultura_13_4dg);
+app.get('/tambah_hortikultura_13_4dg', sistem.tambah_hortikultura_13_4dg);
+app.get('/edit_hortikultura_13_4dg', sistem.edit_hortikultura_13_4dg);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ea', sistem.hortikultura_13_4ea);
+app.get('/tambah_hortikultura_13_4ea', sistem.tambah_hortikultura_13_4ea);
+app.get('/edit_hortikultura_13_4ea', sistem.edit_hortikultura_13_4ea);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4eb', sistem.hortikultura_13_4eb);
+app.get('/tambah_hortikultura_13_4eb', sistem.tambah_hortikultura_13_4eb);
+app.get('/edit_hortikultura_13_4eb', sistem.edit_hortikultura_13_4eb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ec', sistem.hortikultura_13_4ec);
+app.get('/tambah_hortikultura_13_4ec', sistem.tambah_hortikultura_13_4ec);
+app.get('/edit_hortikultura_13_4ec', sistem.edit_hortikultura_13_4ec);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ed', sistem.hortikultura_13_4ed);
+app.get('/tambah_hortikultura_13_4ed', sistem.tambah_hortikultura_13_4ed);
+app.get('/edit_hortikultura_13_4ed', sistem.edit_hortikultura_13_4ed);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ee', sistem.hortikultura_13_4ee);
+app.get('/tambah_hortikultura_13_4ee', sistem.tambah_hortikultura_13_4ee);
+app.get('/edit_hortikultura_13_4ee', sistem.edit_hortikultura_13_4ee);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ef', sistem.hortikultura_13_4ef);
+app.get('/tambah_hortikultura_13_4ef', sistem.tambah_hortikultura_13_4ef);
+app.get('/edit_hortikultura_13_4ef', sistem.edit_hortikultura_13_4ef);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4eg', sistem.hortikultura_13_4eg);
+app.get('/tambah_hortikultura_13_4eg', sistem.tambah_hortikultura_13_4eg);
+app.get('/edit_hortikultura_13_4eg', sistem.edit_hortikultura_13_4eg);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4fa', sistem.hortikultura_13_4fa);
+app.get('/tambah_hortikultura_13_4fa', sistem.tambah_hortikultura_13_4fa);
+app.get('/edit_hortikultura_13_4fa', sistem.edit_hortikultura_13_4fa);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4fb', sistem.hortikultura_13_4fb);
+app.get('/tambah_hortikultura_13_4fb', sistem.tambah_hortikultura_13_4fb);
+app.get('/edit_hortikultura_13_4fb', sistem.edit_hortikultura_13_4fb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4fc', sistem.hortikultura_13_4fc);
+app.get('/tambah_hortikultura_13_4fc', sistem.tambah_hortikultura_13_4fc);
+app.get('/edit_hortikultura_13_4fc', sistem.edit_hortikultura_13_4fc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4fd', sistem.hortikultura_13_4fd);
+app.get('/tambah_hortikultura_13_4fd', sistem.tambah_hortikultura_13_4fd);
+app.get('/edit_hortikultura_13_4fd', sistem.edit_hortikultura_13_4fd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4fe', sistem.hortikultura_13_4fe);
+app.get('/tambah_hortikultura_13_4fe', sistem.tambah_hortikultura_13_4fe);
+app.get('/edit_hortikultura_13_4fe', sistem.edit_hortikultura_13_4fe);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ff', sistem.hortikultura_13_4ff);
+app.get('/tambah_hortikultura_13_4ff', sistem.tambah_hortikultura_13_4ff);
+app.get('/edit_hortikultura_13_4ff', sistem.edit_hortikultura_13_4ff);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4fg', sistem.hortikultura_13_4fg);
+app.get('/tambah_hortikultura_13_4fg', sistem.tambah_hortikultura_13_4fg);
+app.get('/edit_hortikultura_13_4fg', sistem.edit_hortikultura_13_4fg);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ga', sistem.hortikultura_13_4ga);
+app.get('/tambah_hortikultura_13_4ga', sistem.tambah_hortikultura_13_4ga);
+app.get('/edit_hortikultura_13_4ga', sistem.edit_hortikultura_13_4ga);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4gb', sistem.hortikultura_13_4gb);
+app.get('/tambah_hortikultura_13_4gb', sistem.tambah_hortikultura_13_4gb);
+app.get('/edit_hortikultura_13_4gb', sistem.edit_hortikultura_13_4gb);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4gc', sistem.hortikultura_13_4gc);
+app.get('/tambah_hortikultura_13_4gc', sistem.tambah_hortikultura_13_4gc);
+app.get('/edit_hortikultura_13_4gc', sistem.edit_hortikultura_13_4gc);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4gd', sistem.hortikultura_13_4gd);
+app.get('/tambah_hortikultura_13_4gd', sistem.tambah_hortikultura_13_4gd);
+app.get('/edit_hortikultura_13_4gd', sistem.edit_hortikultura_13_4gd);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4ge', sistem.hortikultura_13_4ge);
+app.get('/tambah_hortikultura_13_4ge', sistem.tambah_hortikultura_13_4ge);
+app.get('/edit_hortikultura_13_4ge', sistem.edit_hortikultura_13_4ge);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4gf', sistem.hortikultura_13_4gf);
+app.get('/tambah_hortikultura_13_4gf', sistem.tambah_hortikultura_13_4gf);
+app.get('/edit_hortikultura_13_4gf', sistem.edit_hortikultura_13_4gf);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_4gg', sistem.hortikultura_13_4gg);
+app.get('/tambah_hortikultura_13_4gg', sistem.tambah_hortikultura_13_4gg);
+app.get('/edit_hortikultura_13_4gg', sistem.edit_hortikultura_13_4gg);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_5a', sistem.hortikultura_13_5a);
+app.get('/tambah_hortikultura_13_5a', sistem.tambah_hortikultura_13_5a);
+app.get('/edit_hortikultura_13_5a', sistem.edit_hortikultura_13_5a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_5b', sistem.hortikultura_13_5b);
+app.get('/tambah_hortikultura_13_5b', sistem.tambah_hortikultura_13_5b);
+app.get('/edit_hortikultura_13_5b', sistem.edit_hortikultura_13_5b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_5c', sistem.hortikultura_13_5c);
+app.get('/tambah_hortikultura_13_5c', sistem.tambah_hortikultura_13_5c);
+app.get('/edit_hortikultura_13_5c', sistem.edit_hortikultura_13_5c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_5d', sistem.hortikultura_13_5d);
+app.get('/tambah_hortikultura_13_5d', sistem.tambah_hortikultura_13_5d);
+app.get('/edit_hortikultura_13_5d', sistem.edit_hortikultura_13_5d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_5e', sistem.hortikultura_13_5e);
+app.get('/tambah_hortikultura_13_5e', sistem.tambah_hortikultura_13_5e);
+app.get('/edit_hortikultura_13_5e', sistem.edit_hortikultura_13_5e);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_5f', sistem.hortikultura_13_5f);
+app.get('/tambah_hortikultura_13_5f', sistem.tambah_hortikultura_13_5f);
+app.get('/edit_hortikultura_13_5f', sistem.edit_hortikultura_13_5f);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_6a', sistem.hortikultura_13_6a);
+app.get('/tambah_hortikultura_13_6a', sistem.tambah_hortikultura_13_6a);
+app.get('/edit_hortikultura_13_6a', sistem.edit_hortikultura_13_6a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_6b', sistem.hortikultura_13_6b);
+app.get('/tambah_hortikultura_13_6b', sistem.tambah_hortikultura_13_6b);
+app.get('/edit_hortikultura_13_6b', sistem.edit_hortikultura_13_6b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_6c', sistem.hortikultura_13_6c);
+app.get('/tambah_hortikultura_13_6c', sistem.tambah_hortikultura_13_6c);
+app.get('/edit_hortikultura_13_6c', sistem.edit_hortikultura_13_6c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_7a', sistem.hortikultura_13_7a);
+app.get('/tambah_hortikultura_13_7a', sistem.tambah_hortikultura_13_7a);
+app.get('/edit_hortikultura_13_7a', sistem.edit_hortikultura_13_7a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_7b', sistem.hortikultura_13_7b);
+app.get('/tambah_hortikultura_13_7b', sistem.tambah_hortikultura_13_7b);
+app.get('/edit_hortikultura_13_7b', sistem.edit_hortikultura_13_7b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_7c', sistem.hortikultura_13_7c);
+app.get('/tambah_hortikultura_13_7c', sistem.tambah_hortikultura_13_7c);
+app.get('/edit_hortikultura_13_7c', sistem.edit_hortikultura_13_7c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_8a', sistem.hortikultura_13_8a);
+app.get('/tambah_hortikultura_13_8a', sistem.tambah_hortikultura_13_8a);
+app.get('/edit_hortikultura_13_8a', sistem.edit_hortikultura_13_8a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_8b', sistem.hortikultura_13_8b);
+app.get('/tambah_hortikultura_13_8b', sistem.tambah_hortikultura_13_8b);
+app.get('/edit_hortikultura_13_8b', sistem.edit_hortikultura_13_8b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_8c', sistem.hortikultura_13_8c);
+app.get('/tambah_hortikultura_13_8c', sistem.tambah_hortikultura_13_8c);
+app.get('/edit_hortikultura_13_8c', sistem.edit_hortikultura_13_8c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_9', sistem.hortikultura_13_9);
+app.get('/tambah_hortikultura_13_9', sistem.tambah_hortikultura_13_9);
+app.get('/edit_hortikultura_13_9', sistem.edit_hortikultura_13_9);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_10', sistem.hortikultura_13_10);
+app.get('/tambah_hortikultura_13_10', sistem.tambah_hortikultura_13_10);
+app.get('/edit_hortikultura_13_10', sistem.edit_hortikultura_13_10);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_11a', sistem.hortikultura_13_11a);
+app.get('/tambah_hortikultura_13_11a', sistem.tambah_hortikultura_13_11a);
+app.get('/edit_hortikultura_13_11a', sistem.edit_hortikultura_13_11a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_11b', sistem.hortikultura_13_11b);
+app.get('/tambah_hortikultura_13_11b', sistem.tambah_hortikultura_13_11b);
+app.get('/edit_hortikultura_13_11b', sistem.edit_hortikultura_13_11b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_11c', sistem.hortikultura_13_11c);
+app.get('/tambah_hortikultura_13_11c', sistem.tambah_hortikultura_13_11c);
+app.get('/edit_hortikultura_13_11c', sistem.edit_hortikultura_13_11c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_12', sistem.hortikultura_13_12);
+app.get('/tambah_hortikultura_13_12', sistem.tambah_hortikultura_13_12);
+app.get('/edit_hortikultura_13_12', sistem.edit_hortikultura_13_12);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_13', sistem.hortikultura_13_13);
+app.get('/tambah_hortikultura_13_13', sistem.tambah_hortikultura_13_13);
+app.get('/edit_hortikultura_13_13', sistem.edit_hortikultura_13_13);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_14', sistem.hortikultura_13_14);
+app.get('/tambah_hortikultura_13_14', sistem.tambah_hortikultura_13_14);
+app.get('/edit_hortikultura_13_14', sistem.edit_hortikultura_13_14);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_15a', sistem.hortikultura_13_15a);
+app.get('/tambah_hortikultura_13_15a', sistem.tambah_hortikultura_13_15a);
+app.get('/edit_hortikultura_13_15a', sistem.edit_hortikultura_13_15a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_15b', sistem.hortikultura_13_15b);
+app.get('/tambah_hortikultura_13_15b', sistem.tambah_hortikultura_13_15b);
+app.get('/edit_hortikultura_13_15b', sistem.edit_hortikultura_13_15b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_15c', sistem.hortikultura_13_15c);
+app.get('/tambah_hortikultura_13_15c', sistem.tambah_hortikultura_13_15c);
+app.get('/edit_hortikultura_13_15c', sistem.edit_hortikultura_13_15c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/hortikultura_13_15d', sistem.hortikultura_13_15d);
+app.get('/tambah_hortikultura_13_15d', sistem.tambah_hortikultura_13_15d);
+app.get('/edit_hortikultura_13_15d', sistem.edit_hortikultura_13_15d);
+/*==============================================================================*/
+
 /*=================================Peternakan===================================*/
 app.get('/peternakan', sistem.peternakan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
