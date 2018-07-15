@@ -297,13 +297,19 @@ app.get('/edit_cipta_3_1/delete/:id', sistem.delete_cipta_3_1);
 /*==============================================================================*/
 /*===================Tenaga sub  Profesional jasa  konsultansi==================*/
 app.get('/cipta_3_2', sistem.cipta_3_2);
-app.get('/tambah_cipta_3_2', sistem.tambah_cipta_3_2);
-app.get('/edit_cipta_3_2', sistem.edit_cipta_3_2);
+app.get('/tambah_cipta_3_2/add', sistem.tambah_cipta_3_2);
+app.post('/tambah_cipta_3_2/add', sistem.save_cipta_3_2);
+app.get('/edit_cipta_3_2/edit/:id', sistem.edit_cipta_3_2);
+app.post('/edit_cipta_3_2/edit/:id', sistem.save_edit_cipta_3_2);
+app.get('/edit_cipta_3_2/delete/:id', sistem.delete_cipta_3_2);
 /*==============================================================================*/  
 /*=======================Tenaga pendukung jasa konsultansi======================*/
 app.get('/cipta_3_3', sistem.cipta_3_3);
-app.get('/tambah_cipta_3_3', sistem.tambah_cipta_3_3);
-app.get('/edit_cipta_3_3', sistem.edit_cipta_3_3);
+app.get('/tambah_cipta_3_3/add', sistem.tambah_cipta_3_3);
+app.post('/tambah_cipta_3_3/add', sistem.save_cipta_3_3);
+app.get('/edit_cipta_3_3/edit/:id', sistem.edit_cipta_3_3);
+app.post('/edit_cipta_3_3/edit/:id', sistem.save_edit_cipta_3_3);
+app.get('/edit_cipta_3_3/delete/:id', sistem.delete_cipta_3_3);
 /*==============================================================================*/  
 /*=====Biaya Langsung Non Personil Untuk Jenis Pengeluaran Reimbursable=========*/
 app.get('/cipta_3_4', sistem.cipta_3_4);
@@ -337,8 +343,11 @@ app.get('/edit_cipta_3_9', sistem.edit_cipta_3_9);
 /*==============================================================================*/  
 /*Pedoman Harga Satuan Per Meter Persegi Tertinggi Bangunan  Gedung Pemerintah dan Rumah Dinas*/
 app.get('/cipta_3_10', sistem.cipta_3_10);
-app.get('/tambah_cipta_3_10', sistem.tambah_cipta_3_10);
-app.get('/edit_cipta_3_10', sistem.edit_cipta_3_10);
+app.get('/tambah_cipta_3_10/add', sistem.tambah_cipta_3_10);
+app.post('/tambah_cipta_3_10/add', sistem.save_cipta_3_10);
+app.get('/edit_cipta_3_10/edit/:id', sistem.edit_cipta_3_10);
+app.post('/edit_cipta_3_10/edit/:id', sistem.save_edit_cipta_3_10);
+app.get('/edit_cipta_3_10/delete/:id', sistem.delete_cipta_3_10);
 /*==============================================================================*/
 /*=========Pedoman Harga Satuan Per Meter Tertinggi Bangunan Pagar=============*/
 app.get('/cipta_3_11', sistem.cipta_3_11);

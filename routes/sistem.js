@@ -3112,7 +3112,19 @@ exports.delete_cipta_3_1 = function(req, res){
 /*==========================Tenaga sub Profesional Jasa Konsultansi===========================*/
 /*Render Tabel*/
 exports.cipta_3_2 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_2', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 93", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_2', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3120,15 +3132,126 @@ exports.tambah_cipta_3_2 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_2', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_2 */
+exports.save_cipta_3_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 93
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_2 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_2', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_2',{
+                title : 'Edit cipta_3_2',
+                page_title:"Edit cipta_3_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_2 */
+exports.save_edit_cipta_3_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_2');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_2*/
+exports.delete_cipta_3_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==============================Tenaga Pendukung Jasa Konsultansi=============================*/
 /*Render Tabel*/
 exports.cipta_3_3 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_3', {title: 'Keciptakaryaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 94", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_3', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3136,10 +3259,105 @@ exports.tambah_cipta_3_3 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_3', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_3 */
+exports.save_cipta_3_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 94
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_3 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_3', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_3',{
+                title : 'Edit cipta_3_3',
+                page_title:"Edit cipta_3_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_3 */
+exports.save_edit_cipta_3_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_3');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_3*/
+exports.delete_cipta_3_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*============Biaya Langsung Non Personil Untuk Jenis Pengeluaran Reimbursable================*/
 /*Render Tabel*/
@@ -3240,7 +3458,19 @@ exports.edit_cipta_3_9 = function(req, res){
 /*=Pedoman Harga Satuan Per Meter Persegi Tertinggi Bangunan  Gedung Pemerintah dan Rumah Dinas=*/
 /*Render Tabel*/
 exports.cipta_3_10 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_10', {title: 'Keciptakaryaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail7 WHERE kategori_id = 101", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_10', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3248,10 +3478,115 @@ exports.tambah_cipta_3_10 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_10', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_10 */
+exports.save_cipta_3_10 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            nilai6 : input.nilai6,
+            nilai7 : input.nilai7,
+            keterangan : input.keterangan,
+            kategori_id : 101
+        };
+
+        var query = connection.query("INSERT INTO detail7 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_10');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_10 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_10', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail7 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_3',{
+                title : 'Edit cipta_3_10',
+                page_title:"Edit cipta_3_10",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_10 */
+exports.save_edit_cipta_3_10 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            nilai6 : input.nilai6,
+            nilai7 : input.nilai7,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail7 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_10');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_10*/
+exports.delete_cipta_3_10 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail7  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_10');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===================Pedoman Harga Satuan Per Meter Tertinggi Bangunan Pagar==================*/
 /*Render Tabel*/
