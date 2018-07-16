@@ -106,19 +106,11 @@ exports.saveBidang = function(req, res, next){
 
 /*=====================================Bidang Kebinamargaan=========================================*/
 exports.kebinamargaan = function(req, res){
-    req.getConnection(function(err, connection){
 
-        var query = connection.query('SELECT * FROM fsk_jl', function(err, rows){
-
-            if(err)
-                console.log("Error Selecting : %s ", err);
-
-            res.render('kebinamargaan/kebinamargaan', {
-                title: "Bidang Kebinamargaan",
-                page_title: "Bidang Kebinamargaan", data:rows
-            });
-        });
-    });
+    res.render('kebinamargaan/kebinamargaan', {
+    title: "Bidang Kebinamargaan",
+    page_title: "Bidang Kebinamargaan",
+});
 };
 
 
@@ -129,84 +121,78 @@ exports.kebinamargaan = function(req, res){
 
 /*Render Tabel*/
 exports.kebinamargaan_1_1 = function(req, res){
+
      req.getConnection(function(err, connection){
 
-        var query = connection.query('SELECT * FROM sub_fsk_jl', function(err, rows){
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 66", function(err, rows){
 
             if(err)
                 console.log("Error Selecting : %s ", err);
 
             res.render('kebinamargaan/kebinamargaan_1_1', {
-                title: "Kebinamargaan",
-                page_title: "Bidang Kebinamargaan", data:rows
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
             });
         });
     });
 };
-
 
 /* Tambah Data */
 exports.tambah_kebinamargaan_1_1 = function(req, res){
-    req.getConnection(function(err, connection){
-
-        var query = connection.query('SELECT * FROM fsk_jl', function(err, rows){
-
-            if(err)
-                console.log("Error Selecting : %s ", err);
-
-            res.render('kebinamargaan/tambah_kebinamargaan_1_1', {
-                title: "Kebinamargaan",
-                page_title: "Bidang Kebinamargaan", data:rows
-            });
-        });
-    });
+    res.render('kebinamargaan/tambah_kebinamargaan_1_1', {title: 'Peningkatan Jalan Hotmix'});
+   
 };
 
-exports.save_Tambahkebinamargaan_1_1 = function(req, res){
-     var input = JSON.parse(JSON.stringify(req.body));
+/* Save Data kebinamargaan_1_1 */
+exports.save_kebinamargaan_1_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
 
     req.getConnection(function(err, connection){
 
         var data = {
 
-            lebar : input.lebar,
-            nominal : input.nominal,
-            fsk_jl_id : input.fsk_jl_id
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 66
         };
 
-        var query = connection.query("INSERT INTO sub_fsk_jl set ?", data, function(err, rows){
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
 
             if(err)
                 console.log("Error Instering : %s", err);
-            res.redirect('kebinamargaan/kebinamargaan_1_1');
+            res.redirect('/kebinamargaan_1_1');
         });
     });
-}
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_1 = function(req, res){
-
+    // res.render('sbu1/edit_2_1', {title: 'Pengadan Barang/Jasa'});
     var id = req.params.id;
     
     req.getConnection(function(err,connection){
        
-        var query = connection.query('SELECT * FROM sub_fsk_jl WHERE id = ?',[id],function(err,rows)
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
         {
             
             if(err)
                 console.log("Error Selecting : %s ",err );
      
             res.render('kebinamargaan/edit_kebinamargaan_1_1',{
-                title : 'Edit Kebinamargaan',
+                title : 'Edit kebinamargaan_1_1',
                 page_title:"Edit kebinamargaan_1_1",data:rows
             });
                 
            
          });
          
-         //console.log(query.sql);
     }); 
 };
 
+/* Save Edit sbu1_2_1 */
 exports.save_edit_kebinamargaan_1_1 = function(req, res){
 
     var input = JSON.parse(JSON.stringify(req.body));
@@ -215,43 +201,45 @@ exports.save_edit_kebinamargaan_1_1 = function(req, res){
     req.getConnection(function (err, connection) {
         
         var data = {
-            
-            lebar    : input.lebar,
-            nominal : input.nominal
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
         
         };
         
-        connection.query("UPDATE sub_fsk_jl set ? WHERE id = ? ",[data,id], function(err, rows)
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
         {
   
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('kebinamargaan/kebinamargaan_1_1');
+          res.redirect('/kebinamargaan_1_1');
           
         });
     
     });
 };
 
+/* Delete sbu1_2_1 */
 exports.delete_kebinamargaan_1_1 = function(req, res){
 
     var id = req.params.id;
     
      req.getConnection(function (err, connection) {
         
-        connection.query("DELETE FROM sub_fsk_jl  WHERE id = ? ",[id], function(err, rows)
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
         {
             
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('kebinamargaan/kebinamargaan_1_1');
+             res.redirect('/kebinamargaan_1_1');
              
         });
         
      });
-}
+};
 
 /*=================================================================================================*/
 
@@ -260,7 +248,19 @@ exports.delete_kebinamargaan_1_1 = function(req, res){
 
 /*Render Tabel*/
 exports.kebinamargaan_1_2 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_2', {title: 'Kebinamargaan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 67", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_2', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /*Tambah Data Baru*/
@@ -268,30 +268,31 @@ exports.tambah_kebinamargaan_1_2 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_2', {title: 'Kebinamargaan'});
 };
 
-/*show data From database*/
+/* Save Data kebinamargaan_1_2 */
+exports.save_kebinamargaan_1_2 = function(req, res){
 
-exports.list = function(req, res){
+ var input = JSON.parse(JSON.stringify(req.body));
 
-  req.getConnection(function(err,connection){
-       
-        var query = connection.query('SELECT * FROM sub_fsk_jl',function(err,rows)
-        {
-            
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 67
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
             if(err)
-                console.log("Error Selecting : %s ",err );
-     
-            res.render('kebinamargaan/kebinamargaan',{
-                page_title:"Customers - Node.js",data:rows,
-                title: "Kebinamargaan SI"
-            });
-                
-           
-         });
-         
-         //console.log(query.sql);
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_2');
+        });
     });
-  
+
 };
+
 
 /*edit data From database*/
 exports.edit_kebinamargaan_1_2 = function(req, res){
@@ -300,76 +301,89 @@ exports.edit_kebinamargaan_1_2 = function(req, res){
     
     req.getConnection(function(err,connection){
        
-        var query = connection.query('SELECT * FROM sub_fsk_jl WHERE id = ?',[id],function(err,rows)
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
         {
             
             if(err)
                 console.log("Error Selecting : %s ",err );
      
             res.render('kebinamargaan/edit_kebinamargaan_1_2',{
-                page_title:"Edit Customers - Node.js",data:rows,
-                title: "Edit Kebinamargaan"
+                title : 'Edit kebinamargaan_1_2',
+                page_title:"Edit kebinamargaan_1_2",data:rows
             });
                 
            
          });
          
-         //console.log(query.sql);
     }); 
 };
 
-/* Update Data */
-exports.save_edit_kebinamargaan_1_2 = function(req,res){
-    
+/* Save Edit kebinamargaan_1_2 */
+exports.save_edit_kebinamargaan_1_2 = function(req, res){
+
     var input = JSON.parse(JSON.stringify(req.body));
     var id = req.params.id;
     
     req.getConnection(function (err, connection) {
         
         var data = {
-            
-            lebar    : input.lebar,
-            nominal : input.nominal
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
         
         };
         
-        connection.query("UPDATE sub_fsk_jl set ? WHERE id = ? ",[data,id], function(err, rows)
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
         {
   
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('kebinamargaan/kebinamargaan');
+          res.redirect('/kebinamargaan_1_2');
           
         });
     
     });
 };
 
-/*Delete Data*/
-exports.delete_kebinamargaan_1_2 = function(req,res){
-          
-     var id = req.params.id;
+/* Delete kebinamargaan_1_2 */
+exports.delete_kebinamargaan_1_2 = function(req, res){
+
+    var id = req.params.id;
     
      req.getConnection(function (err, connection) {
         
-        connection.query("DELETE FROM sub_fsk_jl  WHERE id = ? ",[id], function(err, rows)
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
         {
             
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('kebinamargaan/kebinamargaan');
+             res.redirect('/kebinamargaan_1_2');
              
         });
         
      });
 };
+
 /*=========================Rehabilitasi/Pemeliharaan Berkala (HOTMIX)==========================*/
 
 /*Render Tabel*/
 exports.kebinamargaan_1_3 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_3', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 68", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_3', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -377,9 +391,101 @@ exports.tambah_kebinamargaan_1_3 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_3', {title: 'Kebinamargaan'});
 };
 
+/* Save Data kebinamargaan_1_3 */
+exports.save_kebinamargaan_1_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 68
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_3 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_3', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_3',{
+                title : 'Edit kebinamargaan_1_3',
+                page_title:"Edit kebinamargaan_1_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_3 */
+exports.save_edit_kebinamargaan_1_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_3');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_3 */
+exports.delete_kebinamargaan_1_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_3');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -387,7 +493,19 @@ exports.edit_kebinamargaan_1_3 = function(req, res){
 /*=====================================Pemeliharaan Rutin======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_4 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_4', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 69", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_4', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -395,9 +513,101 @@ exports.tambah_kebinamargaan_1_4 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_4', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_4 */
+exports.save_kebinamargaan_1_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 69
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_4 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_4', {title: 'Kebinamargaan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_4',{
+                title : 'Edit kebinamargaan_1_4',
+                page_title:"Edit kebinamargaan_1_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_4 */
+exports.save_edit_kebinamargaan_1_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_4');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_4 */
+exports.delete_kebinamargaan_1_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_4');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -405,7 +615,19 @@ exports.edit_kebinamargaan_1_4 = function(req, res){
 /*====================================Pemeliharaan Rutin*======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_5 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_5', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 70", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_5', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -413,9 +635,101 @@ exports.tambah_kebinamargaan_1_5 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_5', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_5 */
+exports.save_kebinamargaan_1_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 70
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_5 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_5', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_5',{
+                title : 'Edit kebinamargaan_1_5',
+                page_title:"Edit kebinamargaan_1_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_5 */
+exports.save_edit_kebinamargaan_1_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_5');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_5 */
+exports.delete_kebinamargaan_1_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_5');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -423,7 +737,19 @@ exports.edit_kebinamargaan_1_5 = function(req, res){
 /*===============================Pembangunan Jalan Baru Hotmix=================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_6 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_6', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 71", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_6', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -431,9 +757,101 @@ exports.tambah_kebinamargaan_1_6 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_6', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_6 */
+exports.save_kebinamargaan_1_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 71
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_6 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_6', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_6',{
+                title : 'Edit kebinamargaan_1_6',
+                page_title:"Edit kebinamargaan_1_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_6 */
+exports.save_edit_kebinamargaan_1_6 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_6');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_6 */
+exports.delete_kebinamargaan_1_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_6');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -441,7 +859,19 @@ exports.edit_kebinamargaan_1_6 = function(req, res){
 /*================================Pembangunan Jalan Baru Beton=================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_7 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_7', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 72", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_7', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -449,9 +879,101 @@ exports.tambah_kebinamargaan_1_7 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_7', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_7 */
+exports.save_kebinamargaan_1_7 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 72
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_7');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_7 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_7', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_7',{
+                title : 'Edit kebinamargaan_1_7',
+                page_title:"Edit kebinamargaan_1_7",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_7 */
+exports.save_edit_kebinamargaan_1_7 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_7');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_7 */
+exports.delete_kebinamargaan_1_7 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_7');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -459,7 +981,19 @@ exports.edit_kebinamargaan_1_7 = function(req, res){
 /*==================================Bahu di Perkeras Beton=====================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_8 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_8', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 73", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_8', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -467,9 +1001,101 @@ exports.tambah_kebinamargaan_1_8 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_8', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_8 */
+exports.save_kebinamargaan_1_8 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 73
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_8');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_8 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_8', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_8',{
+                title : 'Edit kebinamargaan_1_8',
+                page_title:"Edit kebinamargaan_1_8",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_8 */
+exports.save_edit_kebinamargaan_1_8 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_8');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_8*/
+exports.delete_kebinamargaan_1_8 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_8');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -477,7 +1103,19 @@ exports.edit_kebinamargaan_1_8 = function(req, res){
 /*==================================Pelebaran Jalan Beton======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_9 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_9', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 74", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_9', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -485,9 +1123,101 @@ exports.tambah_kebinamargaan_1_9 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_9', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_9 */
+exports.save_kebinamargaan_1_9 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 74
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_9');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_9 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_9', {title: 'Kebinamargaan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_9',{
+                title : 'Edit kebinamargaan_1_9',
+                page_title:"Edit kebinamargaan_1_9",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_9 */
+exports.save_edit_kebinamargaan_1_9 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_9');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_9*/
+exports.delete_kebinamargaan_1_9 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_9');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -495,7 +1225,19 @@ exports.edit_kebinamargaan_1_9 = function(req, res){
 /*================================Pelebaran Jalan AGREGAT======================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_10 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_10', {title: 'Kebinamargaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 75", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_10', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -503,9 +1245,101 @@ exports.tambah_kebinamargaan_1_10 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_10', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_10 */
+exports.save_kebinamargaan_1_10 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 75
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_10');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_10 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_10', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_10',{
+                title : 'Edit kebinamargaan_1_10',
+                page_title:"Edit kebinamargaan_1_10",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_10 */
+exports.save_edit_kebinamargaan_1_10 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_10');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_10*/
+exports.delete_kebinamargaan_1_10 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_10');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -513,7 +1347,19 @@ exports.edit_kebinamargaan_1_10 = function(req, res){
 /*=================================Rekonstrksi Jalan HOTMIX====================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_11 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_11', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 76", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_11', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -521,9 +1367,101 @@ exports.tambah_kebinamargaan_1_11 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_11', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_11 */
+exports.save_kebinamargaan_1_11 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 76
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_11');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_11 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_11', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_11',{
+                title : 'Edit kebinamargaan_1_11',
+                page_title:"Edit kebinamargaan_1_11",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_11 */
+exports.save_edit_kebinamargaan_1_11 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_11');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_11*/
+exports.delete_kebinamargaan_1_11 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_11');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -531,7 +1469,19 @@ exports.edit_kebinamargaan_1_11 = function(req, res){
 /*===============================Minimal Penanganan Jembatan===================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_12 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_12', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 77", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_12', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -539,9 +1489,107 @@ exports.tambah_kebinamargaan_1_12 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_12', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_12 */
+exports.save_kebinamargaan_1_12 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 77
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_12');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_12 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_12', {title: 'Kebinamargaan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_12',{
+                title : 'Edit kebinamargaan_1_12',
+                page_title:"Edit kebinamargaan_1_12",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_12 */
+exports.save_edit_kebinamargaan_1_12 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_12');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_12*/
+exports.delete_kebinamargaan_1_12 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_12');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -549,7 +1597,19 @@ exports.edit_kebinamargaan_1_12 = function(req, res){
 /*==========================Perencanaan dan Pengawasan Jalan Jembatan==========================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_13 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_13', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 78", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_13', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -557,9 +1617,101 @@ exports.tambah_kebinamargaan_1_13 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_13', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_13 */
+exports.save_kebinamargaan_1_13 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 78
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_13');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_13 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_13', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_13',{
+                title : 'Edit kebinamargaan_1_13',
+                page_title:"Edit kebinamargaan_1_13",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_13 */
+exports.save_edit_kebinamargaan_1_13 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_13');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_13*/
+exports.delete_kebinamargaan_1_13 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_13');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -567,7 +1719,19 @@ exports.edit_kebinamargaan_1_13 = function(req, res){
 /*=====================================Sewa Alat/Kendaraaan====================================*/
 /*Render Tabel*/
 exports.kebinamargaan_1_17 = function(req, res){
-    res.render('kebinamargaan/kebinamargaan_1_17', {title: 'Kebinamargaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 82", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kebinamargaan/kebinamargaan_1_17', {
+                title: 'Kebinamargaan',
+                page_title: "Kebinamargaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -575,9 +1739,103 @@ exports.tambah_kebinamargaan_1_17 = function(req, res){
     res.render('kebinamargaan/tambah_kebinamargaan_1_17', {title: 'Kebinamargaan'})
 };
 
+/* Save Data kebinamargaan_1_17 */
+exports.save_kebinamargaan_1_17 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 82
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kebinamargaan_1_17');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kebinamargaan_1_17 = function(req, res){
-    res.render('kebinamargaan/edit_kebinamargaan_1_17', {title: 'Kebinamargaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kebinamargaan/edit_kebinamargaan_1_17',{
+                title : 'Edit kebinamargaan_1_17',
+                page_title:"Edit kebinamargaan_1_17",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit kebinamargaan_1_17 */
+exports.save_edit_kebinamargaan_1_17 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kebinamargaan_1_17');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_17*/
+exports.delete_kebinamargaan_1_17 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kebinamargaan_1_17');
+             
+        });
+        
+     });
 };
 
 /*=============================================================================================*/
@@ -589,7 +1847,19 @@ exports.sumber_daya_air = function(req, res){
 /*========================Honorarium Tenaga Teknis NON PNS Khusus Bidang SDA===================*/
 /*Render Tabel*/
 exports.sda_2_1 = function(req, res){
-    res.render('sda/sda_2_1', {title: 'Sumber Daya Air'});
+      req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 83", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_1', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -597,15 +1867,124 @@ exports.tambah_sda_2_1 = function(req, res){
     res.render('sda/tambah_sda_2_1', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_1 */
+exports.save_sda_2_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 83
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_1 = function(req, res){
-    res.render('sda/edit_sda_2_1', {title: 'Sumber Daya Air'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_1',{
+                title : 'Edit sda_2_1',
+                page_title:"Edit sda_2_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_1 */
+exports.save_edit_sda_2_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_1');
+          
+        });
+    
+    });
+};
+
+/* Delete kebinamargaan_1_17*/
+exports.delete_sda_2_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================Besaran Uang Saku Tenaga Teknis Non PNS  Piket Banjir/Kekeringan===========*/
 /*Render Tabel*/
 exports.sda_2_2 = function(req, res){
-    res.render('sda/sda_2_2', {title: 'Sumber Daya Air'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 84", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_2', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -613,15 +1992,122 @@ exports.tambah_sda_2_2 = function(req, res){
     res.render('sda/tambah_sda_2_2', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_2 */
+exports.save_sda_2_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 84
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_2 = function(req, res){
-    res.render('sda/edit_sda_2_2', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_2',{
+                title : 'Edit sda_2_2',
+                page_title:"Edit sda_2_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_2 */
+exports.save_edit_sda_2_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_2');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_2*/
+exports.delete_sda_2_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pedataran)================*/
 /*Render Tabel*/
 exports.sda_2_3 = function(req, res){
-    res.render('sda/sda_2_3', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 85", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_3', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -629,15 +2115,122 @@ exports.tambah_sda_2_3 = function(req, res){
     res.render('sda/tambah_sda_2_3', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_3 */
+exports.save_sda_2_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 85
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_3 = function(req, res){
-    res.render('sda/edit_sda_2_3', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_3',{
+                title : 'Edit sda_2_3',
+                page_title:"Edit sda_2_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_3 */
+exports.save_edit_sda_2_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_3');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_3*/
+exports.delete_sda_2_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================Pengukuran dan Perencanaan Rehabilitasi Irigasi (Pegunungan)===============*/
 /*Render Tabel*/
 exports.sda_2_4 = function(req, res){
-    res.render('sda/sda_2_4', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 86", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_4', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -645,15 +2238,122 @@ exports.tambah_sda_2_4 = function(req, res){
     res.render('sda/tambah_sda_2_4', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_4 */
+exports.save_sda_2_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 86
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_4 = function(req, res){
-    res.render('sda/edit_sda_2_4', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_4',{
+                title : 'Edit sda_2_4',
+                page_title:"Edit sda_2_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_4 */
+exports.save_edit_sda_2_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_4');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_4*/
+exports.delete_sda_2_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==========================Pengukuran dan Perencanaan Sungai/Drainase========================*/
 /*Render Tabel*/
 exports.sda_2_5 = function(req, res){
-    res.render('sda/sda_2_5', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail5 WHERE kategori_id = 87", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_5', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -661,15 +2361,130 @@ exports.tambah_sda_2_5 = function(req, res){
     res.render('sda/tambah_sda_2_5', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_5 */
+exports.save_sda_2_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan,
+            kategori_id : 87
+        };
+
+        var query = connection.query("INSERT INTO detail5 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_5 = function(req, res){
-    res.render('sda/edit_sda_2_5', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail5 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_5',{
+                title : 'Edit sda_2_5',
+                page_title:"Edit sda_2_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_5 */
+exports.save_edit_sda_2_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail5 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_5');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_5*/
+exports.delete_sda_2_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail5  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==============================Pengukuran dan Perencanaan Situ===============================*/
 /*Render Tabel*/
 exports.sda_2_6 = function(req, res){
-    res.render('sda/sda_2_6', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 88", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_6', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -677,15 +2492,122 @@ exports.tambah_sda_2_6 = function(req, res){
     res.render('sda/tambah_sda_2_6', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_6 */
+exports.save_sda_2_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 88
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_6 = function(req, res){
-    res.render('sda/edit_sda_2_6', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_6',{
+                title : 'Edit sda_2_6',
+                page_title:"Edit sda_2_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_6 */
+exports.save_edit_sda_2_6 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_6');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_6*/
+exports.delete_sda_2_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_6');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==========Pengukuran dan Perencanaan Pengamanan Pantai dan Perbaikan Muara Sungai===========*/
 /*Render Tabel*/
 exports.sda_2_7 = function(req, res){
-    res.render('sda/sda_2_7', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 89", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_7', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -693,15 +2615,122 @@ exports.tambah_sda_2_7 = function(req, res){
     res.render('sda/tambah_sda_2_7', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_7 */
+exports.save_sda_2_7 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 89
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_7');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_7 = function(req, res){
-    res.render('sda/edit_sda_2_7', {title: 'Sumber Daya Air'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_7',{
+                title : 'Edit sda_2_7',
+                page_title:"Edit sda_2_7",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_7 */
+exports.save_edit_sda_2_7 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_7');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_7*/
+exports.delete_sda_2_7 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_7');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================Biaya Penyelidikan Lapangan & Pengujian Laboratorium Geoteknik=============*/
 /*Render Tabel*/
 exports.sda_2_8 = function(req, res){
-    res.render('sda/sda_2_8', {title: 'Sumber Daya Air'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM deatil1a WHERE detail1_id = 2", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_8', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -709,15 +2738,122 @@ exports.tambah_sda_2_8 = function(req, res){
     res.render('sda/tambah_sda_2_8', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_8 */
+exports.save_sda_2_8 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 2
+        };
+
+        var query = connection.query("INSERT INTO deatil1a set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_8');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_8 = function(req, res){
-    res.render('sda/edit_sda_2_8', {title: 'Sumber Daya Air'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM deatil1a WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_8',{
+                title : 'Edit sda_2_8',
+                page_title:"Edit sda_2_8",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_8 */
+exports.save_edit_sda_2_8 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE deatil1a set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_8');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_8*/
+exports.delete_sda_2_8 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM deatil1a  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_8');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=============================Biaya Pengelolaan Jaringan Irigasi=============================*/
 /*Render Tabel*/
 exports.sda_2_9 = function(req, res){
-    res.render('sda/sda_2_9', {title: 'Sumber Daya Air'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 91", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sda/sda_2_9', {
+                title: 'Sumber Daya Air',
+                page_title: "Sumber Daya Air", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -725,10 +2861,105 @@ exports.tambah_sda_2_9 = function(req, res){
     res.render('sda/tambah_sda_2_9', {title: 'Sumber Daya Air'});
 };
 
+/* Save Data sda_2_9 */
+exports.save_sda_2_9 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 91
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sda_2_9');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sda_2_9 = function(req, res){
-    res.render('sda/edit_sda_2_9', {title: 'Sumber Daya Air'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sda/edit_sda_2_9',{
+                title : 'Edit sda_2_9',
+                page_title:"Edit sda_2_9",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit sda_2_9 */
+exports.save_edit_sda_2_9 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sda_2_9');
+          
+        });
+    
+    });
+};
+
+/* Delete sda_2_9*/
+exports.delete_sda_2_9 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sda_2_9');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*============================Biaya Sewa Alat Pemotretan Topografi============================*/
 /*Render Tabel*/
@@ -754,7 +2985,19 @@ exports.keciptakaryaan = function(req, res){
 /*=====================Tenaga Ahli Berdasarkan Pengalaman dan Sertifikasi ====================*/
 /*Render Tabel*/
 exports.cipta_3_1 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_1', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 92", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_1', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -762,15 +3005,126 @@ exports.tambah_cipta_3_1 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_1', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_1 */
+exports.save_cipta_3_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 92
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_1 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_1', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_1',{
+                title : 'Edit cipta_3_1',
+                page_title:"Edit cipta_3_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_1 */
+exports.save_edit_cipta_3_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_1');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_1*/
+exports.delete_cipta_3_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==========================Tenaga sub Profesional Jasa Konsultansi===========================*/
 /*Render Tabel*/
 exports.cipta_3_2 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_2', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail6 WHERE kategori_id = 93", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_2', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -778,15 +3132,126 @@ exports.tambah_cipta_3_2 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_2', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_2 */
+exports.save_cipta_3_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 93
+        };
+
+        var query = connection.query("INSERT INTO detail6 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_2 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_2', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail6 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_2',{
+                title : 'Edit cipta_3_2',
+                page_title:"Edit cipta_3_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_2 */
+exports.save_edit_cipta_3_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nama4 : input.nama4,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail6 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_2');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_2*/
+exports.delete_cipta_3_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail6  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==============================Tenaga Pendukung Jasa Konsultansi=============================*/
 /*Render Tabel*/
 exports.cipta_3_3 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_3', {title: 'Keciptakaryaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 94", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_3', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -794,10 +3259,105 @@ exports.tambah_cipta_3_3 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_3', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_3 */
+exports.save_cipta_3_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 94
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_3 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_3', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_3',{
+                title : 'Edit cipta_3_3',
+                page_title:"Edit cipta_3_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_3 */
+exports.save_edit_cipta_3_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_3');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_3*/
+exports.delete_cipta_3_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*============Biaya Langsung Non Personil Untuk Jenis Pengeluaran Reimbursable================*/
 /*Render Tabel*/
@@ -898,7 +3458,19 @@ exports.edit_cipta_3_9 = function(req, res){
 /*=Pedoman Harga Satuan Per Meter Persegi Tertinggi Bangunan  Gedung Pemerintah dan Rumah Dinas=*/
 /*Render Tabel*/
 exports.cipta_3_10 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_10', {title: 'Keciptakaryaan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail7 WHERE kategori_id = 101", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_10', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -906,10 +3478,115 @@ exports.tambah_cipta_3_10 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_10', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_10 */
+exports.save_cipta_3_10 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            nilai6 : input.nilai6,
+            nilai7 : input.nilai7,
+            keterangan : input.keterangan,
+            kategori_id : 101
+        };
+
+        var query = connection.query("INSERT INTO detail7 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_10');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_10 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_10', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail7 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_3',{
+                title : 'Edit cipta_3_10',
+                page_title:"Edit cipta_3_10",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_10 */
+exports.save_edit_cipta_3_10 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            nilai5 : input.nilai5,
+            nilai6 : input.nilai6,
+            nilai7 : input.nilai7,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail7 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_10');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_10*/
+exports.delete_cipta_3_10 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail7  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_10');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===================Pedoman Harga Satuan Per Meter Tertinggi Bangunan Pagar==================*/
 /*Render Tabel*/
@@ -5153,6 +7830,1820 @@ exports.edit_informatika_12_8 = function(req, res){
     res.render('informatika/edit_informatika_12_8', {title: 'Informatika'});
 };
 /*============================================================================================*/
+
+/*==============================Tanaman Pangan dan Hortikultura===============================*/
+exports.hortikultura = function(req, res){
+    res.render('hortikultura/hortikultura', {title: 'Hortikultura'});
+};
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1a = function(req, res){
+    res.render('hortikultura/hortikultura_13_1a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1b = function(req, res){
+    res.render('hortikultura/hortikultura_13_1b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1c = function(req, res){
+    res.render('hortikultura/hortikultura_13_1c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1d = function(req, res){
+    res.render('hortikultura/hortikultura_13_1d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1e = function(req, res){
+    res.render('hortikultura/hortikultura_13_1e', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1e = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1e', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1e = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1e', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_1f = function(req, res){
+    res.render('hortikultura/hortikultura_13_1f', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_1f = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_1f', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_1f = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_1f', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2a = function(req, res){
+    res.render('hortikultura/hortikultura_13_2a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2b = function(req, res){
+    res.render('hortikultura/hortikultura_13_2b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2c = function(req, res){
+    res.render('hortikultura/hortikultura_13_2c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_2d = function(req, res){
+    res.render('hortikultura/hortikultura_13_2d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_2d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_2d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_2d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_2d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3aa = function(req, res){
+    res.render('hortikultura/hortikultura_13_3aa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3aa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3aa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3aa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3aa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ab = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ab', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ab = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ab', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ab = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ab', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ac = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ac', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ac = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ac', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ac = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ac', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ad = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ad', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ad = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ad', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ad = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ad', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ae = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ae', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ae = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ae', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ae = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ae', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ba = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ba', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ba = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ba', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ba = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ba', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3bb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3bb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3bb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3bb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3bb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3bb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3bc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3bc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3bc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3bc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3bc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3bc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3bd = function(req, res){
+    res.render('hortikultura/hortikultura_13_3bd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3bd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3bd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3bd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3bd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3be = function(req, res){
+    res.render('hortikultura/hortikultura_13_3be', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3be = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3be', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3be = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3be', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ca = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ca', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ca = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ca', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ca = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ca', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3cb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3cb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3cb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3cb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3cb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3cb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3cc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3cc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3cc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3cc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3cc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3cc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3cd = function(req, res){
+    res.render('hortikultura/hortikultura_13_3cd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3cd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3cd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3cd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3cd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ce = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ce', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ce = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ce', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ce = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ce', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3da = function(req, res){
+    res.render('hortikultura/hortikultura_13_3da', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3da = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3da', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3da = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3da', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3db = function(req, res){
+    res.render('hortikultura/hortikultura_13_3db', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3db = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3db', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3db = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3db', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3dc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3dc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3dc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3dc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3dc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3dc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3dd = function(req, res){
+    res.render('hortikultura/hortikultura_13_3dd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3dd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3dd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3dd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3dd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3de = function(req, res){
+    res.render('hortikultura/hortikultura_13_3de', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3de = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3de', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3de = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3de', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ea = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ea', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ea = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ea', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ea = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ea', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3eb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3eb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3eb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3eb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3eb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3eb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ec = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ec', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ec = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ec', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ec = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ec', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3fa = function(req, res){
+    res.render('hortikultura/hortikultura_13_3fa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3fa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3fa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3fa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3fa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3fb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3fb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3fb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3fb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3fb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3fb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3fc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3fc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3fc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3fc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3fc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3fc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3ga = function(req, res){
+    res.render('hortikultura/hortikultura_13_3ga', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3ga = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3ga', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3ga = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3ga', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3gb = function(req, res){
+    res.render('hortikultura/hortikultura_13_3gb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3gb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3gb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3gb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3gb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_3gc = function(req, res){
+    res.render('hortikultura/hortikultura_13_3gc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_3gc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_3gc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_3gc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_3gc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4aa = function(req, res){
+    res.render('hortikultura/hortikultura_13_4aa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4aa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4aa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4aa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4aa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ab = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ab', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ab = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ab', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ab = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ab', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ac = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ac', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ac = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ac', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ac = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ac', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ad = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ad', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ad = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ad', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ad = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ad', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ae = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ae', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ae = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ae', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ae = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ae', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4af = function(req, res){
+    res.render('hortikultura/hortikultura_13_4af', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4af = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4af', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4af = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4af', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ag = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ag', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ag = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ag', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ag = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ag', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ba = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ba', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ba = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ba', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ba = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ba', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4be = function(req, res){
+    res.render('hortikultura/hortikultura_13_4be', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4be = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4be', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4be = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4be', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bf = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bf', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bf = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bf', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bf = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bf', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4bg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4bg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4bg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4bg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4bg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4bg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ca = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ca', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ca = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ca', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ca = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ca', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ce = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ce', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ce = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ce', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ce = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ce', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cf = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cf', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cf = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cf', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cf = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cf', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4cg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4cg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4cg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4cg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4cg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4cg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4da = function(req, res){
+    res.render('hortikultura/hortikultura_13_4da', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4da = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4da', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4da = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4da', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4db = function(req, res){
+    res.render('hortikultura/hortikultura_13_4db', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4db = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4db', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4db = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4db', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4dc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4dc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4dc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4dc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4dc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4dc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4dd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4dd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4dd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4dd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4dd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4dd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4de = function(req, res){
+    res.render('hortikultura/hortikultura_13_4de', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4de = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4de', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4de = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4de', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4df = function(req, res){
+    res.render('hortikultura/hortikultura_13_4df', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4df = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4df', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4df = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4df', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4dg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4dg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4dg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4dg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4dg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4dg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ea = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ea', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ea = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ea', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ea = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ea', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4eb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4eb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4eb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4eb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4eb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4eb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ec = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ec', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ec = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ec', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ec = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ec', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ed = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ed', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ed = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ed', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ed = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ed', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ee = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ee', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ee = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ee', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ee = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ee', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ef = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ef', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ef = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ef', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ef = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ef', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4eg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4eg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4eg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4eg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4eg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4eg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fa = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fa', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fa = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fa', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fa = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fa', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fe = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fe', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fe = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fe', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fe = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fe', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ff = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ff', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ff = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ff', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ff = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ff', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4fg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4fg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4fg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4fg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4fg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4fg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ga = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ga', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ga = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ga', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ga = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ga', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gb = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gb', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gb = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gb', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gb = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gb', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gc = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gc', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gc = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gc', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gc = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gc', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gd = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gd', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gd = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gd', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gd = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gd', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4ge = function(req, res){
+    res.render('hortikultura/hortikultura_13_4ge', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4ge = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4ge', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4ge = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4ge', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gf = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gf', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gf = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gf', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gf = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gf', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_4gg = function(req, res){
+    res.render('hortikultura/hortikultura_13_4gg', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_4gg = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_4gg', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_4gg = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_4gg', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5a = function(req, res){
+    res.render('hortikultura/hortikultura_13_5a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5b = function(req, res){
+    res.render('hortikultura/hortikultura_13_5b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5c = function(req, res){
+    res.render('hortikultura/hortikultura_13_5c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5d = function(req, res){
+    res.render('hortikultura/hortikultura_13_5d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5e = function(req, res){
+    res.render('hortikultura/hortikultura_13_5e', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5e = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5e', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5e = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5e', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_5f = function(req, res){
+    res.render('hortikultura/hortikultura_13_5f', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_5f = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_5f', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_5f = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_5f', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_6a = function(req, res){
+    res.render('hortikultura/hortikultura_13_6a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_6a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_6a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_6a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_6a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_6b = function(req, res){
+    res.render('hortikultura/hortikultura_13_6b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_6b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_6b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_6b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_6b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_6c = function(req, res){
+    res.render('hortikultura/hortikultura_13_6c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_6c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_6c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_6c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_6c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_7a = function(req, res){
+    res.render('hortikultura/hortikultura_13_7a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_7a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_7a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_7a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_7a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_8a = function(req, res){
+    res.render('hortikultura/hortikultura_13_8a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_8a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_8a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_8a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_8a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_8b = function(req, res){
+    res.render('hortikultura/hortikultura_13_8b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_8b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_8b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_8b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_8b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_8c = function(req, res){
+    res.render('hortikultura/hortikultura_13_8c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_8c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_8c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_8c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_8c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_9 = function(req, res){
+    res.render('hortikultura/hortikultura_13_9', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_9 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_9', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_9 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_9', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_10 = function(req, res){
+    res.render('hortikultura/hortikultura_13_10', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_10 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_10', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_10 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_10', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_11a = function(req, res){
+    res.render('hortikultura/hortikultura_13_11a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_11a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_11a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_11a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_11a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_11b = function(req, res){
+    res.render('hortikultura/hortikultura_13_11b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_11b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_11b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_11b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_11b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_11c = function(req, res){
+    res.render('hortikultura/hortikultura_13_11c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_11c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_11c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_11c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_11c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_12 = function(req, res){
+    res.render('hortikultura/hortikultura_13_12', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_12 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_12', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_12 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_12', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_13 = function(req, res){
+    res.render('hortikultura/hortikultura_13_13', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_13 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_13', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_13 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_13', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_14 = function(req, res){
+    res.render('hortikultura/hortikultura_13_14', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_14 = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_14', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_14 = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_14', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15a = function(req, res){
+    res.render('hortikultura/hortikultura_13_15a', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15a = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15a', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15a = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15a', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15b = function(req, res){
+    res.render('hortikultura/hortikultura_13_15b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15c = function(req, res){
+    res.render('hortikultura/hortikultura_13_15c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_15d = function(req, res){
+    res.render('hortikultura/hortikultura_13_15d', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_15d = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_15d', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_15d = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_15d', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+
 
 /*========================================Peternakan==========================================*/
 exports.peternakan = function(req, res){
@@ -12685,10 +17176,11 @@ exports.edit_sbu1_2_51 = function(req, res){
             
             if(err)
                 console.log("Error Selecting : %s ",err );
-     
+
             res.render('sbu1/edit_sbu1_2_51',{
-                title : 'Edit SBU1_2_51',
-                page_title:"Edit sbu1_2_51",data:rows
+            title : 'Edit SBU1_2_51',
+            page_title:"Edit sbu1_2_51",data:rows
+            
             });
                 
            
@@ -12885,7 +17377,19 @@ exports.edit_sbu1_2_60 = function(req, res){
 
 /*Render Tabel*/
 exports.sbu2_3_1 = function(req, res){
-    res.render('sbu2/sbu2_3_1', {title: 'Satuan Sewa Gedung/Lapang Olahraga'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 61", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_1', {
+                title: 'Satuan Sewa Gedung/Lapang Olahraga',
+                page_title: "Satuan Sewa Gedung/Lapang Olahraga", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12893,16 +17397,124 @@ exports.tambah_sbu2_3_1 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_1', {title: 'Satuan Sewa Gedung/Lapang Olahraga'});
 };
 
+/* Save Data sbu2_3_1 */
+exports.save_sbu2_3_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 61
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_1 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_1', {title: 'Satuan Sewa Gedung/Lapang Olahraga'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_1',{
+                title : 'Edit SBU2_3_1',
+                page_title:"Edit sbu2_3_1",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_1 */
+exports.save_edit_sbu2_3_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_1');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_1 */
+exports.delete_sbu2_3_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===================Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi================*/
 
 /*Render Tabel*/
 exports.sbu2_3_2 = function(req, res){
-    res.render('sbu2/sbu2_3_2', {title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 62", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_2', {
+                title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi',
+                page_title: "Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12910,16 +17522,122 @@ exports.tambah_sbu2_3_2 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_2', {title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi'});
 };
 
+/* Save Data sbu2_3_2 */
+exports.save_sbu2_3_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 62
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_2 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_2', {title: 'Satuan Biaya Taksi Perjalanan Dinas Jabatan Luar Provinsi'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_2',{
+                title : 'Edit SBU2_3_2',
+                page_title:"Edit sbu2_3_2",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_2 */
+exports.save_edit_sbu2_3_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_2');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_2 */
+exports.delete_sbu2_3_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*==============Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)================*/
 
 /*Render Tabel*/
 exports.sbu2_3_3 = function(req, res){
-    res.render('sbu2/sbu2_3_3', {title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 63", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_3', {
+                title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)',
+                page_title: "Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12927,16 +17645,124 @@ exports.tambah_sbu2_3_3 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_3', {title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)'});
 };
 
+/* Save Data sbu2_3_3 */
+exports.save_sbu2_3_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 63
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_3 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_3', {title: 'Satuan Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_3',{
+                title : 'Edit SBU2_3_3',
+                page_title:"Edit sbu2_3_3",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_3 */
+exports.save_edit_sbu2_3_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_3');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_3 */
+exports.delete_sbu2_3_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*====================Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)====================*/
 
 /*Render Tabel*/
 exports.sbu2_3_4 = function(req, res){
-    res.render('sbu2/sbu2_3_4', {title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail10 WHERE kategori_id = 64", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_4', {
+                title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)',
+                page_title: "Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12944,16 +17770,126 @@ exports.tambah_sbu2_3_4 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_4', {title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)'});
 };
 
+/* Save Data sbu2_3_4 */
+exports.save_sbu2_3_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 64
+        };
+
+        var query = connection.query("INSERT INTO detail10 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_4 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_4', {title: 'Satuan Biaya Tiket Perjalanan Dinas Luar Negeri (PP)'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail10 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_4',{
+                title : 'Edit SBU2_3_4',
+                page_title:"Edit sbu2_3_4",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_4 */
+exports.save_edit_sbu2_3_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail10 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_4');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_4 */
+exports.delete_sbu2_3_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail10  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Biaya Perawatan Kendaraan Dinas==============================*/
 
 /*Render Tabel*/
 exports.sbu2_3_5 = function(req, res){
-    res.render('sbu2/sbu2_3_5', {title: 'Biaya Perawatan Kendaraan Dinas'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 65", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('sbu2/sbu2_3_5', {
+                title: 'Biaya Perawatan Kendaraan Dinas',
+                page_title: "Biaya Perawatan Kendaraan Dinas", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12961,10 +17897,106 @@ exports.tambah_sbu2_3_5 = function(req, res){
     res.render('sbu2/tambah_sbu2_3_5', {title: 'Biaya Perawatan Kendaraan Dinas'});
 };
 
+/* Save Data sbu2_3_5 */
+exports.save_sbu2_3_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 65
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/sbu2_3_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_sbu2_3_5 = function(req, res){
-    res.render('sbu2/edit_sbu2_3_5', {title: 'Biaya Perawatan Kendaraan Dinas'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('sbu2/edit_sbu2_3_5',{
+                title : 'Edit SBU2_3_5',
+                page_title:"Edit sbu2_3_5",data:rows
+            });
+                
+           
+         });
+    }); 
 };
+
+/* Save Edit sbu2_3_5 */
+exports.save_edit_sbu2_3_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+            
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/sbu2_3_5');
+        
+        });
+    
+    });
+};
+
+/* Delete sbu2_3_5 */
+exports.delete_sbu2_3_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/sbu2_3_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 exports.kategoriA = function(req, res){

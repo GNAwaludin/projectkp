@@ -13,14 +13,14 @@
         <div class="page-data">
             <h3>Biaya Tiket Perjalanan Dinas Luar Negeri (PP)</h3></br>
             <h3>Edit Data</h3>
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="post" action="/edit_sbu2_3_4/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Wilayah:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama1">
                                     <option>--Pilih Salah Satu--</option>
-                                    <option>Amerika Utara</option>
-                                    <option>Amerika Selatan</option>
+                                    <option value="Amerika Utara">Amerika Utara</option>
+                                    <option value="Amerika Selatan">Amerika Selatan</option>
                                 </select>
                             </div>
                     </div>
@@ -28,44 +28,48 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Kota:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama2">
                                     <option>--Pilih Salah Satu--</option>
+                                    <option value="Chicago">Chicago</option>
+                                    <option value="Bogota">Bogota</option>
+
+                                    
                                 </select>
                             </div>
                     </div>
 
-                    <div class="form-group">
+               <!--      <div class="form-group">
                         <label class="control-label col-sm-2">Satuan:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" placeholder="Masukan Satuan" name="satuan">
                             </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Eksekutif (US $.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Nominal (US $.)" name="harga1">
+                                <input type="text" class="form-control" placeholder="Masukan Nominal (US $.)" name="nilai1" value="<%=data[0].nilai1%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Bisnis (US $.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Nominal (US $.)" name="harga2">
+                                <input type="text" class="form-control" placeholder="Masukan Nominal (US $.)" name="nilai2" value="<%=data[0].nilai2%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Ekonomi (US $.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Nominal (US $.)" name="harga3">
+                                <input type="text" class="form-control" placeholder="Masukan Nominal (US $.)" name="nilai3" value="<%=data[0].nilai3%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     

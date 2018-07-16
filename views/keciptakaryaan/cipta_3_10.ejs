@@ -11,8 +11,58 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Pedoman Harga Satuan Per Meter Persegi Tertinggi Bangunan  Gedung Pemerintah dan Rumah Dinas</h3>
-                  <a href="/tambah_cipta_3_10" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_cipta_3_10/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Daerah</th>
+                  <th>(Gedung Bertingkat) Kelas Sederhana (Rp.)</th>
+                  <th>(Gedung Bertingkat) Kelas Tidak Sederhana (Rp.)</th>
+                  <th>(Gedung Tidak Bertingkat) Kelas Sederhana (Rp.)</th>
+                  <th>(Gedung Tidak Bertingkat) Kelas Tidak Sederhana (Rp.)</th>
+                  <th>(Gedung Rumah Dinas) Tipe A(Rp.)</th>
+                  <th>(Gedung Rumah Dinas) Tipe B(Rp.)</th>
+                  <th>(Gedung Rumah Dinas) Tipe C(Rp.)</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama%></td>
+                    <td><%=data[i].nilai1%></td>
+                    <td><%=data[i].nilai2%></td>
+                    <td><%=data[i].nilai3%></td>
+                    <td><%=data[i].nilai4%></td>
+                    <td><%=data[i].nilai5%></td>
+                    <td><%=data[i].nilai6%></td>
+                    <td><%=data[i].nilai7%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_cipta_3_10/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_cipta_3_10/delete/<%=data[i].id%>>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
    	<script type="text/javascript" src="/../js/all.js"></script>

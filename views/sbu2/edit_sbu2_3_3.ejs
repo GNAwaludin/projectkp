@@ -13,14 +13,14 @@
         <div class="page-data">
             <h3>Biaya Tiket Pesawat Perjalanan Dinas Luar Provinsi (PP)</h3></br>
             <h3>Edit Data</h3>
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="post" action="/edit_sbu2_3_3/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Kota Asal:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama1">
                                     <option>--Pilih Salah Satu--</option>
-                                    <option>Bandung</option>
-                                    <option>Jakarta</option>
+                                    <option value="Bandung">Bandung</option>
+                                    <option value="Jakarta">Jakarta</option>
                                 </select>
                             </div>
                     </div>
@@ -28,35 +28,36 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Kota Tujuan:</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" style="width: 300px;">
+                                <select class="form-control" id="sel1" style="width: 300px;" name="nama2">
                                     <option>--Pilih Salah Satu--</option>
-                                    <option>Ambon</option>
-                                    <option>Balikpapan</option>
-                                    <option>Banda Aceh</option>
-                                    <option>Bandar Lampung</option>
-                                    <option>Banjarmasin</option>
+                                    <option value="Ambon">Ambon</option>
+                                    <option value="Balikpapan">Balikpapan</option>
+                                    <option value="Banda Aceh">Banda Aceh</option>
+                                    <option value="Bandar Lampung">Bandar Lampung</option>
+                                    <option value="Banjarmasin">Banjarmasin</option>
                                 </select>
                             </div>
                     </div>
 
+
                     <div class="form-group">
                         <label class="control-label col-sm-2">Satuan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="satuan">
+                                <input type="text" class="form-control" placeholder="Masukan Satuan" name="nama3" value="<%=data[0].nama3%>">
                             </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-2">Biaya (Rp.):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Nominal (Rp.)" name="harga1">
+                                <input type="text" class="form-control" placeholder="Masukan Nominal (Rp.)" name="nilai" value="<%=data[0].nilai%>">
                             </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
