@@ -3521,7 +3521,7 @@ exports.edit_cipta_3_10 = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('keciptakaryaan/edit_cipta_3_3',{
+            res.render('keciptakaryaan/edit_cipta_3_10',{
                 title : 'Edit cipta_3_10',
                 page_title:"Edit cipta_3_10",data:rows
             });
@@ -3655,7 +3655,19 @@ exports.edit_cipta_3_14 = function(req, res){
 /*=========Sub Bidang Proyek Untuk Kegiatan Perumahan Kota (PLPK)/ Bidang Permukiman==========*/
 /*Render Tabel*/
 exports.cipta_3_15 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_15', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail8 WHERE kategori_id = 106", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_15', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3663,15 +3675,124 @@ exports.tambah_cipta_3_15 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_15', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_15 */
+exports.save_cipta_3_15 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            float1 : input.float1,
+            float2 : input.float2,
+            float3 : input.float3,
+            keterangan : input.keterangan,
+            kategori_id : 106
+        };
+
+        var query = connection.query("INSERT INTO detail8 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_15');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_15 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_15', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail8 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_15',{
+                title : 'Edit cipta_3_15',
+                page_title:"Edit cipta_3_15",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_15 */
+exports.save_edit_cipta_3_15 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            float1 : input.float1,
+            float2 : input.float2,
+            float3 : input.float3,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail8 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_15');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_15*/
+exports.delete_cipta_3_15 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail8  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_15');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===========Sub Bidang Untuk Kegiatan Perumahan Kota (PLPK)/ Bidang Permukiman===============*/
 /*Render Tabel*/
 exports.cipta_3_16 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_16', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail8 WHERE kategori_id = 107", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_16', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3679,15 +3800,124 @@ exports.tambah_cipta_3_16 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_16', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_16 */
+exports.save_cipta_3_16 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            float1 : input.float1,
+            float2 : input.float2,
+            float3 : input.float3,
+            keterangan : input.keterangan,
+            kategori_id : 107
+        };
+
+        var query = connection.query("INSERT INTO detail8 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_16');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_16 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_16', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail8 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_16',{
+                title : 'Edit cipta_3_16',
+                page_title:"Edit cipta_3_16",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_16 */
+exports.save_edit_cipta_3_16 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            float1 : input.float1,
+            float2 : input.float2,
+            float3 : input.float3,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail8 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_16');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_16*/
+exports.delete_cipta_3_16 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail8  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_16');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*========================Prosentase Komponen Pekerjaan Bangunan==============================*/
 /*Render Tabel*/
 exports.cipta_3_17 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_17', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 108", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_17', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3695,15 +3925,122 @@ exports.tambah_cipta_3_17 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_17', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_17 */
+exports.save_cipta_3_17 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 108
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_17');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_17 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_17', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_17',{
+                title : 'Edit cipta_3_17',
+                page_title:"Edit cipta_3_17",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_17 */
+exports.save_edit_cipta_3_17 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_17');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_17*/
+exports.delete_cipta_3_17 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_17');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=========Standar Kegiatan Pekerjaan Fisik Perencanaan Teknis Sistem Air Bersih==============*/
 /*Render Tabel*/
 exports.cipta_3_18 = function(req, res){
-    res.render('keciptakaryaan/cipta_3_18', {title: 'Keciptakaryaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 109", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('keciptakaryaan/cipta_3_18', {
+                title: 'Keciptakaryaan',
+                page_title: "Keciptakaryaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -3711,10 +4048,105 @@ exports.tambah_cipta_3_18 = function(req, res){
     res.render('keciptakaryaan/tambah_cipta_3_18', {title: 'Keciptakaryaan'});
 };
 
+/* Save Data cipta_3_18 */
+exports.save_cipta_3_18 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 109
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/cipta_3_18');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_cipta_3_18 = function(req, res){
-    res.render('keciptakaryaan/edit_cipta_3_18', {title: 'Keciptakaryaan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('keciptakaryaan/edit_cipta_3_18',{
+                title : 'Edit cipta_3_18',
+                page_title:"Edit cipta_3_18",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit cipta_3_18 */
+exports.save_edit_cipta_3_18 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/cipta_3_18');
+          
+        });
+    
+    });
+};
+
+/* Delete cipta_3_18*/
+exports.delete_cipta_3_18 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/cipta_3_18');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*======================================Perhubungan===========================================*/
 exports.perhubungan = function(req, res){

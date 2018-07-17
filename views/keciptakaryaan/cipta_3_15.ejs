@@ -11,8 +11,50 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Sub Bidang Proyek Untuk Kegiatan Perumahan Kota (PLPK)/ Bidang Permukiman</h3>
-                  <a href="/tambah_cipta_3_15" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_cipta_3_15/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Uraian Kegiatan</th>
+                  <th>Persentase (%) Kota Kecil</th>
+                  <th>Persentase (%) Kota Sedang</th>
+                  <th>Persentase (%) Kota Besar</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama%></td>
+                    <td><%=data[i].float1%></td>
+                    <td><%=data[i].float2%></td>
+                    <td><%=data[i].float3%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_cipta_3_15/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_cipta_3_15/delete/<%=data[i].id%>>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
    	<script type="text/javascript" src="/../js/all.js"></script>
