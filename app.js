@@ -371,23 +371,35 @@ app.get('/edit_cipta_3_14', sistem.edit_cipta_3_14);
 /*==============================================================================*/
 /*==Sub Bidang Proyek Untuk Kegiatan Perumahan Kota (PLPK)/ Bidang Permukiman===*/
 app.get('/cipta_3_15', sistem.cipta_3_15);
-app.get('/tambah_cipta_3_15', sistem.tambah_cipta_3_15);
-app.get('/edit_cipta_3_15', sistem.edit_cipta_3_15);
+app.get('/tambah_cipta_3_15/add', sistem.tambah_cipta_3_15);
+app.post('/tambah_cipta_3_15/add', sistem.save_cipta_3_15);
+app.get('/edit_cipta_3_15/edit/:id', sistem.edit_cipta_3_15);
+app.post('/edit_cipta_3_15/edit/:id', sistem.save_edit_cipta_3_15);
+app.get('/edit_cipta_3_15/delete/:id', sistem.delete_cipta_3_15);
 /*==============================================================================*/
 /*======Sub Bidang Untuk Kegiatan Perumahan Kota (PLPK)/ Bidang Permukiman======*/
 app.get('/cipta_3_16', sistem.cipta_3_16);
-app.get('/tambah_cipta_3_16', sistem.tambah_cipta_3_16);
-app.get('/edit_cipta_3_16', sistem.edit_cipta_3_16);
+app.get('/tambah_cipta_3_16/add', sistem.tambah_cipta_3_16);
+app.post('/tambah_cipta_3_16/add', sistem.save_cipta_3_16);
+app.get('/edit_cipta_3_16/edit/:id', sistem.edit_cipta_3_16);
+app.post('/edit_cipta_3_16/edit/:id', sistem.save_edit_cipta_3_16);
+app.get('/edit_cipta_3_16/delete/:id', sistem.delete_cipta_3_16);
 /*==============================================================================*/
 /*===================Prosentase Komponen Pekerjaan Bangunan=====================*/
 app.get('/cipta_3_17', sistem.cipta_3_17);
-app.get('/tambah_cipta_3_17', sistem.tambah_cipta_3_17);
-app.get('/edit_cipta_3_17', sistem.edit_cipta_3_17);
+app.get('/tambah_cipta_3_17/add', sistem.tambah_cipta_3_17);
+app.post('/tambah_cipta_3_17/add', sistem.save_cipta_3_17);
+app.get('/edit_cipta_3_17/edit/:id', sistem.edit_cipta_3_17);
+app.post('/edit_cipta_3_17/edit/:id', sistem.save_edit_cipta_3_17);
+app.get('/edit_cipta_3_17/delete/:id', sistem.delete_cipta_3_17);
 /*==============================================================================*/
 /*================Prosentase Komponen Pekerjaan Rumah Negara====================*/
 app.get('/cipta_3_18', sistem.cipta_3_18);
-app.get('/tambah_cipta_3_18', sistem.tambah_cipta_3_18);
-app.get('/edit_cipta_3_18', sistem.edit_cipta_3_18);
+app.get('/tambah_cipta_3_18/add', sistem.tambah_cipta_3_18);
+app.post('/tambah_cipta_3_18/add', sistem.save_cipta_3_18);
+app.get('/edit_cipta_3_18/edit/:id', sistem.edit_cipta_3_18);
+app.post('/edit_cipta_3_18/edit/:id', sistem.save_edit_cipta_3_18);
+app.get('/edit_cipta_3_18/delete/:id', sistem.delete_cipta_3_18);
 /*==============================================================================*/
 /*=================================Perhubungan==================================*/
 /*=============Standar Harga Satuan Kegiatan Pembangunan Prasarana==============*/

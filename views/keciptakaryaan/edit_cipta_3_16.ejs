@@ -13,11 +13,11 @@
         <div class="page-data">
             <h3>Sub Bidang Untuk Kegiatan Perumahan Kota (PLPK)/ Bidang Permukiman</h3></br>
             <h3>Edit Data</h3>
-             <form class="form-horizontal" method="post">
+             <form class="form-horizontal" method="post" action="/edit_cipta_3_16/edit/<%=data[0].id%>">
                     <div class="form-group">
                         <label class="control-label col-sm-2">Uraian Kegiatan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Uraian Kegiatan" name="uraian">
+                                <input type="text" class="form-control" placeholder="Masukan Uraian Kegiatan" name="nama" value="<%=data[0].nama%>">
                             </div>
                     </div>
 
@@ -26,7 +26,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Persentase (%):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Persentase (%)" name="presentase1">
+                                <input type="text" class="form-control" placeholder="Persentase (%)" name="float1" value="<%=data[0].float1%>">
                             </div>
                     </div>
 
@@ -35,7 +35,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Persentase (%):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Persentase (%)" name="presentase2">
+                                <input type="text" class="form-control" placeholder="Persentase (%)" name="float2" value="<%=data[0].float2%>">
                             </div>
                     </div>
 
@@ -44,7 +44,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Persentase (%):</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Persentase (%)" name="presentase3">
+                                <input type="text" class="form-control" placeholder="Persentase (%)" name="float3" value="<%=data[0].float3%>">
                             </div>
                     </div>
 
@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2">Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan">
+                                <input type="text" class="form-control" placeholder="Masukan Keterangan" name="keterangan" value="<%=data[0].keterangan%>">
                             </div>
                     </div>
     
