@@ -29,7 +29,7 @@
 - Tabel 3.17 - 3.18 (Detail 9)(DONE)
 ===============================
 4. Bidang 4
-- Tabel 4.1 (Detail 2)
+- Tabel 4.1 (Detail 2)(DONE)
 ===============================
 5. Bidang 5
 - Tabel 5.1 (Detail 1C)
