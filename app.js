@@ -2186,6 +2186,989 @@ app.get('/tambah_hortikultura_13_15d', sistem.tambah_hortikultura_13_15d);
 app.get('/edit_hortikultura_13_15d', sistem.edit_hortikultura_13_15d);
 /*==============================================================================*/
 
+/*==================================Kehutanan===================================*/
+app.get('/kehutanan', sistem.kehutanan);
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_1a', sistem.kehutanan_14_1a);
+app.get('/tambah_kehutanan_14_1a', sistem.tambah_kehutanan_14_1a);
+app.get('/edit_kehutanan_14_1a', sistem.edit_kehutanan_14_1a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_1b', sistem.kehutanan_14_1b);
+app.get('/tambah_kehutanan_14_1b', sistem.tambah_kehutanan_14_1b);
+app.get('/edit_kehutanan_14_1b', sistem.edit_kehutanan_14_1b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_1c', sistem.kehutanan_14_1c);
+app.get('/tambah_kehutanan_14_1c', sistem.tambah_kehutanan_14_1c);
+app.get('/edit_kehutanan_14_1c', sistem.edit_kehutanan_14_1c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_2a', sistem.kehutanan_14_2a);
+app.get('/tambah_kehutanan_14_2a', sistem.tambah_kehutanan_14_2a);
+app.get('/edit_kehutanan_14_2a', sistem.edit_kehutanan_14_2a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_2b', sistem.kehutanan_14_2b);
+app.get('/tambah_kehutanan_14_2b', sistem.tambah_kehutanan_14_2b);
+app.get('/edit_kehutanan_14_2b', sistem.edit_kehutanan_14_2b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_2c', sistem.kehutanan_14_2c);
+app.get('/tambah_kehutanan_14_2c', sistem.tambah_kehutanan_14_2c);
+app.get('/edit_kehutanan_14_2c', sistem.edit_kehutanan_14_2c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_3a', sistem.kehutanan_14_3a);
+app.get('/tambah_kehutanan_14_3a', sistem.tambah_kehutanan_14_3a);
+app.get('/edit_kehutanan_14_3a', sistem.edit_kehutanan_14_3a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_3b', sistem.kehutanan_14_3b);
+app.get('/tambah_kehutanan_14_3b', sistem.tambah_kehutanan_14_3b);
+app.get('/edit_kehutanan_14_3b', sistem.edit_kehutanan_14_3b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_3c', sistem.kehutanan_14_3c);
+app.get('/tambah_kehutanan_14_3c', sistem.tambah_kehutanan_14_3c);
+app.get('/edit_kehutanan_14_3c', sistem.edit_kehutanan_14_3c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_4a', sistem.kehutanan_14_4a);
+app.get('/tambah_kehutanan_14_4a', sistem.tambah_kehutanan_14_4a);
+app.get('/edit_kehutanan_14_4a', sistem.edit_kehutanan_14_4a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_4b', sistem.kehutanan_14_4b);
+app.get('/tambah_kehutanan_14_4b', sistem.tambah_kehutanan_14_4b);
+app.get('/edit_kehutanan_14_4b', sistem.edit_kehutanan_14_4b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_5a', sistem.kehutanan_14_5a);
+app.get('/tambah_kehutanan_14_5a', sistem.tambah_kehutanan_14_5a);
+app.get('/edit_kehutanan_14_5a', sistem.edit_kehutanan_14_5a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_5b', sistem.kehutanan_14_5b);
+app.get('/tambah_kehutanan_14_5b', sistem.tambah_kehutanan_14_5b);
+app.get('/edit_kehutanan_14_5b', sistem.edit_kehutanan_14_5b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_6a', sistem.kehutanan_14_6a);
+app.get('/tambah_kehutanan_14_6a', sistem.tambah_kehutanan_14_6a);
+app.get('/edit_kehutanan_14_6a', sistem.edit_kehutanan_14_6a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_6b', sistem.kehutanan_14_6b);
+app.get('/tambah_kehutanan_14_6b', sistem.tambah_kehutanan_14_6b);
+app.get('/edit_kehutanan_14_6b', sistem.edit_kehutanan_14_6b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_6c', sistem.kehutanan_14_6c);
+app.get('/tambah_kehutanan_14_6c', sistem.tambah_kehutanan_14_6c);
+app.get('/edit_kehutanan_14_6c', sistem.edit_kehutanan_14_6c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_6d', sistem.kehutanan_14_6d);
+app.get('/tambah_kehutanan_14_6d', sistem.tambah_kehutanan_14_6d);
+app.get('/edit_kehutanan_14_6d', sistem.edit_kehutanan_14_6d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_7a', sistem.kehutanan_14_7a);
+app.get('/tambah_kehutanan_14_7a', sistem.tambah_kehutanan_14_7a);
+app.get('/edit_kehutanan_14_7a', sistem.edit_kehutanan_14_7a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_7b', sistem.kehutanan_14_7b);
+app.get('/tambah_kehutanan_14_7b', sistem.tambah_kehutanan_14_7b);
+app.get('/edit_kehutanan_14_7b', sistem.edit_kehutanan_14_7b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_7c', sistem.kehutanan_14_7c);
+app.get('/tambah_kehutanan_14_7c', sistem.tambah_kehutanan_14_7c);
+app.get('/edit_kehutanan_14_7c', sistem.edit_kehutanan_14_7c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_7d', sistem.kehutanan_14_7d);
+app.get('/tambah_kehutanan_14_7d', sistem.tambah_kehutanan_14_7d);
+app.get('/edit_kehutanan_14_7d', sistem.edit_kehutanan_14_7d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_8a', sistem.kehutanan_14_8a);
+app.get('/tambah_kehutanan_14_8a', sistem.tambah_kehutanan_14_8a);
+app.get('/edit_kehutanan_14_8a', sistem.edit_kehutanan_14_8a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_8b', sistem.kehutanan_14_8b);
+app.get('/tambah_kehutanan_14_8b', sistem.tambah_kehutanan_14_8b);
+app.get('/edit_kehutanan_14_8b', sistem.edit_kehutanan_14_8b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_8c', sistem.kehutanan_14_8c);
+app.get('/tambah_kehutanan_14_8c', sistem.tambah_kehutanan_14_8c);
+app.get('/edit_kehutanan_14_8c', sistem.edit_kehutanan_14_8c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_8d', sistem.kehutanan_14_8d);
+app.get('/tambah_kehutanan_14_8d', sistem.tambah_kehutanan_14_8d);
+app.get('/edit_kehutanan_14_8d', sistem.edit_kehutanan_14_8d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_9a', sistem.kehutanan_14_9a);
+app.get('/tambah_kehutanan_14_9a', sistem.tambah_kehutanan_14_9a);
+app.get('/edit_kehutanan_14_9a', sistem.edit_kehutanan_14_9a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_9b', sistem.kehutanan_14_9b);
+app.get('/tambah_kehutanan_14_9b', sistem.tambah_kehutanan_14_9b);
+app.get('/edit_kehutanan_14_9b', sistem.edit_kehutanan_14_9b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_10a', sistem.kehutanan_14_10a);
+app.get('/tambah_kehutanan_14_10a', sistem.tambah_kehutanan_14_10a);
+app.get('/edit_kehutanan_14_10a', sistem.edit_kehutanan_14_10a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_10b', sistem.kehutanan_14_10b);
+app.get('/tambah_kehutanan_14_10b', sistem.tambah_kehutanan_14_10b);
+app.get('/edit_kehutanan_14_10b', sistem.edit_kehutanan_14_10b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_10c', sistem.kehutanan_14_10c);
+app.get('/tambah_kehutanan_14_10c', sistem.tambah_kehutanan_14_10c);
+app.get('/edit_kehutanan_14_10c', sistem.edit_kehutanan_14_10c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_11a', sistem.kehutanan_14_11a);
+app.get('/tambah_kehutanan_14_11a', sistem.tambah_kehutanan_14_11a);
+app.get('/edit_kehutanan_14_11a', sistem.edit_kehutanan_14_11a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_11b', sistem.kehutanan_14_11b);
+app.get('/tambah_kehutanan_14_11b', sistem.tambah_kehutanan_14_11b);
+app.get('/edit_kehutanan_14_11b', sistem.edit_kehutanan_14_11b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_11c', sistem.kehutanan_14_11c);
+app.get('/tambah_kehutanan_14_11c', sistem.tambah_kehutanan_14_11c);
+app.get('/edit_kehutanan_14_11c', sistem.edit_kehutanan_14_11c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_12a', sistem.kehutanan_14_12a);
+app.get('/tambah_kehutanan_14_12a', sistem.tambah_kehutanan_14_12a);
+app.get('/edit_kehutanan_14_12a', sistem.edit_kehutanan_14_12a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_12b', sistem.kehutanan_14_12b);
+app.get('/tambah_kehutanan_14_12b', sistem.tambah_kehutanan_14_12b);
+app.get('/edit_kehutanan_14_12b', sistem.edit_kehutanan_14_12b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_13a', sistem.kehutanan_14_13a);
+app.get('/tambah_kehutanan_14_13a', sistem.tambah_kehutanan_14_13a);
+app.get('/edit_kehutanan_14_13a', sistem.edit_kehutanan_14_13a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_13b', sistem.kehutanan_14_13b);
+app.get('/tambah_kehutanan_14_13b', sistem.tambah_kehutanan_14_13b);
+app.get('/edit_kehutanan_14_13b', sistem.edit_kehutanan_14_13b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_14a', sistem.kehutanan_14_14a);
+app.get('/tambah_kehutanan_14_14a', sistem.tambah_kehutanan_14_14a);
+app.get('/edit_kehutanan_14_14a', sistem.edit_kehutanan_14_14a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_14b', sistem.kehutanan_14_14b);
+app.get('/tambah_kehutanan_14_14b', sistem.tambah_kehutanan_14_14b);
+app.get('/edit_kehutanan_14_14b', sistem.edit_kehutanan_14_14b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_14c', sistem.kehutanan_14_14c);
+app.get('/tambah_kehutanan_14_14c', sistem.tambah_kehutanan_14_14c);
+app.get('/edit_kehutanan_14_14c', sistem.edit_kehutanan_14_14c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_14d', sistem.kehutanan_14_14d);
+app.get('/tambah_kehutanan_14_14d', sistem.tambah_kehutanan_14_14d);
+app.get('/edit_kehutanan_14_14d', sistem.edit_kehutanan_14_14d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_15a', sistem.kehutanan_14_15a);
+app.get('/tambah_kehutanan_14_15a', sistem.tambah_kehutanan_14_15a);
+app.get('/edit_kehutanan_14_15a', sistem.edit_kehutanan_14_15a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_15b', sistem.kehutanan_14_15b);
+app.get('/tambah_kehutanan_14_15b', sistem.tambah_kehutanan_14_15b);
+app.get('/edit_kehutanan_14_15b', sistem.edit_kehutanan_14_15b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_16a', sistem.kehutanan_14_16a);
+app.get('/tambah_kehutanan_14_16a', sistem.tambah_kehutanan_14_16a);
+app.get('/edit_kehutanan_14_16a', sistem.edit_kehutanan_14_16a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_16b', sistem.kehutanan_14_16b);
+app.get('/tambah_kehutanan_14_16b', sistem.tambah_kehutanan_14_16b);
+app.get('/edit_kehutanan_14_16b', sistem.edit_kehutanan_14_16b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_17a', sistem.kehutanan_14_17a);
+app.get('/tambah_kehutanan_14_17a', sistem.tambah_kehutanan_14_17a);
+app.get('/edit_kehutanan_14_17a', sistem.edit_kehutanan_14_17a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_17b', sistem.kehutanan_14_17b);
+app.get('/tambah_kehutanan_14_17b', sistem.tambah_kehutanan_14_17b);
+app.get('/edit_kehutanan_14_17b', sistem.edit_kehutanan_14_17b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_18a', sistem.kehutanan_14_18a);
+app.get('/tambah_kehutanan_14_18a', sistem.tambah_kehutanan_14_18a);
+app.get('/edit_kehutanan_14_18a', sistem.edit_kehutanan_14_18a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_18b', sistem.kehutanan_14_18b);
+app.get('/tambah_kehutanan_14_18b', sistem.tambah_kehutanan_14_18b);
+app.get('/edit_kehutanan_14_18b', sistem.edit_kehutanan_14_18b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_19a', sistem.kehutanan_14_19a);
+app.get('/tambah_kehutanan_14_19a', sistem.tambah_kehutanan_14_19a);
+app.get('/edit_kehutanan_14_19a', sistem.edit_kehutanan_14_19a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_19b', sistem.kehutanan_14_19b);
+app.get('/tambah_kehutanan_14_19b', sistem.tambah_kehutanan_14_19b);
+app.get('/edit_kehutanan_14_19b', sistem.edit_kehutanan_14_19b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_19c', sistem.kehutanan_14_19c);
+app.get('/tambah_kehutanan_14_19c', sistem.tambah_kehutanan_14_19c);
+app.get('/edit_kehutanan_14_19c', sistem.edit_kehutanan_14_19c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_19d', sistem.kehutanan_14_19d);
+app.get('/tambah_kehutanan_14_19d', sistem.tambah_kehutanan_14_19d);
+app.get('/edit_kehutanan_14_19d', sistem.edit_kehutanan_14_19d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_20a', sistem.kehutanan_14_20a);
+app.get('/tambah_kehutanan_14_20a', sistem.tambah_kehutanan_14_20a);
+app.get('/edit_kehutanan_14_20a', sistem.edit_kehutanan_14_20a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_20b', sistem.kehutanan_14_20b);
+app.get('/tambah_kehutanan_14_20b', sistem.tambah_kehutanan_14_20b);
+app.get('/edit_kehutanan_14_20b', sistem.edit_kehutanan_14_20b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_20c', sistem.kehutanan_14_20c);
+app.get('/tambah_kehutanan_14_20c', sistem.tambah_kehutanan_14_20c);
+app.get('/edit_kehutanan_14_20c', sistem.edit_kehutanan_14_20c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_20d', sistem.kehutanan_14_20d);
+app.get('/tambah_kehutanan_14_20d', sistem.tambah_kehutanan_14_20d);
+app.get('/edit_kehutanan_14_20d', sistem.edit_kehutanan_14_20d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_21a', sistem.kehutanan_14_21a);
+app.get('/tambah_kehutanan_14_21a', sistem.tambah_kehutanan_14_21a);
+app.get('/edit_kehutanan_14_21a', sistem.edit_kehutanan_14_21a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_21b', sistem.kehutanan_14_21b);
+app.get('/tambah_kehutanan_14_21b', sistem.tambah_kehutanan_14_21b);
+app.get('/edit_kehutanan_14_21b', sistem.edit_kehutanan_14_21b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_21c', sistem.kehutanan_14_21c);
+app.get('/tambah_kehutanan_14_21c', sistem.tambah_kehutanan_14_21c);
+app.get('/edit_kehutanan_14_21c', sistem.edit_kehutanan_14_21c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_21d', sistem.kehutanan_14_21d);
+app.get('/tambah_kehutanan_14_21d', sistem.tambah_kehutanan_14_21d);
+app.get('/edit_kehutanan_14_21d', sistem.edit_kehutanan_14_21d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_22a', sistem.kehutanan_14_22a);
+app.get('/tambah_kehutanan_14_22a', sistem.tambah_kehutanan_14_22a);
+app.get('/edit_kehutanan_14_22a', sistem.edit_kehutanan_14_22a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_22b', sistem.kehutanan_14_22b);
+app.get('/tambah_kehutanan_14_22b', sistem.tambah_kehutanan_14_22b);
+app.get('/edit_kehutanan_14_22b', sistem.edit_kehutanan_14_22b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_23a', sistem.kehutanan_14_23a);
+app.get('/tambah_kehutanan_14_23a', sistem.tambah_kehutanan_14_23a);
+app.get('/edit_kehutanan_14_23a', sistem.edit_kehutanan_14_23a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_23b', sistem.kehutanan_14_23b);
+app.get('/tambah_kehutanan_14_23b', sistem.tambah_kehutanan_14_23b);
+app.get('/edit_kehutanan_14_23b', sistem.edit_kehutanan_14_23b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_24a', sistem.kehutanan_14_24a);
+app.get('/tambah_kehutanan_14_24a', sistem.tambah_kehutanan_14_24a);
+app.get('/edit_kehutanan_14_24a', sistem.edit_kehutanan_14_24a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_24b', sistem.kehutanan_14_24b);
+app.get('/tambah_kehutanan_14_24b', sistem.tambah_kehutanan_14_24b);
+app.get('/edit_kehutanan_14_24b', sistem.edit_kehutanan_14_24b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_25a', sistem.kehutanan_14_25a);
+app.get('/tambah_kehutanan_14_25a', sistem.tambah_kehutanan_14_25a);
+app.get('/edit_kehutanan_14_25a', sistem.edit_kehutanan_14_25a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_25b', sistem.kehutanan_14_25b);
+app.get('/tambah_kehutanan_14_25b', sistem.tambah_kehutanan_14_25b);
+app.get('/edit_kehutanan_14_25b', sistem.edit_kehutanan_14_25b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_26a', sistem.kehutanan_14_26a);
+app.get('/tambah_kehutanan_14_26a', sistem.tambah_kehutanan_14_26a);
+app.get('/edit_kehutanan_14_26a', sistem.edit_kehutanan_14_26a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_26b', sistem.kehutanan_14_26b);
+app.get('/tambah_kehutanan_14_26b', sistem.tambah_kehutanan_14_26b);
+app.get('/edit_kehutanan_14_26b', sistem.edit_kehutanan_14_26b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_27a', sistem.kehutanan_14_27a);
+app.get('/tambah_kehutanan_14_27a', sistem.tambah_kehutanan_14_27a);
+app.get('/edit_kehutanan_14_27a', sistem.edit_kehutanan_14_27a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_27b', sistem.kehutanan_14_27b);
+app.get('/tambah_kehutanan_14_27b', sistem.tambah_kehutanan_14_27b);
+app.get('/edit_kehutanan_14_27b', sistem.edit_kehutanan_14_27b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_28a', sistem.kehutanan_14_28a);
+app.get('/tambah_kehutanan_14_28a', sistem.tambah_kehutanan_14_28a);
+app.get('/edit_kehutanan_14_28a', sistem.edit_kehutanan_14_28a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_28b', sistem.kehutanan_14_28b);
+app.get('/tambah_kehutanan_14_28b', sistem.tambah_kehutanan_14_28b);
+app.get('/edit_kehutanan_14_28b', sistem.edit_kehutanan_14_28b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_28c', sistem.kehutanan_14_28c);
+app.get('/tambah_kehutanan_14_28c', sistem.tambah_kehutanan_14_28c);
+app.get('/edit_kehutanan_14_28c', sistem.edit_kehutanan_14_28c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_28d', sistem.kehutanan_14_28d);
+app.get('/tambah_kehutanan_14_28d', sistem.tambah_kehutanan_14_28d);
+app.get('/edit_kehutanan_14_28d', sistem.edit_kehutanan_14_28d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_29a', sistem.kehutanan_14_29a);
+app.get('/tambah_kehutanan_14_29a', sistem.tambah_kehutanan_14_29a);
+app.get('/edit_kehutanan_14_29a', sistem.edit_kehutanan_14_29a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_29b', sistem.kehutanan_14_29b);
+app.get('/tambah_kehutanan_14_29b', sistem.tambah_kehutanan_14_29b);
+app.get('/edit_kehutanan_14_29b', sistem.edit_kehutanan_14_29b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_29c', sistem.kehutanan_14_29c);
+app.get('/tambah_kehutanan_14_29c', sistem.tambah_kehutanan_14_29c);
+app.get('/edit_kehutanan_14_29c', sistem.edit_kehutanan_14_29c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_29d', sistem.kehutanan_14_29d);
+app.get('/tambah_kehutanan_14_29d', sistem.tambah_kehutanan_14_29d);
+app.get('/edit_kehutanan_14_29d', sistem.edit_kehutanan_14_29d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_30a', sistem.kehutanan_14_30a);
+app.get('/tambah_kehutanan_14_30a', sistem.tambah_kehutanan_14_30a);
+app.get('/edit_kehutanan_14_30a', sistem.edit_kehutanan_14_30a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_30b', sistem.kehutanan_14_30b);
+app.get('/tambah_kehutanan_14_30b', sistem.tambah_kehutanan_14_30b);
+app.get('/edit_kehutanan_14_30b', sistem.edit_kehutanan_14_30b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_30c', sistem.kehutanan_14_30c);
+app.get('/tambah_kehutanan_14_30c', sistem.tambah_kehutanan_14_30c);
+app.get('/edit_kehutanan_14_30c', sistem.edit_kehutanan_14_30c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_30d', sistem.kehutanan_14_30d);
+app.get('/tambah_kehutanan_14_30d', sistem.tambah_kehutanan_14_30d);
+app.get('/edit_kehutanan_14_30d', sistem.edit_kehutanan_14_30d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_31', sistem.kehutanan_14_31);
+app.get('/tambah_kehutanan_14_31', sistem.tambah_kehutanan_14_31);
+app.get('/edit_kehutanan_14_31', sistem.edit_kehutanan_14_31);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_32', sistem.kehutanan_14_32);
+app.get('/tambah_kehutanan_14_32', sistem.tambah_kehutanan_14_32);
+app.get('/edit_kehutanan_14_32', sistem.edit_kehutanan_14_32);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_33', sistem.kehutanan_14_33);
+app.get('/tambah_kehutanan_14_33', sistem.tambah_kehutanan_14_33);
+app.get('/edit_kehutanan_14_33', sistem.edit_kehutanan_14_33);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_34', sistem.kehutanan_14_34);
+app.get('/tambah_kehutanan_14_34', sistem.tambah_kehutanan_14_34);
+app.get('/edit_kehutanan_14_34', sistem.edit_kehutanan_14_34);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_35', sistem.kehutanan_14_35);
+app.get('/tambah_kehutanan_14_35', sistem.tambah_kehutanan_14_35);
+app.get('/edit_kehutanan_14_35', sistem.edit_kehutanan_14_35);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_36', sistem.kehutanan_14_36);
+app.get('/tambah_kehutanan_14_36', sistem.tambah_kehutanan_14_36);
+app.get('/edit_kehutanan_14_36', sistem.edit_kehutanan_14_36);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_37', sistem.kehutanan_14_37);
+app.get('/tambah_kehutanan_14_37', sistem.tambah_kehutanan_14_37);
+app.get('/edit_kehutanan_14_37', sistem.edit_kehutanan_14_37);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_38a', sistem.kehutanan_14_38a);
+app.get('/tambah_kehutanan_14_38a', sistem.tambah_kehutanan_14_38a);
+app.get('/edit_kehutanan_14_38a', sistem.edit_kehutanan_14_38a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_38b', sistem.kehutanan_14_38b);
+app.get('/tambah_kehutanan_14_38b', sistem.tambah_kehutanan_14_38b);
+app.get('/edit_kehutanan_14_38b', sistem.edit_kehutanan_14_38b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_39a', sistem.kehutanan_14_39a);
+app.get('/tambah_kehutanan_14_39a', sistem.tambah_kehutanan_14_39a);
+app.get('/edit_kehutanan_14_39a', sistem.edit_kehutanan_14_39a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_39b', sistem.kehutanan_14_39b);
+app.get('/tambah_kehutanan_14_39b', sistem.tambah_kehutanan_14_39b);
+app.get('/edit_kehutanan_14_39b', sistem.edit_kehutanan_14_39b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_39c', sistem.kehutanan_14_39c);
+app.get('/tambah_kehutanan_14_39c', sistem.tambah_kehutanan_14_39c);
+app.get('/edit_kehutanan_14_39c', sistem.edit_kehutanan_14_39c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_39d', sistem.kehutanan_14_39d);
+app.get('/tambah_kehutanan_14_39d', sistem.tambah_kehutanan_14_39d);
+app.get('/edit_kehutanan_14_39d', sistem.edit_kehutanan_14_40a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_40a', sistem.kehutanan_14_40a);
+app.get('/tambah_kehutanan_14_40a', sistem.tambah_kehutanan_14_40a);
+app.get('/edit_kehutanan_14_40a', sistem.edit_kehutanan_14_40a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_40b', sistem.kehutanan_14_40b);
+app.get('/tambah_kehutanan_14_40b', sistem.tambah_kehutanan_14_40b);
+app.get('/edit_kehutanan_14_40b', sistem.edit_kehutanan_14_40b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_40c', sistem.kehutanan_14_40c);
+app.get('/tambah_kehutanan_14_40c', sistem.tambah_kehutanan_14_40c);
+app.get('/edit_kehutanan_14_40c', sistem.edit_kehutanan_14_40c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_40d', sistem.kehutanan_14_40d);
+app.get('/tambah_kehutanan_14_40d', sistem.tambah_kehutanan_14_40d);
+app.get('/edit_kehutanan_14_40d', sistem.edit_kehutanan_14_40d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_41a', sistem.kehutanan_14_41a);
+app.get('/tambah_kehutanan_14_41a', sistem.tambah_kehutanan_14_41a);
+app.get('/edit_kehutanan_14_41a', sistem.edit_kehutanan_14_41a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_41b', sistem.kehutanan_14_41b);
+app.get('/tambah_kehutanan_14_41b', sistem.tambah_kehutanan_14_41b);
+app.get('/edit_kehutanan_14_41b', sistem.edit_kehutanan_14_41b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_41c', sistem.kehutanan_14_41c);
+app.get('/tambah_kehutanan_14_41c', sistem.tambah_kehutanan_14_41c);
+app.get('/edit_kehutanan_14_41c', sistem.edit_kehutanan_14_41c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_41d', sistem.kehutanan_14_41d);
+app.get('/tambah_kehutanan_14_41d', sistem.tambah_kehutanan_14_41d);
+app.get('/edit_kehutanan_14_41d', sistem.edit_kehutanan_14_41d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_42a', sistem.kehutanan_14_42a);
+app.get('/tambah_kehutanan_14_42a', sistem.tambah_kehutanan_14_42a);
+app.get('/edit_kehutanan_14_42a', sistem.edit_kehutanan_14_42a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_42b', sistem.kehutanan_14_42b);
+app.get('/tambah_kehutanan_14_42b', sistem.tambah_kehutanan_14_42b);
+app.get('/edit_kehutanan_14_42b', sistem.edit_kehutanan_14_42b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_42c', sistem.kehutanan_14_42c);
+app.get('/tambah_kehutanan_14_42c', sistem.tambah_kehutanan_14_42c);
+app.get('/edit_kehutanan_14_42c', sistem.edit_kehutanan_14_42c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_43a', sistem.kehutanan_14_43a);
+app.get('/tambah_kehutanan_14_43a', sistem.tambah_kehutanan_14_43a);
+app.get('/edit_kehutanan_14_43a', sistem.edit_kehutanan_14_43a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_43b', sistem.kehutanan_14_43b);
+app.get('/tambah_kehutanan_14_43b', sistem.tambah_kehutanan_14_43b);
+app.get('/edit_kehutanan_14_43b', sistem.edit_kehutanan_14_43b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_43c', sistem.kehutanan_14_43c);
+app.get('/tambah_kehutanan_14_43c', sistem.tambah_kehutanan_14_43c);
+app.get('/edit_kehutanan_14_43c', sistem.edit_kehutanan_14_43c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_43d', sistem.kehutanan_14_43d);
+app.get('/tambah_kehutanan_14_43d', sistem.tambah_kehutanan_14_43d);
+app.get('/edit_kehutanan_14_43d', sistem.edit_kehutanan_14_43d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_43e', sistem.kehutanan_14_43e);
+app.get('/tambah_kehutanan_14_43e', sistem.tambah_kehutanan_14_43e);
+app.get('/edit_kehutanan_14_43e', sistem.edit_kehutanan_14_43e);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_44a', sistem.kehutanan_14_44a);
+app.get('/tambah_kehutanan_14_44a', sistem.tambah_kehutanan_14_44a);
+app.get('/edit_kehutanan_14_44a', sistem.edit_kehutanan_14_44a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_44b', sistem.kehutanan_14_44b);
+app.get('/tambah_kehutanan_14_44b', sistem.tambah_kehutanan_14_44b);
+app.get('/edit_kehutanan_14_44b', sistem.edit_kehutanan_14_44b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_44c', sistem.kehutanan_14_44c);
+app.get('/tambah_kehutanan_14_44c', sistem.tambah_kehutanan_14_44c);
+app.get('/edit_kehutanan_14_44c', sistem.edit_kehutanan_14_44c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_45a', sistem.kehutanan_14_45a);
+app.get('/tambah_kehutanan_14_45a', sistem.tambah_kehutanan_14_45a);
+app.get('/edit_kehutanan_14_45a', sistem.edit_kehutanan_14_45a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_45b', sistem.kehutanan_14_45b);
+app.get('/tambah_kehutanan_14_45b', sistem.tambah_kehutanan_14_45b);
+app.get('/edit_kehutanan_14_45b', sistem.edit_kehutanan_14_45b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_45c', sistem.kehutanan_14_45c);
+app.get('/tambah_kehutanan_14_45c', sistem.tambah_kehutanan_14_45c);
+app.get('/edit_kehutanan_14_45c', sistem.edit_kehutanan_14_45c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_46a', sistem.kehutanan_14_46a);
+app.get('/tambah_kehutanan_14_46a', sistem.tambah_kehutanan_14_46a);
+app.get('/edit_kehutanan_14_46a', sistem.edit_kehutanan_14_46a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_46b', sistem.kehutanan_14_46b);
+app.get('/tambah_kehutanan_14_46b', sistem.tambah_kehutanan_14_46b);
+app.get('/edit_kehutanan_14_46b', sistem.edit_kehutanan_14_46b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_46c', sistem.kehutanan_14_46c);
+app.get('/tambah_kehutanan_14_46c', sistem.tambah_kehutanan_14_46c);
+app.get('/edit_kehutanan_14_46c', sistem.edit_kehutanan_14_46c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_47a', sistem.kehutanan_14_47a);
+app.get('/tambah_kehutanan_14_47a', sistem.tambah_kehutanan_14_47a);
+app.get('/edit_kehutanan_14_47a', sistem.edit_kehutanan_14_47a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_47b', sistem.kehutanan_14_47b);
+app.get('/tambah_kehutanan_14_47b', sistem.tambah_kehutanan_14_47b);
+app.get('/edit_kehutanan_14_47b', sistem.edit_kehutanan_14_47b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_47c', sistem.kehutanan_14_47c);
+app.get('/tambah_kehutanan_14_47c', sistem.tambah_kehutanan_14_47c);
+app.get('/edit_kehutanan_14_47c', sistem.edit_kehutanan_14_47c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_48a', sistem.kehutanan_14_48a);
+app.get('/tambah_kehutanan_14_48a', sistem.tambah_kehutanan_14_48a);
+app.get('/edit_kehutanan_14_48a', sistem.edit_kehutanan_14_48a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_48b', sistem.kehutanan_14_48b);
+app.get('/tambah_kehutanan_14_48b', sistem.tambah_kehutanan_14_48b);
+app.get('/edit_kehutanan_14_48b', sistem.edit_kehutanan_14_48b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_48c', sistem.kehutanan_14_48c);
+app.get('/tambah_kehutanan_14_48c', sistem.tambah_kehutanan_14_48c);
+app.get('/edit_kehutanan_14_48c', sistem.edit_kehutanan_14_48c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_49a', sistem.kehutanan_14_49a);
+app.get('/tambah_kehutanan_14_49a', sistem.tambah_kehutanan_14_49a);
+app.get('/edit_kehutanan_14_49a', sistem.edit_kehutanan_14_49a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_49b', sistem.kehutanan_14_49b);
+app.get('/tambah_kehutanan_14_49b', sistem.tambah_kehutanan_14_49b);
+app.get('/edit_kehutanan_14_49b', sistem.edit_kehutanan_14_49b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_49c', sistem.kehutanan_14_49c);
+app.get('/tambah_kehutanan_14_49c', sistem.tambah_kehutanan_14_49c);
+app.get('/edit_kehutanan_14_49c', sistem.edit_kehutanan_14_49c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_50a', sistem.kehutanan_14_50a);
+app.get('/tambah_kehutanan_14_50a', sistem.tambah_kehutanan_14_50a);
+app.get('/edit_kehutanan_14_50a', sistem.edit_kehutanan_14_50a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_50b', sistem.kehutanan_14_50b);
+app.get('/tambah_kehutanan_14_50b', sistem.tambah_kehutanan_14_50b);
+app.get('/edit_kehutanan_14_50b', sistem.edit_kehutanan_14_50b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_50c', sistem.kehutanan_14_50c);
+app.get('/tambah_kehutanan_14_50c', sistem.tambah_kehutanan_14_50c);
+app.get('/edit_kehutanan_14_50c', sistem.edit_kehutanan_14_50c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_51a', sistem.kehutanan_14_51a);
+app.get('/tambah_kehutanan_14_51a', sistem.tambah_kehutanan_14_51a);
+app.get('/edit_kehutanan_14_51a', sistem.edit_kehutanan_14_51a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_51b', sistem.kehutanan_14_51b);
+app.get('/tambah_kehutanan_14_51b', sistem.tambah_kehutanan_14_51b);
+app.get('/edit_kehutanan_14_51b', sistem.edit_kehutanan_14_51b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_51c', sistem.kehutanan_14_51c);
+app.get('/tambah_kehutanan_14_51c', sistem.tambah_kehutanan_14_51c);
+app.get('/edit_kehutanan_14_51c', sistem.edit_kehutanan_14_51c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_52a', sistem.kehutanan_14_52a);
+app.get('/tambah_kehutanan_14_52a', sistem.tambah_kehutanan_14_52a);
+app.get('/edit_kehutanan_14_52a', sistem.edit_kehutanan_14_52a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_52b', sistem.kehutanan_14_52b);
+app.get('/tambah_kehutanan_14_52b', sistem.tambah_kehutanan_14_52b);
+app.get('/edit_kehutanan_14_52b', sistem.edit_kehutanan_14_52b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_52c', sistem.kehutanan_14_52c);
+app.get('/tambah_kehutanan_14_52c', sistem.tambah_kehutanan_14_52c);
+app.get('/edit_kehutanan_14_52c', sistem.edit_kehutanan_14_52c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_53a', sistem.kehutanan_14_53a);
+app.get('/tambah_kehutanan_14_53a', sistem.tambah_kehutanan_14_53a);
+app.get('/edit_kehutanan_14_53a', sistem.edit_kehutanan_14_53a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_53b', sistem.kehutanan_14_53b);
+app.get('/tambah_kehutanan_14_53b', sistem.tambah_kehutanan_14_53b);
+app.get('/edit_kehutanan_14_53b', sistem.edit_kehutanan_14_53b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_53c', sistem.kehutanan_14_53c);
+app.get('/tambah_kehutanan_14_53c', sistem.tambah_kehutanan_14_53c);
+app.get('/edit_kehutanan_14_53c', sistem.edit_kehutanan_14_53c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_54a', sistem.kehutanan_14_54a);
+app.get('/tambah_kehutanan_14_54a', sistem.tambah_kehutanan_14_54a);
+app.get('/edit_kehutanan_14_54a', sistem.edit_kehutanan_14_54a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_54b', sistem.kehutanan_14_54b);
+app.get('/tambah_kehutanan_14_54b', sistem.tambah_kehutanan_14_54b);
+app.get('/edit_kehutanan_14_54b', sistem.edit_kehutanan_14_54b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55a', sistem.kehutanan_14_55a);
+app.get('/tambah_kehutanan_14_55a', sistem.tambah_kehutanan_14_55a);
+app.get('/edit_kehutanan_14_55a', sistem.edit_kehutanan_14_55a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55b', sistem.kehutanan_14_55b);
+app.get('/tambah_kehutanan_14_55b', sistem.tambah_kehutanan_14_55b);
+app.get('/edit_kehutanan_14_55b', sistem.edit_kehutanan_14_55b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55c', sistem.kehutanan_14_55c);
+app.get('/tambah_kehutanan_14_55c', sistem.tambah_kehutanan_14_55c);
+app.get('/edit_kehutanan_14_55c', sistem.edit_kehutanan_14_55c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55d', sistem.kehutanan_14_55d);
+app.get('/tambah_kehutanan_14_55d', sistem.tambah_kehutanan_14_55d);
+app.get('/edit_kehutanan_14_55d', sistem.edit_kehutanan_14_55d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55e', sistem.kehutanan_14_55e);
+app.get('/tambah_kehutanan_14_55e', sistem.tambah_kehutanan_14_55e);
+app.get('/edit_kehutanan_14_55e', sistem.edit_kehutanan_14_55e);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55f', sistem.kehutanan_14_55f);
+app.get('/tambah_kehutanan_14_55f', sistem.tambah_kehutanan_14_55f);
+app.get('/edit_kehutanan_14_55f', sistem.edit_kehutanan_14_55f);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55g', sistem.kehutanan_14_55g);
+app.get('/tambah_kehutanan_14_55g', sistem.tambah_kehutanan_14_55g);
+app.get('/edit_kehutanan_14_55g', sistem.edit_kehutanan_14_55g);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_55h', sistem.kehutanan_14_55h);
+app.get('/tambah_kehutanan_14_55h', sistem.tambah_kehutanan_14_55h);
+app.get('/edit_kehutanan_14_55h', sistem.edit_kehutanan_14_55h);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_56a', sistem.kehutanan_14_56a);
+app.get('/tambah_kehutanan_14_56a', sistem.tambah_kehutanan_14_56a);
+app.get('/edit_kehutanan_14_56a', sistem.edit_kehutanan_14_56a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_56b', sistem.kehutanan_14_56b);
+app.get('/tambah_kehutanan_14_56b', sistem.tambah_kehutanan_14_56b);
+app.get('/edit_kehutanan_14_56b', sistem.edit_kehutanan_14_56b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_56c', sistem.kehutanan_14_56c);
+app.get('/tambah_kehutanan_14_56c', sistem.tambah_kehutanan_14_56c);
+app.get('/edit_kehutanan_14_56c', sistem.edit_kehutanan_14_56c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_57a', sistem.kehutanan_14_57a);
+app.get('/tambah_kehutanan_14_57a', sistem.tambah_kehutanan_14_57a);
+app.get('/edit_kehutanan_14_57a', sistem.edit_kehutanan_14_57a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_57b', sistem.kehutanan_14_57b);
+app.get('/tambah_kehutanan_14_57b', sistem.tambah_kehutanan_14_57b);
+app.get('/edit_kehutanan_14_57b', sistem.edit_kehutanan_14_57b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_57c', sistem.kehutanan_14_57c);
+app.get('/tambah_kehutanan_14_57c', sistem.tambah_kehutanan_14_57c);
+app.get('/edit_kehutanan_14_57c', sistem.edit_kehutanan_14_57c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_58a', sistem.kehutanan_14_58a);
+app.get('/tambah_kehutanan_14_58a', sistem.tambah_kehutanan_14_58a);
+app.get('/edit_kehutanan_14_58a', sistem.edit_kehutanan_14_58a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_58b', sistem.kehutanan_14_58b);
+app.get('/tambah_kehutanan_14_58b', sistem.tambah_kehutanan_14_58b);
+app.get('/edit_kehutanan_14_58b', sistem.edit_kehutanan_14_58b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_58c', sistem.kehutanan_14_58c);
+app.get('/tambah_kehutanan_14_58c', sistem.tambah_kehutanan_14_58c);
+app.get('/edit_kehutanan_14_58c', sistem.edit_kehutanan_14_58c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_59a', sistem.kehutanan_14_59a);
+app.get('/tambah_kehutanan_14_59a', sistem.tambah_kehutanan_14_59a);
+app.get('/edit_kehutanan_14_59a', sistem.edit_kehutanan_14_59a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_59b', sistem.kehutanan_14_59b);
+app.get('/tambah_kehutanan_14_59b', sistem.tambah_kehutanan_14_59b);
+app.get('/edit_kehutanan_14_59b', sistem.edit_kehutanan_14_59b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_59c', sistem.kehutanan_14_59c);
+app.get('/tambah_kehutanan_14_59c', sistem.tambah_kehutanan_14_59c);
+app.get('/edit_kehutanan_14_59c', sistem.edit_kehutanan_14_59c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_60a', sistem.kehutanan_14_60a);
+app.get('/tambah_kehutanan_14_60a', sistem.tambah_kehutanan_14_60a);
+app.get('/edit_kehutanan_14_60a', sistem.edit_kehutanan_14_60a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_60b', sistem.kehutanan_14_60b);
+app.get('/tambah_kehutanan_14_60b', sistem.tambah_kehutanan_14_60b);
+app.get('/edit_kehutanan_14_60b', sistem.edit_kehutanan_14_60b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_60c', sistem.kehutanan_14_60c);
+app.get('/tambah_kehutanan_14_60c', sistem.tambah_kehutanan_14_60c);
+app.get('/edit_kehutanan_14_60c', sistem.edit_kehutanan_14_60c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_61a', sistem.kehutanan_14_61a);
+app.get('/tambah_kehutanan_14_61a', sistem.tambah_kehutanan_14_61a);
+app.get('/edit_kehutanan_14_61a', sistem.edit_kehutanan_14_61a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_61b', sistem.kehutanan_14_61b);
+app.get('/tambah_kehutanan_14_61b', sistem.tambah_kehutanan_14_61b);
+app.get('/edit_kehutanan_14_61b', sistem.edit_kehutanan_14_61b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_61c', sistem.kehutanan_14_61c);
+app.get('/tambah_kehutanan_14_61c', sistem.tambah_kehutanan_14_61c);
+app.get('/edit_kehutanan_14_61c', sistem.edit_kehutanan_14_61c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_62a', sistem.kehutanan_14_62a);
+app.get('/tambah_kehutanan_14_62a', sistem.tambah_kehutanan_14_62a);
+app.get('/edit_kehutanan_14_62a', sistem.edit_kehutanan_14_62a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_62b', sistem.kehutanan_14_62b);
+app.get('/tambah_kehutanan_14_62b', sistem.tambah_kehutanan_14_62b);
+app.get('/edit_kehutanan_14_62b', sistem.edit_kehutanan_14_62b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_62c', sistem.kehutanan_14_62c);
+app.get('/tambah_kehutanan_14_62c', sistem.tambah_kehutanan_14_62c);
+app.get('/edit_kehutanan_14_62c', sistem.edit_kehutanan_14_62c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_63a', sistem.kehutanan_14_63a);
+app.get('/tambah_kehutanan_14_63a', sistem.tambah_kehutanan_14_63a);
+app.get('/edit_kehutanan_14_63a', sistem.edit_kehutanan_14_63a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_63b', sistem.kehutanan_14_63b);
+app.get('/tambah_kehutanan_14_63b', sistem.tambah_kehutanan_14_63b);
+app.get('/edit_kehutanan_14_63b', sistem.edit_kehutanan_14_63b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_63c', sistem.kehutanan_14_63c);
+app.get('/tambah_kehutanan_14_63c', sistem.tambah_kehutanan_14_63c);
+app.get('/edit_kehutanan_14_63c', sistem.edit_kehutanan_14_63c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_64a', sistem.kehutanan_14_64a);
+app.get('/tambah_kehutanan_14_64a', sistem.tambah_kehutanan_14_64a);
+app.get('/edit_kehutanan_14_64a', sistem.edit_kehutanan_14_64a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_64b', sistem.kehutanan_14_64b);
+app.get('/tambah_kehutanan_14_64b', sistem.tambah_kehutanan_14_64b);
+app.get('/edit_kehutanan_14_64b', sistem.edit_kehutanan_14_64b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_64c', sistem.kehutanan_14_64c);
+app.get('/tambah_kehutanan_14_64c', sistem.tambah_kehutanan_14_64c);
+app.get('/edit_kehutanan_14_64c', sistem.edit_kehutanan_14_64c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_65a', sistem.kehutanan_14_65a);
+app.get('/tambah_kehutanan_14_65a', sistem.tambah_kehutanan_14_65a);
+app.get('/edit_kehutanan_14_65a', sistem.edit_kehutanan_14_65a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_65b', sistem.kehutanan_14_65b);
+app.get('/tambah_kehutanan_14_65b', sistem.tambah_kehutanan_14_65b);
+app.get('/edit_kehutanan_14_65b', sistem.edit_kehutanan_14_65b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_65c', sistem.kehutanan_14_65c);
+app.get('/tambah_kehutanan_14_65c', sistem.tambah_kehutanan_14_65c);
+app.get('/edit_kehutanan_14_65c', sistem.edit_kehutanan_14_65c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66a', sistem.kehutanan_14_66a);
+app.get('/tambah_kehutanan_14_66a', sistem.tambah_kehutanan_14_66a);
+app.get('/edit_kehutanan_14_66a', sistem.edit_kehutanan_14_66a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66b', sistem.kehutanan_14_66b);
+app.get('/tambah_kehutanan_14_66b', sistem.tambah_kehutanan_14_66b);
+app.get('/edit_kehutanan_14_66b', sistem.edit_kehutanan_14_66b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66c', sistem.kehutanan_14_66c);
+app.get('/tambah_kehutanan_14_66c', sistem.tambah_kehutanan_14_66c);
+app.get('/edit_kehutanan_14_66c', sistem.edit_kehutanan_14_66c);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66d', sistem.kehutanan_14_66d);
+app.get('/tambah_kehutanan_14_66d', sistem.tambah_kehutanan_14_66d);
+app.get('/edit_kehutanan_14_66d', sistem.edit_kehutanan_14_66d);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66e', sistem.kehutanan_14_66e);
+app.get('/tambah_kehutanan_14_66e', sistem.tambah_kehutanan_14_66e);
+app.get('/edit_kehutanan_14_66e', sistem.edit_kehutanan_14_66e);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66f', sistem.kehutanan_14_66f);
+app.get('/tambah_kehutanan_14_66f', sistem.tambah_kehutanan_14_66f);
+app.get('/edit_kehutanan_14_66f', sistem.edit_kehutanan_14_66f);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_66g', sistem.kehutanan_14_66g);
+app.get('/tambah_kehutanan_14_66g', sistem.tambah_kehutanan_14_66g);
+app.get('/edit_kehutanan_14_66g', sistem.edit_kehutanan_14_66g);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_67a', sistem.kehutanan_14_67a);
+app.get('/tambah_kehutanan_14_67a', sistem.tambah_kehutanan_14_67a);
+app.get('/edit_kehutanan_14_67a', sistem.edit_kehutanan_14_67a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_67b', sistem.kehutanan_14_67b);
+app.get('/tambah_kehutanan_14_67b', sistem.tambah_kehutanan_14_67b);
+app.get('/edit_kehutanan_14_67b', sistem.edit_kehutanan_14_67b);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_68', sistem.kehutanan_14_68);
+app.get('/tambah_kehutanan_14_68', sistem.tambah_kehutanan_14_68);
+app.get('/edit_kehutanan_14_68', sistem.edit_kehutanan_14_68);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_69a', sistem.kehutanan_14_69a);
+app.get('/tambah_kehutanan_14_69a', sistem.tambah_kehutanan_14_69a);
+app.get('/edit_kehutanan_14_69a', sistem.edit_kehutanan_14_69a);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kehutanan_14_69b', sistem.kehutanan_14_69b);
+app.get('/tambah_kehutanan_14_69b', sistem.tambah_kehutanan_14_69b);
+app.get('/edit_kehutanan_14_69b', sistem.edit_kehutanan_14_69b);
+/*==============================================================================*/
+
 /*=================================Peternakan===================================*/
 app.get('/peternakan', sistem.peternakan);
 /*========================Standar Biaya Tenaga Khusus===========================*/

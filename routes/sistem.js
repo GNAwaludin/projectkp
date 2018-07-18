@@ -10718,6 +10718,3195 @@ exports.edit_hortikultura_13_15d = function(req, res){
 };
 /*============================================================================================*/
 
+/*=========================================Kehutanan==========================================*/
+exports.Kehutanan = function(req, res){
+    res.render('Kehutanan/Kehutanan', {title: 'Kehutanan'});
+};
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_1a = function(req, res){
+    res.render('kehutanan/kehutanan_14_1a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_1a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_1a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_1a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_1a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_1b = function(req, res){
+    res.render('kehutanan/kehutanan_14_1b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_1b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_1b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_1b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_1b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_1c = function(req, res){
+    res.render('kehutanan/kehutanan_14_1c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_1c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_1c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_1c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_1c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_1d = function(req, res){
+    res.render('kehutanan/kehutanan_14_1d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_1d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_1d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_1d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_1d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_2a = function(req, res){
+    res.render('kehutanan/kehutanan_14_2a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_2a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_2a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_2a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_2a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_2b = function(req, res){
+    res.render('kehutanan/kehutanan_14_2b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_2b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_2b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_2b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_2b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_2c = function(req, res){
+    res.render('kehutanan/kehutanan_14_2c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_2c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_2c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_2c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_2c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_2d = function(req, res){
+    res.render('kehutanan/kehutanan_14_2d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_2d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_2d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_2d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_2d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_3a = function(req, res){
+    res.render('kehutanan/kehutanan_14_3a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_3a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_3a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_3a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_3a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_3b = function(req, res){
+    res.render('kehutanan/kehutanan_14_3b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_3b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_3b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_3b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_3b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_3c = function(req, res){
+    res.render('kehutanan/kehutanan_14_3c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_3c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_3c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_3c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_3c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_3d = function(req, res){
+    res.render('kehutanan/kehutanan_14_3d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_3d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_3d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_3d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_3d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_4a = function(req, res){
+    res.render('kehutanan/kehutanan_14_4a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_4a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_4a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_4a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_4a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_4b = function(req, res){
+    res.render('kehutanan/kehutanan_14_4b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_4b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_4b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_4b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_4b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_5a = function(req, res){
+    res.render('kehutanan/kehutanan_14_5a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_5a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_5a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_5a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_5a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_5b = function(req, res){
+    res.render('kehutanan/kehutanan_14_5b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_5b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_5b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_5b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_5b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_6a = function(req, res){
+    res.render('kehutanan/kehutanan_14_6a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_6a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_6a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_6a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_6a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_6b = function(req, res){
+    res.render('kehutanan/kehutanan_14_6b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_6b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_6b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_6b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_6b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_6c = function(req, res){
+    res.render('kehutanan/kehutanan_14_6c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_6c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_6c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_6c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_6c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_6d = function(req, res){
+    res.render('kehutanan/kehutanan_14_6d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_6d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_6d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_6d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_6d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_7a = function(req, res){
+    res.render('kehutanan/kehutanan_14_7a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_7a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_7a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_7a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_7a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_7b = function(req, res){
+    res.render('kehutanan/kehutanan_14_7b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_7b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_7b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_7b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_7b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_7c = function(req, res){
+    res.render('kehutanan/kehutanan_14_7c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_7c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_7c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_7c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_7c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_7d = function(req, res){
+    res.render('kehutanan/kehutanan_14_7d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_7d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_7d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_7d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_7d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_8a = function(req, res){
+    res.render('kehutanan/kehutanan_14_8a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_8a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_8a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_8a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_8a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_8b = function(req, res){
+    res.render('kehutanan/kehutanan_14_8b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_8b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_8b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_8b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_8b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_8c = function(req, res){
+    res.render('kehutanan/kehutanan_14_8c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_8c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_8c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_8c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_8c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_8d = function(req, res){
+    res.render('kehutanan/kehutanan_14_8d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_8d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_8d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_8d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_8d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_9a = function(req, res){
+    res.render('kehutanan/kehutanan_14_9a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_9a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_9a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_9a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_9a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_9b = function(req, res){
+    res.render('kehutanan/kehutanan_14_9b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_9b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_9b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_9b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_9b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_10a = function(req, res){
+    res.render('kehutanan/kehutanan_14_10a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_10a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_10a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_10a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_10a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_10b = function(req, res){
+    res.render('kehutanan/kehutanan_14_10b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_10b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_10b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_10b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_10b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_10c = function(req, res){
+    res.render('kehutanan/kehutanan_14_10c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_10c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_10c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_10c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_10c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_11a = function(req, res){
+    res.render('kehutanan/kehutanan_14_11a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_11a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_11a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_11a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_11a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_11b = function(req, res){
+    res.render('kehutanan/kehutanan_14_11b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_11b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_11b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_11b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_11b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_11c = function(req, res){
+    res.render('kehutanan/kehutanan_14_11c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_11c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_11c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_11c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_11c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_12a = function(req, res){
+    res.render('kehutanan/kehutanan_14_12a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_12a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_12a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_12a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_12a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_12b = function(req, res){
+    res.render('kehutanan/kehutanan_14_12b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_12b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_12b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_12b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_12b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_13a = function(req, res){
+    res.render('kehutanan/kehutanan_14_13a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_13a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_13a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_13a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_13a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_13b = function(req, res){
+    res.render('kehutanan/kehutanan_14_13b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_13b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_13b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_13b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_13b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_14a = function(req, res){
+    res.render('kehutanan/kehutanan_14_14a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_14a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_14a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_14a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_14a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_14b = function(req, res){
+    res.render('kehutanan/kehutanan_14_14b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_14b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_14b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_14b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_14b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_14c = function(req, res){
+    res.render('kehutanan/kehutanan_14_14c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_14c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_14c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_14c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_14c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_14d = function(req, res){
+    res.render('kehutanan/kehutanan_14_14d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_14d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_14d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_14d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_14d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_15a = function(req, res){
+    res.render('kehutanan/kehutanan_14_15a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_15a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_15a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_15a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_15a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_15b = function(req, res){
+    res.render('kehutanan/kehutanan_14_15b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_15b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_15b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_15b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_15b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_16a = function(req, res){
+    res.render('kehutanan/kehutanan_14_16a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_16a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_16a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_16a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_16a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_16b = function(req, res){
+    res.render('kehutanan/kehutanan_14_16b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_16b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_16b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_16b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_16b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_17a = function(req, res){
+    res.render('kehutanan/kehutanan_14_17a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_17a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_17a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_17a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_17a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_17b = function(req, res){
+    res.render('kehutanan/kehutanan_14_17b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_17b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_17b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_17b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_17b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_18a = function(req, res){
+    res.render('kehutanan/kehutanan_14_18a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_18a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_18a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_18a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_18a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_18b = function(req, res){
+    res.render('kehutanan/kehutanan_14_18b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_18b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_18b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_18b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_18b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_19a = function(req, res){
+    res.render('kehutanan/kehutanan_14_19a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_19a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_19a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_19a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_19a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_19b = function(req, res){
+    res.render('kehutanan/kehutanan_14_19b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_19b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_19b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_19b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_19b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_19c = function(req, res){
+    res.render('kehutanan/kehutanan_14_19c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_19c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_19c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_19c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_19c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_19d = function(req, res){
+    res.render('kehutanan/kehutanan_14_19d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_19d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_19d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_19d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_19d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_20a = function(req, res){
+    res.render('kehutanan/kehutanan_14_20a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_20a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_20a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_20a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_20a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_20b = function(req, res){
+    res.render('kehutanan/kehutanan_14_20b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_20b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_20b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_20b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_20b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_20c = function(req, res){
+    res.render('kehutanan/kehutanan_14_20c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_20c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_20c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_20c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_20c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_20d = function(req, res){
+    res.render('kehutanan/kehutanan_14_20d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_20d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_20d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_20d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_20d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_21a = function(req, res){
+    res.render('kehutanan/kehutanan_14_21a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_21a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_21a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_21a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_21a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_21b = function(req, res){
+    res.render('kehutanan/kehutanan_14_21b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_21b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_21b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_21b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_21b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_21c = function(req, res){
+    res.render('kehutanan/kehutanan_14_21c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_21c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_21c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_21c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_21c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_21d = function(req, res){
+    res.render('kehutanan/kehutanan_14_21d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_21d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_21d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_21d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_21d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_22a = function(req, res){
+    res.render('kehutanan/kehutanan_14_22a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_22a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_22a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_22a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_22a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_22b = function(req, res){
+    res.render('kehutanan/kehutanan_14_22b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_22b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_22b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_22b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_22b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_23a = function(req, res){
+    res.render('kehutanan/kehutanan_14_23a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_23a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_23a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_23a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_23a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_23b = function(req, res){
+    res.render('kehutanan/kehutanan_14_23b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_23b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_23b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_23b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_23b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_24a = function(req, res){
+    res.render('kehutanan/kehutanan_14_24a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_24a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_24a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_24a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_24a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_24b = function(req, res){
+    res.render('kehutanan/kehutanan_14_24b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_24b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_24b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_24b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_24b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_25a = function(req, res){
+    res.render('kehutanan/kehutanan_14_25a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_25a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_25a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_25a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_25a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_25b = function(req, res){
+    res.render('kehutanan/kehutanan_14_25b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_25b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_25b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_25b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_25b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_26a = function(req, res){
+    res.render('kehutanan/kehutanan_14_26a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_26a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_26a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_26a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_26a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_26b = function(req, res){
+    res.render('kehutanan/kehutanan_14_26b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_26b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_26b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_26b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_26b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_27a = function(req, res){
+    res.render('kehutanan/kehutanan_14_27a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_27a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_27a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_27a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_27a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_27b = function(req, res){
+    res.render('kehutanan/kehutanan_14_27b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_27b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_27b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_27b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_27b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_28a = function(req, res){
+    res.render('kehutanan/kehutanan_14_28a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_28a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_28a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_28a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_28a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_28b = function(req, res){
+    res.render('kehutanan/kehutanan_14_28b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_28b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_28b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_28b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_28b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_28c = function(req, res){
+    res.render('kehutanan/kehutanan_14_28c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_28c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_28c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_28c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_28c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_28d = function(req, res){
+    res.render('kehutanan/kehutanan_14_28d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_28d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_28d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_28d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_28d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_29a = function(req, res){
+    res.render('kehutanan/kehutanan_14_29a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_29a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_29a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_29a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_29a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_29b = function(req, res){
+    res.render('kehutanan/kehutanan_14_29b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_29b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_29b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_29b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_29b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_29c = function(req, res){
+    res.render('kehutanan/kehutanan_14_29c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_29c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_29c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_29c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_29c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_29d = function(req, res){
+    res.render('kehutanan/kehutanan_14_29d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_29d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_29d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_29d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_29d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_30a = function(req, res){
+    res.render('kehutanan/kehutanan_14_30a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_30a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_30a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_30a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_30a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_30b = function(req, res){
+    res.render('kehutanan/kehutanan_14_30b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_30b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_30b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_30b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_30b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_30c = function(req, res){
+    res.render('kehutanan/kehutanan_14_30c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_30c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_30c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_30c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_30c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_30d = function(req, res){
+    res.render('kehutanan/kehutanan_14_30d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_30d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_30d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_30d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_30d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_31 = function(req, res){
+    res.render('kehutanan/kehutanan_14_31', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_31 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_31', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_31 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_31', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_32 = function(req, res){
+    res.render('kehutanan/kehutanan_14_32', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_32 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_32', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_32 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_32', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_33 = function(req, res){
+    res.render('kehutanan/kehutanan_14_33', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_33 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_33', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_33 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_33', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_34 = function(req, res){
+    res.render('kehutanan/kehutanan_14_34', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_34 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_34', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_34 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_34', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_35 = function(req, res){
+    res.render('kehutanan/kehutanan_14_35', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_35 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_35', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_35 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_35', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_36 = function(req, res){
+    res.render('kehutanan/kehutanan_14_36', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_36 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_36', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_36 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_36', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_37 = function(req, res){
+    res.render('kehutanan/kehutanan_14_37', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_37 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_37', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_37 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_37', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_38a = function(req, res){
+    res.render('kehutanan/kehutanan_14_38a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_38a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_38a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_38a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_38a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_38b = function(req, res){
+    res.render('kehutanan/kehutanan_14_38b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_38b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_38b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_38b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_38b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_39a = function(req, res){
+    res.render('kehutanan/kehutanan_14_39a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_39a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_39a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_39a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_39a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_39b = function(req, res){
+    res.render('kehutanan/kehutanan_14_39b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_39b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_39b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_39b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_39b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_39c = function(req, res){
+    res.render('kehutanan/kehutanan_14_39c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_39c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_39c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_39c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_39c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_39d = function(req, res){
+    res.render('kehutanan/kehutanan_14_39d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_39d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_39d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_39d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_39d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_40a = function(req, res){
+    res.render('kehutanan/kehutanan_14_40a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_40a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_40a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_40a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_40a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_40b = function(req, res){
+    res.render('kehutanan/kehutanan_14_40b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_40b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_40b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_40b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_40b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_40c = function(req, res){
+    res.render('kehutanan/kehutanan_14_40c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_40c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_40c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_40c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_40c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_40d = function(req, res){
+    res.render('kehutanan/kehutanan_14_40d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_40d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_40d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_40d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_40d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_41a = function(req, res){
+    res.render('kehutanan/kehutanan_14_41a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_41a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_41a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_41a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_41a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_41b = function(req, res){
+    res.render('kehutanan/kehutanan_14_41b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_41b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_41b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_41b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_41b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_41c = function(req, res){
+    res.render('kehutanan/kehutanan_14_41c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_41c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_41c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_41c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_41c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_41d = function(req, res){
+    res.render('kehutanan/kehutanan_14_41d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_41d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_41d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_41d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_41d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_42a = function(req, res){
+    res.render('kehutanan/kehutanan_14_42a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_42a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_42a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_42a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_42a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_42b = function(req, res){
+    res.render('kehutanan/kehutanan_14_42b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_42b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_42b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_42b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_42b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_42c = function(req, res){
+    res.render('kehutanan/kehutanan_14_42c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_42c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_42c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_42c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_42c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_43a = function(req, res){
+    res.render('kehutanan/kehutanan_14_43a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_43a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_43a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_43a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_43a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_43b = function(req, res){
+    res.render('kehutanan/kehutanan_14_43b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_43b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_43b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_43b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_43b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_43c = function(req, res){
+    res.render('kehutanan/kehutanan_14_43c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_43c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_43c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_43c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_43c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_43d = function(req, res){
+    res.render('kehutanan/kehutanan_14_43d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_43d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_43d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_43d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_43d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_43e = function(req, res){
+    res.render('kehutanan/kehutanan_14_43e', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_43e = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_43e', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_43e = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_43e', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_44a = function(req, res){
+    res.render('kehutanan/kehutanan_14_44a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_44a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_44a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_44a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_44a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_44b = function(req, res){
+    res.render('kehutanan/kehutanan_14_44b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_44b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_44b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_44b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_44b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_44c = function(req, res){
+    res.render('kehutanan/kehutanan_14_44c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_44c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_44c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_44c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_44c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_45a = function(req, res){
+    res.render('kehutanan/kehutanan_14_45a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_45a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_45a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_45a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_45a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_45b = function(req, res){
+    res.render('kehutanan/kehutanan_14_45b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_45b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_45b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_45b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_45b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_45c = function(req, res){
+    res.render('kehutanan/kehutanan_14_45c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_45c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_45c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_45c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_45c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_46a = function(req, res){
+    res.render('kehutanan/kehutanan_14_46a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_46a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_46a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_46a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_46a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_46b = function(req, res){
+    res.render('kehutanan/kehutanan_14_46b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_46b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_46b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_46b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_46b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_46c = function(req, res){
+    res.render('kehutanan/kehutanan_14_46c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_46c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_46c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_46c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_46c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_47a = function(req, res){
+    res.render('kehutanan/kehutanan_14_47a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_47a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_47a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_47a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_47a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_47b = function(req, res){
+    res.render('kehutanan/kehutanan_14_47b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_47b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_47b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_47b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_47b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_47c = function(req, res){
+    res.render('kehutanan/kehutanan_14_47c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_47c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_47c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_47c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_47c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_48a = function(req, res){
+    res.render('kehutanan/kehutanan_14_48a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_48a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_48a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_48a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_48a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_48b = function(req, res){
+    res.render('kehutanan/kehutanan_14_48b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_48b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_48b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_48b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_48b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_48c = function(req, res){
+    res.render('kehutanan/kehutanan_14_48c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_48c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_48c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_48c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_48c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_49a = function(req, res){
+    res.render('kehutanan/kehutanan_14_49a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_49a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_49a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_49a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_49a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_49b = function(req, res){
+    res.render('kehutanan/kehutanan_14_49b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_49b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_49b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_49b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_49b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_49c = function(req, res){
+    res.render('kehutanan/kehutanan_14_49c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_49c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_49c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_49c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_49c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_50a = function(req, res){
+    res.render('kehutanan/kehutanan_14_50a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_50a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_50a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_50a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_50a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_50b = function(req, res){
+    res.render('kehutanan/kehutanan_14_50b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_50b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_50b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_50b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_50b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_50c = function(req, res){
+    res.render('kehutanan/kehutanan_14_50c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_50c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_50c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_50c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_50c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_51a = function(req, res){
+    res.render('kehutanan/kehutanan_14_51a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_51a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_51a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_51a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_51a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_51b = function(req, res){
+    res.render('kehutanan/kehutanan_14_51b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_51b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_51b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_51b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_51b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_51c = function(req, res){
+    res.render('kehutanan/kehutanan_14_51c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_51c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_51c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_51c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_51c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_52a = function(req, res){
+    res.render('kehutanan/kehutanan_14_52a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_52a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_52a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_52a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_52a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_52b = function(req, res){
+    res.render('kehutanan/kehutanan_14_52b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_52b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_52b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_52b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_52b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_52c = function(req, res){
+    res.render('kehutanan/kehutanan_14_52c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_52c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_52c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_52c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_52c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_53a = function(req, res){
+    res.render('kehutanan/kehutanan_14_53a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_53a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_53a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_53a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_53a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_53b = function(req, res){
+    res.render('kehutanan/kehutanan_14_53b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_53b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_53b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_53b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_53b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_53c = function(req, res){
+    res.render('kehutanan/kehutanan_14_53c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_53c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_53c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_53c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_53c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_54a = function(req, res){
+    res.render('kehutanan/kehutanan_14_54a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_54a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_54a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_54a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_54a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_54b = function(req, res){
+    res.render('kehutanan/kehutanan_14_54b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_54b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_54b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_54b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_54b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55a = function(req, res){
+    res.render('kehutanan/kehutanan_14_55a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55b = function(req, res){
+    res.render('kehutanan/kehutanan_14_55b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55c = function(req, res){
+    res.render('kehutanan/kehutanan_14_55c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55d = function(req, res){
+    res.render('kehutanan/kehutanan_14_55d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55e = function(req, res){
+    res.render('kehutanan/kehutanan_14_55e', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55e = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55e', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55e = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55e', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55f = function(req, res){
+    res.render('kehutanan/kehutanan_14_55f', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55f = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55f', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55f = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55f', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55g = function(req, res){
+    res.render('kehutanan/kehutanan_14_55g', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55g = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55g', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55g = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55g', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_55h = function(req, res){
+    res.render('kehutanan/kehutanan_14_55h', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_55h = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_55h', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_55h = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_55h', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_56a = function(req, res){
+    res.render('kehutanan/kehutanan_14_56a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_56a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_56a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_56a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_56a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_56b = function(req, res){
+    res.render('kehutanan/kehutanan_14_56b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_56b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_56b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_56b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_56b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_56c = function(req, res){
+    res.render('kehutanan/kehutanan_14_56c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_56c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_56c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_56c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_56c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_57a = function(req, res){
+    res.render('kehutanan/kehutanan_14_57a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_57a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_57a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_57a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_57a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_57b = function(req, res){
+    res.render('kehutanan/kehutanan_14_57b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_57b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_57b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_57b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_57b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_57c = function(req, res){
+    res.render('kehutanan/kehutanan_14_57c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_57c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_57c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_57c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_57c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_58a = function(req, res){
+    res.render('kehutanan/kehutanan_14_58a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_58a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_58a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_58a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_58a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_58b = function(req, res){
+    res.render('kehutanan/kehutanan_14_58b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_58b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_58b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_58b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_58b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_58c = function(req, res){
+    res.render('kehutanan/kehutanan_14_58c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_58c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_58c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_58c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_58c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_59a = function(req, res){
+    res.render('kehutanan/kehutanan_14_59a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_59a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_59a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_59a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_59a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_59b = function(req, res){
+    res.render('kehutanan/kehutanan_14_59b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_59b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_59b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_59b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_59b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_59c = function(req, res){
+    res.render('kehutanan/kehutanan_14_59c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_59c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_59c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_59c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_59c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_60a = function(req, res){
+    res.render('kehutanan/kehutanan_14_60a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_60a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_60a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_60a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_60a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_60b = function(req, res){
+    res.render('kehutanan/kehutanan_14_60b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_60b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_60b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_60b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_60b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_60c = function(req, res){
+    res.render('kehutanan/kehutanan_14_60c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_60c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_60c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_60c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_60c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_61a = function(req, res){
+    res.render('kehutanan/kehutanan_14_61a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_61a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_61a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_61a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_61a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_61b = function(req, res){
+    res.render('kehutanan/kehutanan_14_61b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_61b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_61b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_61b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_61b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_61c = function(req, res){
+    res.render('kehutanan/kehutanan_14_61c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_61c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_61c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_61c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_61c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_62a = function(req, res){
+    res.render('kehutanan/kehutanan_14_62a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_62a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_62a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_62a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_62a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_62b = function(req, res){
+    res.render('kehutanan/kehutanan_14_62b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_62b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_62b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_62b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_62b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_62c = function(req, res){
+    res.render('kehutanan/kehutanan_14_62c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_62c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_62c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_62c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_62c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_63a = function(req, res){
+    res.render('kehutanan/kehutanan_14_63a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_63a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_63a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_63a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_63a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_63b = function(req, res){
+    res.render('kehutanan/kehutanan_14_63b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_63b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_63b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_63b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_63b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_63c = function(req, res){
+    res.render('kehutanan/kehutanan_14_63c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_63c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_63c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_63c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_63c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_64a = function(req, res){
+    res.render('kehutanan/kehutanan_14_64a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_64a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_64a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_64a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_64a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_64b = function(req, res){
+    res.render('kehutanan/kehutanan_14_64b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_64b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_64b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_64b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_64b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_64c = function(req, res){
+    res.render('kehutanan/kehutanan_14_64c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_64c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_64c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_64c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_64c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_65a = function(req, res){
+    res.render('kehutanan/kehutanan_14_65a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_65a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_65a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_65a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_65a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_65b = function(req, res){
+    res.render('kehutanan/kehutanan_14_65b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_65b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_65b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_65b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_65b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_65c = function(req, res){
+    res.render('kehutanan/kehutanan_14_65c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_65c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_65c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_65c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_65c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66a = function(req, res){
+    res.render('kehutanan/kehutanan_14_66a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66b = function(req, res){
+    res.render('kehutanan/kehutanan_14_66b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66c = function(req, res){
+    res.render('kehutanan/kehutanan_14_66c', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66c = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66c', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66c = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66c', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66d = function(req, res){
+    res.render('kehutanan/kehutanan_14_66d', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66d = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66d', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66d = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66d', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66e = function(req, res){
+    res.render('kehutanan/kehutanan_14_66e', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66e = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66e', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66e = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66e', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66f = function(req, res){
+    res.render('kehutanan/kehutanan_14_66f', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66f = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66f', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66f = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66f', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_66g = function(req, res){
+    res.render('kehutanan/kehutanan_14_66g', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_66g = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_66g', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_66g = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_66g', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_67a = function(req, res){
+    res.render('kehutanan/kehutanan_14_67a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_67a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_67a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_67a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_67a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_67b = function(req, res){
+    res.render('kehutanan/kehutanan_14_67b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_67b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_67b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_67b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_67b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_68 = function(req, res){
+    res.render('kehutanan/kehutanan_14_68', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_68 = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_68', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_68 = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_68', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_69a = function(req, res){
+    res.render('kehutanan/kehutanan_14_69a', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_69a = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_69a', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_69a = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_69a', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.kehutanan_14_69b = function(req, res){
+    res.render('kehutanan/kehutanan_14_69b', {title: 'Kehutanan'});
+};
+
+/* Tambah Data */
+exports.tambah_kehutanan_14_69b = function(req, res){
+    res.render('kehutanan/tambah_kehutanan_14_69b', {title: 'Kehutanan'});
+};
+
+/* Edit Data */
+exports.edit_kehutanan_14_69b = function(req, res){
+    res.render('kehutanan/edit_kehutanan_14_69b', {title: 'Kehutanan'});
+};
+/*============================================================================================*/
+
 
 /*========================================Peternakan==========================================*/
 exports.peternakan = function(req, res){
