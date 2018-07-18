@@ -1,2 +1,2 @@
 # projectkp
-# Sistem Informasi Standar Biaya PemProv Jabar
+#Sistem Informasi Standar Biaya Pemprov Jawa Barat
