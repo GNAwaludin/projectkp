@@ -4155,7 +4155,19 @@ exports.perhubungan = function(req, res){
 /*====================================Perhubungan Darat=======================================*/
 /*Render Tabel*/
 exports.hub_4_1IA = function(req, res){
-    res.render('perhubungan/hub_4_1IA', {title: 'Perhubungan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 110", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perhubungan/hub_4_1IA', {
+                title: 'Perhubungan',
+                page_title: "Perhubungan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4163,13 +4175,120 @@ exports.tambah_hub_4_1IA = function(req, res){
     res.render('perhubungan/tambah_hub_4_1IA', {title: 'Perhubungan'});
 };
 
+/* Save Data hub_4_1IA */
+exports.save_hub_4_1IA = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 110
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/hub_4_1IA');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_hub_4_1IA = function(req, res){
-    res.render('perhubungan/edit_hub_4_1IA', {title: 'Perhubungan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perhubungan/edit_hub_4_1IA',{
+                title : 'Edit hub_4_1IA',
+                page_title:"Edit hub_4_1IA",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit hub_4_1IA */
+exports.save_edit_hub_4_1IA = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/hub_4_1IA');
+          
+        });
+    
+    });
+};
+
+/* Delete hub_4_1IA*/
+exports.delete_hub_4_1IA = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/hub_4_1IA');
+             
+        });
+        
+     });
+};
+
 /*===========================================================================================*/
 exports.hub_4_1IB = function(req, res){
-    res.render('perhubungan/hub_4_1IB', {title: 'Perhubungan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 111", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perhubungan/hub_4_1IB', {
+                title: 'Perhubungan',
+                page_title: "Perhubungan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4177,13 +4296,120 @@ exports.tambah_hub_4_1IB = function(req, res){
     res.render('perhubungan/tambah_hub_4_1IB', {title: 'Perhubungan'});
 };
 
+/* Save Data hub_4_1IB */
+exports.save_hub_4_1IB = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 111
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/hub_4_1IB');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_hub_4_1IB = function(req, res){
-    res.render('perhubungan/edit_hub_4_1IB', {title: 'Perhubungan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perhubungan/edit_hub_4_1IB',{
+                title : 'Edit hub_4_1IB',
+                page_title:"Edit hub_4_1IB",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit hub_4_1IB */
+exports.save_edit_hub_4_1IB = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/hub_4_1IB');
+          
+        });
+    
+    });
+};
+
+/* Delete hub_4_1IB*/
+exports.delete_hub_4_1IB = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/hub_4_1IB');
+             
+        });
+        
+     });
+};
+
 /*===========================================================================================*/
 exports.hub_4_1IC = function(req, res){
-    res.render('perhubungan/hub_4_1IC', {title: 'Perhubungan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 112", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perhubungan/hub_4_1IC', {
+                title: 'Perhubungan',
+                page_title: "Perhubungan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4191,14 +4417,121 @@ exports.tambah_hub_4_1IC = function(req, res){
     res.render('perhubungan/tambah_hub_4_1IC', {title: 'Perhubungan'});
 };
 
+/* Save Data hub_4_1IC */
+exports.save_hub_4_1IC = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 112
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/hub_4_1IC');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_hub_4_1IC = function(req, res){
-    res.render('perhubungan/edit_hub_4_1IC', {title: 'Perhubungan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perhubungan/edit_hub_4_1IC',{
+                title : 'Edit hub_4_1IC',
+                page_title:"Edit hub_4_1IC",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit hub_4_1IC */
+exports.save_edit_hub_4_1IC = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/hub_4_1IC');
+          
+        });
+    
+    });
+};
+
+/* Delete hub_4_1IC*/
+exports.delete_hub_4_1IC = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/hub_4_1IC');
+             
+        });
+        
+     });
+};
+
 /*====================================Perhubungan Laut=======================================*/
 /*Render Tabel*/
 exports.hub_4_1IIA = function(req, res){
-    res.render('perhubungan/hub_4_1IIA', {title: 'Perhubungan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 113", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perhubungan/hub_4_1IIA', {
+                title: 'Perhubungan',
+                page_title: "Perhubungan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4206,13 +4539,120 @@ exports.tambah_hub_4_1IIA = function(req, res){
     res.render('perhubungan/tambah_hub_4_1IIA', {title: 'Perhubungan'});
 };
 
+/* Save Data hub_4_1IIA */
+exports.save_hub_4_1IIA = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 113
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/hub_4_1IIA');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_hub_4_1IIA = function(req, res){
-    res.render('perhubungan/edit_hub_4_1IIA', {title: 'Perhubungan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perhubungan/edit_hub_4_1IIA',{
+                title : 'Edit hub_4_1IIA',
+                page_title:"Edit hub_4_1IIA",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit hub_4_1IIA */
+exports.save_edit_hub_4_1IIA = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/hub_4_1IIA');
+          
+        });
+    
+    });
+};
+
+/* Delete hub_4_1IIA*/
+exports.delete_hub_4_1IIA = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/hub_4_1IIA');
+             
+        });
+        
+     });
+};
+
 /*===========================================================================================*/
 exports.hub_4_1IIB = function(req, res){
-    res.render('perhubungan/hub_4_1IIB', {title: 'Perhubungan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 114", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perhubungan/hub_4_1IIB', {
+                title: 'Perhubungan',
+                page_title: "Perhubungan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4220,14 +4660,121 @@ exports.tambah_hub_4_1IIB = function(req, res){
     res.render('perhubungan/tambah_hub_4_1IIB', {title: 'Perhubungan'});
 };
 
+/* Save Data hub_4_1IIB */
+exports.save_hub_4_1IIB = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 114
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/hub_4_1IIB');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_hub_4_1IIB = function(req, res){
-    res.render('perhubungan/edit_hub_4_1IIB', {title: 'Perhubungan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perhubungan/edit_hub_4_1IIB',{
+                title : 'Edit hub_4_1IIB',
+                page_title:"Edit hub_4_1IIB",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit hub_4_1IIB */
+exports.save_edit_hub_4_1IIB = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/hub_4_1IIB');
+          
+        });
+    
+    });
+};
+
+/* Delete hub_4_1IIB*/
+exports.delete_hub_4_1IIB = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/hub_4_1IIB');
+             
+        });
+        
+     });
+};
+
 /*====================================Perhubungan Udara=======================================*/
 /*Render Tabel*/
 exports.hub_4_1IIIA = function(req, res){
-    res.render('perhubungan/hub_4_1IIIA', {title: 'Perhubungan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 115", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perhubungan/hub_4_1IIIA', {
+                title: 'Perhubungan',
+                page_title: "Perhubungan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4235,10 +4782,105 @@ exports.tambah_hub_4_1IIIA = function(req, res){
     res.render('perhubungan/tambah_hub_4_1IIIA', {title: 'Perhubungan'});
 };
 
+/* Save Data hub_4_1IIIA */
+exports.save_hub_4_1IIIA = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 115
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/hub_4_1IIIA');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_hub_4_1IIIA = function(req, res){
-    res.render('perhubungan/edit_hub_4_1IIIA', {title: 'Perhubungan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perhubungan/edit_hub_4_1IIIA',{
+                title : 'Edit hub_4_1IIIA',
+                page_title:"Edit hub_4_1IIIA",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit hub_4_1IIIA */
+exports.save_edit_hub_4_1IIIA = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/hub_4_1IIIA');
+          
+        });
+    
+    });
+};
+
+/* Delete hub_4_1IIIA*/
+exports.delete_hub_4_1IIIA = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2  WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/hub_4_1IIIA');
+             
+        });
+        
+     });
+};
+
 /*===========================================================================================*/
 
 /*===================================Lingkungan Hidup=========================================*/

@@ -406,30 +406,48 @@ app.get('/edit_cipta_3_18/delete/:id', sistem.delete_cipta_3_18);
 app.get('/perhubungan', sistem.perhubungan);
 /*==============================Perhubungan Darat===============================*/
 app.get('/hub_4_1IA', sistem.hub_4_1IA);
-app.get('/tambah_hub_4_1IA', sistem.tambah_hub_4_1IA);
-app.get('/edit_hub_4_1IA', sistem.edit_hub_4_1IA);
+app.get('/tambah_hub_4_1IA/add', sistem.tambah_hub_4_1IA);
+app.post('/tambah_hub_4_1IA/add', sistem.save_hub_4_1IA);
+app.get('/edit_hub_4_1IA/edit/:id', sistem.edit_hub_4_1IA);
+app.post('/edit_hub_4_1IA/edit/:id', sistem.save_edit_hub_4_1IA);
+app.get('/edit_hub_4_1IA/delete/:id', sistem.delete_hub_4_1IA);
 
 app.get('/hub_4_1IB', sistem.hub_4_1IB);
-app.get('/tambah_hub_4_1IB', sistem.tambah_hub_4_1IB);
-app.get('/edit_hub_4_1IB', sistem.edit_hub_4_1IB);
+app.get('/tambah_hub_4_1IB/add', sistem.tambah_hub_4_1IB);
+app.post('/tambah_hub_4_1IB/add', sistem.save_hub_4_1IB);
+app.get('/edit_hub_4_1IB/edit/:id', sistem.edit_hub_4_1IB);
+app.post('/edit_hub_4_1IB/edit/:id', sistem.save_edit_hub_4_1IB);
+app.get('/edit_hub_4_1IB/delete/:id', sistem.delete_hub_4_1IB);
 
 app.get('/hub_4_1IC', sistem.hub_4_1IC);
-app.get('/tambah_hub_4_1IC', sistem.tambah_hub_4_1IC);
-app.get('/edit_hub_4_1IC', sistem.edit_hub_4_1IC);
+app.get('/tambah_hub_4_1IC/add', sistem.tambah_hub_4_1IC);
+app.post('/tambah_hub_4_1IC/add', sistem.save_hub_4_1IC);
+app.get('/edit_hub_4_1IC/edit/:id', sistem.edit_hub_4_1IC);
+app.post('/edit_hub_4_1IC/edit/:id', sistem.save_edit_hub_4_1IC);
+app.get('/edit_hub_4_1IC/delete/:id', sistem.delete_hub_4_1IC);
 /*==============================================================================*/
 /*==============================Perhubungan Laut================================*/
 app.get('/hub_4_1IIA', sistem.hub_4_1IIA);
-app.get('/tambah_hub_4_1IIA', sistem.tambah_hub_4_1IIA);
-app.get('/edit_hub_4_1IIA', sistem.edit_hub_4_1IIA);
+app.get('/tambah_hub_4_1IIA/add', sistem.tambah_hub_4_1IIA);
+app.post('/tambah_hub_4_1IIA/add', sistem.save_hub_4_1IIA);
+app.get('/edit_hub_4_1IIA/edit/:id', sistem.edit_hub_4_1IIA);
+app.post('/edit_hub_4_1IIA/edit/:id', sistem.save_edit_hub_4_1IIA);
+app.get('/edit_hub_4_1IIA/delete/:id', sistem.delete_hub_4_1IIA);
 
 app.get('/hub_4_1IIB', sistem.hub_4_1IIB);
-app.get('/tambah_hub_4_1IIB', sistem.tambah_hub_4_1IIB);
-app.get('/edit_hub_4_1IIB', sistem.edit_hub_4_1IIB);
+app.get('/tambah_hub_4_1IIB/add', sistem.tambah_hub_4_1IIB);
+app.post('/tambah_hub_4_1IIB/add', sistem.save_hub_4_1IIB);
+app.get('/edit_hub_4_1IIB/edit/:id', sistem.edit_hub_4_1IIB);
+app.post('/edit_hub_4_1IIB/edit/:id', sistem.save_edit_hub_4_1IIB);
+app.get('/edit_hub_4_1IIB/delete/:id', sistem.delete_hub_4_1IIB);
 /*==============================================================================*/
 /*==============================Perhubungan Udara===============================*/
 app.get('/hub_4_1IIIA', sistem.hub_4_1IIIA);
-app.get('/tambah_hub_4_1IIIA', sistem.tambah_hub_4_1IIIA);
-app.get('/edit_hub_4_1IIIA', sistem.edit_hub_4_1IIIA);
+app.get('/tambah_hub_4_1IIIA/add', sistem.tambah_hub_4_1IIIA);
+app.post('/tambah_hub_4_1IIIA/add', sistem.save_hub_4_1IIIA);
+app.get('/edit_hub_4_1IIIA/edit/:id', sistem.edit_hub_4_1IIIA);
+app.post('/edit_hub_4_1IIIA/edit/:id', sistem.save_edit_hub_4_1IIIA);
+app.get('/edit_hub_4_1IIIA/delete/:id', sistem.delete_hub_4_1IIIA);
 /*==============================================================================*/
 
 /*===============================Lingkungan Hidup===============================*/
