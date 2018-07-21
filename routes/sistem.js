@@ -4890,7 +4890,19 @@ exports.lingkungan_hidup = function(req, res){
 /*==========================Pengujian Parameter Kualitas Lingkungan===========================*/
 /*Render Tabel*/
 exports.lh_5_1a = function(req, res){
-    res.render('lhidup/lh_5_1a', {title: 'Lingkungan Hidup'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 3", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1a', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4898,14 +4910,123 @@ exports.tambah_lh_5_1a = function(req, res){
     res.render('lhidup/tambah_lh_5_1a', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1a */
+exports.save_lh_5_1a = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 3
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1a');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1a = function(req, res){
-    res.render('lhidup/edit_lh_5_1a', {title: 'Lingkungan Hidup'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1a',{
+                title : 'Edit lh_5_1a',
+                page_title:"Edit lh_5_1a",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1a */
+exports.save_edit_lh_5_1a = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1a');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1a*/
+exports.delete_lh_5_1a = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1a');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.lh_5_1b = function(req, res){
-    res.render('lhidup/lh_5_1b', {title: 'Lingkungan Hidup'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 4", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1b', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4913,14 +5034,123 @@ exports.tambah_lh_5_1b = function(req, res){
     res.render('lhidup/tambah_lh_5_1b', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1b */
+exports.save_lh_5_1b = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 4
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1b');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1b = function(req, res){
-    res.render('lhidup/edit_lh_5_1b', {title: 'Lingkungan Hidup'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1b',{
+                title : 'Edit lh_5_1b',
+                page_title:"Edit lh_5_1b",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1b */
+exports.save_edit_lh_5_1b = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1b');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1b*/
+exports.delete_lh_5_1b = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1b');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.lh_5_1c = function(req, res){
-    res.render('lhidup/lh_5_1c', {title: 'Lingkungan Hidup'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 5", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1c', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4928,14 +5158,123 @@ exports.tambah_lh_5_1c = function(req, res){
     res.render('lhidup/tambah_lh_5_1c', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1c */
+exports.save_lh_5_1c = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 5
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1c');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1c = function(req, res){
-    res.render('lhidup/edit_lh_5_1c', {title: 'Lingkungan Hidup'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1c',{
+                title : 'Edit lh_5_1c',
+                page_title:"Edit lh_5_1c",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1c */
+exports.save_edit_lh_5_1c = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1c');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1c*/
+exports.delete_lh_5_1c = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1c');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.lh_5_1d = function(req, res){
-    res.render('lhidup/lh_5_1d', {title: 'Lingkungan Hidup'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 6", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1d', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4943,14 +5282,123 @@ exports.tambah_lh_5_1d = function(req, res){
     res.render('lhidup/tambah_lh_5_1d', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1d */
+exports.save_lh_5_1d = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 6
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1d');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1d = function(req, res){
-    res.render('lhidup/edit_lh_5_1d', {title: 'Lingkungan Hidup'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1d',{
+                title : 'Edit lh_5_1d',
+                page_title:"Edit lh_5_1d",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1d */
+exports.save_edit_lh_5_1d = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1d');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1d*/
+exports.delete_lh_5_1d = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1d');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.lh_5_1e = function(req, res){
-    res.render('lhidup/lh_5_1e', {title: 'Lingkungan Hidup'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 7", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1e', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4958,14 +5406,123 @@ exports.tambah_lh_5_1e = function(req, res){
     res.render('lhidup/tambah_lh_5_1e', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1e */
+exports.save_lh_5_1e = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 7
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1e');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1e = function(req, res){
-    res.render('lhidup/edit_lh_5_1e', {title: 'Lingkungan Hidup'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1e',{
+                title : 'Edit lh_5_1e',
+                page_title:"Edit lh_5_1e",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1e */
+exports.save_edit_lh_5_1e = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1e');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1e*/
+exports.delete_lh_5_1e = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1e');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.lh_5_1f = function(req, res){
-    res.render('lhidup/lh_5_1f', {title: 'Lingkungan Hidup'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 8", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1f', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4973,14 +5530,123 @@ exports.tambah_lh_5_1f = function(req, res){
     res.render('lhidup/tambah_lh_5_1f', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1f */
+exports.save_lh_5_1f = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 8
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1f');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1f = function(req, res){
-    res.render('lhidup/edit_lh_5_1f', {title: 'Lingkungan Hidup'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1f',{
+                title : 'Edit lh_5_1f',
+                page_title:"Edit lh_5_1f",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1f */
+exports.save_edit_lh_5_1f = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1f');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1f*/
+exports.delete_lh_5_1f = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1f');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.lh_5_1g = function(req, res){
-    res.render('lhidup/lh_5_1g', {title: 'Lingkungan Hidup'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 9", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_1g', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -4988,16 +5654,125 @@ exports.tambah_lh_5_1g = function(req, res){
     res.render('lhidup/tambah_lh_5_1g', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_1g */
+exports.save_lh_5_1g = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 9
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_1g');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_1g = function(req, res){
-    res.render('lhidup/edit_lh_5_1g', {title: 'Lingkungan Hidup'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_1g',{
+                title : 'Edit lh_5_1g',
+                page_title:"Edit lh_5_1g",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_1g */
+exports.save_edit_lh_5_1g = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_1g');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_1g*/
+exports.delete_lh_5_1g = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_1g');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*=======================Pengambilan Contoh Parameter Kualitas Lingkungan=====================*/
 /*Render Tabel*/
 exports.lh_5_2 = function(req, res){
-    res.render('lhidup/lh_5_2', {title: 'Lingkungan Hidup'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail3 WHERE kategori_id = 117", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_2', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5005,15 +5780,124 @@ exports.tambah_lh_5_2 = function(req, res){
     res.render('lhidup/tambah_lh_5_2', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_2 */
+exports.save_lh_5_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 117
+        };
+
+        var query = connection.query("INSERT INTO detail3 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_2 = function(req, res){
-    res.render('lhidup/edit_lh_5_2', {title: 'Lingkungan Hidup'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail3 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_2',{
+                title : 'Edit lh_5_2',
+                page_title:"Edit lh_5_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_2 */
+exports.save_edit_lh_5_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail3 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_2');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_2*/
+exports.delete_lh_5_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail3 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=========================================Honorarium=========================================*/
 /*Render Tabel*/
 exports.lh_5_3 = function(req, res){
-    res.render('lhidup/lh_5_3', {title: 'Lingkungan Hidup'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 118", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('lhidup/lh_5_3', {
+                title: 'Lingkungan Hidup',
+                page_title: "Lingkungan Hidup", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -5021,10 +5905,107 @@ exports.tambah_lh_5_3 = function(req, res){
     res.render('lhidup/tambah_lh_5_3', {title: 'Lingkungan Hidup'});
 };
 
+/* Save Data lh_5_3 */
+exports.save_lh_5_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 118
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/lh_5_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_lh_5_3 = function(req, res){
-    res.render('lhidup/edit_lh_5_3', {title: 'Lingkungan Hidup'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('lhidup/edit_lh_5_3',{
+                title : 'Edit lh_5_3',
+                page_title:"Edit lh_5_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit lh_5_3 */
+exports.save_edit_lh_5_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/lh_5_3');
+          
+        });
+    
+    });
+};
+
+/* Delete lh_5_3*/
+exports.delete_lh_5_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/lh_5_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*=====================================Bidang Kearsipan=======================================*/
@@ -10479,6 +11460,38 @@ exports.edit_hortikultura_13_7a = function(req, res){
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
+exports.hortikultura_13_7b = function(req, res){
+    res.render('hortikultura/hortikultura_13_7b', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_7b = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_7b', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_7b = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_7b', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
+exports.hortikultura_13_7c = function(req, res){
+    res.render('hortikultura/hortikultura_13_7c', {title: 'Hortikultura'});
+};
+
+/* Tambah Data */
+exports.tambah_hortikultura_13_7c = function(req, res){
+    res.render('hortikultura/tambah_hortikultura_13_7c', {title: 'Hortikultura'});
+};
+
+/* Edit Data */
+exports.edit_hortikultura_13_7c = function(req, res){
+    res.render('hortikultura/edit_hortikultura_13_7c', {title: 'Hortikultura'});
+};
+/*============================================================================================*/
+/*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
+/*Render Tabel*/
 exports.hortikultura_13_8a = function(req, res){
     res.render('hortikultura/hortikultura_13_8a', {title: 'Hortikultura'});
 };
@@ -10719,8 +11732,8 @@ exports.edit_hortikultura_13_15d = function(req, res){
 /*============================================================================================*/
 
 /*=========================================Kehutanan==========================================*/
-exports.Kehutanan = function(req, res){
-    res.render('Kehutanan/Kehutanan', {title: 'Kehutanan'});
+exports.kehutanan = function(req, res){
+    res.render('Kehutanan/kehutanan', {title: 'Kehutanan'});
 };
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/

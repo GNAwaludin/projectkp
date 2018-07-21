@@ -11,8 +11,50 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Pengujian Parameter Kualitas Lingkungan (Uji Limbah Padat dan Limbah B3)</h3>
-                  <a href="/tambah_lh_5_1g" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_lh_5_1g/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
+         <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Parameter Lingkungan</th>
+                  <th>Metode</th>
+                  <th>Satuan</th>
+                  <th>Tarif (Rp.)</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nama2%></td>
+                    <td><%=data[i].nama3%></td>
+                    <td><%=data[i].nilai%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_lh_5_1g/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_lh_5_1g/delete/<%=data[i].id%>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+            </div>
         </div>
        </div>
    	<script type="text/javascript" src="/../js/all.js"></script>
