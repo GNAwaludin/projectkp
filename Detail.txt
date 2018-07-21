@@ -19,17 +19,17 @@
 ===============================
 3. Bidang 3
 - Tabel 3.1 - 3.2 (Detail 6) (DONE)
-- Tabel 3.3, 3.6 (Detail 2)
+- Tabel 3.3(DONE), 3.6 (Detail 2)
 - Tabel 3.4 - 3.5 (Dilewat Sementara)
 - Tabel 3.6
 - Tabel 3.7 - 3.9, 3.12 - 3.14 (Dilewat Sementara)
-- Tabel 3.10 (Detail 7)
-- Tabel 3.11 (Detail 2)
-- Tabel 3.15 - 3.16 (Detail 8)
-- Tabel 3.17 - 3.18 (Detail 9)
+- Tabel 3.10 (Detail 7) (DONE)
+- Tabel 3.11 (Detail 2) )DILEWAT)
+- Tabel 3.15 - 3.16 (Detail 8)(DONE)
+- Tabel 3.17 - 3.18 (Detail 9)(DONE)
 ===============================
 4. Bidang 4
-- Tabel 4.1 (Detail 2)
+- Tabel 4.1 (Detail 2)(DONE)
 ===============================
 5. Bidang 5
 - Tabel 5.1 (Detail 1C)
