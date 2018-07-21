@@ -454,42 +454,69 @@ app.get('/edit_hub_4_1IIIA/delete/:id', sistem.delete_hub_4_1IIIA);
 app.get('/lingkungan_hidup', sistem.lingkungan_hidup);
 /*==================Pengujian Parameter Kualitas Lingkungan=====================*/
 app.get('/lh_5_1a', sistem.lh_5_1a);
-app.get('/tambah_lh_5_1a', sistem.tambah_lh_5_1a);
-app.get('/edit_lh_5_1a', sistem.edit_lh_5_1a);
+app.get('/tambah_lh_5_1a/add', sistem.tambah_lh_5_1a);
+app.post('/tambah_lh_5_1a/add', sistem.save_lh_5_1a);
+app.get('/edit_lh_5_1a/edit/:id', sistem.edit_lh_5_1a);
+app.post('/edit_lh_5_1a/edit/:id', sistem.save_edit_lh_5_1a);
+app.get('/edit_lh_5_1a/delete/:id', sistem.delete_lh_5_1a);
 
 app.get('/lh_5_1b', sistem.lh_5_1b);
-app.get('/tambah_lh_5_1b', sistem.tambah_lh_5_1b);
-app.get('/edit_lh_5_1b', sistem.edit_lh_5_1b);
+app.get('/tambah_lh_5_1b/add', sistem.tambah_lh_5_1b);
+app.post('/tambah_lh_5_1b/add', sistem.save_lh_5_1b);
+app.get('/edit_lh_5_1b/edit/:id', sistem.edit_lh_5_1b);
+app.post('/edit_lh_5_1b/edit/:id', sistem.save_edit_lh_5_1b);
+app.get('/edit_lh_5_1b/delete/:id', sistem.delete_lh_5_1b);
 
 app.get('/lh_5_1c', sistem.lh_5_1c);
-app.get('/tambah_lh_5_1c', sistem.tambah_lh_5_1c);
-app.get('/edit_lh_5_1c', sistem.edit_lh_5_1c);
+app.get('/tambah_lh_5_1c/add', sistem.tambah_lh_5_1c);
+app.post('/tambah_lh_5_1c/add', sistem.save_lh_5_1c);
+app.get('/edit_lh_5_1c/edit/:id', sistem.edit_lh_5_1c);
+app.post('/edit_lh_5_1c/edit/:id', sistem.save_edit_lh_5_1c);
+app.get('/edit_lh_5_1c/delete/:id', sistem.delete_lh_5_1c);
 
 app.get('/lh_5_1d', sistem.lh_5_1d);
-app.get('/tambah_lh_5_1d', sistem.tambah_lh_5_1d);
-app.get('/edit_lh_5_1d', sistem.edit_lh_5_1d);
+app.get('/tambah_lh_5_1d/add', sistem.tambah_lh_5_1d);
+app.post('/tambah_lh_5_1d/add', sistem.save_lh_5_1d);
+app.get('/edit_lh_5_1d/edit/:id', sistem.edit_lh_5_1d);
+app.post('/edit_lh_5_1d/edit/:id', sistem.save_edit_lh_5_1d);
+app.get('/edit_lh_5_1d/delete/:id', sistem.delete_lh_5_1d);
 
 app.get('/lh_5_1e', sistem.lh_5_1e);
-app.get('/tambah_lh_5_1e', sistem.tambah_lh_5_1e);
-app.get('/edit_lh_5_1e', sistem.edit_lh_5_1e);
+app.get('/tambah_lh_5_1e/add', sistem.tambah_lh_5_1e);
+app.post('/tambah_lh_5_1e/add', sistem.save_lh_5_1e);
+app.get('/edit_lh_5_1e/edit/:id', sistem.edit_lh_5_1e);
+app.post('/edit_lh_5_1e/edit/:id', sistem.save_edit_lh_5_1e);
+app.get('/edit_lh_5_1e/delete/:id', sistem.delete_lh_5_1e);
 
 app.get('/lh_5_1f', sistem.lh_5_1f);
-app.get('/tambah_lh_5_1f', sistem.tambah_lh_5_1f);
-app.get('/edit_lh_5_1f', sistem.edit_lh_5_1f);
+app.get('/tambah_lh_5_1f/add', sistem.tambah_lh_5_1f);
+app.post('/tambah_lh_5_1f/add', sistem.save_lh_5_1f);
+app.get('/edit_lh_5_1f/edit/:id', sistem.edit_lh_5_1f);
+app.post('/edit_lh_5_1f/edit/:id', sistem.save_edit_lh_5_1f);
+app.get('/edit_lh_5_1f/delete/:id', sistem.delete_lh_5_1f);
 
 app.get('/lh_5_1g', sistem.lh_5_1g);
-app.get('/tambah_lh_5_1g', sistem.tambah_lh_5_1g);
-app.get('/edit_lh_5_1g', sistem.edit_lh_5_1g);
+app.get('/tambah_lh_5_1g/add', sistem.tambah_lh_5_1g);
+app.post('/tambah_lh_5_1g/add', sistem.save_lh_5_1g);
+app.get('/edit_lh_5_1g/edit/:id', sistem.edit_lh_5_1g);
+app.post('/edit_lh_5_1g/edit/:id', sistem.save_edit_lh_5_1g);
+app.get('/edit_lh_5_1g/delete/:id', sistem.delete_lh_5_1g);
 /*==============================================================================*/
 /*==============Pengambilan Contoh Parameter Kualitas Lingkungan================*/
 app.get('/lh_5_2', sistem.lh_5_2);
-app.get('/tambah_lh_5_2', sistem.tambah_lh_5_2);
-app.get('/edit_lh_5_2', sistem.edit_lh_5_2);
+app.get('/tambah_lh_5_2/add', sistem.tambah_lh_5_2);
+app.post('/tambah_lh_5_2/add', sistem.save_lh_5_2);
+app.get('/edit_lh_5_2/edit/:id', sistem.edit_lh_5_2);
+app.post('/edit_lh_5_2/edit/:id', sistem.save_edit_lh_5_2);
+app.get('/edit_lh_5_2/delete/:id', sistem.delete_lh_5_2);
 /*==============================================================================*/
 /*===================================Honorarium=================================*/
 app.get('/lh_5_3', sistem.lh_5_3);
-app.get('/tambah_lh_5_3', sistem.tambah_lh_5_3);
-app.get('/edit_lh_5_3', sistem.edit_lh_5_3);
+app.get('/tambah_lh_5_3/add', sistem.tambah_lh_5_3);
+app.post('/tambah_lh_5_3/add', sistem.save_lh_5_3);
+app.get('/edit_lh_5_3/edit/:id', sistem.edit_lh_5_3);
+app.post('/edit_lh_5_3/edit/:id', sistem.save_edit_lh_5_3);
+app.get('/edit_lh_5_3/delete/:id', sistem.delete_lh_5_3);
 /*==============================================================================*/
 
 /*=================================Kearsipan====================================*/
