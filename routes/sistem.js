@@ -6015,7 +6015,19 @@ exports.kearsipan = function(req, res){
 /*============================Standar Biaya Satuan Pembenahan Arsip===========================*/
 /*Render Tabel*/
 exports.arsip_6_1 = function(req, res){
-    res.render('kearsipan/arsip_6_1', {title: 'Kearsipan'});
+      req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 119", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kearsipan/arsip_6_1', {
+                title: 'Kearsipan',
+                page_title: "Kearsipan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6023,15 +6035,122 @@ exports.tambah_arsip_6_1 = function(req, res){
     res.render('kearsipan/tambah_arsip_6_1', {title: 'Kearsipan'});
 };
 
+/* Save Data arsip_6_1 */
+exports.save_arsip_6_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 119
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/arsip_6_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_arsip_6_1 = function(req, res){
-    res.render('kearsipan/edit_arsip_6_1', {title: 'Kearsipan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kearsipan/edit_arsip_6_1',{
+                title : 'Edit arsip_6_1',
+                page_title:"Edit arsip_6_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit arsip_6_1 */
+exports.save_edit_arsip_6_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/arsip_6_1');
+          
+        });
+    
+    });
+};
+
+/* Delete arsip_6_1*/
+exports.delete_arsip_6_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/arsip_6_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*======================Standar Biaya Pemeliharaan dan Perawatan Arsip========================*/
 /*Render Tabel*/
 exports.arsip_6_2 = function(req, res){
-    res.render('kearsipan/arsip_6_2', {title: 'Kearsipan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 120", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kearsipan/arsip_6_2', {
+                title: 'Kearsipan',
+                page_title: "Kearsipan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6039,15 +6158,122 @@ exports.tambah_arsip_6_2 = function(req, res){
     res.render('kearsipan/tambah_arsip_6_2', {title: 'Kearsipan'});
 };
 
+/* Save Data arsip_6_2 */
+exports.save_arsip_6_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 120
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/arsip_6_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_arsip_6_2 = function(req, res){
-    res.render('kearsipan/edit_arsip_6_2', {title: 'Kearsipan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kearsipan/edit_arsip_6_2',{
+                title : 'Edit arsip_6_2',
+                page_title:"Edit arsip_6_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit arsip_6_2 */
+exports.save_edit_arsip_6_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/arsip_6_2');
+          
+        });
+    
+    });
+};
+
+/* Delete arsip_6_2*/
+exports.delete_arsip_6_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/arsip_6_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*============================Satuan Biaya Reproduksi dan Transkripsi=========================*/
 /*Render Tabel*/
 exports.arsip_6_3 = function(req, res){
-    res.render('kearsipan/arsip_6_3', {title: 'Kearsipan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM deatil1a WHERE detail1_id = 10", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kearsipan/arsip_6_3', {
+                title: 'Kearsipan',
+                page_title: "Kearsipan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6055,15 +6281,121 @@ exports.tambah_arsip_6_3 = function(req, res){
     res.render('kearsipan/tambah_arsip_6_3', {title: 'Kearsipan'});
 };
 
+/* Save Data arsip_6_3 */
+exports.save_arsip_6_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 10
+        };
+
+        var query = connection.query("INSERT INTO deatil1a set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/arsip_6_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_arsip_6_3 = function(req, res){
-    res.render('kearsipan/edit_arsip_6_3', {title: 'Kearsipan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM deatil1a WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kearsipan/edit_arsip_6_3',{
+                title : 'Edit arsip_6_3',
+                page_title:"Edit arsip_6_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit arsip_6_3 */
+exports.save_edit_arsip_6_3 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE deatil1a set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/arsip_6_3');
+          
+        });
+    
+    });
+};
+/* Delete arsip_6_3*/
+exports.delete_arsip_6_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM deatil1a WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/arsip_6_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================================Satuan Biaya Pembersihan Arsip=============================*/
 /*Render Tabel*/
 exports.arsip_6_4 = function(req, res){
-    res.render('kearsipan/arsip_6_4', {title: 'Kearsipan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 122", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kearsipan/arsip_6_4', {
+                title: 'Kearsipan',
+                page_title: "Kearsipan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6071,15 +6403,123 @@ exports.tambah_arsip_6_4 = function(req, res){
     res.render('kearsipan/tambah_arsip_6_4', {title: 'Kearsipan'});
 };
 
+/* Save Data arsip_6_4 */
+exports.save_arsip_6_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 122
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/arsip_6_4');
+        });
+    });
+
+};
+
+
 /* Edit Data */
 exports.edit_arsip_6_4 = function(req, res){
-    res.render('kearsipan/edit_arsip_6_4', {title: 'Kearsipan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kearsipan/edit_arsip_6_4',{
+                title : 'Edit arsip_6_4',
+                page_title:"Edit arsip_6_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit arsip_6_4 */
+exports.save_edit_arsip_6_4 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/arsip_6_4');
+          
+        });
+    
+    });
+};
+
+/* Delete arsip_6_4*/
+exports.delete_arsip_6_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/arsip_6_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=============================Satuan Biaya Jasa Penerjemahan Arsip===========================*/
 /*Render Tabel*/
 exports.arsip_6_5 = function(req, res){
-    res.render('kearsipan/arsip_6_5', {title: 'Kearsipan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 123", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kearsipan/arsip_6_5', {
+                title: 'Kearsipan',
+                page_title: "Kearsipan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6087,10 +6527,105 @@ exports.tambah_arsip_6_5 = function(req, res){
     res.render('kearsipan/tambah_arsip_6_5', {title: 'Kearsipan'});
 };
 
+/* Save Data arsip_6_5 */
+exports.save_arsip_6_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 123
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/arsip_6_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_arsip_6_5 = function(req, res){
-    res.render('kearsipan/edit_arsip_6_5', {title: 'Kearsipan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kearsipan/edit_arsip_6_5',{
+                title : 'Edit arsip_6_5',
+                page_title:"Edit arsip_6_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit arsip_6_5 */
+exports.save_edit_arsip_6_5 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/arsip_6_5');
+          
+        });
+    
+    });
+};
+
+/* Delete arsip_6_5*/
+exports.delete_arsip_6_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/arsip_6_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*===================================Bidang Perpustakaan======================================*/
@@ -6100,7 +6635,19 @@ exports.perpustakaan = function(req, res){
 /*==========================================Honorarium========================================*/
 /*Render Tabel*/
 exports.perpus_7_1 = function(req, res){
-    res.render('perpustakaan/perpus_7_1', {title: 'Perpustakaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 124", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perpustakaan/perpus_7_1', {
+                title: 'Perpustakaan',
+                page_title: "Perpustakaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6108,15 +6655,122 @@ exports.tambah_perpus_7_1 = function(req, res){
     res.render('perpustakaan/tambah_perpus_7_1', {title: 'Perpustakaan'});
 };
 
+/* Save Data perpus_7_1 */
+exports.save_perpus_7_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 124
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/perpus_7_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_perpus_7_1 = function(req, res){
-    res.render('perpustakaan/edit_perpus_7_1', {title: 'Perpustakaan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perpustakaan/edit_perpus_7_1',{
+                title : 'Edit perpus_7_1',
+                page_title:"Edit perpus_7_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit perpus_7_1 */
+exports.save_edit_perpus_7_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/perpus_7_1');
+          
+        });
+    
+    });
+};
+
+/* Delete perpus_7_1*/
+exports.delete_perpus_7_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/perpus_7_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*=================================Standar biaya jasa perpustakaan============================*/
 /*Render Tabel*/
 exports.perpus_7_2 = function(req, res){
-    res.render('perpustakaan/perpus_7_2', {title: 'Perpustakaan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 125", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('perpustakaan/perpus_7_2', {
+                title: 'Perpustakaan',
+                page_title: "Perpustakaan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -6124,10 +6778,105 @@ exports.tambah_perpus_7_2 = function(req, res){
     res.render('perpustakaan/tambah_perpus_7_2', {title: 'Perpustakaan'});
 };
 
+/* Save Data perpus_7_2 */
+exports.save_perpus_7_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 125
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/perpus_7_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_perpus_7_2 = function(req, res){
-    res.render('perpustakaan/edit_perpus_7_2', {title: 'Perpustakaan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('perpustakaan/edit_perpus_7_2',{
+                title : 'Edit perpus_7_2',
+                page_title:"Edit perpus_7_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit perpus_7_2 */
+exports.save_edit_perpus_7_2 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/perpus_7_2');
+          
+        });
+    
+    });
+};
+
+/* Delete perpus_7_2*/
+exports.delete_perpus_7_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/perpus_7_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*=======================================Bidang Perkebunan====================================*/

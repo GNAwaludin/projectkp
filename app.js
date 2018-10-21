@@ -523,41 +523,62 @@ app.get('/edit_lh_5_3/delete/:id', sistem.delete_lh_5_3);
 app.get('/kearsipan', sistem.kearsipan);
 /*======================Standar Biaya Satuan Pembenahan Arsip===================*/
 app.get('/arsip_6_1', sistem.arsip_6_1);
-app.get('/tambah_arsip_6_1', sistem.tambah_arsip_6_1);
-app.get('/edit_arsip_6_1', sistem.edit_arsip_6_1);
+app.get('/tambah_arsip_6_1/add', sistem.tambah_arsip_6_1);
+app.post('/tambah_arsip_6_1/add', sistem.save_arsip_6_1);
+app.get('/edit_arsip_6_1/edit/:id', sistem.edit_arsip_6_1);
+app.post('/edit_arsip_6_1/edit/:id', sistem.save_edit_arsip_6_1);
+app.get('/edit_arsip_6_1/delete/:id', sistem.delete_arsip_6_1);
 /*==============================================================================*/
 /*================Standar Biaya Pemeliharaan dan Perawatan Arsip================*/
 app.get('/arsip_6_2', sistem.arsip_6_2);
-app.get('/tambah_arsip_6_2', sistem.tambah_arsip_6_2);
-app.get('/edit_arsip_6_2', sistem.edit_arsip_6_2);
+app.get('/tambah_arsip_6_2/add', sistem.tambah_arsip_6_2);
+app.post('/tambah_arsip_6_2/add', sistem.save_arsip_6_2);
+app.get('/edit_arsip_6_2/edit/:id', sistem.edit_arsip_6_2);
+app.post('/edit_arsip_6_2/edit/:id', sistem.save_edit_arsip_6_2);
+app.get('/edit_arsip_6_2/delete/:id', sistem.delete_arsip_6_2);
 /*==============================================================================*/
 /*====================Satuan Biaya Reproduksi dan Transkripsi===================*/
 app.get('/arsip_6_3', sistem.arsip_6_3);
-app.get('/tambah_arsip_6_3', sistem.tambah_arsip_6_3);
-app.get('/edit_arsip_6_3', sistem.edit_arsip_6_3);
+app.get('/tambah_arsip_6_3/add', sistem.tambah_arsip_6_3);
+app.post('/tambah_arsip_6_3/add', sistem.save_arsip_6_3);
+app.get('/edit_arsip_6_3/edit/:id', sistem.edit_arsip_6_3);
+app.post('/edit_arsip_6_3/edit/:id', sistem.save_edit_arsip_6_3);
+app.get('/edit_arsip_6_3/delete/:id', sistem.delete_arsip_6_3);
 /*==============================================================================*/
 /*=========================Satuan Biaya Pembersihan Arsip=======================*/
 app.get('/arsip_6_4', sistem.arsip_6_4);
-app.get('/tambah_arsip_6_4', sistem.tambah_arsip_6_4);
-app.get('/edit_arsip_6_4', sistem.edit_arsip_6_4);
+app.get('/tambah_arsip_6_4/add', sistem.tambah_arsip_6_4);
+app.post('/tambah_arsip_6_4/add', sistem.save_arsip_6_4);
+app.get('/edit_arsip_6_4/edit/:id', sistem.edit_arsip_6_4);
+app.post('/edit_arsip_6_4/edit/:id', sistem.save_edit_arsip_6_4);
+app.get('/edit_arsip_6_4/delete/:id', sistem.delete_arsip_6_4);
 /*==============================================================================*/
 /*======================Satuan Biaya Jasa Penerjemahan Arsip====================*/
 app.get('/arsip_6_5', sistem.arsip_6_5);
-app.get('/tambah_arsip_6_5', sistem.tambah_arsip_6_5);
-app.get('/edit_arsip_6_5', sistem.edit_arsip_6_5);
+app.get('/tambah_arsip_6_5/add', sistem.tambah_arsip_6_5);
+app.post('/tambah_arsip_6_5/add', sistem.save_arsip_6_5);
+app.get('/edit_arsip_6_5/edit/:id', sistem.edit_arsip_6_5);
+app.post('/edit_arsip_6_5/edit/:id', sistem.save_edit_arsip_6_5);
+app.get('/edit_arsip_6_5/delete/:id', sistem.delete_arsip_6_5);
 /*==============================================================================*/
 
 /*================================Perpustakaan==================================*/
 app.get('/perpustakaan', sistem.perpustakaan);
 /*=================================Honorarium===================================*/
 app.get('/perpus_7_1', sistem.perpus_7_1);
-app.get('/tambah_perpus_7_1', sistem.tambah_perpus_7_1);
-app.get('/edit_perpus_7_1', sistem.edit_perpus_7_1);
+app.get('/tambah_perpus_7_1/add', sistem.tambah_perpus_7_1);
+app.post('/tambah_perpus_7_1/add', sistem.save_perpus_7_1);
+app.get('/edit_perpus_7_1/edit/:id', sistem.edit_perpus_7_1);
+app.post('/edit_perpus_7_1/edit/:id', sistem.save_edit_perpus_7_1);
+app.get('/edit_perpus_7_1/delete/:id', sistem.delete_perpus_7_1);
 /*==============================================================================*/
 /*========================Standar biaya jasa perpustakaan=======================*/
 app.get('/perpus_7_2', sistem.perpus_7_2);
-app.get('/tambah_perpus_7_2', sistem.tambah_perpus_7_2);
-app.get('/edit_perpus_7_2', sistem.edit_perpus_7_2);
+app.get('/tambah_perpus_7_2/add', sistem.tambah_perpus_7_2);
+app.post('/tambah_perpus_7_2/add', sistem.save_perpus_7_2);
+app.get('/edit_perpus_7_2/edit/:id', sistem.edit_perpus_7_2);
+app.post('/edit_perpus_7_2/edit/:id', sistem.save_edit_perpus_7_2);
+app.get('/edit_perpus_7_2/delete/:id', sistem.delete_perpus_7_2);
 /*==============================================================================*/
 
 /*=================================Perkebunan===================================*/
