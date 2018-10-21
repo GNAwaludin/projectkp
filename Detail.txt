@@ -31,16 +31,16 @@
 4. Bidang 4
 - Tabel 4.1 (Detail 2)(DONE)
 ===============================
-5. Bidang 5
+5. Bidang 5 (DONE)
 - Tabel 5.1 (Detail 1C)
 - Tabel 5.2 (Detail 3)
 - Tabel 5.3 (Detail 9)
 ===============================
-6. Bidang 6
+6. Bidang 6 (DONE)
 - Tabel 6.1 - 6.2, 6.4 - 6.5 (Detail 2)
 - Tabel 6.3 (Detail 1A)
 ===============================
-7. Bidang 7
+7. Bidang 7 (DONE)
 - Tabel 7.1 - 7.2 (Detail 2) 
 ===============================
 8. Bidang 8
