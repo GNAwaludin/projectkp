@@ -10154,7 +10154,19 @@ exports.pariwisata = function(req, res){
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.budpar_9_1 = function(req, res){
-    res.render('pariwisata/budpar_9_1', {title: 'Kebudayaan dan Pariwisata'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 205", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('pariwisata/budpar_9_1', {
+                title: 'Kebudayaan dan Pariwisata',
+                page_title: "Kebudayaan dan Pariwisata", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10162,10 +10174,107 @@ exports.tambah_budpar_9_1 = function(req, res){
     res.render('pariwisata/tambah_budpar_9_1', {title: 'Kabudayaan dan Pariwisata'});
 };
 
+/* Save Data budpar_9_1 */
+exports.save_budpar_9_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 205
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/budpar_9_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_budpar_9_1 = function(req, res){
-    res.render('pariwisata/edit_budpar_9_1', {title: 'Kebudayaan dan Pariwisata'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('pariwisata/edit_budpar_9_1',{
+                title : 'Edit budpar_9_1',
+                page_title:"Edit budpar_9_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit budpar_9_1 */
+exports.save_edit_budpar_9_1 = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/budpar_9_1');
+          
+        });
+    
+    });
+};
+
+/* Delete budpar_9_1*/
+exports.delete_budpar_9_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/budpar_9_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*=================================Industri dan Perdagangan===================================*/
@@ -10175,7 +10284,19 @@ exports.indag = function(req, res){
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_1a = function(req, res){
-    res.render('indag/indag_10_1a', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 11", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1a', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10183,14 +10304,118 @@ exports.tambah_indag_10_1a = function(req, res){
     res.render('indag/tambah_indag_10_1a', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1a */
+exports.save_indag_10_1a = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 11
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1a');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_1a = function(req, res){
-    res.render('indag/edit_indag_10_1a', {title: 'Industri dan Perdagangan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1a',{
+                title : 'Edit indag_10_1a',
+                page_title:"Edit indag_10_1a",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit indag_10_1a */
+exports.save_edit_indag_10_1a = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1a');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1a*/
+exports.delete_indag_10_1a = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1a');
+             
+        });
+        
+     });
 };
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_1b = function(req, res){
-    res.render('indag/indag_10_1b', {title: 'Industri dan Perdagangan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 12", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1b', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10198,14 +10423,118 @@ exports.tambah_indag_10_1b = function(req, res){
     res.render('indag/tambah_indag_10_1b', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1b */
+exports.save_indag_10_1b = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 12
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1b');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_1b = function(req, res){
-    res.render('indag/edit_indag_10_1b', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1b',{
+                title : 'Edit indag_10_1b',
+                page_title:"Edit indag_10_1b",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit indag_10_1b */
+exports.save_edit_indag_10_1b = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1b');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1b*/
+exports.delete_indag_10_1b = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1b');
+             
+        });
+        
+     });
 };
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_1c = function(req, res){
-    res.render('indag/indag_10_1c', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 26", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1c', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10213,14 +10542,119 @@ exports.tambah_indag_10_1c = function(req, res){
     res.render('indag/tambah_indag_10_1c', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1c */
+exports.save_indag_10_1c = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 26
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1c');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_1c = function(req, res){
-    res.render('indag/edit_indag_10_1c', {title: 'Industri dan Perdagangan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1c',{
+                title : 'Edit indag_10_1c',
+                page_title:"Edit indag_10_1c",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_1c */
+exports.save_edit_indag_10_1c = function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1c');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1c*/
+exports.delete_indag_10_1c = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1c');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_1d = function(req, res){
-    res.render('indag/indag_10_1d', {title: 'Industri dan Perdagangan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 27", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1d', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10228,14 +10662,119 @@ exports.tambah_indag_10_1d = function(req, res){
     res.render('indag/tambah_indag_10_1d', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1d */
+exports.save_indag_10_1d = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 27
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1d');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_1d = function(req, res){
-    res.render('indag/edit_indag_10_1d', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1d',{
+                title : 'Edit indag_10_1d',
+                page_title:"Edit indag_10_1d",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_1d */
+exports.save_edit_indag_10_1d= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1d');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1d*/
+exports.delete_indag_10_1d = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1d');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_1e = function(req, res){
-    res.render('indag/indag_10_1e', {title: 'Industri dan Perdagangan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 28", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1e', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10243,14 +10782,119 @@ exports.tambah_indag_10_1e = function(req, res){
     res.render('indag/tambah_indag_10_1e', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1e */
+exports.save_indag_10_1e = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 28
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1e');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_1e = function(req, res){
-    res.render('indag/edit_indag_10_1e', {title: 'Industri dan Perdagangan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1e',{
+                title : 'Edit indag_10_1e',
+                page_title:"Edit indag_10_1e",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_1e */
+exports.save_edit_indag_10_1e= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1e');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1e*/
+exports.delete_indag_10_1e = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1e');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_1f = function(req, res){
-    res.render('indag/indag_10_1f', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 29", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1f', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10258,14 +10902,119 @@ exports.tambah_indag_10_1f = function(req, res){
     res.render('indag/tambah_indag_10_1f', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1f */
+exports.save_indag_10_1f = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 29
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1f');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_1f = function(req, res){
-    res.render('indag/edit_indag_10_1f', {title: 'Industri dan Perdagangan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1f',{
+                title : 'Edit indag_10_1f',
+                page_title:"Edit indag_10_1f",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_1f */
+exports.save_edit_indag_10_1f= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1f');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1f*/
+exports.delete_indag_10_1f = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1f');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_1g = function(req, res){
-    res.render('indag/indag_10_1g', {title: 'Industri dan Perdagangan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1d WHERE detail1_id = 13", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_1g', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10273,15 +11022,120 @@ exports.tambah_indag_10_1g = function(req, res){
     res.render('indag/tambah_indag_10_1g', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_1g */
+exports.save_indag_10_1g = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 13
+        };
+
+        var query = connection.query("INSERT INTO detail1d set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_1g');
+        });
+    });
+
+};
+
+
 /* Edit Data */
 exports.edit_indag_10_1g = function(req, res){
-    res.render('indag/edit_indag_10_1g', {title: 'Industri dan Perdagangan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1d WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_1g',{
+                title : 'Edit indag_10_1g',
+                page_title:"Edit indag_10_1g",data:rows
+            });
+                
+           
+         });
+         
+    }); 
+};
+
+/* Save Edit indag_10_1g */
+exports.save_edit_indag_10_1g= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail1d set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_1g');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_1g*/
+exports.delete_indag_10_1g = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1d WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_1g');
+             
+        });
+        
+     });
 };
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_2a = function(req, res){
-    res.render('indag/indag_10_2a', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM deatil1a WHERE detail1_id = 30", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_2a', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10289,14 +11143,121 @@ exports.tambah_indag_10_2a = function(req, res){
     res.render('indag/tambah_indag_10_2a', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_2a */
+exports.save_indag_10_2a = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 30
+        };
+
+        var query = connection.query("INSERT INTO deatil1a set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_2a');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_2a = function(req, res){
-    res.render('indag/edit_indag_10_2a', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM deatil1a WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_2a',{
+                title : 'Edit indag_10_2a',
+                page_title:"Edit indag_10_2a",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_2a */
+exports.save_edit_indag_10_2a= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE deatil1a set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_2a');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_2a*/
+exports.delete_indag_10_2a = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM deatil1a WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_2a');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.indag_10_2b = function(req, res){
-    res.render('indag/indag_10_2b', {title: 'Industri dan Perdagangan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM deatil1a WHERE detail1_id = 31", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_2b', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10304,15 +11265,122 @@ exports.tambah_indag_10_2b = function(req, res){
     res.render('indag/tambah_indag_10_2b', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_2b */
+exports.save_indag_10_2b = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 31
+        };
+
+        var query = connection.query("INSERT INTO deatil1a set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_2b');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_2b = function(req, res){
-    res.render('indag/edit_indag_10_2b', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM deatil1a WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_2b',{
+                title : 'Edit indag_10_2b',
+                page_title:"Edit indag_10_2b",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_2b */
+exports.save_edit_indag_10_2b= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE deatil1a set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_2b');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_2b*/
+exports.delete_indag_10_2b = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM deatil1a WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_2b');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_3 = function(req, res){
-    res.render('indag/indag_10_3', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 208", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_3', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10320,15 +11388,122 @@ exports.tambah_indag_10_3 = function(req, res){
     res.render('indag/tambah_indag_10_3', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_3 */
+exports.save_indag_10_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            kategori_id : 208,
+            keterangan : input.keterangan
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_3 = function(req, res){
-    res.render('indag/edit_indag_10_3', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_3',{
+                title : 'Edit indag_10_3',
+                page_title:"Edit indag_10_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_3 */
+exports.save_edit_indag_10_3= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_3');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_3*/
+exports.delete_indag_10_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_4 = function(req, res){
-    res.render('indag/indag_10_4', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 209", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_4', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10336,15 +11511,122 @@ exports.tambah_indag_10_4 = function(req, res){
     res.render('indag/tambah_indag_10_4', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_4 */
+exports.save_indag_10_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            kategori_id : 209,
+            keterangan : input.keterangan
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_4 = function(req, res){
-    res.render('indag/edit_indag_10_4', {title: 'Industri dan Perdagangan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_4',{
+                title : 'Edit indag_10_4',
+                page_title:"Edit indag_10_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_4 */
+exports.save_edit_indag_10_4= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_4');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_4*/
+exports.delete_indag_10_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_5 = function(req, res){
-    res.render('indag/indag_10_5', {title: 'Industri dan Perdagangan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 210", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_5', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10352,15 +11634,122 @@ exports.tambah_indag_10_5 = function(req, res){
     res.render('indag/tambah_indag_10_5', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_5 */
+exports.save_indag_10_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            kategori_id : 210,
+            keterangan : input.keterangan
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_5 = function(req, res){
-    res.render('indag/edit_indag_10_5', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_5',{
+                title : 'Edit indag_10_5',
+                page_title:"Edit indag_10_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_5 */
+exports.save_edit_indag_10_5= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_5');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_5*/
+exports.delete_indag_10_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_6 = function(req, res){
-    res.render('indag/indag_10_6', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 211", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_6', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10368,15 +11757,122 @@ exports.tambah_indag_10_6 = function(req, res){
     res.render('indag/tambah_indag_10_6', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_6 */
+exports.save_indag_10_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            kategori_id : 211,
+            keterangan : input.keterangan
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_6 = function(req, res){
-    res.render('indag/edit_indag_10_6', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_6',{
+                title : 'Edit indag_10_6',
+                page_title:"Edit indag_10_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_6 */
+exports.save_edit_indag_10_6= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_6');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_6*/
+exports.delete_indag_10_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_6');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.indag_10_7 = function(req, res){
-    res.render('indag/indag_10_7', {title: 'Industri dan Perdagangan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 212", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('indag/indag_10_7', {
+                title: 'Industri dan Perdagangan',
+                page_title: "Industri dan Perdagangan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10384,10 +11880,105 @@ exports.tambah_indag_10_7 = function(req, res){
     res.render('indag/tambah_indag_10_7', {title: 'Industri dan Perdagangan'});
 };
 
+/* Save Data indag_10_7 */
+exports.save_indag_10_7 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            kategori_id : 212,
+            keterangan : input.keterangan
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/indag_10_7');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_indag_10_7 = function(req, res){
-    res.render('indag/edit_indag_10_7', {title: 'Industri dan Perdagangan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('indag/edit_indag_10_7',{
+                title : 'Edit indag_10_7',
+                page_title:"Edit indag_10_7",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit indag_10_7 */
+exports.save_edit_indag_10_7= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/indag_10_7');
+          
+        });
+    
+    });
+};
+
+/* Delete indag_10_7*/
+exports.delete_indag_10_7 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/indag_10_7');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*================================Promosi dan Pnanaman Modal==================================*/
@@ -10397,7 +11988,19 @@ exports.promod = function(req, res){
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.promod_11_1a = function(req, res){
-    res.render('promod/promod_11_1a', {title: 'Promosi dan Pnanaman Modal'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 213", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1a', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -10405,10 +12008,107 @@ exports.tambah_promod_11_1a = function(req, res){
     res.render('promod/tambah_promod_11_1a', {title: 'Promosi dan Pnanaman Modal'});
 };
 
+/* Save Data promod_11_1a */
+exports.save_promod_11_1a = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 213
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1a');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_promod_11_1a = function(req, res){
-    res.render('promod/edit_promod_11_1a', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1a',{
+                title : 'Edit promod_11_1a',
+                page_title:"Edit promod_11_1a",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1a */
+exports.save_edit_promod_11_1a= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1a');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1a*/
+exports.delete_promod_11_1a = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1a');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1b = function(req, res){

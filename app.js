@@ -1511,82 +1511,132 @@ app.get('/edit_kebun_8_71c', sistem.edit_kebun_8_71c);
 app.get('/pariwisata', sistem.pariwisata);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/budpar_9_1', sistem.budpar_9_1);
-app.get('/tambah_budpar_9_1', sistem.tambah_budpar_9_1);
-app.get('/edit_budpar_9_1', sistem.edit_budpar_9_1);
+app.get('/tambah_budpar_9_1/add', sistem.tambah_budpar_9_1);
+app.post('/tambah_budpar_9_1/add', sistem.save_budpar_9_1);
+app.get('/edit_budpar_9_1/edit/:id', sistem.edit_budpar_9_1);
+app.post('/edit_budpar_9_1/edit/:id', sistem.save_edit_budpar_9_1);
+app.get('/edit_budpar_9_1/delete/:id', sistem.delete_budpar_9_1);
+
 /*==============================================================================*/
 
 /*=========================Industri dan Perdagangan=============================*/
 app.get('/indag', sistem.indag);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_1a', sistem.indag_10_1a);
-app.get('/tambah_indag_10_1a', sistem.tambah_indag_10_1a);
-app.get('/edit_indag_10_1a', sistem.edit_indag_10_1a);
+app.get('/tambah_indag_10_1a/add', sistem.tambah_indag_10_1a);
+app.post('/tambah_indag_10_1a/add', sistem.save_indag_10_1a);
+app.get('/edit_indag_10_1a/edit/:id', sistem.edit_indag_10_1a);
+app.post('/edit_indag_10_1a/edit/:id', sistem.save_edit_indag_10_1a);
+app.get('/edit_indag_10_1a/delete/:id', sistem.delete_indag_10_1a);
 
 app.get('/indag_10_1b', sistem.indag_10_1b);
-app.get('/tambah_indag_10_1b', sistem.tambah_indag_10_1b);
-app.get('/edit_indag_10_1b', sistem.edit_indag_10_1b);
+app.get('/tambah_indag_10_1b/add', sistem.tambah_indag_10_1b);
+app.post('/tambah_indag_10_1b/add', sistem.save_indag_10_1b);
+app.get('/edit_indag_10_1b/edit/:id', sistem.edit_indag_10_1b);
+app.post('/edit_indag_10_1b/edit/:id', sistem.save_edit_indag_10_1b);
+app.get('/edit_indag_10_1b/delete/:id', sistem.delete_indag_10_1b);
+
 
 app.get('/indag_10_1c', sistem.indag_10_1c);
-app.get('/tambah_indag_10_1c', sistem.tambah_indag_10_1c);
-app.get('/edit_indag_10_1c', sistem.edit_indag_10_1c);
+app.get('/tambah_indag_10_1c/add', sistem.tambah_indag_10_1c);
+app.post('/tambah_indag_10_1c/add', sistem.save_indag_10_1c);
+app.get('/edit_indag_10_1c/edit/:id', sistem.edit_indag_10_1c);
+app.post('/edit_indag_10_1c/edit/:id', sistem.save_edit_indag_10_1c);
+app.get('/edit_indag_10_1c/delete/:id', sistem.delete_indag_10_1c);
 
 app.get('/indag_10_1d', sistem.indag_10_1d);
-app.get('/tambah_indag_10_1d', sistem.tambah_indag_10_1d);
-app.get('/edit_indag_10_1d', sistem.edit_indag_10_1d);
+app.get('/tambah_indag_10_1d/add', sistem.tambah_indag_10_1d);
+app.post('/tambah_indag_10_1d/add', sistem.save_indag_10_1d);
+app.get('/edit_indag_10_1d/edit/:id', sistem.edit_indag_10_1d);
+app.post('/edit_indag_10_1d/edit/:id', sistem.save_edit_indag_10_1d);
+app.get('/edit_indag_10_1d/delete/:id', sistem.delete_indag_10_1d);
 
 app.get('/indag_10_1e', sistem.indag_10_1e);
-app.get('/tambah_indag_10_1e', sistem.tambah_indag_10_1e);
-app.get('/edit_indag_10_1e', sistem.edit_indag_10_1e);
+app.get('/tambah_indag_10_1e/add', sistem.tambah_indag_10_1e);
+app.post('/tambah_indag_10_1e/add', sistem.save_indag_10_1e);
+app.get('/edit_indag_10_1e/edit/:id', sistem.edit_indag_10_1e);
+app.post('/edit_indag_10_1e/edit/:id', sistem.save_edit_indag_10_1e);
+app.get('/edit_indag_10_1e/delete/:id', sistem.delete_indag_10_1e);
 
 app.get('/indag_10_1f', sistem.indag_10_1f);
-app.get('/tambah_indag_10_1f', sistem.tambah_indag_10_1f);
-app.get('/edit_indag_10_1f', sistem.edit_indag_10_1f);
+app.get('/tambah_indag_10_1f/add', sistem.tambah_indag_10_1f);
+app.post('/tambah_indag_10_1f/add', sistem.save_indag_10_1f);
+app.get('/edit_indag_10_1f/edit/:id', sistem.edit_indag_10_1f);
+app.post('/edit_indag_10_1f/edit/:id', sistem.save_edit_indag_10_1f);
+app.get('/edit_indag_10_1f/delete/:id', sistem.delete_indag_10_1f);
 
 app.get('/indag_10_1g', sistem.indag_10_1g);
-app.get('/tambah_indag_10_1g', sistem.tambah_indag_10_1g);
-app.get('/edit_indag_10_1g', sistem.edit_indag_10_1g);
+app.get('/tambah_indag_10_1g/add', sistem.tambah_indag_10_1g);
+app.post('/tambah_indag_10_1g/add', sistem.save_indag_10_1g);
+app.get('/edit_indag_10_1g/edit/:id', sistem.edit_indag_10_1g);
+app.post('/edit_indag_10_1g/edit/:id', sistem.save_edit_indag_10_1g);
+app.get('/edit_indag_10_1g/delete/:id', sistem.delete_indag_10_1g);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_2a', sistem.indag_10_2a);
-app.get('/tambah_indag_10_2a', sistem.tambah_indag_10_2a);
-app.get('/edit_indag_10_2a', sistem.edit_indag_10_2a);
+app.get('/tambah_indag_10_2a/add', sistem.tambah_indag_10_2a);
+app.post('/tambah_indag_10_2a/add', sistem.save_indag_10_2a);
+app.get('/edit_indag_10_2a/edit/:id', sistem.edit_indag_10_2a);
+app.post('/edit_indag_10_2a/edit/:id', sistem.save_edit_indag_10_2a);
+app.get('/edit_indag_10_2a/delete/:id', sistem.delete_indag_10_2a);
 
 app.get('/indag_10_2b', sistem.indag_10_2b);
-app.get('/tambah_indag_10_2b', sistem.tambah_indag_10_2b);
-app.get('/edit_indag_10_2b', sistem.edit_indag_10_2b);
+app.get('/tambah_indag_10_2b/add', sistem.tambah_indag_10_2b);
+app.post('/tambah_indag_10_2b/add', sistem.save_indag_10_2b);
+app.get('/edit_indag_10_2b/edit/:id', sistem.edit_indag_10_2b);
+app.post('/edit_indag_10_2b/edit/:id', sistem.save_edit_indag_10_2b);
+app.get('/edit_indag_10_2b/delete/:id', sistem.delete_indag_10_2b);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_3', sistem.indag_10_3);
-app.get('/tambah_indag_10_3', sistem.tambah_indag_10_3);
-app.get('/edit_indag_10_3', sistem.edit_indag_10_3);
+app.get('/tambah_indag_10_3/add', sistem.tambah_indag_10_3);
+app.post('/tambah_indag_10_3/add', sistem.save_indag_10_3);
+app.get('/edit_indag_10_3/edit/:id', sistem.edit_indag_10_3);
+app.post('/edit_indag_10_3/edit/:id', sistem.save_edit_indag_10_3);
+app.get('/edit_indag_10_3/delete/:id', sistem.delete_indag_10_3);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_4', sistem.indag_10_4);
-app.get('/tambah_indag_10_4', sistem.tambah_indag_10_4);
-app.get('/edit_indag_10_4', sistem.edit_indag_10_4);
+app.get('/tambah_indag_10_4/add', sistem.tambah_indag_10_4);
+app.post('/tambah_indag_10_4/add', sistem.save_indag_10_4);
+app.get('/edit_indag_10_4/edit/:id', sistem.edit_indag_10_4);
+app.post('/edit_indag_10_4/edit/:id', sistem.save_edit_indag_10_4);
+app.get('/edit_indag_10_4/delete/:id', sistem.delete_indag_10_4);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_5', sistem.indag_10_5);
-app.get('/tambah_indag_10_5', sistem.tambah_indag_10_5);
-app.get('/edit_indag_10_5', sistem.edit_indag_10_5);
+app.get('/tambah_indag_10_5/add', sistem.tambah_indag_10_5);
+app.post('/tambah_indag_10_5/add', sistem.save_indag_10_5);
+app.get('/edit_indag_10_5/edit/:id', sistem.edit_indag_10_5);
+app.post('/edit_indag_10_5/edit/:id', sistem.save_edit_indag_10_5);
+app.get('/edit_indag_10_5/delete/:id', sistem.delete_indag_10_5);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_6', sistem.indag_10_6);
-app.get('/tambah_indag_10_6', sistem.tambah_indag_10_6);
-app.get('/edit_indag_10_6', sistem.edit_indag_10_6);
+app.get('/tambah_indag_10_6/add', sistem.tambah_indag_10_6);
+app.post('/tambah_indag_10_6/add', sistem.save_indag_10_6);
+app.get('/edit_indag_10_6/edit/:id', sistem.edit_indag_10_6);
+app.post('/edit_indag_10_6/edit/:id', sistem.save_edit_indag_10_6);
+app.get('/edit_indag_10_6/delete/:id', sistem.delete_indag_10_6);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/indag_10_7', sistem.indag_10_7);
-app.get('/tambah_indag_10_7', sistem.tambah_indag_10_7);
-app.get('/edit_indag_10_7', sistem.edit_indag_10_7);
+app.get('/tambah_indag_10_7/add', sistem.tambah_indag_10_7);
+app.post('/tambah_indag_10_7/add', sistem.save_indag_10_7);
+app.get('/edit_indag_10_7/edit/:id', sistem.edit_indag_10_7);
+app.post('/edit_indag_10_7/edit/:id', sistem.save_edit_indag_10_7);
+app.get('/edit_indag_10_7/delete/:id', sistem.delete_indag_10_7);
 /*==============================================================================*/
 
 /*==========================Promosi dan Penanaman Modal=========================*/
 app.get('/promod', sistem.promod);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/promod_11_1a', sistem.promod_11_1a);
-app.get('/tambah_promod_11_1a', sistem.tambah_promod_11_1a);
-app.get('/edit_promod_11_1a', sistem.edit_promod_11_1a);
+app.get('/tambah_promod_11_1a/add', sistem.tambah_promod_11_1a);
+app.post('/tambah_promod_11_1a/add', sistem.save_promod_11_1a);
+app.get('/edit_promod_11_1a/edit/:id', sistem.edit_promod_11_1a);
+app.post('/edit_promod_11_1a/edit/:id', sistem.save_edit_promod_11_1a);
+app.get('/edit_promod_11_1a/delete/:id', sistem.delete_promod_11_1a);
 /*==============================================================================*/
 app.get('/promod_11_1b', sistem.promod_11_1b);
 app.get('/tambah_promod_11_1b', sistem.tambah_promod_11_1b);
