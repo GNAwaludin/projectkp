@@ -14,7 +14,7 @@
                   <a href="/tambah_perpus_7_2/add" class="btn btn-success" role="button">Tambah Data</a>
         </div>
          <div class="table-responsive">          
-            <table class="table">
+            <table class="table" id="perpus_7_2">
               <thead>
                 <tr>
                   <th>#</th>
@@ -54,6 +54,22 @@
             </table>
         </div>
        </div>
+       <button id="button-a" class="btn btn-danger" role="button">Open in Ms.Excel</button>
+
+       <script>
+         var wb = XLSX.utils.table_to_book(document.getElementById('perpus_7_2'),{sheet:"Sheet perpus_7_2"});
+         var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'binary'});
+           function s2ab(s) {
+                    var buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
+                    var view = new Uint8Array(buf);  //create uint8array as viewer
+                    for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF; //convert to octet
+                    return buf;
+                  }
+        $("#button-a").click(function(){
+            saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'Table 7_2 Perpustakaan.xlsx');
+          });
+       </script>
+
    	<script type="text/javascript" src="/../js/all.js"></script>
 </body>
 </html>

@@ -46,10 +46,10 @@
 8. Bidang 8
 - Tabel 8.1 - 8.71 (Detail 10)
 ===============================
-9. Bidang 9
+9. Bidang 9 (DONE)
 - Tabel 9.1 (Detail 9)
 ===============================
-10. Bidang 10
+10. Bidang 10 (DONE)
 - Tabel 10.1 (Detail 1D)
 - Tabel 10.2 (Detail 1A)
 - Tabel 10.3 - 10.7 (Detail 2)
