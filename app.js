@@ -1639,28 +1639,46 @@ app.post('/edit_promod_11_1a/edit/:id', sistem.save_edit_promod_11_1a);
 app.get('/edit_promod_11_1a/delete/:id', sistem.delete_promod_11_1a);
 /*==============================================================================*/
 app.get('/promod_11_1b', sistem.promod_11_1b);
-app.get('/tambah_promod_11_1b', sistem.tambah_promod_11_1b);
-app.get('/edit_promod_11_1b', sistem.edit_promod_11_1b);
+app.get('/tambah_promod_11_1b/add', sistem.tambah_promod_11_1b);
+app.post('/tambah_promod_11_1b/add', sistem.save_promod_11_1b);
+app.get('/edit_promod_11_1b/edit/:id', sistem.edit_promod_11_1b);
+app.post('/edit_promod_11_1b/edit/:id', sistem.save_edit_promod_11_1b);
+app.get('/edit_promod_11_1b/delete/:id', sistem.delete_promod_11_1b);
 /*==============================================================================*/
 app.get('/promod_11_1c', sistem.promod_11_1c);
-app.get('/tambah_promod_11_1c', sistem.tambah_promod_11_1c);
-app.get('/edit_promod_11_1c', sistem.edit_promod_11_1c);
+app.get('/tambah_promod_11_1c/add', sistem.tambah_promod_11_1c);
+app.post('/tambah_promod_11_1c/add', sistem.save_promod_11_1c);
+app.get('/edit_promod_11_1c/edit/:id', sistem.edit_promod_11_1c);
+app.post('/edit_promod_11_1c/edit/:id', sistem.save_edit_promod_11_1c);
+app.get('/edit_promod_11_1c/delete/:id', sistem.delete_promod_11_1c);
 /*==============================================================================*/
 app.get('/promod_11_1d', sistem.promod_11_1d);
-app.get('/tambah_promod_11_1d', sistem.tambah_promod_11_1d);
-app.get('/edit_promod_11_1d', sistem.edit_promod_11_1d);
+app.get('/tambah_promod_11_1d/add', sistem.tambah_promod_11_1d);
+app.post('/tambah_promod_11_1d/add', sistem.save_promod_11_1d);
+app.get('/edit_promod_11_1d/edit/:id', sistem.edit_promod_11_1d);
+app.post('/edit_promod_11_1d/edit/:id', sistem.save_edit_promod_11_1d);
+app.get('/edit_promod_11_1d/delete/:id', sistem.delete_promod_11_1d);
 /*==============================================================================*/
 app.get('/promod_11_1e', sistem.promod_11_1e);
-app.get('/tambah_promod_11_1e', sistem.tambah_promod_11_1e);
-app.get('/edit_promod_11_1e', sistem.edit_promod_11_1e);
+app.get('/tambah_promod_11_1e/add', sistem.tambah_promod_11_1e);
+app.post('/tambah_promod_11_1e/add', sistem.save_promod_11_1e);
+app.get('/edit_promod_11_1e/edit/:id', sistem.edit_promod_11_1e);
+app.post('/edit_promod_11_1e/edit/:id', sistem.save_edit_promod_11_1e);
+app.get('/edit_promod_11_1e/delete/:id', sistem.delete_promod_11_1e);
 /*==============================================================================*/
 app.get('/promod_11_1f', sistem.promod_11_1f);
-app.get('/tambah_promod_11_1f', sistem.tambah_promod_11_1f);
-app.get('/edit_promod_11_1f', sistem.edit_promod_11_1f);
+app.get('/tambah_promod_11_1f/add', sistem.tambah_promod_11_1f);
+app.post('/tambah_promod_11_1f/add', sistem.save_promod_11_1f);
+app.get('/edit_promod_11_1f/edit/:id', sistem.edit_promod_11_1f);
+app.post('/edit_promod_11_1f/edit/:id', sistem.save_edit_promod_11_1f);
+app.get('/edit_promod_11_1f/delete/:id', sistem.delete_promod_11_1f);
 /*==============================================================================*/
 app.get('/promod_11_1g', sistem.promod_11_1g);
-app.get('/tambah_promod_11_1g', sistem.tambah_promod_11_1g);
-app.get('/edit_promod_11_1g', sistem.edit_promod_11_1g);
+app.get('/tambah_promod_11_1g/add', sistem.tambah_promod_11_1g);
+app.post('/tambah_promod_11_1g/add', sistem.save_promod_11_1g);
+app.get('/edit_promod_11_1g/edit/:id', sistem.edit_promod_11_1g);
+app.post('/edit_promod_11_1g/edit/:id', sistem.save_edit_promod_11_1g);
+app.get('/edit_promod_11_1g/delete/:id', sistem.delete_promod_11_1g);
 /*==============================================================================*/
 
 /*=================================Informatika==================================*/
@@ -3271,33 +3289,51 @@ app.get('/edit_kehutanan_14_69b', sistem.edit_kehutanan_14_69b);
 app.get('/peternakan', sistem.peternakan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_1', sistem.peternakan_15_1);
-app.get('/tambah_peternakan_15_1', sistem.tambah_peternakan_15_1);
-app.get('/edit_peternakan_15_1', sistem.edit_peternakan_15_1);
+app.get('/tambah_peternakan_15_1/add', sistem.tambah_peternakan_15_1);
+app.post('/tambah_peternakan_15_1/add', sistem.save_peternakan_15_1);
+app.get('/edit_peternakan_15_1/edit/:id', sistem.edit_peternakan_15_1);
+app.post('/edit_peternakan_15_1/edit/:id', sistem.save_edit_peternakan_15_1);
+app.get('/edit_peternakan_15_1/delete/:id', sistem.delete_peternakan_15_1);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_2', sistem.peternakan_15_2);
-app.get('/tambah_peternakan_15_2', sistem.tambah_peternakan_15_2);
-app.get('/edit_peternakan_15_2', sistem.edit_peternakan_15_2);
+app.get('/tambah_peternakan_15_2/add', sistem.tambah_peternakan_15_2);
+app.post('/tambah_peternakan_15_2/add', sistem.save_peternakan_15_2);
+app.get('/edit_peternakan_15_2/edit/:id', sistem.edit_peternakan_15_2);
+app.post('/edit_peternakan_15_2/edit/:id', sistem.save_edit_peternakan_15_2);
+app.get('/edit_peternakan_15_2/delete/:id', sistem.delete_peternakan_15_2);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_3', sistem.peternakan_15_3);
-app.get('/tambah_peternakan_15_3', sistem.tambah_peternakan_15_3);
-app.get('/edit_peternakan_15_3', sistem.edit_peternakan_15_3);
+app.get('/tambah_peternakan_15_3/add', sistem.tambah_peternakan_15_3);
+app.post('/tambah_peternakan_15_3/add', sistem.save_peternakan_15_3);
+app.get('/edit_peternakan_15_3/edit/:id', sistem.edit_peternakan_15_3);
+app.post('/edit_peternakan_15_3/edit/:id', sistem.save_edit_peternakan_15_3);
+app.get('/edit_peternakan_15_3/delete/:id', sistem.delete_peternakan_15_3);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_4', sistem.peternakan_15_4);
-app.get('/tambah_peternakan_15_4', sistem.tambah_peternakan_15_4);
-app.get('/edit_peternakan_15_4', sistem.edit_peternakan_15_4);
+app.get('/tambah_peternakan_15_4/add', sistem.tambah_peternakan_15_4);
+app.post('/tambah_peternakan_15_4/add', sistem.save_peternakan_15_4);
+app.get('/edit_peternakan_15_4/edit/:id', sistem.edit_peternakan_15_4);
+app.post('/edit_peternakan_15_4/edit/:id', sistem.save_edit_peternakan_15_4);
+app.get('/edit_peternakan_15_4/delete/:id', sistem.delete_peternakan_15_4);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_5', sistem.peternakan_15_5);
-app.get('/tambah_peternakan_15_5', sistem.tambah_peternakan_15_5);
-app.get('/edit_peternakan_15_5', sistem.edit_peternakan_15_5);
+app.get('/tambah_peternakan_15_5/add', sistem.tambah_peternakan_15_5);
+app.post('/tambah_peternakan_15_5/add', sistem.save_peternakan_15_5);
+app.get('/edit_peternakan_15_5/edit/:id', sistem.edit_peternakan_15_5);
+app.post('/edit_peternakan_15_5/edit/:id', sistem.save_edit_peternakan_15_5);
+app.get('/edit_peternakan_15_5/delete/:id', sistem.delete_peternakan_15_5);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/peternakan_15_6', sistem.peternakan_15_6);
-app.get('/tambah_peternakan_15_6', sistem.tambah_peternakan_15_6);
-app.get('/edit_peternakan_15_6', sistem.edit_peternakan_15_6);
+app.get('/tambah_peternakan_15_6/add', sistem.tambah_peternakan_15_6);
+app.post('/tambah_peternakan_15_6/add', sistem.save_peternakan_15_6);
+app.get('/edit_peternakan_15_6/edit/:id', sistem.edit_peternakan_15_6);
+app.post('/edit_peternakan_15_6/edit/:id', sistem.save_edit_peternakan_15_6);
+app.get('/edit_peternakan_15_6/delete/:id', sistem.delete_peternakan_15_6);
 /*==============================================================================*/
 
 /*=================================Kesehatan====================================*/

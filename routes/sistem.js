@@ -12112,7 +12112,19 @@ exports.delete_promod_11_1a = function(req, res){
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1b = function(req, res){
-    res.render('promod/promod_11_1b', {title: 'Promosi dan Pnanaman Modal'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 214", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1b', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12120,14 +12132,123 @@ exports.tambah_promod_11_1b = function(req, res){
     res.render('promod/tambah_promod_11_1b', {title: 'Promosi dan Pnanaman Modal'});
 };
 
+/* Save Data promod_11_1b */
+exports.save_promod_11_1b = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 214
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1b');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_promod_11_1b = function(req, res){
-    res.render('promod/edit_promod_11_1b', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1b',{
+                title : 'Edit promod_11_1b',
+                page_title:"Edit promod_11_1b",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1b */
+exports.save_edit_promod_11_1b= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1b');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1b*/
+exports.delete_promod_11_1b = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1b');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1c = function(req, res){
-    res.render('promod/promod_11_1c', {title: 'Promosi dan Pnanaman Modal'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 215", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1c', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12135,14 +12256,123 @@ exports.tambah_promod_11_1c = function(req, res){
     res.render('promod/tambah_promod_11_1c', {title: 'Promosi dan Pnanaman Modal'});
 };
 
+/* Save Data promod_11_1c */
+exports.save_promod_11_1c = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 215
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1c');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_promod_11_1c = function(req, res){
-    res.render('promod/edit_promod_11_1c', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1c',{
+                title : 'Edit promod_11_1c',
+                page_title:"Edit promod_11_1c",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1c */
+exports.save_edit_promod_11_1c= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1c');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1c*/
+exports.delete_promod_11_1c = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1c');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1d = function(req, res){
-    res.render('promod/promod_11_1d', {title: 'Promosi dan Pnanaman Modal'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 216", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1d', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12150,14 +12380,123 @@ exports.tambah_promod_11_1d = function(req, res){
     res.render('promod/tambah_promod_11_1d', {title: 'Promosi dan Pnanaman Modal'});
 };
 
+/* Save Data promod_11_1d */
+exports.save_promod_11_1d = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 216
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1d');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_promod_11_1d = function(req, res){
-    res.render('promod/edit_promod_11_1d', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1d',{
+                title : 'Edit promod_11_1d',
+                page_title:"Edit promod_11_1d",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1d */
+exports.save_edit_promod_11_1d= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1d');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1c*/
+exports.delete_promod_11_1d = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1d');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1e = function(req, res){
-    res.render('promod/promod_11_1e', {title: 'Promosi dan Pnanaman Modal'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 217", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1e', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12165,29 +12504,247 @@ exports.tambah_promod_11_1e = function(req, res){
     res.render('promod/tambah_promod_11_1e', {title: 'Promosi dan Pnanaman Modal'});
 };
 
+/* Save Data promod_11_1e */
+exports.save_promod_11_1e = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 217
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1e');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_promod_11_1e = function(req, res){
-    res.render('promod/edit_promod_11_1e', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1e',{
+                title : 'Edit promod_11_1e',
+                page_title:"Edit promod_11_1e",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1e */
+exports.save_edit_promod_11_1e= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1e');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1e*/
+exports.delete_promod_11_1e = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1e');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1f = function(req, res){
-    res.render('promod/promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 218", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1f', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
 exports.tambah_promod_11_1f = function(req, res){
-    res.render('promod/tambah_promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+     res.render('promod/tambah_promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+};
+
+/* Save Data promod_11_1f */
+exports.save_promod_11_1f = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 218
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1f');
+        });
+    });
+
 };
 
 /* Edit Data */
 exports.edit_promod_11_1f = function(req, res){
-    res.render('promod/edit_promod_11_1f', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1f',{
+                title : 'Edit promod_11_1f',
+                page_title:"Edit promod_11_1f",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1f */
+exports.save_edit_promod_11_1f= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1f');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1f*/
+exports.delete_promod_11_1f = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1f');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*Render Tabel*/
 exports.promod_11_1g = function(req, res){
-    res.render('promod/promod_11_1g', {title: 'Promosi dan Pnanaman Modal'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 219", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('promod/promod_11_1g', {
+                title: 'Promosi dan Penanaman Modal',
+                page_title: "Promosi dan Penanaman Modal", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -12195,10 +12752,107 @@ exports.tambah_promod_11_1g = function(req, res){
     res.render('promod/tambah_promod_11_1g', {title: 'Promosi dan Pnanaman Modal'});
 };
 
+/* Save Data promod_11_1g */
+exports.save_promod_11_1g = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 219
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/promod_11_1g');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_promod_11_1g = function(req, res){
-    res.render('promod/edit_promod_11_1g', {title: 'Promosi dan Pnanaman Modal'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('promod/edit_promod_11_1g',{
+                title : 'Edit promod_11_1g',
+                page_title:"Edit promod_11_1g",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit promod_11_1g */
+exports.save_edit_promod_11_1g= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/promod_11_1g');
+          
+        });
+    
+    });
+};
+
+/* Delete promod_11_1g*/
+exports.delete_promod_11_1g = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/promod_11_1g');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*========================================Informatika=========================================*/
@@ -17377,7 +18031,19 @@ exports.peternakan = function(req, res){
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_1 = function(req, res){
-    res.render('peternakan/peternakan_15_1', {title: 'Peternakan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail14 WHERE kategori_id = 220", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('peternakan/peternakan_15_1', {
+                title: 'Peternakan',
+                page_title: "Peternakan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -17385,15 +18051,122 @@ exports.tambah_peternakan_15_1 = function(req, res){
     res.render('peternakan/tambah_peternakan_15_1', {title: 'Peternakan'});
 };
 
+/* Save Data peternakan_15_1 */
+exports.save_peternakan_15_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 220
+        };
+
+        var query = connection.query("INSERT INTO detail14 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/peternakan_15_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_peternakan_15_1 = function(req, res){
-    res.render('peternakan/edit_peternakan_15_1', {title: 'Peternakan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail14 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('peternakan/edit_peternakan_15_1',{
+                title : 'Edit peternakan_15_1',
+                page_title:"Edit peternakan_15_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit peternakan_15_1 */
+exports.save_edit_peternakan_15_1= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail14 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/peternakan_15_1');
+          
+        });
+    
+    });
+};
+
+/* Delete peternakan_15_1*/
+exports.delete_peternakan_15_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail14 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/peternakan_15_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_2 = function(req, res){
-    res.render('peternakan/peternakan_15_2', {title: 'Peternakan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 221", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('peternakan/peternakan_15_2', {
+                title: 'Peternakan',
+                page_title: "Peternakan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -17401,15 +18174,122 @@ exports.tambah_peternakan_15_2 = function(req, res){
     res.render('peternakan/tambah_peternakan_15_2', {title: 'Peternakan'});
 };
 
+/* Save Data peternakan_15_2 */
+exports.save_peternakan_15_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 221
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/peternakan_15_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_peternakan_15_2 = function(req, res){
-    res.render('peternakan/edit_peternakan_15_2', {title: 'Peternakan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('peternakan/edit_peternakan_15_2',{
+                title : 'Edit peternakan_15_2',
+                page_title:"Edit peternakan_15_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit peternakan_15_2 */
+exports.save_edit_peternakan_15_2= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/peternakan_15_2');
+          
+        });
+    
+    });
+};
+
+/* Delete peternakan_15_2*/
+exports.delete_peternakan_15_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/peternakan_15_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_3 = function(req, res){
-    res.render('peternakan/peternakan_15_3', {title: 'Peternakan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 222", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('peternakan/peternakan_15_3', {
+                title: 'Peternakan',
+                page_title: "Peternakan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -17417,15 +18297,122 @@ exports.tambah_peternakan_15_3 = function(req, res){
     res.render('peternakan/tambah_peternakan_15_3', {title: 'Peternakan'});
 };
 
+/* Save Data peternakan_15_3 */
+exports.save_peternakan_15_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 222
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/peternakan_15_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_peternakan_15_3 = function(req, res){
-    res.render('peternakan/edit_peternakan_15_3', {title: 'Peternakan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('peternakan/edit_peternakan_15_3',{
+                title : 'Edit peternakan_15_3',
+                page_title:"Edit peternakan_15_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit peternakan_15_3 */
+exports.save_edit_peternakan_15_3= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/peternakan_15_3');
+          
+        });
+    
+    });
+};
+
+/* Delete peternakan_15_3*/
+exports.delete_peternakan_15_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/peternakan_15_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_4 = function(req, res){
-    res.render('peternakan/peternakan_15_4', {title: 'Peternakan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail10 WHERE kategori_id = 223", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('peternakan/peternakan_15_4', {
+                title: 'Peternakan',
+                page_title: "Peternakan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -17433,15 +18420,126 @@ exports.tambah_peternakan_15_4 = function(req, res){
     res.render('peternakan/tambah_peternakan_15_4', {title: 'Peternakan'});
 };
 
+/* Save Data peternakan_15_4 */
+exports.save_peternakan_15_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 223
+        };
+
+        var query = connection.query("INSERT INTO detail10 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/peternakan_15_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_peternakan_15_4 = function(req, res){
-    res.render('peternakan/edit_peternakan_15_4', {title: 'Peternakan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail10 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('peternakan/edit_peternakan_15_4',{
+                title : 'Edit peternakan_15_4',
+                page_title:"Edit peternakan_15_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit peternakan_15_4 */
+exports.save_edit_peternakan_15_4= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail10 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/peternakan_15_4');
+          
+        });
+    
+    });
+};
+
+/* Delete peternakan_15_4*/
+exports.delete_peternakan_15_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail10 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/peternakan_15_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_5 = function(req, res){
-    res.render('peternakan/peternakan_15_5', {title: 'Peternakan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail10 WHERE kategori_id = 224", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('peternakan/peternakan_15_5', {
+                title: 'Peternakan',
+                page_title: "Peternakan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -17449,15 +18547,126 @@ exports.tambah_peternakan_15_5 = function(req, res){
     res.render('peternakan/tambah_peternakan_15_5', {title: 'Peternakan'});
 };
 
+/* Save Data peternakan_15_5 */
+exports.save_peternakan_15_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 224
+        };
+
+        var query = connection.query("INSERT INTO detail10 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/peternakan_15_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_peternakan_15_5 = function(req, res){
-    res.render('peternakan/edit_peternakan_15_5', {title: 'Peternakan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail10 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('peternakan/edit_peternakan_15_5',{
+                title : 'Edit peternakan_15_5',
+                page_title:"Edit peternakan_15_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit peternakan_15_5 */
+exports.save_edit_peternakan_15_5= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail10 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/peternakan_15_5');
+          
+        });
+    
+    });
+};
+
+/* Delete peternakan_15_5*/
+exports.delete_peternakan_15_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail10 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/peternakan_15_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.peternakan_15_6 = function(req, res){
-    res.render('peternakan/peternakan_15_6', {title: 'Peternakan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail1c WHERE detail1_id = 32", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('peternakan/peternakan_15_6', {
+                title: 'Peternakan',
+                page_title: "Peternakan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -17465,10 +18674,107 @@ exports.tambah_peternakan_15_6 = function(req, res){
     res.render('peternakan/tambah_peternakan_15_6', {title: 'Peternakan'});
 };
 
+/* Save Data peternakan_15_6 */
+exports.save_peternakan_15_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            detail1_id : 32
+        };
+
+        var query = connection.query("INSERT INTO detail1c set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/peternakan_15_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_peternakan_15_6 = function(req, res){
-    res.render('peternakan/edit_peternakan_15_6', {title: 'Peternakan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail1c WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('peternakan/edit_peternakan_15_6',{
+                title : 'Edit peternakan_15_6',
+                page_title:"Edit peternakan_15_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit peternakan_15_6 */
+exports.save_edit_peternakan_15_6= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nama3 : input.nama3,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail1c set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/peternakan_15_6');
+          
+        });
+    
+    });
+};
+
+/* Delete peternakan_15_6*/
+exports.delete_peternakan_15_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail1c WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/peternakan_15_6');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*
 
 /*========================================Kesehatan===========================================*/
