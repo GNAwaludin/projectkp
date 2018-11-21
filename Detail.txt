@@ -43,7 +43,7 @@
 7. Bidang 7 (DONE)
 - Tabel 7.1 - 7.2 (Detail 2) 
 ===============================
-8. Bidang 8
+8. Bidang 8 (LEWAT)
 - Tabel 8.1 - 8.71 (Detail 10)
 ===============================
 9. Bidang 9 (DONE)
@@ -54,13 +54,13 @@
 - Tabel 10.2 (Detail 1A)
 - Tabel 10.3 - 10.7 (Detail 2)
 ===============================
-11. Bidang 11
+11. Bidang 11 (DONE)
 - Tabel 11.1 (Detail 9)
 ===============================
-12. Bidang 12
+12. Bidang 12 (LEWAT)
 - Dilewat Sementara
 ===============================
-13. Bidang 13**
+13. Bidang 13** (LEWAT)
 - Tabel 13.1 - 13.2, 13.5 - 13.8 (Detail 10) + Benih (Detail 3)
 - Tabel 13.3 - 13.4 (Detail 1E)
 - Tabel 13.9 - 13.10 (Detail 2)
@@ -69,7 +69,7 @@
 - Tabel 13.14 (Detail 11)
 - Tabel 13.15 (Dilewat Sementara)
 ===============================
-14. Bidang 14**
+14. Bidang 14** (LEWAT)
 - Tabel 14.1 - 14.21, 14.28 - 14.30 (Detail 12)
 - Tabel 14.22 - 14.27 (Detail 13)
 - Tabel 14.31 - 14.34 (Detail 14)
@@ -78,13 +78,13 @@
 - tabel 14.37 - 14.38 (Detail 9)
 - Tabel 14.39 - 14.69 (Detail 2)
 ===============================
-15. Bidang 15
-- Tabel 15.1 (Detail 15)
+15. Bidang 15 (DONE)
+- Tabel 15.1 (Detail 14)
 - Tabel 15.2 - 15.3 (Detail 2)
 - Tabel 15.4 - 15.5 (Detail 10)
-- Tabel 15.6 (Detail 1A)
+- Tabel 15.6 (Detail 1C)
 ===============================
-16. Bidang 16**
+16. Bidang 16** (LEWAT)
 - Tabel 16.1 (Detail 2)
 ===============================
 17. Bidang 17

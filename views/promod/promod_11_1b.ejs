@@ -11,7 +11,49 @@
     <div class="page-container">
         <div class="page-data">
             <h3>Sewa Stand di Luar Negeri</h3>
-                  <a href="/tambah_promod_11_1b" class="btn btn-success" role="button">Tambah Data</a>
+                  <a href="/tambah_promod_11_1b/add" class="btn btn-success" role="button">Tambah Data</a>
+        </div>
+         <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Jenis Kegiatan</th>
+                  <th>Satuan</th>
+                  <th>Besaran Biaya Min (Rp)</th>
+                  <th>Besaran Biaya Max (Rp)</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nama2%></td>
+                    <td><%=data[i].nilai1%></td>
+                    <td><%=data[i].nilai2%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_promod_11_1b/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_promod_11_1b/delete/<%=data[i].id%>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
         </div>
         </div>
        </div>
