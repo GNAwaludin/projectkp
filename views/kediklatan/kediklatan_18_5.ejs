@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+    <% include templates/head.ejs %>
+</head>
+<body>
+    <% include templates/header.ejs %>
+	<div id="wrapper">
+	<div class="page-header-data"><h2>Bidang Kediklatan</h2></div>
+    <div class="page-container">
+        <div class="page-data">
+            <h3>Pendidikan dan Pelatihan Kepemimpinan</h3>
+                  <a href="/tambah_kediklatan_18_5/add" class="btn btn-success" role="button">Tambah Data</a>
+        </div>
+        <div class="table-responsive">          
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Komponen</th>
+                  <th>Satuan</th>
+                  <th>Tenaga Ahli (Rp.)</th>
+                  <th>Tenaga Terampil (Rp.)</th>
+                  <th>Keterangan</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if(data.length){
+
+                  for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].nama1%></td>
+                    <td><%=data[i].nama2%></td>
+                    <td><%=data[i].nilai1%></td>
+                    <td><%=data[i].nilai2%></td>
+                    <td><%=data[i].keterangan%></td>
+                    <td>
+                        <a class="a-inside edit" href="../edit_kediklatan_18_5/edit/<%=data[i].id%>">Edit</a>
+
+                        <a class="a-inside delete" href="../edit_kediklatan_18_5/delete/<%=data[i].id%>">Delete</a>
+
+                    </td>
+                </tr>
+            <% }
+
+              }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+            <% } %>
+              </tbody>
+            </table>
+        </div>
+        </div>
+       </div>
+   	<script type="text/javascript" src="/../js/all.js"></script>
+</body>
+</html>

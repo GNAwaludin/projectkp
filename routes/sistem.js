@@ -18784,7 +18784,19 @@ exports.kesehatan = function(req, res){
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_1 = function(req, res){
-    res.render('kesehatan/kesehatan_17_1', {title: 'Kesehatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail10 WHERE kategori_id = 226", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kesehatan/kesehatan_17_1', {
+                title: 'Kesehatan',
+                page_title: "Kesehatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18792,15 +18804,126 @@ exports.tambah_kesehatan_17_1 = function(req, res){
     res.render('kesehatan/tambah_kesehatan_17_1', {title: 'Kesehatan'});
 };
 
+/* Save Data kesehatan_17_1 */
+exports.save_kesehatan_17_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 226
+        };
+
+        var query = connection.query("INSERT INTO detail10 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kesehatan_17_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kesehatan_17_1 = function(req, res){
-    res.render('kesehatan/edit_kesehatan_17_1', {title: 'Kesehatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail10 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kesehatan/edit_kesehatan_17_1',{
+                title : 'Edit kesehatan_17_1',
+                page_title:"Edit kesehatan_17_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kesehatan_17_1 */
+exports.save_edit_kesehatan_17_1= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail10 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kesehatan_17_1');
+          
+        });
+    
+    });
+};
+
+/* Delete kesehatan_17_1*/
+exports.delete_kesehatan_17_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail10 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kesehatan_17_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_2 = function(req, res){
-    res.render('kesehatan/kesehatan_17_2', {title: 'Kesehatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 227", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kesehatan/kesehatan_17_2', {
+                title: 'Kesehatan',
+                page_title: "Kesehatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18808,15 +18931,129 @@ exports.tambah_kesehatan_17_2 = function(req, res){
     res.render('kesehatan/tambah_kesehatan_17_2', {title: 'Kesehatan'});
 };
 
+
+/* Save Data kesehatan_17_2 */
+exports.save_kesehatan_17_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 227
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kesehatan_17_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kesehatan_17_2 = function(req, res){
-    res.render('kesehatan/edit_kesehatan_17_2', {title: 'Kesehatan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kesehatan/edit_kesehatan_17_2',{
+                title : 'Edit kesehatan_17_2',
+                page_title:"Edit kesehatan_17_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kesehatan_17_2 */
+exports.save_edit_kesehatan_17_2= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kesehatan_17_2');
+          
+        });
+    
+    });
+};
+
+/* Delete kesehatan_17_2*/
+exports.delete_kesehatan_17_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kesehatan_17_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_3 = function(req, res){
-    res.render('kesehatan/kesehatan_17_3', {title: 'Kesehatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 228", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kesehatan/kesehatan_17_3', {
+                title: 'Kesehatan',
+                page_title: "Kesehatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18824,15 +19061,128 @@ exports.tambah_kesehatan_17_3 = function(req, res){
     res.render('kesehatan/tambah_kesehatan_17_3', {title: 'Kesehatan'});
 };
 
+/* Save Data kesehatan_17_3 */
+exports.save_kesehatan_17_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 228
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kesehatan_17_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kesehatan_17_3 = function(req, res){
-    res.render('kesehatan/edit_kesehatan_17_3', {title: 'Kesehatan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kesehatan/edit_kesehatan_17_3',{
+                title : 'Edit kesehatan_17_3',
+                page_title:"Edit kesehatan_17_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kesehatan_17_2 */
+exports.save_edit_kesehatan_17_3= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kesehatan_17_3');
+          
+        });
+    
+    });
+};
+
+/* Delete kesehatan_17_3*/
+exports.delete_kesehatan_17_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kesehatan_17_3');
+             
+        });
+        
+     });
+}; 
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_4 = function(req, res){
-    res.render('kesehatan/kesehatan_17_4', {title: 'Kesehatan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 229", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kesehatan/kesehatan_17_4', {
+                title: 'Kesehatan',
+                page_title: "Kesehatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18840,15 +19190,124 @@ exports.tambah_kesehatan_17_4 = function(req, res){
     res.render('kesehatan/tambah_kesehatan_17_4', {title: 'Kesehatan'});
 };
 
+/* Save Data kesehatan_17_4 */
+exports.save_kesehatan_17_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 229
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kesehatan_17_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kesehatan_17_4 = function(req, res){
-    res.render('kesehatan/edit_kesehatan_17_4', {title: 'Kesehatan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kesehatan/edit_kesehatan_17_4',{
+                title : 'Edit kesehatan_17_4',
+                page_title:"Edit kesehatan_17_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kesehatan_17_4 */
+exports.save_edit_kesehatan_17_4= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kesehatan_17_4');
+          
+        });
+    
+    });
+};
+
+/* Delete kesehatan_17_4*/
+exports.delete_kesehatan_17_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kesehatan_17_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_5 = function(req, res){
-    res.render('kesehatan/kesehatan_17_5', {title: 'Kesehatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail15 WHERE kategori_id = 230", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kesehatan/kesehatan_17_5', {
+                title: 'Kesehatan',
+                page_title: "Kesehatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18856,15 +19315,120 @@ exports.tambah_kesehatan_17_5 = function(req, res){
     res.render('kesehatan/tambah_kesehatan_17_5', {title: 'Kesehatan'});
 };
 
+/* Save Data kesehatan_17_5 */
+exports.save_kesehatan_17_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 230
+        };
+
+        var query = connection.query("INSERT INTO detail15 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kesehatan_17_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kesehatan_17_5 = function(req, res){
-    res.render('kesehatan/edit_kesehatan_17_5', {title: 'Kesehatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail15 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kesehatan/edit_kesehatan_17_5',{
+                title : 'Edit kesehatan_17_5',
+                page_title:"Edit kesehatan_17_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kesehatan_17_5 */
+exports.save_edit_kesehatan_17_5= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail15 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kesehatan_17_5');
+          
+        });
+    
+    });
+};
+
+/* Delete kesehatan_17_5*/
+exports.delete_kesehatan_17_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail15 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kesehatan_17_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kesehatan_17_6 = function(req, res){
-    res.render('kesehatan/kesehatan_17_6', {title: 'Kesehatan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 231", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kesehatan/kesehatan_17_6', {
+                title: 'Kesehatan',
+                page_title: "Kesehatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18872,10 +19436,105 @@ exports.tambah_kesehatan_17_6 = function(req, res){
     res.render('kesehatan/tambah_kesehatan_17_6', {title: 'Kesehatan'});
 };
 
+/* Save Data kesehatan_17_6 */
+exports.save_kesehatan_17_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 231
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kesehatan_17_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kesehatan_17_6 = function(req, res){
-    res.render('kesehatan/edit_kesehatan_17_6', {title: 'Kesehatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kesehatan/edit_kesehatan_17_6',{
+                title : 'Edit kesehatan_17_6',
+                page_title:"Edit kesehatan_17_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kesehatan_17_6 */
+exports.save_edit_kesehatan_17_6= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kesehatan_17_6');
+          
+        });
+    
+    });
+};
+
+/* Delete kesehatan_17_6*/
+exports.delete_kesehatan_17_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kesehatan_17_6');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*========================================Kediklatan==========================================*/
@@ -18885,7 +19544,19 @@ exports.kediklatan = function(req, res){
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_1 = function(req, res){
-    res.render('kediklatan/kediklatan_18_1', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 232", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_1', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18893,15 +19564,122 @@ exports.tambah_kediklatan_18_1 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_1', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_1 */
+exports.save_kediklatan_18_1 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 232
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_1');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_1 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_1', {title: 'Kediklatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_1',{
+                title : 'Edit kediklatan_18_1',
+                page_title:"Edit kediklatan_18_1",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_1 */
+exports.save_edit_kediklatan_18_1= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_1');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_1*/
+exports.delete_kediklatan_18_1 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_1');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_2 = function(req, res){
-    res.render('kediklatan/kediklatan_18_2', {title: 'Kediklatan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail2 WHERE kategori_id = 233", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_2', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18909,15 +19687,122 @@ exports.tambah_kediklatan_18_2 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_2', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_2 */
+exports.save_kediklatan_18_2 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 233
+        };
+
+        var query = connection.query("INSERT INTO detail2 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_2');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_2 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_2', {title: 'Kediklatan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail2 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_2',{
+                title : 'Edit kediklatan_18_2',
+                page_title:"Edit kediklatan_18_2",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_2 */
+exports.save_edit_kediklatan_18_2= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail2 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_2');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_2*/
+exports.delete_kediklatan_18_2 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail2 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_2');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_3 = function(req, res){
-    res.render('kediklatan/kediklatan_18_3', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail15 WHERE kategori_id = 234", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_3', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18925,15 +19810,120 @@ exports.tambah_kediklatan_18_3 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_3', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_3 */
+exports.save_kediklatan_18_3 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan,
+            kategori_id : 234
+        };
+
+        var query = connection.query("INSERT INTO detail15 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_3');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_3 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_3', {title: 'Kediklatan'});
+     var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail15 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_3',{
+                title : 'Edit kediklatan_18_3',
+                page_title:"Edit kediklatan_18_3",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_3 */
+exports.save_edit_kediklatan_18_3= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama : input.nama,
+            nilai : input.nilai,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail15 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_3');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_3*/
+exports.delete_kediklatan_18_3 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail15 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_3');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_4 = function(req, res){
-    res.render('kediklatan/kediklatan_18_4', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 235", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_4', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18941,15 +19931,128 @@ exports.tambah_kediklatan_18_4 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_4', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_4 */
+exports.save_kediklatan_18_4 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 235
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_4');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_4 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_4', {title: 'Kediklatan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_4',{
+                title : 'Edit kediklatan_18_4',
+                page_title:"Edit kediklatan_18_4",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_4 */
+exports.save_edit_kediklatan_18_4= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_4');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_4*/
+exports.delete_kediklatan_18_4 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_4');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_5 = function(req, res){
-    res.render('kediklatan/kediklatan_18_5', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 236", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_5', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18957,15 +20060,124 @@ exports.tambah_kediklatan_18_5 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_5', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_5 */
+exports.save_kediklatan_18_5 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 236
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_5');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_5 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_5', {title: 'Kediklatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_5',{
+                title : 'Edit kediklatan_18_5',
+                page_title:"Edit kediklatan_18_5",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_5 */
+exports.save_edit_kediklatan_18_5= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_5');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_5*/
+exports.delete_kediklatan_18_5 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_5');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_6 = function(req, res){
-    res.render('kediklatan/kediklatan_18_6', {title: 'Kediklatan'});
+     req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 237", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_6', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18973,15 +20185,128 @@ exports.tambah_kediklatan_18_6 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_6', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_6 */
+exports.save_kediklatan_18_6 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 237
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_6');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_6 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_6', {title: 'Kediklatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_6',{
+                title : 'Edit kediklatan_18_6',
+                page_title:"Edit kediklatan_18_6",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_6 */
+exports.save_edit_kediklatan_18_6= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_6');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_6*/
+exports.delete_kediklatan_18_6 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_6');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_7 = function(req, res){
-    res.render('kediklatan/kediklatan_18_7', {title: 'Kediklatan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 238", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_7', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -18989,15 +20314,128 @@ exports.tambah_kediklatan_18_7 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_7', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_7 */
+exports.save_kediklatan_18_7 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 238
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_7');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_7 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_7', {title: 'Kediklatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_7',{
+                title : 'Edit kediklatan_18_7',
+                page_title:"Edit kediklatan_18_7",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_7 */
+exports.save_edit_kediklatan_18_7= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_7');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_7*/
+exports.delete_kediklatan_18_7 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_7');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_8 = function(req, res){
-    res.render('kediklatan/kediklatan_18_8', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 239", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_8', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -19005,15 +20443,124 @@ exports.tambah_kediklatan_18_8 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_8', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_8 */
+exports.save_kediklatan_18_8 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 239
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_8');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_8 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_8', {title: 'Kediklatan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_8',{
+                title : 'Edit kediklatan_18_8',
+                page_title:"Edit kediklatan_18_8",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_8 */
+exports.save_edit_kediklatan_18_8= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_8');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_8*/
+exports.delete_kediklatan_18_8 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_8');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_9 = function(req, res){
-    res.render('kediklatan/kediklatan_18_9', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail4 WHERE kategori_id = 240", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_9', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -19021,15 +20568,127 @@ exports.tambah_kediklatan_18_9 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_9', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_9 */
+exports.save_kediklatan_18_9 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan,
+            kategori_id : 240
+        };
+
+        var query = connection.query("INSERT INTO detail4 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_9');
+        });
+    });
+
+};
 /* Edit Data */
 exports.edit_kediklatan_18_9 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_9', {title: 'Kediklatan'});
+   var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail4 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_9',{
+                title : 'Edit kediklatan_18_9',
+                page_title:"Edit kediklatan_18_9",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_9 */
+exports.save_edit_kediklatan_18_9= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            nilai4 : input.nilai4,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail4 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_9');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_9*/
+exports.delete_kediklatan_18_9 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail4 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_9');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_10 = function(req, res){
-    res.render('kediklatan/kediklatan_18_10', {title: 'Kediklatan'});
+    req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail9 WHERE kategori_id = 241", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_10', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -19037,15 +20696,124 @@ exports.tambah_kediklatan_18_10 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_10', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_10 */
+exports.save_kediklatan_18_10 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan,
+            kategori_id : 241
+        };
+
+        var query = connection.query("INSERT INTO detail9 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_10');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_10 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_10', {title: 'Kediklatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail9 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_10',{
+                title : 'Edit kediklatan_18_10',
+                page_title:"Edit kediklatan_18_10",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_10*/
+exports.save_edit_kediklatan_18_10= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nama2 : input.nama2,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail9 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_10');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_10*/
+exports.delete_kediklatan_18_10 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail9 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_10');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 /*===============================Satuan Biaya Tenaga Teknis Khusus============================*/
 /*Render Tabel*/
 exports.kediklatan_18_11 = function(req, res){
-    res.render('kediklatan/kediklatan_18_11', {title: 'Kediklatan'});
+   req.getConnection(function(err, connection){
+
+        var query = connection.query("SELECT * FROM detail14 WHERE kategori_id = 242", function(err, rows){
+
+            if(err)
+                console.log("Error Selecting : %s ", err);
+
+            res.render('kediklatan/kediklatan_18_11', {
+                title: 'Kediklatan',
+                page_title: "Kediklatan", data:rows
+            });
+        });
+    });
 };
 
 /* Tambah Data */
@@ -19053,10 +20821,106 @@ exports.tambah_kediklatan_18_11 = function(req, res){
     res.render('kediklatan/tambah_kediklatan_18_11', {title: 'Kediklatan'});
 };
 
+/* Save Data kediklatan_18_11 */
+exports.save_kediklatan_18_11 = function(req, res){
+
+ var input = JSON.parse(JSON.stringify(req.body));
+
+    req.getConnection(function(err, connection){
+
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            nilai3 : input.nilai3,
+            keterangan : input.keterangan,
+            kategori_id : 242
+        };
+
+        var query = connection.query("INSERT INTO detail14 set ?", data, function(err, rows){
+
+            if(err)
+                console.log("Error Instering : %s", err);
+            res.redirect('/kediklatan_18_11');
+        });
+    });
+
+};
+
 /* Edit Data */
 exports.edit_kediklatan_18_11 = function(req, res){
-    res.render('kediklatan/edit_kediklatan_18_11', {title: 'Kediklatan'});
+    var id = req.params.id;
+    
+    req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM detail14 WHERE id = ?',[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('kediklatan/edit_kediklatan_18_11',{
+                title : 'Edit kediklatan_18_11',
+                page_title:"Edit kediklatan_18_11",data:rows
+            });
+                
+           
+         });
+         
+    }); 
 };
+
+/* Save Edit kediklatan_18_11*/
+exports.save_edit_kediklatan_18_11= function(req, res){
+
+    var input = JSON.parse(JSON.stringify(req.body));
+    var id = req.params.id;
+    
+    req.getConnection(function (err, connection) {
+        
+        var data = {
+
+            nama1 : input.nama1,
+            nilai1 : input.nilai1,
+            nilai2 : input.nilai2,
+            keterangan : input.keterangan
+        
+        };
+        
+        connection.query("UPDATE detail14 set ? WHERE id = ? ",[data,id], function(err, rows)
+        {
+  
+          if (err)
+              console.log("Error Updating : %s ",err );
+         
+          res.redirect('/kediklatan_18_11');
+          
+        });
+    
+    });
+};
+
+/* Delete kediklatan_18_11*/
+exports.delete_kediklatan_18_11 = function(req, res){
+
+    var id = req.params.id;
+    
+     req.getConnection(function (err, connection) {
+        
+        connection.query("DELETE FROM detail14 WHERE id = ? ",[id], function(err, rows)
+        {
+            
+             if(err)
+                 console.log("Error deleting : %s ",err );
+            
+             res.redirect('/kediklatan_18_11');
+             
+        });
+        
+     });
+};
+
 /*============================================================================================*/
 
 /*========================================Olahraga============================================*/
