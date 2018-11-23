@@ -3340,91 +3340,142 @@ app.get('/edit_peternakan_15_6/delete/:id', sistem.delete_peternakan_15_6);
 app.get('/kesehatan', sistem.kesehatan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_1', sistem.kesehatan_17_1);
-app.get('/tambah_kesehatan_17_1', sistem.tambah_kesehatan_17_1);
-app.get('/edit_kesehatan_17_1', sistem.edit_kesehatan_17_1);
+app.get('/tambah_kesehatan_17_1/add', sistem.tambah_kesehatan_17_1);
+app.post('/tambah_kesehatan_17_1/add', sistem.save_kesehatan_17_1);
+app.get('/edit_kesehatan_17_1/edit/:id', sistem.edit_kesehatan_17_1);
+app.post('/edit_kesehatan_17_1/edit/:id', sistem.save_edit_kesehatan_17_1);
+app.get('/edit_kesehatan_17_1/delete/:id', sistem.delete_kesehatan_17_1);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_2', sistem.kesehatan_17_2);
-app.get('/tambah_kesehatan_17_2', sistem.tambah_kesehatan_17_2);
-app.get('/edit_kesehatan_17_2', sistem.edit_kesehatan_17_2);
+app.get('/tambah_kesehatan_17_2/add', sistem.tambah_kesehatan_17_2);
+app.post('/tambah_kesehatan_17_2/add', sistem.save_kesehatan_17_2);
+app.get('/edit_kesehatan_17_2/edit/:id', sistem.edit_kesehatan_17_2);
+app.post('/edit_kesehatan_17_2/edit/:id', sistem.save_edit_kesehatan_17_2);
+app.get('/edit_kesehatan_17_2/delete/:id', sistem.delete_kesehatan_17_2);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_3', sistem.kesehatan_17_3);
-app.get('/tambah_kesehatan_17_3', sistem.tambah_kesehatan_17_3);
-app.get('/edit_kesehatan_17_3', sistem.edit_kesehatan_17_3);
+app.get('/tambah_kesehatan_17_3/add', sistem.tambah_kesehatan_17_3);
+app.post('/tambah_kesehatan_17_3/add', sistem.save_kesehatan_17_3);
+app.get('/edit_kesehatan_17_3/edit/:id', sistem.edit_kesehatan_17_3);
+app.post('/edit_kesehatan_17_3/edit/:id', sistem.save_edit_kesehatan_17_3);
+app.get('/edit_kesehatan_17_3/delete/:id', sistem.delete_kesehatan_17_3);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_4', sistem.kesehatan_17_4);
-app.get('/tambah_kesehatan_17_4', sistem.tambah_kesehatan_17_4);
-app.get('/edit_kesehatan_17_4', sistem.edit_kesehatan_17_4);
+app.get('/tambah_kesehatan_17_4/add', sistem.tambah_kesehatan_17_4);
+app.post('/tambah_kesehatan_17_4/add', sistem.save_kesehatan_17_4);
+app.get('/edit_kesehatan_17_4/edit/:id', sistem.edit_kesehatan_17_4);
+app.post('/edit_kesehatan_17_4/edit/:id', sistem.save_edit_kesehatan_17_4);
+app.get('/edit_kesehatan_17_4/delete/:id', sistem.delete_kesehatan_17_4);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_5', sistem.kesehatan_17_5);
-app.get('/tambah_kesehatan_17_5', sistem.tambah_kesehatan_17_5);
-app.get('/edit_kesehatan_17_5', sistem.edit_kesehatan_17_5);
+app.get('/tambah_kesehatan_17_5/add', sistem.tambah_kesehatan_17_5);
+app.post('/tambah_kesehatan_17_5/add', sistem.save_kesehatan_17_5);
+app.get('/edit_kesehatan_17_5/edit/:id', sistem.edit_kesehatan_17_5);
+app.post('/edit_kesehatan_17_5/edit/:id', sistem.save_edit_kesehatan_17_5);
+app.get('/edit_kesehatan_17_5/delete/:id', sistem.delete_kesehatan_17_5);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kesehatan_17_6', sistem.kesehatan_17_6);
-app.get('/tambah_kesehatan_17_6', sistem.tambah_kesehatan_17_6);
-app.get('/edit_kesehatan_17_6', sistem.edit_kesehatan_17_6);
+app.get('/tambah_kesehatan_17_6/add', sistem.tambah_kesehatan_17_6);
+app.post('/tambah_kesehatan_17_6/add', sistem.save_kesehatan_17_6);
+app.get('/edit_kesehatan_17_6/edit/:id', sistem.edit_kesehatan_17_6);
+app.post('/edit_kesehatan_17_6/edit/:id', sistem.save_edit_kesehatan_17_6);
+app.get('/edit_kesehatan_17_6/delete/:id', sistem.delete_kesehatan_17_6);
 /*==============================================================================*/
 
 /*=================================Kediklatan===================================*/
 app.get('/kediklatan', sistem.kediklatan);
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_1', sistem.kediklatan_18_1);
-app.get('/tambah_kediklatan_18_1', sistem.tambah_kediklatan_18_1);
-app.get('/edit_kediklatan_18_1', sistem.edit_kediklatan_18_1);
+app.get('/tambah_kediklatan_18_1/add', sistem.tambah_kediklatan_18_1);
+app.post('/tambah_kediklatan_18_1/add', sistem.save_kediklatan_18_1);
+app.get('/edit_kediklatan_18_1/edit/:id', sistem.edit_kediklatan_18_1);
+app.post('/edit_kediklatan_18_1/edit/:id', sistem.save_edit_kediklatan_18_1);
+app.get('/edit_kediklatan_18_1/delete/:id', sistem.delete_kediklatan_18_1);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_2', sistem.kediklatan_18_2);
-app.get('/tambah_kediklatan_18_2', sistem.tambah_kediklatan_18_2);
-app.get('/edit_kediklatan_18_2', sistem.edit_kediklatan_18_2);
+app.get('/tambah_kediklatan_18_2/add', sistem.tambah_kediklatan_18_2);
+app.post('/tambah_kediklatan_18_2/add', sistem.save_kediklatan_18_2);
+app.get('/edit_kediklatan_18_2/edit/:id', sistem.edit_kediklatan_18_2);
+app.post('/edit_kediklatan_18_2/edit/:id', sistem.save_edit_kediklatan_18_2);
+app.get('/edit_kediklatan_18_2/delete/:id', sistem.delete_kediklatan_18_2);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_3', sistem.kediklatan_18_3);
-app.get('/tambah_kediklatan_18_3', sistem.tambah_kediklatan_18_3);
-app.get('/edit_kediklatan_18_3', sistem.edit_kediklatan_18_3);
+app.get('/tambah_kediklatan_18_3/add', sistem.tambah_kediklatan_18_3);
+app.post('/tambah_kediklatan_18_3/add', sistem.save_kediklatan_18_3);
+app.get('/edit_kediklatan_18_3/edit/:id', sistem.edit_kediklatan_18_3);
+app.post('/edit_kediklatan_18_3/edit/:id', sistem.save_edit_kediklatan_18_3);
+app.get('/edit_kediklatan_18_3/delete/:id', sistem.delete_kediklatan_18_3);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_4', sistem.kediklatan_18_4);
-app.get('/tambah_kediklatan_18_4', sistem.tambah_kediklatan_18_4);
-app.get('/edit_kediklatan_18_4', sistem.edit_kediklatan_18_4);
+app.get('/tambah_kediklatan_18_4/add', sistem.tambah_kediklatan_18_4);
+app.post('/tambah_kediklatan_18_4/add', sistem.save_kediklatan_18_4);
+app.get('/edit_kediklatan_18_4/edit/:id', sistem.edit_kediklatan_18_4);
+app.post('/edit_kediklatan_18_4/edit/:id', sistem.save_edit_kediklatan_18_4);
+app.get('/edit_kediklatan_18_4/delete/:id', sistem.delete_kediklatan_18_4);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_5', sistem.kediklatan_18_5);
-app.get('/tambah_kediklatan_18_5', sistem.tambah_kediklatan_18_5);
-app.get('/edit_kediklatan_18_5', sistem.edit_kediklatan_18_5);
-/*==============================================================================*/
-/*========================Standar Biaya Tenaga Khusus===========================*/
-app.get('/kediklatan_18_5', sistem.kediklatan_18_5);
-app.get('/tambah_kediklatan_18_5', sistem.tambah_kediklatan_18_5);
-app.get('/edit_kediklatan_18_5', sistem.edit_kediklatan_18_5);
+app.get('/tambah_kediklatan_18_5/add', sistem.tambah_kediklatan_18_5);
+app.post('/tambah_kediklatan_18_5/add', sistem.save_kediklatan_18_5);
+app.get('/edit_kediklatan_18_5/edit/:id', sistem.edit_kediklatan_18_5);
+app.post('/edit_kediklatan_18_5/edit/:id', sistem.save_edit_kediklatan_18_5);
+app.get('/edit_kediklatan_18_5/delete/:id', sistem.delete_kediklatan_18_5);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_6', sistem.kediklatan_18_6);
-app.get('/tambah_kediklatan_18_6', sistem.tambah_kediklatan_18_6);
-app.get('/edit_kediklatan_18_6', sistem.edit_kediklatan_18_6);
+app.get('/tambah_kediklatan_18_6/add', sistem.tambah_kediklatan_18_6);
+app.post('/tambah_kediklatan_18_6/add', sistem.save_kediklatan_18_6);
+app.get('/edit_kediklatan_18_6/edit/:id', sistem.edit_kediklatan_18_6);
+app.post('/edit_kediklatan_18_6/edit/:id', sistem.save_edit_kediklatan_18_6);
+app.get('/edit_kediklatan_18_6/delete/:id', sistem.delete_kediklatan_18_6);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_7', sistem.kediklatan_18_7);
-app.get('/tambah_kediklatan_18_7', sistem.tambah_kediklatan_18_7);
-app.get('/edit_kediklatan_18_7', sistem.edit_kediklatan_18_7);
+app.get('/tambah_kediklatan_18_7/add', sistem.tambah_kediklatan_18_7);
+app.post('/tambah_kediklatan_18_7/add', sistem.save_kediklatan_18_7);
+app.get('/edit_kediklatan_18_7/edit/:id', sistem.edit_kediklatan_18_7);
+app.post('/edit_kediklatan_18_7/edit/:id', sistem.save_edit_kediklatan_18_7);
+app.get('/edit_kediklatan_18_7/delete/:id', sistem.delete_kediklatan_18_7);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_8', sistem.kediklatan_18_8);
-app.get('/tambah_kediklatan_18_8', sistem.tambah_kediklatan_18_8);
-app.get('/edit_kediklatan_18_8', sistem.edit_kediklatan_18_8);
+app.get('/tambah_kediklatan_18_8/add', sistem.tambah_kediklatan_18_8);
+app.post('/tambah_kediklatan_18_8/add', sistem.save_kediklatan_18_8);
+app.get('/edit_kediklatan_18_8/edit/:id', sistem.edit_kediklatan_18_8);
+app.post('/edit_kediklatan_18_8/edit/:id', sistem.save_edit_kediklatan_18_8);
+app.get('/edit_kediklatan_18_8/delete/:id', sistem.delete_kediklatan_18_8);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_9', sistem.kediklatan_18_9);
-app.get('/tambah_kediklatan_18_9', sistem.tambah_kediklatan_18_9);
-app.get('/edit_kediklatan_18_9', sistem.edit_kediklatan_18_9);
+app.get('/tambah_kediklatan_18_9/add', sistem.tambah_kediklatan_18_9);
+app.post('/tambah_kediklatan_18_9/add', sistem.save_kediklatan_18_9);
+app.get('/edit_kediklatan_18_9/edit/:id', sistem.edit_kediklatan_18_9);
+app.post('/edit_kediklatan_18_9/edit/:id', sistem.save_edit_kediklatan_18_9);
+app.get('/edit_kediklatan_18_9/delete/:id', sistem.delete_kediklatan_18_9);
 /*==============================================================================*/
 /*========================Standar Biaya Tenaga Khusus===========================*/
 app.get('/kediklatan_18_10', sistem.kediklatan_18_10);
-app.get('/tambah_kediklatan_18_10', sistem.tambah_kediklatan_18_10);
-app.get('/edit_kediklatan_18_10', sistem.edit_kediklatan_18_10);
+app.get('/tambah_kediklatan_18_10/add', sistem.tambah_kediklatan_18_10);
+app.post('/tambah_kediklatan_18_10/add', sistem.save_kediklatan_18_10);
+app.get('/edit_kediklatan_18_10/edit/:id', sistem.edit_kediklatan_18_10);
+app.post('/edit_kediklatan_18_10/edit/:id', sistem.save_edit_kediklatan_18_10);
+app.get('/edit_kediklatan_18_10/delete/:id', sistem.delete_kediklatan_18_10);
+/*==============================================================================*/
+/*========================Standar Biaya Tenaga Khusus===========================*/
+app.get('/kediklatan_18_11', sistem.kediklatan_18_11);
+app.get('/tambah_kediklatan_18_11/add', sistem.tambah_kediklatan_18_11);
+app.post('/tambah_kediklatan_18_11/add', sistem.save_kediklatan_18_11);
+app.get('/edit_kediklatan_18_11/edit/:id', sistem.edit_kediklatan_18_11);
+app.post('/edit_kediklatan_18_11/edit/:id', sistem.save_edit_kediklatan_18_11);
+app.get('/edit_kediklatan_18_11/delete/:id', sistem.delete_kediklatan_18_11);
 /*==============================================================================*/
 
 /*=================================Olahraga=====================================*/

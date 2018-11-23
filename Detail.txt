@@ -87,14 +87,14 @@
 16. Bidang 16** (LEWAT)
 - Tabel 16.1 (Detail 2)
 ===============================
-17. Bidang 17
+17. Bidang 17 (DONE)
 - Tabel 17.1 (Detail 10)
-- Tabel 17.2 - 17.3 (Detail 4)
+- Tabel 17.2 - Tabel 17.3 (Detail 4)
 - Tabel 17.4 (Detail 9)
 - Tabel 17.5 (Detail 15)
 - Tabel 17.6 (Detail 2)
 ===============================
-18. Bidang 18
+18. Bidang 18 (DONE)
 - Tabel 18.1 - 18.2 (Detail 2) + Makan Malam
 - Tabel 18.3 (Detail 15)
 - Tabel 18.4 (Detail 4)
